@@ -1,3 +1,9 @@
+debconf (1.5.42ubuntu1pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 24 Dec 2013 14:42:18 +0000
+
 debconf (1.5.42ubuntu1) precise; urgency=low
 
   * Resynchronise with Debian.  Remaining changes:
