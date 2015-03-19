@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-22 18:46+0100\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2011-05-12 11:20+0100\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -114,18 +114,19 @@ msgstr "_Axuda"
 msgid "Help"
 msgstr "Axuda"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "Non se configurou debconf para amosar este erro, así que lla enviou a Vd."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, executándose en %s"
@@ -157,15 +158,15 @@ msgstr "Non é posíbel cargar Debconf::Element::%s. Erro debido a: %s"
 msgid "Configuring %s"
 msgstr "Configurando %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "Non se estabeleceu TERM, así que a interface Dialog non é utilizábel."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "A interface Dialog é incompatíbel cos búferes shell de emacs."
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -173,7 +174,7 @@ msgstr ""
 "A interface Dialog non funciona nun terminal parvo, nun búfer shell de "
 "emacs, ou sen un terminal de control."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -181,14 +182,14 @@ msgstr ""
 "Non hai un programa semellante a Dialog instalado, así que non se pode "
 "empregar a interface baseada en Dialog."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "A interface Dialog precisa dunha pantalla de polo menos 13 liñas e 31 "
 "columnas."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Configuración do paquete"
 
@@ -217,7 +218,7 @@ msgstr ""
 "gráveo e saia. Nese punto, debconf lerá o ficheiro editado, e empregará os "
 "valores introducidos para configurar o sistema."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -231,7 +232,7 @@ msgstr "Esta interface precisa dun terminal de control."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU é incompatíbel cos búferes shell de emacs."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Máis"
 
@@ -285,54 +286,61 @@ msgstr ""
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "O modelo num. %s en %s non conten unha liña «Template:»\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "débense especificar algúns paquetes para preconfigurar"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr ""
 "atrasase a configuración dos paquetes porque apt-utils non está instalado"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "non é posíbel volver abrir a entrada estándar: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates non funcionou: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Extraendo os modelos dos paquetes: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Preconfigurando paquetes ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "erro na análise do modelo: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: non é posíbel aplicar chmod: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "Non se puido preconfigurar %s, co estado de saída %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
+#, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -346,29 +354,24 @@ msgstr ""
 "       --force\t\t\tForzar a reconfiguración dos paquetes estragados.\n"
 "       --no-reload\t\tNon cargar os modelos (usar con tino)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s débese executar como administrador (root)"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "especifique un paquete a reconfigurar"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s non está instalado"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s está estragado ou non está completamente instalado"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Non é posíbel ler o ficheiro de estado: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -437,3 +440,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=package\t\tEstabelecer o paquete ao que pertence a orde."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Non é posíbel ler o ficheiro de estado: %s"

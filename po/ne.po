@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2007-07-31 17:23+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -105,19 +105,20 @@ msgstr "मद्दत"
 msgid "Help"
 msgstr "मद्दत"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "यो त्रुटि प्रदर्शन गर्न Debconf कन्फिगर गरिएको थिएन, त्यसैले यसले तपाईँलाई पत्र पठाएको "
 "हो ।"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, %s मा चल्दैछ"
@@ -149,15 +150,15 @@ msgstr "Debconf::तत्व::%s लोड गर्न अक्षम । फ
 msgid "Configuring %s"
 msgstr "%s कन्फिगर गर्दैछ"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM सेट गरिएको छैन, त्यसैले फ्रन्टइन्डको संवाद उपयोगी छैन ।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "संवाद फ्रन्टइन्ड इमाक्स शेल बफरसँग नमिल्दो छ"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -165,7 +166,7 @@ msgstr ""
 "संवाद फ्रन्टइन्डले कार्य नगर्ने टर्मिनल, इमाक्स शेल बफर मा कार्य गर्दैन, वा नियन्त्रण टर्मिनल "
 "बिना कार्य गर्दैन ।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -173,13 +174,13 @@ msgstr ""
 "उपयोगी संवाद-जस्तो कार्यक्रम स्थापान गरिएको छैन, त्यसैले संवाद आधारित फ्रन्टइन्ड प्रयोग "
 "गर्न सकिने छैन ।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "संवाद फ्रन्टइन्डलाई कम्तिमा १३ लाइन उचाइ र ३१ स्तम्भ चौडाइ भएको पर्दा आवश्यक हुन्छ ।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "प्याकेज कन्फिगरेसन"
 
@@ -207,7 +208,8 @@ msgstr ""
 "गर्नुहोस्, र त्यसपछि यसलाई बचत गर्नुहोस् र बाहिरिनुहोस् । यस्तो अवस्थामा, debconf ले "
 "सम्पादित फाइल पढ्नेछ, र तपाईँले प्रणाली कन्फिगर गर्न प्रविष्टि गरेका मान प्रयोग गर्नेछ ।"
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf को %s"
@@ -220,7 +222,7 @@ msgstr "यो फ्रन्टइन्डलाई नियन्त्र�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "इमाक्स शेल बफरसँग Term::ReadLine::GNU मिलेको छैन ।"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "बढी"
 
@@ -269,54 +271,53 @@ msgstr "चरण #%s को %s मा,`%s' नजिक टेम्प्ल�
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "टेम्प्लेट %s को #%s मा 'टेम्प्लेट:' लाइन समाविष्ट छैन\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "पहिले कन्फिगर गर्न केही debs निर्दिष्ट गर्नुपर्दछ"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "प्याकेज कन्फिगरेसन विलम्ब, apt-utils देखि स्थापना भएको छैन"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "stdin फेरी खोल्न अक्षम: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates असफल भयो: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "प्याकेजबाट टेम्प्लेट उद्धरण गर्दैछ: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "पहिले कन्फिगर गर्ने प्याकेज ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "टेम्प्लेट पद वर्णन गर्दा त्रुटि: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: ले मोड परिवर्तन गर्न सक्दैन: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "बाहिरिने वस्तुस्थिति %s सँग, %s पहिला कन्फिगर गर्न असफल"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -328,29 +329,24 @@ msgstr ""
 "       --default-priority\tतलका साटोमा पूर्वनिर्धारित प्राथमिकता प्रयोग गर्नुहोस् ।\n"
 "       --force\t\t\tविच्छेद प्याकेजको पुन: कन्फिगरेसन गर्न दवाब दिनुहोस् ।"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s मूलका रुपमा चल्नु पर्दछ"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "कृपया पुन: कन्फिगर गर्न प्याकेज निर्दिष्ट गर्नुहोस्"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s स्थापना भएको छैन"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s विच्छेद भएको छ वा पूर्णरुपमा स्थापना भएको छैन"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "वस्तुस्थिति फाइल पढ्न सकिँदैन: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -419,3 +415,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=package\t\tआदेश स्वीकार गर्ने प्याकेज सेट गर्नुहोस् ।"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "वस्तुस्थिति फाइल पढ्न सकिँदैन: %s"

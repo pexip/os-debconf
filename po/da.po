@@ -1,15 +1,16 @@
-# Copyright (C) 2011 Free Software Foundation, Inc.
+# Danish translation debconf.
+# Copyright (C) 2013 Free Software Foundation, Inc.
 # Morten Brix Pedersen <morten@wtf.dk>, 2001-2002.
 # Morten Bo Johansen <mbj@spamcop.net>, 2002-.
 # Claus Hindsgaul <claus.hindsgaul@gmail.com>, 2006.
-# Joe Hansen <joedalton2@yahoo.dk>, 2011.
+# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.38\n"
+"Project-Id-Version: debconf 1.5.52\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-30 12:23-0400\n"
-"PO-Revision-Date: 2011-04-30 20:27+0200\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"PO-Revision-Date: 2013-12-15 20:27+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
 "Language: da\n"
@@ -109,19 +110,19 @@ msgstr "_Hjælp"
 msgid "Help"
 msgstr "Hjælp"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
-"Debconf var ikke indstillet til at vise denne fejlmeddelelse, så den sendte "
+"Debconf var ikke sikker på, at denne fejlmeddelelse blev vist, så den sendte "
 "den til dig."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, kørende på %s"
@@ -153,15 +154,15 @@ msgstr "Kunne ikke indlæse Debconf::Element::%s. Fejlede pga.: %s"
 msgid "Configuring %s"
 msgstr "Sætter %s op"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM er ikke sat, så dialog-brugerfladen kan ikke bruges."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Dialog-brugerflade er ikke forenelig med Emacs-skalbuffere"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -169,7 +170,7 @@ msgstr ""
 "Dialog-brugerfladen vil ikke virke på en 'dum' terminal, en Emacs-skalbuffer "
 "eller uden en styrende terminal."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -177,13 +178,13 @@ msgstr ""
 "Der er ikke installeret noget brugbart dialoglignende program, så den "
 "dialogbaserede brugerflade kan ikke bruges."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Dialog-brugerfladen behøver en skærm, min. 13 linjer høj og 31 kolonner bred."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Pakkeopsætning"
 
@@ -211,7 +212,7 @@ msgstr ""
 "nødvendigt, gem den og afslut så. Derefter vil debconf læse den redigerede "
 "fil og bruge værdierne du indtastede til at sætte systemet op."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -225,7 +226,7 @@ msgstr "Denne brugerflade behøver en styrende tty."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU er ikke forenelig med Emacs-skalbuffere."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Mere"
 
@@ -276,88 +277,81 @@ msgstr "Fortolkningsfejl i skabelon, nær `%s', i kombination nr. %s af %s\n"
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Skabelon nr. %s i %s indeholder ikke en 'Template:'-linje\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "er nødt til at angive nogle debianpakker for at prækonfigurere"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "udsætter pakkeopsætning da apt-utils ikke er installeret"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "kunne ikke genåbne standardinddata: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates fejlede: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Udtrækker skabeloner fra pakker: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Prækonfigurerer pakker ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "fortolkningsfejl i skabelon: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: kan ikke chmod: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s fejlede i prækonfigurering med afslutningsstatus %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Brug: dpkg-reconfigure [tilvalg] pakker\n"
-"  -a, --all\t\t\tGenopsæt alle pakker.\n"
 "  -u, --unseen-only\t\tVis kun spørgsmål som ikke tidligere har være vist.\n"
 "      --default-priority\tBrug standardprioritering i stedet for lav.\n"
-"      --force\t\t\tGennemtving genopsætning af brudte pakker.       --no-"
-"reload\t\tGenindlæs ikke skabeloner. (Brug med forsigtighed.)"
+"      --force\t\t\tGennemtving genopsætning af brudte pakker.\n"
+"      --no-reload\t\tGenindlæs ikke skabeloner. (Brug med forsigtighed.)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s skal køres som root"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "angiv venligst pakken som skal genopsættes"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s er ikke installeret"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s har brudte afhængigheder eller ikke fuldt installeret"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Kan ikke læse statusfil: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -427,27 +421,5 @@ msgstr ""
 "\n"
 "  -o,  --owner=pakke\t\tSæt pakke der ejer kommando."
 
-#~ msgid "Save (mail) Note"
-#~ msgstr "Gem (send) notits med e-post"
-
-#~ msgid "Debconf was asked to save this note, so it mailed it to you."
-#~ msgstr ""
-#~ "Debconf blev bedt om at gemme denne notits, så den sendte den til dig."
-
-#~ msgid "Information"
-#~ msgstr "Information"
-
-#~ msgid "The note has been mailed."
-#~ msgstr "Notitsen er blevet sendt."
-
-#~ msgid "Error"
-#~ msgstr "Fejl"
-
-#~ msgid "Unable to save note."
-#~ msgstr "Kunne ikke sende notits."
-
-#~ msgid ""
-#~ "Debconf was not configured to display this note, so it mailed it to you."
-#~ msgstr ""
-#~ "Debconf var ikke sat op til at vise denne notits, så den sendte den til "
-#~ "dig."
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Kan ikke læse statusfil: %s"

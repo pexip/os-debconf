@@ -2,20 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
-# Ossama M. Khayat <okhayat@yahoo.com>, 2005, 2006.
+# Ossama M. Khayat <okhayat@yahoo.com>, 2005, 2006, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
-"PO-Revision-Date: 2006-02-21 08:18+0300\n"
-"Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"PO-Revision-Date: 2012-08-08 15:31+0300\n"
+"Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../Debconf/AutoSelect.pm:76
 #, perl-format
@@ -109,17 +111,17 @@ msgstr "_مساعدة"
 msgid "Help"
 msgstr "مساعدة"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
-msgstr "لم تتم تهيئة debconf لعرض رسالة الخطأ هذه، فقام بإرسالها إليك بالبريد."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
+msgstr "لم يتأكد Debconf من ظهور رسالة الخطأ هذه، لذا قام بإرساله لك بالبريد."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf، يعمل على %s"
@@ -152,22 +154,22 @@ msgstr "لم يمكن تحميل Debconf::Element::%s. فشل ذلك بسبب: %
 msgid "Configuring %s"
 msgstr "تهيئة %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM ليست مُعيّنة، لذا لا يمكن استخدام واجهة dialog."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "واجهة dialog ليست متوافقة مع مخازن صدفة emacs"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
 msgstr ""
 "لن يعمل dialog على طرفيّة وهمية، أو مخزن صدفة emacs، أو بدون طرفيّة تحكّم."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -175,12 +177,12 @@ msgstr ""
 "ليس هناك برنامج مشابه لـdialog مثبّت، لذا لا يمكن استخدام الواجهة المبنيّة على "
 "dialog."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr "تتطلب واجهة dialog شاشة بطول 13 سطراً على الأقل وعرض 31 عموداً."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "تهيئة الحزمة"
 
@@ -207,7 +209,8 @@ msgstr ""
 "بتغيير أي عناصر كما يلزم، ثم احفظ الملف واخرج من البرنامج. عند هذا، سيقرأ "
 "debconf الملف، ويستخدم القيم التي أدخلتها لتهيئة نظامك."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf على %s"
@@ -220,7 +223,7 @@ msgstr "تحتاج هذه الواجهة إلى مبرقة (tty) تحكّم."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU ليس متوافق مع مخازن صدفة emacs."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "المزيد"
 
@@ -272,54 +275,60 @@ msgstr "خطأ في إعراب القالب قُرْب `%s'، في المَقْ�
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "القالب #%s في %s لا يحتوي على سطر 'Template:'\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "يجب تحديد بعض حزم deb لتهيئتها مسبقاً"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "تأجيل تهيئة الحزم، حيث أن apt-utils غير مثبتة"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "لم يمكن إعادة فتح stdin: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "فشل apt-extracttemplates: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "استخراج القوالب من الحزم: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "تهيئة الحزم مسبقاً ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "خطأ في إعراب القالب: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: لايمكن تنفيذ chmod: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "فشلت تهيئة %s مسبقاً، مع حالة خروج %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 #, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -327,33 +336,29 @@ msgid ""
 msgstr ""
 "الاستخدام: dpkg-reconfigure [options] packages\n"
 "  -a,  --all\t\t\tإعادة تهيئة جميع الحزم.\n"
-"  -u,  --unseen-only\t\tإظهار الأسئلة التي لم تظهر من قبل فقط.\n"
-"       --default-priority\tاستخدام الأولوية الافتراضية بدلاً من المنخفضة.\n"
-"       --force\t\t\tأإجبار إعادة تهيئة الحزم المعطوبة."
+"  -u,  --unseen-only\t\tاعرض الأسئلة التي لم تظهر من قبل فقط.\n"
+"       --default-priority\tاستخدم الأولوية الافتراضية بدلاً من المنخفضة.\n"
+"       --force\t\t\tافرض إعادة تهيئة الحزم المُعطّلة.\n"
+"       --no-reload\t\tلا تُعد تحميل القوالب (استخدمه بحذر)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "يجب تشغيل %s كمستخدم جذر"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "الرجاء تحديد حزمة لتهيئتها مسبقاً"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s غير مُثبّتة"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s معطوبة أو غير مُثبّتة بالكامل"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "لا يمكن قراءة ملف الحالة: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -425,6 +430,9 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=package\t\tتحديد الحزمة التي تخص الأمر."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "لا يمكن قراءة ملف الحالة: %s"
 
 #~ msgid "Save (mail) Note"
 #~ msgstr "حفظ (البريد) الملاحظة"

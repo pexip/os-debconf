@@ -1,5 +1,5 @@
 # Translation of debconf manpages to German
-# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2008, 2009.
+# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2008, 2009, 2012.
 # Copyright (C) Florian 'eix' Rehnisch <eixman@gmx.de>, 2008.
 # This file is distributed under the same license as the debconf package.
 #
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-29 12:37+0300\n"
-"PO-Revision-Date: 2011-08-14 11:31+0200\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"PO-Revision-Date: 2013-10-12 14:12+0200\n"
 "Last-Translator: Florian 'eix' Rehnisch <eixman@gmx.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -76,9 +76,9 @@ msgid ""
 "overview and documentation for sysadmins, see L<debconf(7)> (in the debconf-"
 "doc package)."
 msgstr ""
-"Debconf ist ein Konfigurationssystem für Debian-Pakete. Lesen Sie L<debconf"
-"(7)> (im Paket debconf-doc) für einen Überblick und die Dokumentation von "
-"Debconf für Systemadministratoren."
+"Debconf ist ein Konfigurationssystem für Debian-Pakete. Lesen Sie "
+"L<debconf(7)> (im Paket debconf-doc) für einen Überblick und die "
+"Dokumentation von Debconf für Systemadministratoren."
 
 #. type: textblock
 #: ../../debconf:19
@@ -211,7 +211,7 @@ msgstr ""
 #: ../../debconf-copydb:101 ../../debconf-getlang:73
 #: ../../debconf-loadtemplate:30 ../../debconf-mergetemplate:60
 #: ../../debconf-set-selections:82 ../../dpkg-preconfigure:59
-#: ../../dpkg-reconfigure:78 debconf.conf.5:537 confmodule.3:36 debconf.7:376
+#: ../../dpkg-reconfigure:73 debconf.conf.5:537 confmodule.3:36 debconf.7:376
 #: debconf-devel.7:958
 #, no-wrap
 msgid "SEE ALSO"
@@ -227,9 +227,9 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-escape:71 ../../debconf-communicate:73
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
-#: ../../debconf-show:154 ../../dpkg-preconfigure:243
-#: ../../dpkg-reconfigure:268 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
+#: ../../debconf-show:154 ../../dpkg-preconfigure:244
+#: ../../dpkg-reconfigure:295 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -240,7 +240,7 @@ msgstr "AUTOR"
 #: ../../debconf-apt-progress:666 ../../debconf-communicate:75
 #: ../../debconf-copydb:177 ../../debconf-getlang:257
 #: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:245 ../../dpkg-reconfigure:270
+#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:297
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess <joeyh@debian.org>"
 
@@ -1253,7 +1253,7 @@ msgstr ""
 "cdebconf, auszugeben, benutzen Sie den Parameter »--installer«"
 
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:229
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr "Petter Reinholdtsen <pere@hungry.com>"
 
@@ -1415,10 +1415,8 @@ msgstr "L<debconf-getlang(1)>"
 
 #. type: textblock
 #: ../../debconf-set-selections:5
-msgid ""
-"debconf-set-selections - insert new default values into the debconf database"
-msgstr ""
-"debconf-set-selections - füge neue Vorgabewerte in die Debconf-Datenbank ein"
+msgid "debconf-set-selections - insert new values into the debconf database"
+msgstr "debconf-set-selections - füge neue Werte in die Debconf-Datenbank ein"
 
 #. type: verbatim
 #: ../../debconf-set-selections:21
@@ -1747,17 +1745,17 @@ msgstr ""
 "\n"
 
 #. type: =item
-#: ../../dpkg-preconfigure:51 ../../dpkg-reconfigure:70
+#: ../../dpkg-preconfigure:51 ../../dpkg-reconfigure:65
 msgid "B<-h>, B<--help>"
 msgstr "B<-h>, B<--help>"
 
 #. type: textblock
-#: ../../dpkg-preconfigure:53 ../../dpkg-reconfigure:72
+#: ../../dpkg-preconfigure:53 ../../dpkg-reconfigure:67
 msgid "Display usage help."
 msgstr "Zeige Hilfe zur Benutzung an."
 
 #. type: textblock
-#: ../../dpkg-preconfigure:61 ../../dpkg-reconfigure:80
+#: ../../dpkg-preconfigure:61 ../../dpkg-reconfigure:75
 msgid "L<debconf(7)>"
 msgstr "L<debconf(7)>"
 
@@ -1857,25 +1855,11 @@ msgstr ""
 
 #. type: =item
 #: ../../dpkg-reconfigure:47
-msgid "B<-a>, B<--all>"
-msgstr "B<-a>, B<--all>"
-
-#. type: textblock
-#: ../../dpkg-reconfigure:49
-msgid ""
-"Reconfigure all installed packages that use debconf. Warning: this may take "
-"a long time."
-msgstr ""
-"Konfiguriere alle installierten Pakete, die Debconf benutzen, erneut. "
-"Warnung: dies kann viel Zeit beanspruchen."
-
-#. type: =item
-#: ../../dpkg-reconfigure:52
 msgid "B<-u>, B<--unseen-only>"
 msgstr "B<-u>, B<--unseen-only>"
 
 #. type: textblock
-#: ../../dpkg-reconfigure:54
+#: ../../dpkg-reconfigure:49
 msgid ""
 "By default, all questions are shown, even if they have already been "
 "answered. If this parameter is set though, only questions that have not yet "
@@ -1886,12 +1870,12 @@ msgstr ""
 "Fragen gestellt, die noch nicht gesehen wurden."
 
 #. type: =item
-#: ../../dpkg-reconfigure:58
+#: ../../dpkg-reconfigure:53
 msgid "B<--force>"
 msgstr "B<--force>"
 
 #. type: textblock
-#: ../../dpkg-reconfigure:60
+#: ../../dpkg-reconfigure:55
 msgid ""
 "Force dpkg-reconfigure to reconfigure a package even if the package is in an "
 "inconsistent or broken state. Use with caution."
@@ -1900,12 +1884,12 @@ msgstr ""
 "in einem inkonsistenten oder defekten Zustand ist. Mit Vorsicht zu benutzen."
 
 #. type: =item
-#: ../../dpkg-reconfigure:63
+#: ../../dpkg-reconfigure:58
 msgid "B<--no-reload>"
 msgstr "B<--no-reload>"
 
 #. type: textblock
-#: ../../dpkg-reconfigure:65
+#: ../../dpkg-reconfigure:60
 msgid ""
 "Prevent dpkg-reconfigure from reloading templates. Use with caution; this "
 "will prevent dpkg-reconfigure from repairing broken templates databases.  "
@@ -3561,10 +3545,10 @@ msgid ""
 "will need apt-utils installed for that to work."
 msgstr ""
 "Manchmal möchten Sie vielleicht ein Paket von Hand vorkonfigurieren, wenn "
-"Sie es nicht mit APT installieren. Sie können B<dpkg-preconfigure> (8)"
-"benutzen, um das zu machen, übergeben Sie einfach die Dateinamen der Pakete, "
-"die Sie vorkonfigurieren wollen. Damit dies funktioniert, muss das Paket apt-"
-"utils installiert sein."
+"Sie es nicht mit APT installieren. Sie können B<dpkg-preconfigure> "
+"(8)benutzen, um das zu machen, übergeben Sie einfach die Dateinamen der "
+"Pakete, die Sie vorkonfigurieren wollen. Damit dies funktioniert, muss das "
+"Paket apt-utils installiert sein."
 
 #. type: SH
 #: debconf.7:33
@@ -3647,9 +3631,9 @@ msgid ""
 "The default frontend, this uses the B<whiptail>(1)  or B<dialog>(1)  "
 "programs to display questions to you. It works in text mode."
 msgstr ""
-"Die vorgegeben Benutzerschnittstelle, diese benutzt die Programme B<whiptail>"
-"(1) oder B<dialog>(1), um die Fragen an Sie anzuzeigen. Sie arbeitet im "
-"Textmodus."
+"Die vorgegeben Benutzerschnittstelle, diese benutzt die Programme "
+"B<whiptail>(1) oder B<dialog>(1), um die Fragen an Sie anzuzeigen. Sie "
+"arbeitet im Textmodus."
 
 #. type: TP
 #: debconf.7:60
@@ -5318,14 +5302,14 @@ msgstr "B<CAPB> I<Fähigkeiten>"
 #: debconf-devel.7:257
 msgid ""
 "You generally don't need to use this command. It exchanges with debconf a "
-"list of supported capabilities. Capabilities that both you and debconf "
-"support will be used, and debconf will reply with all the capabilities it "
-"supports."
+"list of supported capabilities (separated by spaces). Capabilities that both "
+"you and debconf support will be used, and debconf will reply with all the "
+"capabilities it supports."
 msgstr ""
 "Im Allgemeinen brauchen Sie diesen Befehl nicht zu benutzen. Er tauscht mit "
-"Debconf eine Liste unterstützter Fähigkeiten aus. Fähigkeiten, die sowohl "
-"Debconf und Sie unterstützen, werden benutzt, und Debconf antwortet mit "
-"allen Fähigkeiten, die es unterstützt."
+"Debconf eine Liste unterstützter Fähigkeiten (getrennt durch Leerzeichen) "
+"aus. Fähigkeiten, die sowohl Debconf und Sie unterstützen, werden benutzt, "
+"und Debconf antwortet mit allen Fähigkeiten, die es unterstützt."
 
 # FIXME Double space
 #. type: Plain text
@@ -5836,8 +5820,9 @@ msgid ""
 "Perl programmers can use the B<Debconf::Client::ConfModule>(3pm)  perl "
 "module, and python programmers can use the debconf python module."
 msgstr ""
-"Perl-Programmierer können das Perl-Modul B<Debconf::\\:Client::\\:ConfModule>"
-"(3pm) und Python-Programmierer können das Python-Modul debconf benutzen."
+"Perl-Programmierer können das Perl-Modul B<Debconf::\\:Client::\\:"
+"ConfModule>(3pm) und Python-Programmierer können das Python-Modul debconf "
+"benutzen."
 
 #. type: Plain text
 #: debconf-devel.7:438
@@ -6116,12 +6101,12 @@ msgid ""
 "to translate the 'Default' field of a select or multiselect question, and "
 "the value of the question will be automatically returned in English."
 msgstr ""
-"Neben dem Feld »Description« sollten Sie das Feld »Choices« einer (Mehrfach-)"
-"Auswahl-Vorlage übersetzen. Stellen Sie sicher, dass Sie die übersetzten "
-"Optionen in derselben Reihenfolge auflisten, wie Sie in dem Hauptfeld "
-"»Choices« erscheinen. Sie brauchen nicht das Feld »Default« einer (Mehrfach-)"
-"Auswahl-Frage zu übersetzen, und der Wert der Frage wird automatisch auf "
-"Englisch zurückgegeben."
+"Neben dem Feld »Description« sollten Sie das Feld »Choices« einer "
+"(Mehrfach-)Auswahl-Vorlage übersetzen. Stellen Sie sicher, dass Sie die "
+"übersetzten Optionen in derselben Reihenfolge auflisten, wie Sie in dem "
+"Hauptfeld »Choices« erscheinen. Sie brauchen nicht das Feld »Default« einer "
+"(Mehrfach-)Auswahl-Frage zu übersetzen, und der Wert der Frage wird "
+"automatisch auf Englisch zurückgegeben."
 
 # FIXME Double spaces
 #. type: Plain text
@@ -6149,9 +6134,9 @@ msgstr ""
 #: debconf-devel.7:558
 msgid ""
 "For the details on po-debconf, see its man page. If you're using debhelper, "
-"converting to po-debconf is as simple as running the B<debconf-gettextize>"
-"(1)  command once, and adding a Build-Dependency on po-debconf and on "
-"debhelper (E<gt>= 4.1.13)."
+"converting to po-debconf is as simple as running the B<debconf-"
+"gettextize>(1)  command once, and adding a Build-Dependency on po-debconf "
+"and on debhelper (E<gt>= 4.1.13)."
 msgstr ""
 "Für die Details zu po-debconf lesen Sie seine Handbuchseite. Falls Sie "
 "debhelper benutzen, ist das Konvertieren nach po-debconf ein einfaches "
@@ -7234,6 +7219,16 @@ msgid ""
 msgstr ""
 "In B<debconf.conf>(5) sind viele nützliche Informationen, darunter auch über "
 "die Backend-Datenbank."
+
+#~ msgid "B<-a>, B<--all>"
+#~ msgstr "B<-a>, B<--all>"
+
+#~ msgid ""
+#~ "Reconfigure all installed packages that use debconf. Warning: this may "
+#~ "take a long time."
+#~ msgstr ""
+#~ "Konfiguriere alle installierten Pakete, die Debconf benutzen, erneut. "
+#~ "Warnung: dies kann viel Zeit beanspruchen."
 
 #~ msgid ""
 #~ "This sets the title debconf displays to the user. You rarely need to use "

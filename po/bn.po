@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2009-04-19 16:07+0600\n"
 "Last-Translator: Md. Rezwan Shahid <rezwan@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
@@ -105,19 +105,20 @@ msgstr "_সহায়তা"
 msgid "Help"
 msgstr "সহায়তা"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "এই সমস্যা বার্তা প্রদর্শনের জন্য Debconf কনফিগার করা হয়নি, কাজেই এটি আপনার কাছে "
 "মেইল করা হয়েছে।"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, %s এ চালানো হচ্ছে"
@@ -149,15 +150,15 @@ msgstr "Debconf লোড করতে ব্যর্থ::উপাদান::%
 msgid "Configuring %s"
 msgstr "কনফিগার করা হচ্ছে %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM সেট করা হয়নি, ফলে ডায়লগ ফ্রন্টএন্ড ব্যবহারযোগ্য নয়।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "ডায়লগ ফ্রন্টএন্ড emacs শেল বাফারের সাথে অসামঞ্জস্যপূর্ণ"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -165,7 +166,7 @@ msgstr ""
 "ডায়লগ ফ্রন্টএন্ড একটি ডাম্ব টার্মিনালে, একটি emacs শেল বাফারে, বা একটি নিয়ন্ত্রন "
 "টার্মিনাল ছাড়া কাজ করবে না।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -173,12 +174,12 @@ msgstr ""
 "কোনো ব্যবহারযোগ্য ডায়লগ-ধরনের প্রোগ্রাম ইন্সটল করা হয়নি, কাজেই ডায়লগ ভিত্তিক "
 "ফ্রন্টএন্ড ব্যবহার করা যাবে না।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr "ডায়লগ ফ্রন্টএন্ডের অন্তত ১৩ লাইন লম্বা এবং ৩১ কলাম প্রস্থের একটি পর্দা প্রয়োজন।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "প্যাকেজ কনফিগারেশন"
 
@@ -206,7 +207,8 @@ msgstr ""
 "আইটেম পরিবর্তন করুন, এবং তারপর সংরক্ষন করে প্রস্থান করুন। এখন debconf সম্পাদিত "
 "ফাইলটি পড়ে দেখবে, এবং সিস্টেম কনফিগার করার জন্য আপনার দেয়া মানগুলো ব্যবহার করবে।"
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "%s এ Debconf"
@@ -219,7 +221,7 @@ msgstr "ফ্রন্টএন্ডের একটি নিয়ন্ত্�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "টার্ম::ReadLine::GNU emacs শেল বাফারের সাথে অসামঞ্জস্যপূর্ন।"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "আরো"
 
@@ -269,53 +271,60 @@ msgstr "টেমপ্লেট পার্স সমস্যা '%1$s' এ�
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "#%2$s এ টেমপ্লেট #%1$s কোনো 'টেমপ্লেট:' লাইন ধারন করে না\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "পূর্বকনফিগারের জন্য কিছু debs উল্লেখ করা লাগবে"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "প্যাকেজ কনফিগারেশন বিলম্ব করা হচ্ছে, যেহেতু apt-utils ইন্সটল করা নেই"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "stdin পুন:খুলতে ব্যর্থ: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates ব্যর্থ: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "প্যাকেজ থেকে টেমপ্লেট এক্সট্র্যাক্ট করা হচ্ছে: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "প্যাকেজ পূর্বকনফিগার করা হচ্ছে ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "টেমপ্লেট পার্স সমস্যা: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: chmod করা যায়নি: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s পূর্বকনফিগার করতে ব্যর্থ, প্রস্থানের স্ট্যাটাস %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
+#, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -329,29 +338,24 @@ msgstr ""
 "       --no-reload\t\tটেমপ্লেট পুনরায় রিলোড করা হবে না। (সতর্কতার সাথে ব্যবহার "
 "করুন।)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s অবশ্যই রুট হিসেবে চালাতে হবে"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "অনুগ্রহ করে পুন:কনফিগারের জন্য একটি প্যাকেজ উল্লেখ করুন"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s ইন্সটল করা নেই"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s ভাঙ্গা বা সম্পূর্ণভাবে ইন্সটল করা নয়"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "স্ট্যাটাস ফাইল পড়া যায়নি: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -421,3 +425,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=package\t\tযেই প্যাকেজ কমান্ডটি ধারন করে সেটি সেট করুন।"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "স্ট্যাটাস ফাইল পড়া যায়নি: %s"

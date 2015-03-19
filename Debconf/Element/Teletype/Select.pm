@@ -77,7 +77,7 @@ sub printlist {
 	# Figure out the upper bound on the number of columns.
 	my $choice_min=length $choices[0];
 	map { $choice_min = length $_ if length $_ < $choice_min } @choices;
-	my $max_cols=int($width / (2 + length(@choices) +  2 + $choice_min)) - 1;
+	my $max_cols=int($width / (2 + length(scalar(@choices)) +  2 + $choice_min)) - 1;
 	$max_cols = $#choices if $max_cols > $#choices;
 
 	my $max_lines;
@@ -94,7 +94,7 @@ COLUMN:	for ($num_cols = $max_cols; $num_cols >= 0; $num_cols--) {
 
 		foreach (my $choice=1; $choice <= $#choices + 1; $choice++) {
 			my $choice_length=2
-				+ length(@choices) + 2
+				+ length(scalar(@choices)) + 2
 				+ length($choices[$choice - 1]);
 			my $current_col=ceil($choice / $max_lines) - 1;
 			if (! defined $col_width[$current_col] ||

@@ -27,7 +27,7 @@ install: install-utils install-rest
 # Anything that goes in the debconf-utils package.
 install-utils:
 	install -d $(prefix)/usr/bin
-	find . -maxdepth 1 -perm +100 -type f -name 'debconf-*' | grep -v debconf-set-selections | grep -v debconf-show | grep -v debconf-copydb | grep -v debconf-communicate | grep -v debconf-apt-progress | grep -v debconf-escape | \
+	find . -maxdepth 1 -perm /100 -type f -name 'debconf-*' | grep -v debconf-set-selections | grep -v debconf-show | grep -v debconf-copydb | grep -v debconf-communicate | grep -v debconf-apt-progress | grep -v debconf-escape | \
 		xargs -i install {} $(prefix)/usr/bin
 
 # Anything that goes in the debconf-i18n package.
@@ -61,7 +61,7 @@ install-rest:
 		install -m 0644 debconf.py $$dir/; \
 	done
 	install -d $(prefix)/usr/lib/python3/dist-packages
-	install -m 0644 debconf3.py $(prefix)/usr/lib/python3/dist-packages/debconf.py
+	install -m 0644 debconf.py $(prefix)/usr/lib/python3/dist-packages/
 	# Special case for back-compatability.
 	install -d $(prefix)/usr/share/perl5/Debian/DebConf/Client
 	cp Debconf/Client/ConfModule.stub \
@@ -72,9 +72,9 @@ install-rest:
 	install -m 0755 transition_db.pl fix_db.pl $(prefix)/usr/share/debconf/
 	# Install essential programs.
 	install -d $(prefix)/usr/sbin $(prefix)/usr/bin
-	find . -maxdepth 1 -perm +100 -type f -name 'dpkg-*' | \
+	find . -maxdepth 1 -perm /100 -type f -name 'dpkg-*' | \
 		xargs -i install {} $(prefix)/usr/sbin
-	find . -maxdepth 1 -perm +100 -type f -name debconf -or -name debconf-show -or -name debconf-copydb -or -name debconf-communicate -or -name debconf-set-selections -or -name debconf-apt-progress -or -name debconf-escape | \
+	find . -maxdepth 1 -perm /100 -type f -name debconf -or -name debconf-show -or -name debconf-copydb -or -name debconf-communicate -or -name debconf-set-selections -or -name debconf-apt-progress -or -name debconf-escape | \
 		xargs -i install {} $(prefix)/usr/bin
 	# Now strip all pod documentation from all .pm files and scripts.
 	find $(prefix)/usr/share/perl5/ $(prefix)/usr/sbin		\

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2008-07-20 11:28+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <debian-l10n-korean@lists.debian.org>\n"
@@ -106,17 +106,18 @@ msgstr "도움말(_H)"
 msgid "Help"
 msgstr "도움말"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr "debconf 설정이 이 오류 메시지를 표시할 수 없으므로 메일로 보냅니다."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "debconf, %s에서 실행 중"
@@ -148,16 +149,16 @@ msgstr "Debconf::Element::%s을(를) 읽을 수 없습니다. 실패 이유: %s"
 msgid "Configuring %s"
 msgstr "%s 설정 중입니다"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr ""
 "TERM 환경변수를 설정하지 않아서 다이얼로그 프론트엔드는 사용할 수 없습니다."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "다이얼로그 프론트엔드는 이맥스 쉘 버퍼와 호환되지 않습니다"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -165,7 +166,7 @@ msgstr ""
 "다이얼로그 프론트엔드는 dumb 터미널이나 이맥스 쉘 버퍼에서, 또는 제어 테미널 "
 "없이는 사용할 수 없습니다."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -173,13 +174,13 @@ msgstr ""
 "dialog나 그와 비슷한 프로그램을 설치하지 않았으므로, 다이얼로그 프론트엔드는 "
 "사용할 수 없습니다."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "다이얼로그 프론트엔드를 사용하려면 화면이 적어도 13행 31열은 되어야 합니다."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "패키지 설정"
 
@@ -207,7 +208,8 @@ msgstr ""
 "시점에 debconf는 편집된 파일을 읽고, 입력한 값을 사용해 시스템을 설정합니다."
 
 # %s - hostname
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "debconf (%s)"
@@ -220,7 +222,7 @@ msgstr "이 프론트엔드는 제어 TTY를 필요로 합니다."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "이 프론트엔드는 이맥스 쉘 버퍼와 호환되지 않습니다."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "계속"
 
@@ -273,54 +275,53 @@ msgstr "`%1$s' 주위에서 템플릿 parse 에러, %3$s의 #%2$s절\n"
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "%2$s의 템플릿 #%1$s에 `Template:' 줄이 없습니다\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "미리 설정할 deb를 지정해야 합니다"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "apt-utils가 설치되지 않았기 때문에 패키지를 미리 설정하지 않습니다"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "표준입력을 다시 열 수 없음: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates 실패: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "패키지에서 템플릿을 추출하는 중: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "패키지를 미리 설정하는 중입니다...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "템플릿 파싱 오류: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: chmod할 수 없음: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s 미리 설정하기 실패, %s 상태로 끝남"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -332,29 +333,24 @@ msgstr ""
 "       --default-priority\tlow 대신 기본 우선 순위를 사용합니다.\n"
 "       --force\t\t\t망가진 패키지를 강제로 다시 설정합니다."
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s 명령은 root로 실행해야 합니다"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "다시 설정할 패키지를 지정하십시오"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s 패키지는 설치되지 않았습니다"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s 패키지는 망가졌거나 완전히 설치되지 않았습니다"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "상태 파일을 읽을 수 없습니다: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -423,3 +419,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=패키지\t\t명령을 소유하고 있는 패키지를 지정합니다."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "상태 파일을 읽을 수 없습니다: %s"

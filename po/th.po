@@ -1,16 +1,16 @@
 # Thai translation of debconf.
-# Copyright (C) 2006 Software in the Public Interest, Inc.
+# Copyright (C) 2006-2014 Software in the Public Interest, Inc.
 # This file is distributed under the same license as the debconf package.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2006.
+# Theppitak Karoonboonyanan <thep@debian.org>, 2006-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
-"PO-Revision-Date: 2006-10-22 17:19+0700\n"
-"Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
-"Language-Team: Thai <l10n@opentle.org>\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"PO-Revision-Date: 2014-12-12 22:34+0700\n"
+"Last-Translator: Theppitak Karoonboonyanan <thep@debian.org>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,17 +103,17 @@ msgstr "_วิธีใช้"
 msgid "Help"
 msgstr "วิธีใช้"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
-msgstr "debconf ไม่ได้ตั้งค่าไว้ให้แสดงข้อผิดพลาด ดังนั้นจะส่งเมลแจ้งถึงคุณแทน"
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
+msgstr "debconf ไม่แน่ใจว่าข้อผิดพลาดนี้ได้แสดงบนหน้าจอหรือไม่ จึงส่งเมลแจ้งถึงคุณ"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, ทำงานที่ %s"
@@ -145,15 +145,15 @@ msgstr "ไม่สามารถโหลด Debconf::Element::%s ได้ �
 msgid "Configuring %s"
 msgstr "กำลังตั้งค่า %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "ไม่ได้ตั้งค่าตัวแปร TERM ไว้ การติดต่อแบบกล่องโต้ตอบจึงไม่สามารถใช้การได้"
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "การติดต่อแบบกล่องโต้ตอบ ไม่สามารถใช้ร่วมกับบัฟเฟอร์ของเชลล์ของ emacs ได้"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -161,20 +161,20 @@ msgstr ""
 "การติดต่อแบบกล่องโต้ตอบจะไม่ทำงานกับเทอร์มินัลแบบ dumb, กับบัฟเฟอร์ของเชลล์ของ emacs, "
 "หรือโดยไม่มีเทอร์มินัลที่ใช้ควบคุม"
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
 msgstr ""
 "ไม่มีโปรแกรมที่คล้ายกับ 'dialog' ที่ใช้การได้ติดตั้งไว้ ดังนั้น การติดต่อแบบกล่องโต้ตอบจึงใช้การไม่ได้"
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "การติดต่อแบบกล่องโต้ตอบ ต้องใช้หน้าจอสูงอย่างน้อย 13 บรรทัด และกว้างอย่างน้อย 31 คอลัมน์"
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "การตั้งค่าแพกเกจ"
 
@@ -201,7 +201,8 @@ msgstr ""
 "โดยเปลี่ยนแปลงรายการตามต้องการ แล้วบันทึกและออกจากเครื่องมือแก้ไขข้อความ จากนั้น debconf "
 "จะอ่านแฟ้มที่แก้ไข แล้วใช้ค่าต่างๆ ที่คุณป้อนเพื่อตั้งค่าระบบ"
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf ที่เครื่อง %s"
@@ -214,7 +215,7 @@ msgstr "การติดต่อแบบนี้ จำเป็นต้�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU ทำงานร่วมกับบัฟเฟอร์ของเชลล์ของ emacs ไม่ได้"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "มีต่อ"
 
@@ -263,88 +264,81 @@ msgstr "เกิดข้อผิดพลาดขณะแจงต้นแ
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "ต้นแบบคำถาม #%s ใน %s ไม่มีบรรทัด 'Template:'\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "ต้องระบุแพกเกจ deb ที่จะตั้งค่าขั้นต้น"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "จะชะลอการตั้งค่าแพกเกจไว้ก่อน เนื่องจากไม่ได้ติดตั้ง apt-utils ไว้"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "ไม่สามารถเปิด stdin ใหม่ได้: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates ไม่สำเร็จ: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "กำลังดึงต้นแบบคำถามจากแพกเกจ: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "กำลังตั้งค่าขั้นต้นให้กับแพกเกจ ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "แจงต้นแบบคำถามไม่สำเร็จ: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: ไม่สามารถ chmod: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "ตั้งค่าขั้นต้นให้กับ %s ไม่สำเร็จ โดยจบด้วยสถานะ %s"
 
-#: ../dpkg-reconfigure:103
-#, fuzzy
+#: ../dpkg-reconfigure:99
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "วิธีใช้: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tตั้งค่าทุกแพกเกจใหม่\n"
 "  -u,  --unseen-only\t\tแสดงเฉพาะคำถามที่ยังไม่เคยผ่านมาก่อน\n"
 "       --default-priority\tใช้ระดับคำถามปริยายแทนการใช้ระดับต่ำ\n"
-"       --force\t\t\tบังคับตั้งค่าแพกเกจที่เสียหายใหม่"
+"       --force\t\t\tบังคับตั้งค่าแพกเกจที่เสียหายใหม่\n"
+"       --no-reload\t\tไม่ต้องโหลดต้นแบบคำถามซ้ำ (ใช้ด้วยความระมัดระวัง)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s ต้องเรียกโดย root"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "กรุณาเลือกแพกเกจที่จะตั้งค่าใหม่"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s ไม่ได้ติดตั้งไว้"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s เสียหาย หรือติดตั้งไม่สมบูรณ์"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "ไม่สามารถอ่านแฟ้มสถานะ: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -413,3 +407,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=package\t\tกำหนดแพกเกจที่เป็นเจ้าของคำสั่ง"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "ไม่สามารถอ่านแฟ้มสถานะ: %s"

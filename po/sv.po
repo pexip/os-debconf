@@ -2,21 +2,22 @@
 # Copyright 2000-2005 Peter Karlsson
 # Peter Karlsson <peterk@debian.org>, 2000-2005.
 # Peter Karlsson <peterk@debian.org>, 2005.
-#
+# Christoffer Holmstedt <christoffer.holmstedt@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
-"PO-Revision-Date: 2010-03-08 18:40+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"PO-Revision-Date: 2014-12-06 08:44+0100\n"
+"Last-Translator: Christoffer Holmstedt <christoffer.holmstedt@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Bookmarks: 53,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../Debconf/AutoSelect.pm:76
 #, perl-format
@@ -109,19 +110,19 @@ msgstr "_Hjälp"
 msgid "Help"
 msgstr "Hjälp"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
-"Debconf blev inte inställt för att visa detta felmeddelande så det har sänts "
-"till dig via e-post."
+"Debconf är inte säker att detta felmeddelande visades, därför har det "
+"skickats som e-post till dig."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf på %s"
@@ -153,15 +154,15 @@ msgstr "Kan inte ladda Debconf::Element::%s. Misslyckades eftersom: %s"
 msgid "Configuring %s"
 msgstr "Konfigurerar %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM är inte satt, så dialogframänden kan inte användas."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Dialogframänden är inkompatibel med emacs-skalbuffertar"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -169,7 +170,7 @@ msgstr ""
 "Dialogframänden fungerar inte på en dum terminal, i en emacs-skalbuffert, "
 "eller utan en kontrollerande terminal."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -177,14 +178,14 @@ msgstr ""
 "Inget användbart dialogliknande program har installerats, så den "
 "dialogbaserade framänden kan inte användas."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Dialogframänden kräver en skärm som är minst 13 rader hög och 31 kolumner "
 "bred."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Paketkonfiguration"
 
@@ -213,7 +214,8 @@ msgstr ""
 "tidpunkten kommer debconf läsa den redigerade filen, och använda de värden "
 "du angivit för att konfigurera systemet."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf på %s"
@@ -226,7 +228,7 @@ msgstr "Denna framände kräver en kontrollerande tty."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU kan inte användas i Emacs skalbuffert."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Mer"
 
@@ -277,88 +279,81 @@ msgstr "Tolkningsfel nära \"%s\" i mall, i strof %s av %s\n"
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Mall %s i %s innehåller inte någon \"Template:\"-rad\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "måste ange några debpaket att förkonfigurera"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "fördröjer paketkonfigurering eftersom apt-utils ej är installerat"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "kan inte återöppna stdin: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates misslyckades: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Plockar ut mallar från paketen: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Förkonfigurerar paket ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "malltolkfel: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: kan inte byta ägare: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s misslyckades med förkonfigurering, med slutkod %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Användning: dpkg-reconfigure [flaggor] paket\n"
-"  -a,  --all\t\t\tKonfigurera om alla paket.\n"
 "  -u,  --unseen-only\t\tVisa bara osedda frågor.\n"
 "       --default-priority\tAnvänd standard prioritet istället för låg.\n"
 "       --force\t\t\tTvinga omkonfigurering av trasiga paket.\n"
 "       --no-reload\t\tLäs inte om mallar. (Använd med försiktighet.)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s måste köras som root"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "ange ett paket att konfigurera om"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s är inte installerat"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s är trasigt eller inte helt installerat"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Kan inte läsa statusfil: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -427,6 +422,9 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=paket\t\tSätt paketet som äger kommandot."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Kan inte läsa statusfil: %s"
 
 #~ msgid "Save (mail) Note"
 #~ msgstr "Spara (e-post-)notis"

@@ -14,13 +14,6 @@ use Debconf::Config;
 use Debconf::Encoding qw(to_Unicode);
 use base qw{Debconf::FrontEnd};
 
-# Catch this so as not to confuse the poor users if Gtk or Gnome are not
-# installed.
-eval q{
-	use Gtk2;
-};
-die "Unable to load Gtk -- is libgtk2-perl installed?\n" if $@;
-
 =head1 DESCRIPTION
 
 This FrontEnd is a Gnome UI for Debconf.
@@ -121,11 +114,35 @@ sub init {
 		}
 	}
 	else {
+		# Catch scenario where Gtk/Gnome are not installed.
+		use Gtk2;
+
 		@ARGV=@ARGV_for_gnome; # temporary change at first
 		Gtk2->init;
+
+		# Create a window, but don't show it.
+		#
+		# This has the effect of exercising gtk a bit in an
+		# attempt to force an error either in the gtk bindings
+		# themselves, but hopefully also in
+		# gtk/glib/gsettings/etc. There is no guarantee that
+		# this alone will provoke an error, but it's a
+		# relatively safe and reasonable operation to perform
+		# and further reduces the chance of the parent debconf
+		# process ending up in an unrecoverable state.
+		my $window = Gtk2::Window->new('toplevel');
+
 		exit(0); # success
 	}
 	
+	# Only load Gtk after the child has successfully proved it can do
+	# the same. This avoids the problem where a module calls into a
+	# native library and causes the perl interpreter to crash. When
+	# we get to here, we know that the child didn't crash, so it
+	# should be safe for us to attempt it.
+	eval q{use Gtk2;};
+	die "Unable to load Gtk -- is libgtk2-perl installed?\n" if $@;
+
 	my @gnome_sucks=@ARGV;
 	@ARGV=@ARGV_for_gnome;
 	Gtk2->init;
@@ -162,21 +179,8 @@ sub init {
 	$this->assistant->signal_connect("prepare", \&prepare_callback, $this);
 	$this->assistant->set_forward_page_func(\&forward_page_func, $this->assistant);
 	$this->create_assistant_page();
- 
-	# hide cancel and the close button to avoid bugreports from
-	# people that force to close the window
-	$this->assistant->signal_connect("realize", sub { 
-		$this->assistant->window->set_functions(["resize","move","maximize"]) 
-	});
-	# Force "Cancel" button to be hidden all the time. Merely calling
-	# hide() after all our show() calls is insufficient, as
-	# this still causes the button to appear when going back.
-	$this->assistant->get_cancel_button->signal_connect("show", sub { 
-		$this->assistant->get_cancel_button->hide 
-	});
 
 	$this->assistant->show;
-	$this->assistant->get_cancel_button->hide;
 }
 
 =item go
