@@ -1,21 +1,22 @@
 # translation of bg.po to Bulgarian
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the debconf package.
+# Damyan Ivanov <dmn@debian.org>, 2006, 2007, 2009, 2012, 2014.
 #
-# Damyan Ivanov <dam@modsoftsys.com>, 2006, 2007, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
-"PO-Revision-Date: 2009-11-26 11:37+0200\n"
-"Last-Translator: Damyan Ivanov <dam@modsoftsys.com>\n"
-"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"PO-Revision-Date: 2014-12-05 00:01+0200\n"
+"Last-Translator: Damyan Ivanov <dmn@debian.org>\n"
+"Language-Team: Български <dict@fsa-bg.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Gtranslator 2.91.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../Debconf/AutoSelect.pm:76
 #, perl-format
@@ -106,19 +107,19 @@ msgstr "_Помощ"
 msgid "Help"
 msgstr "Помощ"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
-"Настройките на debconf не позволяват показването на това съобщение. Поради "
-"тази причина то Ви беше изпратено по електронната поща."
+"Не е сигурно дали съобщението за грешка е било показано на оператора и "
+"затова се изпраща по електронната поща."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, %s"
@@ -150,15 +151,15 @@ msgstr "Unable to load Debconf::Element::%s. Failed because: %s"
 msgid "Configuring %s"
 msgstr "Настройване на %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "TERM is not set, so the dialog frontend is not usable."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Dialog frontend is incompatible with emacs shell buffers"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -166,7 +167,7 @@ msgstr ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -174,13 +175,13 @@ msgstr ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Интерфейсът „dialog“ изисква терминалът да бъде поне 13 реда на 31 колони."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Настройка на пакет"
 
@@ -208,7 +209,8 @@ msgstr ""
 "си, запишете го и излезте ит редактора. Debconf ще прочете файла и ще "
 "приложи указаните промени."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf на %s"
@@ -221,7 +223,7 @@ msgstr "Този интерфейс изисква контролен терми
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::Readline::GNU не е съвместим с буферите на emacs."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Още"
 
@@ -271,61 +273,58 @@ msgstr "Грешка при анализ близо до '%s', в текста #
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Шаблонът #%s в %s не съдържа ред 'Template:'\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "не са указани пакети за пренастройване"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "apt-utils не е инсталиран; отлагане на настройката на пакетите"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "грешка при отваряне на стандартния вход: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "грешка при apt-extracttemplates: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Извличане на шаблони от пакети: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Предварително настройване на пакети ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "грешка при анализ на шаблон: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: грешха при промяна на правата на файл: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "Грешка при предварителната настройка на %s. Код за грешка: %s"
 
-#: ../dpkg-reconfigure:103
-#, fuzzy
+#: ../dpkg-reconfigure:99
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Употреба: dpkg-reconfigure [параметри] пакети\n"
-"  -a,  --all\t\t\tПренастройване на всички пакети.\n"
 "  -u,  --unseen-only\t\tПоказване само на незададените въпроси.\n"
 "       --default-priority\tИзползване на приоритет по подразбиране вместо "
 "„low“ (нисък).\n"
@@ -333,29 +332,24 @@ msgstr ""
 "       --no-reload\t\tБез презареждане на шаблоните. (Да се използва "
 "предпазливо)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s трябва да се изпълнява като потребител „root“"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "укажете пакет за пренастройка"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s не е инсталиран"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s има проблем в инсталацията"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Грешка при четене на файла със състоянията: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -424,3 +418,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o  --owner-package\t\tУказване на пакет, притежаващ командата."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Грешка при четене на файла със състоянията: %s"

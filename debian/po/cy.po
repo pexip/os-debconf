@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
 "POT-Creation-Date: 2009-08-24 19:24+0200\n"
-"PO-Revision-Date: 2006-03-17 18:02+0000\n"
-"Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
+"PO-Revision-Date: 2012-06-13 22:32-0000\n"
+"Last-Translator: Dafydd Tomos <l10n@da.fydd.org>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
 "Language: cy\n"
 "MIME-Version: 1.0\n"
@@ -24,31 +24,31 @@ msgstr ""
 #. Choices
 #: ../templates:1001
 msgid "Dialog"
-msgstr ""
+msgstr "Dialog"
 
 #. Type: select
 #. Choices
 #: ../templates:1001
 msgid "Readline"
-msgstr ""
+msgstr "Readline"
 
 #. Type: select
 #. Choices
 #: ../templates:1001
 msgid "Editor"
-msgstr ""
+msgstr "Golygydd"
 
 #. Type: select
 #. Choices
 #: ../templates:1001
 msgid "Noninteractive"
-msgstr ""
+msgstr "An-rhyngweithiol"
 
 #. Type: select
 #. Description
 #: ../templates:1002
 msgid "Interface to use:"
-msgstr ""
+msgstr "Rhyngwyneb i ddefnyddio:"
 
 #. Type: select
 #. Description
@@ -57,6 +57,9 @@ msgid ""
 "Packages that use debconf for configuration share a common look and feel. "
 "You can select the type of user interface they use."
 msgstr ""
+"Mae pecynnau sy'n defnyddio debconf ar gyfer cyfluniad yn rhannu edrychiad a "
+"teimlad cyffredin. Fe allwch chi ddewis y math o ryngwyneb maent yn "
+"ddefnyddio."
 
 #. Type: select
 #. Description
@@ -69,6 +72,13 @@ msgid ""
 "you configure things using your favorite text editor. The noninteractive "
 "frontend never asks you any questions."
 msgstr ""
+"Mae pen blaen dialog yn ryngwyneb sgrîn-lawn testun graffigol, tra fod y pen "
+"blaen readline yn defnyddio rhyngwyneb testun plaen mwy traddodiadol, tra "
+"fod pen blaen gnome a kde yn ryngwynebau X modern, yn gweddu i'r pen bwrdd "
+"perthnasol (ond gellir ei defnyddio mewn unrhyw amgylchedd X). Mae'r "
+"rhyngwyneb golygydd yn eich caniatau i gyflunio pethau gan ddefnyddio eich "
+"hoff olygydd testun. Nid yw'r pen blaen an-rhyngweithiol yn gofyn unrhyw "
+"gwestiynau o gwbl."
 
 #. Type: select
 #. Choices
@@ -97,9 +107,8 @@ msgstr "isel"
 #. Type: select
 #. Description
 #: ../templates:2002
-#, fuzzy
 msgid "Ignore questions with a priority less than:"
-msgstr "Anwybyddu cwestiynnau gyda blaenoriaeth yn llai na..."
+msgstr "Anwybyddu cwestiynau gyda blaenoriaeth llai na:"
 
 #. Type: select
 #. Description
@@ -113,6 +122,13 @@ msgid ""
 "  - 'medium' is for normal questions\n"
 "  - 'low' is for control freaks who want to see everything"
 msgstr ""
+"Mae debconf yn blaenoriaethu'r cwestiynau mae'n ofyn i chi. Dewiswch y "
+"flaenoriaeth isaf o gwestiynau hoffech chi eu gweld:\n"
+"  - 'hanfodol' - mae'n eich holi dim ond os allai'r system dorri.\n"
+"    Dewiswch hwn os ydych yn ddechreuwr, neu mewn brys\n"
+"  - 'uchel' - mae'n gofyn cwestiynau tra bwysig\n"
+"  - 'canolig' - mae'n gofyn cwestiynau cyffredin\n"
+"  - 'isel' - ar gyfer creaduriaid od sydd eisiau gweld popeth"
 
 #. Type: select
 #. Description
@@ -121,18 +137,20 @@ msgid ""
 "Note that no matter what level you pick here, you will be able to see every "
 "question if you reconfigure a package with dpkg-reconfigure."
 msgstr ""
+"Nodwch fod dim ots pa lefel rydych yn ddewis yma, fe allwch chi weld pob "
+"cwestiwn os ydych yn ail-gyflunio pecyn gyda dpkg-reconfigure."
 
 #. Type: text
 #. Description
 #: ../templates:3001
 msgid "Installing packages"
-msgstr ""
+msgstr "Yn gosod pecynnau"
 
 #. Type: text
 #. Description
 #: ../templates:4001
 msgid "Please wait..."
-msgstr ""
+msgstr "Arhoswch os gwelwch yn dda..."
 
 #. Type: text
 #. Description
@@ -141,7 +159,7 @@ msgstr ""
 #. to install a package or a collection of packages
 #: ../templates:6001
 msgid "Media change"
-msgstr ""
+msgstr "Newid cyfrwng"
 
 #~ msgid ""
 #~ "Packages that use debconf for configuration prioritize the questions they "

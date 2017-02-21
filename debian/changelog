@@ -1,18 +1,229 @@
-debconf (1.5.42ubuntu1pexip1) pexip; urgency=low
+debconf (1.5.56pexip1) pexip; urgency=low
 
-  * Prepare Pexip packaging
+  * Migrate to Jessie
 
- -- John-Mark Bell <jmb@pexip.com>  Tue, 24 Dec 2013 14:42:18 +0000
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 21 Feb 2017 18:39:12 +0000
 
-debconf (1.5.42ubuntu1) precise; urgency=low
+debconf (1.5.56) unstable; urgency=medium
 
-  * Resynchronise with Debian.  Remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons, to avoid breaking
-      maintainer scripts.
-  * Ubuntu's dpkg-query still uses ${PackageSpec} for multiarch support
-    rather than the newer ${binary:Package}.  Support this as well for now.
+  [ Helmut Grohne ]
+  * Tighten dependency on debconf for packages sharing their /usr/share/doc
+    to comply with Debian policy 12.3 (closes: #779420).
 
- -- Colin Watson <cjwatson@ubuntu.com>  Thu, 15 Mar 2012 12:56:18 +0000
+  [ Colin Watson ]
+  * Make Debconf::DbDriver::File stop trying to mkdir the empty string if
+    configured with a path that does not contain a slash (closes: #682959).
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 19 Mar 2015 00:54:33 +0000
+
+debconf (1.5.55) unstable; urgency=low
+
+  * Team upload
+
+  [ Programs translations ]
+  * Dutch updated. Closes: #771731
+  * Spanish updated. Closes: #771847
+  * Indonesian updated
+  * Catalan updated
+  * Japanese updated. Closes: #771886
+  * Basque updated. Closes: #771899
+  * Romanian updated. Closes: #772065
+  * Bulgarian updated. Closes: #772077
+  * Polish updated
+  * Swedish updated
+  * Esperanto updated
+  * Portuguese updated. Closes: #772582
+  * Turkish updated. Closes: #772813
+  * Brazilian Portuguese updated. Closes: #773076
+  * Thai updated. Closes: #772967
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 14 Dec 2014 08:43:06 +0100
+
+debconf (1.5.54) unstable; urgency=medium
+
+  * Team upload
+
+  [ Colin Watson ]
+  * Update Vcs-* to current canonical URLs.
+
+  [ Manpages translations ]
+  * Portuguese updated. Closes: #756178
+
+  [ Programs translations ]
+  * Czech updated. Closes: #764054
+  * Russian updated. Closes: #765914
+  * Slovenian updated. Closes: #766199
+  * Fix typo in Hungarian translation. Closes: #770803
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 24 Nov 2014 11:06:08 +0100
+
+debconf (1.5.53) unstable; urgency=low
+
+  [ Apollon Oikonomopoulos ]
+  * Teletype: page only if screen has more than two rows
+    Closes: #745504
+
+  [ Programs translations ]
+  * German.
+  * French (Christian Perrier).
+  * Danish (Joe Hansen). Closes: #732167
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 22 Apr 2014 20:03:26 -0400
+
+debconf (1.5.52) unstable; urgency=low
+
+  [Joey Hess]
+  * Remove dpkg-reconfigure -a, which existed only to accumulate bug
+    reports about bugs in other packages.
+    Closes: #721329, #664825, #558262, #617618, #707987
+  * Fix bad uses of length @array. Closes: #723841
+
+  [ Programs translations ]
+  * Russian (Yuri Kozlov). Closes: #718188
+
+  [ Manpages translations ]
+  * French updated. Closes: #697458
+  * German updated.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 03 Nov 2013 14:15:51 -0400
+
+debconf (1.5.51) unstable; urgency=low
+
+  * Fix warning when /var/cache/debconf is missing.
+    Closes: #709928
+  * debconf-set-selections: Do not change the default template
+    value when overriding the value of existing questions. Closes: #711693
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 26 Aug 2013 13:26:46 -0400
+
+debconf (1.5.50) unstable; urgency=low
+
+  * KDE frontend: Work around multiple bugs in the perl code generated
+    by puic4. The frontend works again. Closes: #702210
+  * doc/Makefile: Avoid adding duplicated =encoding to pod files.
+    Closes: #704866
+  * Avoid find -perm +mode breakage caused by findutils 4.5.11,
+    by instead using -perm /mode. Thanks, Oron Peled
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 04 May 2013 23:45:04 -0400
+
+debconf (1.5.49) unstable; urgency=low
+
+  * frontend: Don't set title in the maintainer script case when the
+    action is “triggered”. This totally confuses the Debian Installer
+    (“Configuring man-db” instead of “Configuring grub-pc”, notably).
+    Closes: #679327
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 26 Dec 2012 02:02:36 +0100
+
+debconf (1.5.48) unstable; urgency=low
+
+  * dpkg-reconfigure: Fix incorrect scoping of control_path that broke
+    handling of multiple packages (closes: #690755, LP: #1076322).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2012 13:31:38 +0000
+
+debconf (1.5.47) unstable; urgency=low
+
+  [ Manpages translations ]
+  * German updated.
+
+  [ Joey Hess ]
+  * GTK frontend: Do additional probing in child process to catch cases
+    where trying to use GTK will cause an otherwise uncatchable crash.
+    Closes: #690776 Thanks, James Hunt
+  * debconf-devel.7: Mention that CAPB capabilities are separated with spaces.
+    Closes: #694626
+
+  [ Colin Watson ]
+  * dpkg-reconfigure: Fix trigger processing to cope properly if some of the
+    triggered packages use debconf (closes: #686071).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2012 13:18:46 +0000
+
+debconf (1.5.46) unstable; urgency=low
+
+  [ Manpages translations ]
+  * Put the Danish translation of manpages from #664901 in the right
+    place (and also convert its encoding that was broken by a BTS bug)
+  * Activate Danish translation of manpages by adding the needed addenda
+    Closes: #664901
+  
+  [ Programs translations ]
+  * Danish (Joe Dalton). Closes: #683191
+  * Fix typo in the french translation of debconf-show(1)
+    LP: #1025045    
+  * Polish (Marcin Owsiany). Closes: #683207
+  * Japanese (Kenshi Muto). Closes: #683223
+  * Bengali PO file header fixed
+  * Esperanto updated (Felipe Castro).
+  * Indonesian updated (Andika Triwidada).
+  * Simplified Chinese updated (Xingyou Chen).
+  * Bulgarian updated (Damyan Ivanov). Closes: #683245
+  * Russian (Yuri Kozlov). Closes: #683306
+  * Slovak (Ivan Masár). Closes: #683341
+  * French (Steve Petruzzello).
+  * Basque (Iñaki Larrañaga Murgoitio). Closes: #683527
+  * Czech (Miroslav Kure). Closes: #683548
+  * Thai (Theppitak Karoonboonyanan). Closes: #683585
+  * Portuguese (Miguel Figueiredo). Closes: #683615
+  * Finnish (Tommi Vainikainen). Closes: #683967
+  * Catalan (Jordi Mallach).
+  * Vietnamese (Nguyễn Vũ Hưng).
+  * Arabic (Ossama Khayat).
+  * Hebrew (Lior Kaplan).
+
+  [ David Prévot ]
+  * Make sure to keep the previous strings while updating PO files.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 13 Aug 2012 13:17:14 +0100
+
+debconf (1.5.45) unstable; urgency=low
+
+  [ Programs translations ]
+  * German updated.
+
+  [ Colin Watson ]
+  * dpkg-reconfigure: Fix dpkg-query parsing when detecting which triggers
+    are pending (LP: #1018884).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 02 Jul 2012 15:57:38 +0100
+
+debconf (1.5.44) unstable; urgency=low
+
+  [ Debconf translations ]
+  * Vietnamese (Hai Lang)
+  * Latvian (Rūdolfs Mazurs).  Closes: #674707
+  * Lithuanian (Rimas Kudelis).  Closes: #675699
+  * Welsh (Daffyd Tomos).
+
+  [ Joey Hess ]
+  * File DbDriver: Get actual filename, following symlinks.
+    This makes it possible to switch back and forth between
+    debconf and cdebconf. Thanks, Regis Boudin
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 19 Jun 2012 19:03:42 -0400
+
+debconf (1.5.43) unstable; urgency=low
+
+  [ Programs translations ]
+  * Danish updated. Closes: #664901
+
+  [ Debconf translations ]
+  * Uyghur (Sahran). Closes: #627013
+  * Serbian Latin (Janos Guljas). Closes: #600143
+
+  [ Colin Watson ]
+  * Make debconf.py Python 3-compatible directly, which only requires
+    dropping pre-2.6 support (2.6 was in squeeze), and drop the separate
+    debconf3.py implementation.  The previous Python 3 implementation
+    expected read and write to be binary files, while this expects them to
+    be text files.  Technically this is an interface break, but since
+    'import debconf; debconf.Debconf()' was failing (since sys.stdin and
+    sys.stdout are text files), I claim that nobody was using this until now
+    anyway.
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 06 May 2012 18:57:59 +0100
 
 debconf (1.5.42) unstable; urgency=low
 
@@ -56,21 +267,6 @@ debconf (1.5.42) unstable; urgency=low
 
  -- Colin Watson <cjwatson@debian.org>  Wed, 14 Mar 2012 09:08:49 +0000
 
-debconf (1.5.41ubuntu2) precise; urgency=low
-
-  * Also look for whiptail in /bin/whiptail since it's been moved there
-    in Ubuntu.
-
- -- Stéphane Graber <stgraber@ubuntu.com>  Fri, 10 Feb 2012 17:41:35 -0500
-
-debconf (1.5.41ubuntu1) precise; urgency=low
-
-  * Resynchronise with Debian.  Remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons, to avoid breaking
-      maintainer scripts.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Sun, 27 Nov 2011 09:30:59 +0000
-
 debconf (1.5.41) unstable; urgency=low
 
   [ Colin Watson ]
@@ -82,14 +278,6 @@ debconf (1.5.41) unstable; urgency=low
     the DEBCONF_USE_CDEBCONF variable is set. (Regis Boudin)
 
  -- Joey Hess <joeyh@debian.org>  Fri, 29 Jul 2011 12:35:06 +0200
-
-debconf (1.5.40ubuntu1) oneiric; urgency=low
-
-  * Resynchronise with Debian.  Remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons, to avoid breaking
-      maintainer scripts.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Thu, 23 Jun 2011 07:53:21 +0100
 
 debconf (1.5.40) unstable; urgency=low
 
@@ -127,27 +315,6 @@ debconf (1.5.40) unstable; urgency=low
     pointing this out.
 
  -- Colin Watson <cjwatson@debian.org>  Wed, 22 Jun 2011 22:50:23 +0100
-
-debconf (1.5.39ubuntu1) oneiric; urgency=low
-
-  * Merge from Debian unstable.  Remaining changes:
-    - Debconf/FrontEnd/Gnome.pm: Port from Gnome2::Druid to
-      Gtk2::Assistant.
-    - Debconf/Element/Gnome/Select.pm: Drop unused Gnome2 import.
-    - debian/control: Change libgnome2-perl suggestion to libgtk2-perl
-      accordingly.
-    - Convert from deprecated Gtk2::Combo to Gtk2::ComboBox.
-    - Make sure you can't press Forward on a progress bar in the Gnome
-      frontend.
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons, to avoid breaking
-      maintainer scripts.
-    - Build for python2.7, and not for python2.4 or python2.5.
-    - Convert debconf.py for python3.1 and install.
-  * Dropped changes, merged in Debian:
-    - Mark debconf Multi-Arch: foreign to indicate that it satisfies the
-      dependencies of packages from other than the native arch.
-
- -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 12 Jun 2011 19:31:40 +0000
 
 debconf (1.5.39) unstable; urgency=low
 
@@ -207,52 +374,6 @@ debconf (1.5.37) unstable; urgency=low
     as Florian already translated appropriately).
 
  -- Colin Watson <cjwatson@debian.org>  Mon, 29 Nov 2010 18:11:22 +0000
-
-debconf (1.5.36ubuntu4) natty; urgency=low
-
-  * Mark debconf Multi-Arch: foreign to indicate that it satisfies the
-    dependencies of packages from other than the native arch.
-
- -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 20 Feb 2011 02:11:47 -0800
-
-debconf (1.5.36ubuntu3) natty; urgency=low
-
-  [ Martin Pitt ]
-  * Debconf/FrontEnd/Gnome.pm: Port from Gnome2::Druid to Gtk2::Assistant.
-    Original patch by Jani Monoses, thanks! (LP: #415038)
-  * Debconf/Element/Gnome/Select.pm: Drop unused Gnome2 import.
-  * debian/control: Change libgnome2-perl suggestion to libgtk2-perl
-    accordingly.
-
-  [ Colin Watson ]
-  * Fix Gnome frontend to honour backup capability again, and make backup
-    page handling work properly.
-  * Version libgtk2-perl Suggests to match the upstream version where
-    Gtk2::Assistant was introduced.
-  * Convert from deprecated Gtk2::Combo to Gtk2::ComboBox.
-  * Make sure you can't press Forward on a progress bar in the Gnome
-    frontend.
-  * Backport from trunk:
-    - Correctly handle disabling the backup capability in a confmodule after
-      it was previously enabled.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Fri, 17 Dec 2010 13:47:36 +0000
-
-debconf (1.5.36ubuntu2) natty; urgency=low
-
-  * Support Python 2.7.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Fri, 03 Dec 2010 00:04:06 +0000
-
-debconf (1.5.36ubuntu1) natty; urgency=low
-
-  * Resynchronise with Debian.  Remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons, to avoid breaking
-      maintainer scripts.
-    - Build for python2.6, and not for python2.4 or python2.5.
-    - Convert debconf.py for python3.1 and install.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Wed, 24 Nov 2010 15:24:17 +0000
 
 debconf (1.5.36) unstable; urgency=low
 
@@ -328,29 +449,6 @@ debconf (1.5.33) unstable; urgency=low
     strict parsers.
 
  -- Colin Watson <cjwatson@debian.org>  Sun, 11 Jul 2010 13:10:04 +0100
-
-debconf (1.5.32ubuntu3) maverick; urgency=low
-
-  * Don't use dh_python[23] to install the debconf.py module.
-
- -- Matthias Klose <doko@ubuntu.com>  Mon, 27 Sep 2010 20:19:13 +0200
-
-debconf (1.5.32ubuntu2) maverick; urgency=low
-
-  * Move the debconf module for python3 into /usr/lib/python3/dist-modules.
-  * Remove the build dependency on python-central, use dh_python[23].
-
- -- Matthias Klose <doko@ubuntu.com>  Sun, 26 Sep 2010 17:33:43 +0200
-
-debconf (1.5.32ubuntu1) maverick; urgency=low
-
-  * Resynchronise with Debian.  Remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons, to avoid breaking
-      maintainer scripts.
-    - Build for python2.6, and not for python2.4 or python2.5.
-    - Convert debconf.py for python3.1 and install.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Fri, 21 May 2010 17:16:39 +0100
 
 debconf (1.5.32) unstable; urgency=low
 
@@ -442,36 +540,6 @@ debconf (1.5.29) unstable; urgency=low
 
  -- Colin Watson <cjwatson@debian.org>  Sun, 21 Mar 2010 20:51:30 +0000
 
-debconf (1.5.28ubuntu4) lucid; urgency=low
-
-  * Build for python3.1 rather than python3.0.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Fri, 09 Apr 2010 15:13:10 +0100
-
-debconf (1.5.28ubuntu3) lucid; urgency=low
-
-  * Stop building for python2.5 (LP: #558453).
-
- -- Colin Watson <cjwatson@ubuntu.com>  Thu, 08 Apr 2010 19:13:30 +0100
-
-debconf (1.5.28ubuntu2) lucid; urgency=low
-
-  * Gnome.pm: Do not show "Cancel" or "Close" buttons 
-    so that the maintainer scripts do not break
-    (LP: #517813 #517810 #517720)
-
- -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 05 Feb 2010 15:52:59 -0800
-
-debconf (1.5.28ubuntu1) lucid; urgency=low
-
-  * Resynchronise with Debian. Remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons during release
-      upgrades.  Debian Bug: #501767.
-    - Build for python2.6, and not for python2.4.
-    - Convert debconf.py for python3.0 and install.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Tue, 10 Nov 2009 16:24:10 +0000
-
 debconf (1.5.28) unstable; urgency=low
 
   [ Colin Watson ]
@@ -527,24 +595,6 @@ debconf (1.5.28) unstable; urgency=low
 
  -- Joey Hess <joeyh@debian.org>  Mon, 19 Oct 2009 20:14:23 -0400
 
-debconf (1.5.27ubuntu2) karmic; urgency=low
-
-  * Backport from trunk:
-    - Remove unused 'use I18N::Langinfo' from Debconf::Element::Gnome
-      (LP: #387112).
-
- -- Colin Watson <cjwatson@ubuntu.com>  Fri, 02 Oct 2009 10:11:27 +0100
-
-debconf (1.5.27ubuntu1) karmic; urgency=low
-
-  * Resynchronise with Debian. Remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons during release
-      upgrades.  Debian Bug: #501767.
-    - Build for python2.6.
-    - Convert debconf.py for python3.0 and install.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Tue, 07 Jul 2009 12:57:05 +0100
-
 debconf (1.5.27) unstable; urgency=low
 
   * Fix Plural-Forms header in Tagalog translation.
@@ -578,34 +628,6 @@ debconf (1.5.27) unstable; urgency=low
   * Added Bengali
 
  -- Colin Watson <cjwatson@debian.org>  Fri, 03 Jul 2009 14:36:50 +0100
-
-debconf (1.5.26ubuntu3) jaunty; urgency=low
-
-  * debconf-apt-progress: DEBIAN_HAS_FRONTEND is always set here at some
-    point, even if only on the second run after starting debconf, so we need
-    to invert our handling of the check for whether we started the debconf
-    frontend ourselves (LP: #347648).
-
- -- Colin Watson <cjwatson@ubuntu.com>  Tue, 24 Mar 2009 03:22:29 +0000
-
-debconf (1.5.26ubuntu2) jaunty; urgency=low
-
-  * debconf-apt-progress: If we didn't start the debconf frontend ourselves,
-    then it's unlikely that the passthrough child will be able to start
-    debconf normally, so tell it to use a pipe database in that case and
-    rely on passthrough to save answers (LP: #337306).
-
- -- Colin Watson <cjwatson@ubuntu.com>  Sat, 21 Mar 2009 00:43:56 +0000
-
-debconf (1.5.26ubuntu1) jaunty; urgency=low
-
-  * Resynchronise with Debian. Remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons during release
-      upgrades.  Debian Bug: #501767.
-    - Build for python2.6.
-    - Convert debconf.py for python3.0 and install.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Wed, 04 Mar 2009 11:03:24 +0000
 
 debconf (1.5.26) unstable; urgency=low
 
@@ -652,44 +674,6 @@ debconf (1.5.25) unstable; urgency=low
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 19 Feb 2009 00:04:02 +0000
 
-debconf (1.5.24ubuntu4) jaunty; urgency=low
-
-  * Build for python2.6.
-  * Convert debconf.py for python3.0 and install.
-
- -- Matthias Klose <doko@ubuntu.com>  Sun, 22 Feb 2009 11:23:16 +0100
-
-debconf (1.5.24ubuntu3) jaunty; urgency=low
-
-  * Backport from trunk:
-    - Only use -C fields when explicitly disabling internationalisation
-      within debconf (or when DEBCONF_C_VALUES=true), not merely when in the
-      C locale. Based on a patch by Frans Pop, for which thanks! Closes:
-      #476873
-    - Force fallback to the default template if we encounter 'en' in the
-      locale list and no language-specific template for English was
-      found,since English text is usually found in a plain field rather than
-      something like Choices-en.UTF-8. This allows you to override other
-      locale variables for a different language with LANGUAGE=en. Thanks
-      again to Frans Pop.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Mon, 26 Jan 2009 15:30:16 +0000
-
-debconf (1.5.24ubuntu2) jaunty; urgency=low
-
-  * Support overriding frontend's package name determination (used to set
-    the owner) using the DEBCONF_PACKAGE environment variable.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Mon, 22 Dec 2008 14:48:47 +0000
-
-debconf (1.5.24ubuntu1) jaunty; urgency=low
-
-  * Merge from debian unstable, remaining changes:
-    - Gnome.pm: Do not show "Cancel" or "Close" buttons during release
-      upgrades.  Debian Bug: #501767.
-
- -- Scott James Remnant <scott@ubuntu.com>  Wed, 05 Nov 2008 07:07:22 +0000
-
 debconf (1.5.24) unstable; urgency=low
 
   [ Joey Hess ]
@@ -731,27 +715,6 @@ debconf (1.5.24) unstable; urgency=low
     5.10.0-16) as bug #500210 broke the Russian pages. Closes: #485756
 
  -- Colin Watson <cjwatson@debian.org>  Sun, 12 Oct 2008 18:07:17 +0100
-
-debconf (1.5.23ubuntu2) intrepid; urgency=low
-
-  * Gnome.pm:
-    - On release upgrades, do not show the "Cancel" button and hide 
-      the close button in the main window. "Cancel" (or close) 
-      during a install will make the maintainer script fail so its 
-      not desirable.
-
- -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 10 Oct 2008 09:50:40 +0200
-
-debconf (1.5.23ubuntu1) intrepid; urgency=low
-
-  * Backport from trunk:
-    - Fall back to untranslated fields if asking explicitly for any
-      nonexistent translated field, not just Choices-C. For example, asking
-      for Choices-en.UTF-8 should fall back to Choices if Choices-en.UTF-8
-      doesn't exist. LP: #271652
-    - Remove some dead code in Debconf::Template::AUTOLOAD.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Fri, 19 Sep 2008 01:59:06 +0100
 
 debconf (1.5.23) unstable; urgency=low
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po.pot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2006-10-06 10:46+0530\n"
 "Last-Translator: Jurmey Rabgay <jur_gay@yahoo.com>\n"
 "Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -112,19 +112,20 @@ msgstr "གྲོགས་རམ།(_H)"
 msgid "Help"
 msgstr "གྲོགས་རམ།"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
+#, fuzzy
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
 "Debconfའདི་ འཛོལ་བའི་འཕྲིན་དོན་བཀྲམ་སྟོན་འབད་ནིའི་དོན་ལུ་ རིམ་སྒྲིག་མ་འབདཝ་ལས་ ཁྱོད་ལུ་ཡིག་འཕྲིན་"
 "བཏང་ཡོདཔ།"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf %sལུ་ གཡོག་བཀོལ་དོ།"
@@ -155,15 +156,15 @@ msgstr ""
 msgid "Configuring %s"
 msgstr "%sརིམ་སྒྲིག་འབད་དོ།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "དུས་ཡུན་འདི་གཞི་སྒྲིག་མ་འབདཝ་ལས་བརྟེན་ ཌའི་ལོག་གདོང་མཐའ་འདི་ ལག་ལེན་འཐབ་བཏུབ་མེན།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "ཌའི་ལོག་གདོང་མཐའ་འདི་ ཨི་མེཀསི་ཤལ་གནས་ཁོངས་དང་བཅས་ མཐུན་འགྱུར་ཅན་མེན།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -171,7 +172,7 @@ msgstr ""
 "ཌའི་ལོག་གདོང་མཐའ་འདི་གིས་ ཌམཔ་ཊར་མི་་ནཱལ་གུ་དང་ ཨི་མེཀསི་ཤལ་གནས་ཁོངས་ ཡང་ན་ ཊར་མི་ནཱལ་ཚད་"
 "བཟུང་མ་འབད་བའི་གུ་ལུ་ ལཱ་འབད་མི་བཏུབ།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -179,14 +180,14 @@ msgstr ""
 "ལས་རིམ་བཟུམ་གྱི་ཌའི་ལོག་ལག་ལེན་འཐབ་བཏུབ་ གཞི་བཙུགས་མ་འབདཝ་ལས་ ཌའི་ལོག་ལུ་གཞི་བཞག་ཡོད་པའི་གདོང་"
 "མཐའ་ ལག་ལེན་འཐབ་མི་བཏུབ།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "ཌའི་ལོག་གདོང་མཐའ་ལུ་ གསལ་གཞིའི་གྲལ་ཐིག་མཐོ་ཚད་ཉུང་མཐའ་བཅུ་གསུམ་དང་ ཀེར་ཐིག་རྒྱ་ཚད་ཉུང་མཐའ་སོ་"
 "གཅིག་ དགོཔ་ཨིན།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "ཐུམ་སྒྲིལ་རིམ་སྒྲིག"
 
@@ -215,7 +216,8 @@ msgstr ""
 "ཞུན་དག་འབད་ཡོད་པའི་ཡིག་སྣོད་འདི་ ལྷག་ཞིནམ་ལས་ ཁྱོད་ཀྱིས་རིམ་ལུགས་རིམ་སྒྲིག་གི་དོན་ལུ་ བཙུགས་ཡོའ་པའི་བེ་"
 "ལུ་ཚུ་ ལག་ལེན་འདབ་འོང་།"
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "%sགུ་ Debconf"
@@ -228,7 +230,7 @@ msgstr "གདོང་མཐའ་འདི་ལུ་ ཚད་འཛིན�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU འདི་ ཨི་མེཀསི་ཤལ་གནས་ཁོངས་དང་བཅས་ མཐུན་འགྱུར་ཅན་མེན།"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "ཧེང་བཀལ།"
 
@@ -279,54 +281,53 @@ msgstr "%sགི་ ཚིགས་བཅད་ #%s ནང་  `%s'གི་ས�
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr " %sནང་ཡོད་པའི་ ཊེམ་པེལེཊི་ #%sནང་ལུ་ 'ཊེམ་པེལེཊི་'མེད་:གྲལ་ཐིག\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "སྔ་གོང་སྔོན་སྒྲིག་འབད་ནི་ལུ་ ཌེབསི་ལ་ལོ་ཅིག་གསལ་བཀོད་འབད་དགོ"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "apt-util འདི་གཞི་བཙུགས་མ་འབད་ཞིནམ་ལས་ཚུར་ ཐུམ་སྒྲིལ་རིམ་སྒྲིག་ཕྱིར་འགྱངས་ནི།"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "ཨེསི་ཊི་ཌི་ཨའི་ཨེན་ ལོག་ཁ་ཕྱེ་མ་ཚུགས་:%s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplatesའདི་འཐུས་ཤོར་བྱུང་ཡོདཔ་:%s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "ཐུམ་སྒྲིལ་ཚུ་ནང་ལས་ ཊེམ་པེལེཊིསི་ཕྱིར་འདོན་འབད་དོ་:%d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "ཐུམ་སྒྲིལ་ཚུ་སྔ་གོང་རིམ་སྒྲིག་འབད་དོ.....\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "ཊེམ་པེལེཊི་ མིང་དཔྱད་འཛོལ་བ་:%s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf:  chmodའབད་མི་ཚུགས་:%s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "ཕྱིར་འཐོན་གནས་ཚད་ %sདང་བཅས་ %s གིས་སྔ་གོང་རིམ་སྒྲིག་འབད་ནི་ འཐུས་ཤོར་བྱུང་ཡོདཔ།"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -338,29 +339,24 @@ msgstr ""
 "       --default-priority\t དམའ་བའི་ཚབ་ལུ་ སྔོན་སྒྲིག་གཙོ་རིམ་ལག་ལེན་འཐབ།\n"
 "       --force\t\t\t ཆད་ཡོད་པའི་ཐུམ་སྒྲིལ་ཚུའི་ བང་བཙོང་སླར་རིམ་སྒྲིག"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%sའདི་རྩ་བ་སྦེ་ གཡོག་བཀོལ་དགོ"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "ལོག་རིམ་སྒྲིག་འབད་ནི་ལུ་ ཐུམ་སྒྲིལ་ཅིག་གསལ་བཀོད་འབད་གནང་།"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s འདི་གཞི་བཙུགས་མ་འབད་བས།"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s འདི་རྒྱུན་ཆད་ནུག་ ཡངན་ ཆ་ཚང་སྦེ་གཞི་བཙུགས་མ་འབད་བས།"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "གནས་ཚད་ཡིག་སྣོད་ལྷག་མི་ཚུགས་པས་: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -429,3 +425,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=package\t\t བརྡ་བཀོད་བདག་དབང་བཟུང་མི་ཐུམ་སྒྲིལ་འདི་ གཞི་སྒྲིག་འབད།"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "གནས་ཚད་ཡིག་སྣོད་ལྷག་མི་ཚུགས་པས་: %s"

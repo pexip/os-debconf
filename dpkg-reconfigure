@@ -44,11 +44,6 @@ default priority is. See L<debconf(7)> for a list.
 Use whatever the default priority of question is, instead of forcing the
 priority to low.
 
-=item B<-a>, B<--all>
-
-Reconfigure all installed packages that use debconf. Warning: this may take
-a long time.
-
 =item B<-u>, B<--unseen-only>
 
 By default, all questions are shown, even if they have already been
@@ -97,18 +92,15 @@ use Debconf::Log qw(:all);
 Debconf::Config->priority('low');
 
 my $unseen_only=0;
-my $all=0;
 my $force=0;
 my $default_priority=0;
 my $reload=1;
 Debconf::Config->getopt(
 gettext(qq{Usage: dpkg-reconfigure [options] packages
-  -a,  --all			Reconfigure all packages.
   -u,  --unseen-only		Show only not yet seen questions.
        --default-priority	Use default priority instead of low.
        --force			Force reconfiguration of broken packages.
        --no-reload		Do not reload templates. (Use with caution.)}),
-	"all|a"			=> \$all,
 	"unseen-only|u"		=> \$unseen_only,
 	"default-priority"	=> \$default_priority,
 	"force"			=> \$force,
@@ -141,17 +133,10 @@ unless ($unseen_only) {
 	Debconf::Config->reshow(1);
 }
 
-my @packages;
-if ($all) {
-	@packages=allpackages();
-	exit unless @packages;
-}
-else {
-	@packages=@ARGV;
-	if (! @packages) {
-		print STDERR "$0: ".gettext("please specify a package to reconfigure")."\n";
-		exit 1;
-	}
+my @packages=@ARGV;
+if (! @packages) {
+	print STDERR "$0: ".gettext("please specify a package to reconfigure")."\n";
+	exit 1;
 }
 
 # This is a hack to let postinsts know when they're being reconfigured. It
@@ -185,16 +170,16 @@ foreach my $pkg (@packages) {
 	
 	my @control_paths=`dpkg-query --control-path $pkg`;
 	map chomp, @control_paths;
-	sub control_path {
+	my $control_path = sub {
 		my $file = shift;
 		my $path = (grep /\.\Q$file\E$/, @control_paths)[0];
 		chomp($path) if defined $path;
 		return $path;
-	}
+	};
 
 	if ($reload) {
 		# Load up templates just in case they aren't already.
-		my $templates=control_path('templates');
+		my $templates=$control_path->('templates');
 		if ($templates and -e $templates) {
 			Debconf::Template->load($templates, $pkg);
 		}
@@ -209,7 +194,7 @@ foreach my $pkg (@packages) {
 		          ['config',   'reconfigure', $version],
 			  ['postinst', 'configure',   $version]) {
 		my $script=shift @$info;
-		my $path_script=control_path($script);
+		my $path_script=$control_path->($script);
 
 		next unless $path_script and -x $path_script;
 
@@ -247,19 +232,7 @@ foreach my $pkg (@packages) {
 		}
 		else {
 			# Not a confmodule, so run it as a normal script.
-			# Since it might run other programs that do use
-			# debconf, checkpoint the current database state
-			# and re-initialize it when the script finishes.
-			Debconf::Db->save;
-			
-			delete $ENV{DEBIAN_HAS_FRONTEND};
-			my $ret=system($path_script, @$info);
-			if (int($ret / 256) != 0) {
-				exit int($ret / 256);
-			}
-			$ENV{DEBIAN_HAS_FRONTEND}=1;
-			
-			Debconf::Db->load;
+			run_external($path_script, @$info);
 		}
 	}
 }
@@ -274,10 +247,7 @@ do {
 			if not exists $initial_triggers{$trigpend};
 	}
 	if (@new_triggers) {
-		my $ret=system("dpkg", "--configure", @new_triggers);
-		if (int($ret / 256) != 0) {
-			exit int($ret / 256);
-		}
+		run_external("dpkg", "--configure", @new_triggers);
 	}
 } while (@new_triggers);
 
@@ -285,20 +255,20 @@ $frontend->shutdown;
 
 Debconf::Db->save;
 
-# Returns a list of all installed packages.
-sub allpackages {
-	my @ret;
-	local $/="\n\n";
+# Run an external program that does not itself use debconf, but that may run
+# other programs that do use debconf.  To do this safely, checkpoint the
+# current database state and re-initialize it when the program finishes.
+sub run_external {
+	Debconf::Db->save;
 	
-	open (STATUS, "</var/lib/dpkg/status")
-		|| die sprintf(gettext("Cannot read status file: %s"), $!);
-	while (<STATUS>) {
-		push @ret, $1
-			if m/Status:\s*.*\sinstalled\n/ && m/Package:\s*(.*)\n/;
+	delete $ENV{DEBIAN_HAS_FRONTEND};
+	my $ret=system(@_);
+	if (int($ret / 256) != 0) {
+		exit int($ret / 256);
 	}
-	close STATUS;
-
-	return sort @ret;
+	$ENV{DEBIAN_HAS_FRONTEND}=1;
+	
+	Debconf::Db->load;
 }
 
 # Returns a list of all packages with pending triggers.
@@ -307,8 +277,9 @@ sub triggers_pending {
 	local $_;
 
 	open (QUERY, '-|', 'dpkg-query', '-W',
-		'-f', '${Package} ${PackageSpec} ${binary:Package}\t${Triggers-Pending}\n');
+		'-f', '${Package} ${binary:Package}\t${Triggers-Pending}\n');
 	while (<QUERY>) {
+		chomp;
 		my ($pkgnames, $triggers) = split /\t/;
 		if (length $triggers) {
 			# Handle multiarch.

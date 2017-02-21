@@ -90,7 +90,10 @@ sub display_nowrap {
 		# If we had to guess at the screenheight, don't bother
 		# ever pausing; for all I know this is some real teletype
 		# with an infinite height "screen" of fan-fold paper..
-		if (! $this->screenheight_guessed &&
+		# Also don't bother pausing if the screenheight is 2 rows or
+		# less, since that would leave no space to display the actual
+		# text.
+		if (! $this->screenheight_guessed && $this->screenheight > 2 &&
 		    $this->linecount($this->linecount+1) > $this->screenheight - 2) {
 			my $resp=$this->prompt(
 				prompt => '['.gettext("More").']',

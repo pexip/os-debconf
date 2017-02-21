@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
-"POT-Creation-Date: 2011-07-29 12:37+0300\n"
+"POT-Creation-Date: 2013-11-03 14:17-0400\n"
 "PO-Revision-Date: 2001-12-01 19:04:00-0200\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -213,7 +213,7 @@ msgstr ""
 #: ../../debconf-copydb:101 ../../debconf-getlang:73
 #: ../../debconf-loadtemplate:30 ../../debconf-mergetemplate:60
 #: ../../debconf-set-selections:82 ../../dpkg-preconfigure:59
-#: ../../dpkg-reconfigure:78 debconf.conf.5:537 confmodule.3:36 debconf.7:376
+#: ../../dpkg-reconfigure:73 debconf.conf.5:537 confmodule.3:36 debconf.7:376
 #: debconf-devel.7:958
 #, no-wrap
 msgid "SEE ALSO"
@@ -232,9 +232,9 @@ msgstr "L<debconf.conf(5)>"
 #: ../../debconf-escape:71 ../../debconf-communicate:73
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
-#: ../../debconf-show:154 ../../dpkg-preconfigure:243
-#: ../../dpkg-reconfigure:268 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
+#: ../../debconf-show:154 ../../dpkg-preconfigure:244
+#: ../../dpkg-reconfigure:295 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -246,7 +246,7 @@ msgstr "AUTOR"
 #: ../../debconf-apt-progress:666 ../../debconf-communicate:75
 #: ../../debconf-copydb:177 ../../debconf-getlang:257
 #: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:245 ../../dpkg-reconfigure:270
+#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:297
 #, fuzzy
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess E<lt>joeyh@debian.orgE<gt>"
@@ -1238,7 +1238,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:229
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr ""
 
@@ -1414,8 +1414,7 @@ msgstr "L<debconf-getlang(1)>"
 #. type: textblock
 #: ../../debconf-set-selections:5
 #, fuzzy
-msgid ""
-"debconf-set-selections - insert new default values into the debconf database"
+msgid "debconf-set-selections - insert new values into the debconf database"
 msgstr ""
 "debconf-loadtemplate - carrega um arquido de modelo em uma base de dados "
 "debconf"
@@ -1740,19 +1739,19 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../dpkg-preconfigure:51 ../../dpkg-reconfigure:70
+#: ../../dpkg-preconfigure:51 ../../dpkg-reconfigure:65
 msgid "B<-h>, B<--help>"
 msgstr "B<-h>, B<--help>"
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-preconfigure:53 ../../dpkg-reconfigure:72
+#: ../../dpkg-preconfigure:53 ../../dpkg-reconfigure:67
 msgid "Display usage help."
 msgstr "Exibe ajuda sobre o uso."
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-preconfigure:61 ../../dpkg-reconfigure:80
+#: ../../dpkg-preconfigure:61 ../../dpkg-reconfigure:75
 #, fuzzy
 msgid "L<debconf(7)>"
 msgstr "L<debconf(8)>"
@@ -1859,29 +1858,12 @@ msgstr ""
 # type: =item
 #. type: =item
 #: ../../dpkg-reconfigure:47
-#, fuzzy
-msgid "B<-a>, B<--all>"
-msgstr "B<-h>, B<--help>"
-
-# type: textblock
-#. type: textblock
-#: ../../dpkg-reconfigure:49
-msgid ""
-"Reconfigure all installed packages that use debconf. Warning: this may take "
-"a long time."
-msgstr ""
-"Reconfigura todos os pacotes instalados que usam debconf. Aviso: isso pode "
-"levar bastante tempo."
-
-# type: =item
-#. type: =item
-#: ../../dpkg-reconfigure:52
 msgid "B<-u>, B<--unseen-only>"
 msgstr "B<-u>, B<--unseen-only>"
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-reconfigure:54
+#: ../../dpkg-reconfigure:49
 msgid ""
 "By default, all questions are shown, even if they have already been "
 "answered. If this parameter is set though, only questions that have not yet "
@@ -1893,13 +1875,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../dpkg-reconfigure:58
+#: ../../dpkg-reconfigure:53
 msgid "B<--force>"
 msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-reconfigure:60
+#: ../../dpkg-reconfigure:55
 msgid ""
 "Force dpkg-reconfigure to reconfigure a package even if the package is in an "
 "inconsistent or broken state. Use with caution."
@@ -1907,13 +1889,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../dpkg-reconfigure:63
+#: ../../dpkg-reconfigure:58
 msgid "B<--no-reload>"
 msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-reconfigure:65
+#: ../../dpkg-reconfigure:60
 msgid ""
 "Prevent dpkg-reconfigure from reloading templates. Use with caution; this "
 "will prevent dpkg-reconfigure from repairing broken templates databases.  "
@@ -3664,8 +3646,8 @@ msgid ""
 "will need apt-utils installed for that to work."
 msgstr ""
 "Ás vezes você pode querer pré-configurar um pacote manualmente, quando você "
-"não está instalando o mesmo com o apt. Você pode usar B<dpkg-preconfigure (8)"
-"> para fazer isso, somente passe para o dpkg-preconfigure os nomes de "
+"não está instalando o mesmo com o apt. Você pode usar B<dpkg-preconfigure "
+"(8)> para fazer isso, somente passe para o dpkg-preconfigure os nomes de "
 "arquivos dos pacotes que você quer pré-configurar. Você precisará do apt-"
 "utils instalado para que isso funcione."
 
@@ -4075,8 +4057,8 @@ msgstr ""
 "Somente questões com uma prioridade igual ou mairo que a prioridade que você "
 "escolheu lhe serão exibidas. Você pode definir o valor da prioridade "
 "reconfigurando o debconf ou temporariamente passando I<--priority=> seguido "
-"pelo valor para os comandos B<dpkg-reconfigure (8)> e B<dpkg-preconfigure (8)"
-"> ou definindo a variável de ambiente DEBIAN_PRIORITY."
+"pelo valor para os comandos B<dpkg-reconfigure (8)> e B<dpkg-preconfigure "
+"(8)> ou definindo a variável de ambiente DEBIAN_PRIORITY."
 
 # type: SH
 #. type: SH
@@ -5259,14 +5241,13 @@ msgstr ""
 msgid "B<CAPB capabilities>"
 msgstr ""
 
-# type: Plain text
 #. type: Plain text
 #: debconf-devel.7:257
 msgid ""
 "You generally don't need to use this command. It exchanges with debconf a "
-"list of supported capabilities. Capabilities that both you and debconf "
-"support will be used, and debconf will reply with all the capabilities it "
-"supports."
+"list of supported capabilities (separated by spaces). Capabilities that both "
+"you and debconf support will be used, and debconf will reply with all the "
+"capabilities it supports."
 msgstr ""
 
 # type: Plain text
@@ -5957,9 +5938,9 @@ msgstr ""
 #: debconf-devel.7:558
 msgid ""
 "For the details on po-debconf, see its man page. If you're using debhelper, "
-"converting to po-debconf is as simple as running the B<debconf-gettextize>"
-"(1)  command once, and adding a Build-Dependency on po-debconf and on "
-"debhelper (E<gt>= 4.1.13)."
+"converting to po-debconf is as simple as running the B<debconf-"
+"gettextize>(1)  command once, and adding a Build-Dependency on po-debconf "
+"and on debhelper (E<gt>= 4.1.13)."
 msgstr ""
 
 # type: SH
@@ -6755,6 +6736,19 @@ msgid ""
 "B<debconf.conf>(5)  has much useful information, including some info about "
 "the backend database."
 msgstr ""
+
+# type: =item
+#, fuzzy
+#~ msgid "B<-a>, B<--all>"
+#~ msgstr "B<-h>, B<--help>"
+
+# type: textblock
+#~ msgid ""
+#~ "Reconfigure all installed packages that use debconf. Warning: this may "
+#~ "take a long time."
+#~ msgstr ""
+#~ "Reconfigura todos os pacotes instalados que usam debconf. Aviso: isso "
+#~ "pode levar bastante tempo."
 
 # type: textblock
 #, fuzzy

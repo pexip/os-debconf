@@ -2,13 +2,13 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # Keita Maehara <maehara@debian.org>
 # Junichi Uekawa <dancer@debian.org>, 2002, 2003, 2004
-# Kenshi Muto <kmuto@debian.org>, 2004
+# Kenshi Muto <kmuto@debian.org>, 2004-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
-"PO-Revision-Date: 2010-03-09 00:08+0900\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"PO-Revision-Date: 2014-12-03 16:32+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian Japanese list <debian-japanese@lists.debian.org>\n"
 "Language: ja\n"
@@ -107,19 +107,19 @@ msgstr "ヘルプ(_H)"
 msgid "Help"
 msgstr "ヘルプ"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
-"このエラーメッセージを表示するようには設定されていないので、debconf があなた"
-"にメールを送りました。"
+"このエラーメッセージが表示されるかどうか不明なので、debconf があなたにメール"
+"を送りました。"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, %s にて実行"
@@ -151,17 +151,17 @@ msgstr "Debconf::Element::%s をロードできません. 失敗した理由: %s
 msgid "Configuring %s"
 msgstr "%s を設定しています"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr ""
 "TERM が設定されていないので、dialog フロントエンドを利用することはできませ"
 "ん。"
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Dialog フロントエンドは emacs のシェルバッファと互換性がありません"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -169,7 +169,7 @@ msgstr ""
 "Dialog フロントエンドはダムターミナル、emacs のシェルバッファ、もしくはユーザ"
 "が制御しているターミナルではない場合には動作しません。"
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -177,14 +177,14 @@ msgstr ""
 "利用可能な dialog 系のプログラムがインストールされていないため、ダイアログ形"
 "式のフロントエンドは使用できません。"
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Dialog フロントエンドはすくなくとも 13 行あり、幅 31 文字ある画面を必要としま"
 "す。"
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "パッケージの設定"
 
@@ -213,7 +213,8 @@ msgstr ""
 "debconf は編集されたファイルを読み込み、入力された値をシステムの設定に利用し"
 "ます。"
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "%s の Debconf"
@@ -228,7 +229,7 @@ msgstr ""
 "Term::ReadLine::GNU フロントエンドは emacs のシェルバッファと互換性がありませ"
 "ん。"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "移動"
 
@@ -282,89 +283,82 @@ msgstr ""
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "%2$s のテンプレート #%1$s に `Template:' 行がありません\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "preconfigureするdebファイルを指定してください"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr ""
 "apt-utilsがインストールされていないため、パッケージの設定を遅らせます。"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "標準入力を再オープンできません: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates に失敗しました: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "パッケージからテンプレートを展開しています: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "パッケージを事前設定しています ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "テンプレートの解析に失敗しました: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: chmod できません: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s は終了コード %s で前設定に失敗しました"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Usage: dpkg-reconfigure [オプション] パッケージ\n"
-"  -a,  --all\t\t\tすべてのパッケージを再設定する。\n"
 "  -u,  --unseen-only\t\tまだ示していない質問のみを表示する。\n"
 "       --default-priority\tlow の代わりにデフォルトの優先度を使う。\n"
 "       --force\t\t\t壊れたパッケージの再設定を強制的に行う。\n"
 "       --no-reload\t\tテンプレートを再読み込みしない。(注意して利用のこと)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s は root で実行する必要があります"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "再設定するパッケージを指定してください"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s はインストールされていません"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s は壊れているか、完全にインストールされていません"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "ステータスファイルを読み込めません: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"

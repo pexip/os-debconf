@@ -1,13 +1,13 @@
 # Czech translation of debconf package.
 # Copyright (C) 2004 Free Software Foundation, Inc.
-# Miroslav Kure <kurem@debian.cz>, 2004--2010.
+# Miroslav Kure <kurem@debian.cz>, 2004--2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
-"PO-Revision-Date: 2010-03-15 14:15+0100\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"PO-Revision-Date: 2014-10-05 06:38+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
 "Language: cs\n"
@@ -23,12 +23,12 @@ msgstr "uchyluji se k rozhraní: %s"
 #: ../Debconf/AutoSelect.pm:84
 #, perl-format
 msgid "unable to initialize frontend: %s"
-msgstr "nemohu inicializovat rozhraní: %s"
+msgstr "nelze inicializovat rozhraní: %s"
 
 #: ../Debconf/AutoSelect.pm:90
 #, perl-format
 msgid "Unable to start a frontend: %s"
-msgstr "Nemohu spustit rozhraní: %s"
+msgstr "Nelze spustit rozhraní: %s"
 
 #: ../Debconf/Config.pm:130
 msgid "Config database not specified in config file."
@@ -64,7 +64,7 @@ msgstr ""
 #: ../Debconf/Config.pm:308
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
-msgstr "Ignoruji neplatnou prioritu \"%s\""
+msgstr "Ignoruji neplatnou prioritu „%s“"
 
 #: ../Debconf/Config.pm:309
 #, perl-format
@@ -96,7 +96,7 @@ msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
 "(Zadejte nula nebo více položek oddělených čárkou, za kterou následuje "
-"mezera (', ').)"
+"mezera („, “).)"
 
 #: ../Debconf/Element/Gnome.pm:182
 msgid "_Help"
@@ -106,19 +106,19 @@ msgstr "_Nápověda"
 msgid "Help"
 msgstr "Nápověda"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
-"Debconf nebyl nastaven pro zobrazení této chybové hlášky, takže vám ji "
+"Debconf si není jistý, zda se tato chybová hláška zobrazila, takže vám ji "
 "poslal."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf běžící na %s"
@@ -129,7 +129,7 @@ msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
 "Perhaps the templates were incorrectly localized."
 msgstr ""
-"Vstupní hodnota \"%s\" není v C volbách! To se nikdy nemělo stát. Možná jsou "
+"Vstupní hodnota „%s“ není v C volbách! To se nikdy nemělo stát. Možná jsou "
 "šablony špatně lokalizovány."
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:27
@@ -143,22 +143,22 @@ msgstr "Zadejte položky, které chcete vybrat, oddělené mezerami."
 #: ../Debconf/FrontEnd.pm:140
 #, perl-format
 msgid "Unable to load Debconf::Element::%s. Failed because: %s"
-msgstr "Nemohu nahrát Debconf::Element::%s. Selhal, protože: %s"
+msgstr "Nelze nahrát Debconf::Element::%s. Selhal, protože: %s"
 
 #: ../Debconf/FrontEnd.pm:333
 #, perl-format
 msgid "Configuring %s"
-msgstr "Nastavuji %s"
+msgstr "Nastavuje se %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "Proměnná TERM není nastavená, dialogové rozhraní se nedá použít."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Dialogové rozhraní je nekompatibilní s emacsovým shellovým bufferem."
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -166,7 +166,7 @@ msgstr ""
 "Dialogové rozhraní nebude pracovat na hloupém terminálu, shellovém bufferu "
 "emacsu, nebo bez řídícího terminálu."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -174,14 +174,14 @@ msgstr ""
 "Není instalován žádný dialogový program, takže dialogové rozhraní nemůže být "
 "použito."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Dialogové rozhraní vyžaduje obrazovku minimálně 13 řádků vysokou a 31 "
 "sloupců širokou."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Nastavení balíků"
 
@@ -209,7 +209,8 @@ msgstr ""
 "potřeb, uložte jej a ukončete editor. V této fázi si debconf přečte upravený "
 "soubor a použije zadané hodnoty pro nastavení systému."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf na %s"
@@ -222,7 +223,7 @@ msgstr "Toto rozhraní vyžaduje řídící terminál."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU není kompatibilní se shellovým bufferem emacsu."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Více"
 
@@ -256,106 +257,99 @@ msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
 "Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
-"Šablona č.%s v %s má duplicitní pole \"%s\" s novou hodnotou \"%s\". Některé "
-"dvě šablony pravděpodobně nejsou odděleny prázdným řádkem.\n"
+"Šablona č.%s v %s má duplicitní pole „%s“ s novou hodnotou „%s“. Některé dvě "
+"šablony pravděpodobně nejsou odděleny prázdným řádkem.\n"
 
 #: ../Debconf/Template.pm:231
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
-msgstr "Neznámé pole '%s' šablony v části č.%s z %s\n"
+msgstr "Neznámé pole „%s“ šablony v části č.%s z %s\n"
 
 #: ../Debconf/Template.pm:257
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
-msgstr "Chyba zpracování šablony poblíž '%s' v části č.%s z %s\n"
+msgstr "Chyba zpracování šablony poblíž „%s“ v části č.%s z %s\n"
 
 #: ../Debconf/Template.pm:263
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
-msgstr "Šablona č.%s v %s neobsahuje řádek 'Template:'\n"
+msgstr "Šablona č.%s v %s neobsahuje řádek „Template:“\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "musíte zadat nějaké balíky pro přednastavení"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "odkládám nastavení balíků, protože apt-utils nejsou nainstalované"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
-msgstr "nemohu znovu otevřít standardní vstup: %s"
+msgstr "nelze znovu otevřít standardní vstup: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates selhal: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
-msgstr "Extrahuji z balíků šablony: %d%%"
+msgstr "Extrahují se šablony z balíků: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
-msgstr "Přednastavuji balíky...\n"
+msgstr "Přednastavují se balíky…\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "chyba zpracování šablony: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
-msgstr "debconf: nemohu změnit práva: %s"
+msgstr "debconf: nelze změnit práva: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s nemohl být přednastaven, skončil chybou %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Použití: dpkg-reconfigure [volby] balíky\n"
-"  -a,  --all\t\t\tPřekonfiguruje všechny balíky.\n"
 "  -u,  --unseen-only\t\tZobrazí jen dosud nezobrazené otázky.\n"
 "       --default-priority\tMísto nízké použije výchozí prioritu.\n"
 "       --force\t\t\tVynutí překonfiguraci porušených balíků.\n"
 "       --no-reload\t\tZakáže nové načtení šablon (používat opatrně)."
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s se musí spouštět jako root"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "zadejte balík pro rekonfiguraci"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s není nainstalován"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s je porušený, nebo není plně nainstalovaný"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Nemohu číst stavový soubor: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -371,7 +365,7 @@ msgstr ""
 
 #: ../debconf-mergetemplate:66
 msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
-msgstr "Použití: debconf-mergetemplate [volby] [šablony.ll ...] šablony"
+msgstr "Použití: debconf-mergetemplate [volby] [šablony.ll …] šablony"
 
 #: ../debconf-mergetemplate:71
 msgid ""
@@ -425,6 +419,9 @@ msgstr ""
 "\n"
 "  -o,  --owner=balík\t\tNastaví balík, který vlastní příkaz."
 
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Nelze číst stavový soubor: %s"
+
 #~ msgid "Save (mail) Note"
 #~ msgstr "Uložit poznámku (poslat poštou)"
 
@@ -449,4 +446,4 @@ msgstr ""
 #~ "Debconf nebyl nastaven pro zobrazení této poznámky, takže vám ji poslal."
 
 #~ msgid "preconfiguring %s (%s)"
-#~ msgstr "přednastavuji %s (%s)"
+#~ msgstr "přednastavuje se %s (%s)"

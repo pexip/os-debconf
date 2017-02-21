@@ -2,14 +2,14 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Leonard Michlmayr <leonard.michlmayr@ap.univie.ac.at>, 2002.
 # Michael Piefel <piefel@debian.org>, 2004, 2006
-# Helge Kreutzmann <debian@helgefjell.de>, 2009.
+# Helge Kreutzmann <debian@helgefjell.de>, 2009, 2012, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.28\n"
+"Project-Id-Version: debconf 1.5.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-11 12:57+0100\n"
-"PO-Revision-Date: 2009-10-24 17:34+0200\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"PO-Revision-Date: 2013-11-09 18:54+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -108,19 +108,19 @@ msgstr "_Hilfe"
 msgid "Help"
 msgstr "Hilfe"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:39
+#: ../Debconf/Element/Noninteractive/Error.pm:40
 msgid ""
-"Debconf was not configured to display this error message, so it mailed it to "
-"you."
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
 msgstr ""
-"Debconf wurde nicht konfiguriert, diese Fehlernachricht anzuzeigen, daher "
-"sendet es sie Ihnen."
+"Debconf war sich nicht sicher, dass diese Fehlermeldung angezeigt wurde, "
+"daher wurde sie Ihnen zugesendet."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:63
+#: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:86
+#: ../Debconf/Element/Noninteractive/Error.pm:90
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, auf %s"
@@ -154,17 +154,17 @@ msgstr "Kann Debconf::Element::%s nicht laden. Fehlgeschlagen wegen: %s"
 msgid "Configuring %s"
 msgstr "Konfiguriere %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:52
+#: ../Debconf/FrontEnd/Dialog.pm:53
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr ""
 "TERM ist nicht gesetzt, die Dialog-Oberfläche kann daher nicht verwendet "
 "werden."
 
-#: ../Debconf/FrontEnd/Dialog.pm:55
+#: ../Debconf/FrontEnd/Dialog.pm:56
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Die Dialog-Oberfläche ist mit dem Emacs-Shellbuffer nicht kompatibel"
 
-#: ../Debconf/FrontEnd/Dialog.pm:58
+#: ../Debconf/FrontEnd/Dialog.pm:59
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -172,7 +172,7 @@ msgstr ""
 "Die Dialog-Oberfläche funktioniert nicht auf einem Dumb-Terminal, einem "
 "Emacs-Shellbuffer oder ohne ein steuerndes Terminal."
 
-#: ../Debconf/FrontEnd/Dialog.pm:104
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -180,14 +180,14 @@ msgstr ""
 "Kein passendes Dialog-Programm ist installiert, daher kann die Dialog-"
 "Oberfläche nicht verwendet werden."
 
-#: ../Debconf/FrontEnd/Dialog.pm:111
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Für die Dialog-Oberfläche muss das Bild mindestens 13 Zeilen hoch und 31 "
 "Spalten breit sein."
 
-#: ../Debconf/FrontEnd/Dialog.pm:295
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Paketkonfiguration"
 
@@ -217,7 +217,8 @@ msgstr ""
 "wird Debconf die bearbeitete Datei lesen und die von Ihnen eingegebenen "
 "Werte verwenden, um das System zu konfigurieren."
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf auf %s"
@@ -230,7 +231,7 @@ msgstr "Diese Oberfläche bedarf eines steuernden Terminals."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU ist mit dem Emacs-Shellbuffer nicht kompatibel."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Weiter"
 
@@ -281,89 +282,82 @@ msgstr "Auswertfehler in Vorlage bei „%s“ in Absatz Nr. %s von %s\n"
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Vorlage Nr. %s in %s enthält keine „Template:“-Zeile.\n"
 
-#: ../dpkg-preconfigure:121
+#: ../dpkg-preconfigure:126
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "es müssen debs zum Vorkonfigurieren angegeben werden"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:131
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "Schiebe die Paketkonfiguration auf, da apt-utils nicht installiert ist"
 
-#: ../dpkg-preconfigure:133
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "kann Stdin nicht wieder öffnen: %s"
 
-#: ../dpkg-preconfigure:164 ../dpkg-preconfigure:176
+#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates schlug fehl: %s"
 
-#: ../dpkg-preconfigure:168 ../dpkg-preconfigure:180
+#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Extrahiere Vorlagen aus Paketen: %d%%"
 
-#: ../dpkg-preconfigure:190
+#: ../dpkg-preconfigure:195
 msgid "Preconfiguring packages ...\n"
 msgstr "Vorkonfiguration der Pakete ...\n"
 
-#: ../dpkg-preconfigure:202
+#: ../dpkg-preconfigure:207
 #, perl-format
 msgid "template parse error: %s"
 msgstr "Vorlagen-Auswertefehler: %s"
 
-#: ../dpkg-preconfigure:216
+#: ../dpkg-preconfigure:221
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: kann kein chmod durchführen: %s"
 
-#: ../dpkg-preconfigure:227
+#: ../dpkg-preconfigure:232
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s konnte nicht vorkonfiguriert werden, Exit-Status %s"
 
-#: ../dpkg-reconfigure:103
+#: ../dpkg-reconfigure:99
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
 "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgstr ""
 "Aufruf: dpkg-reconfigure [Optionen] Pakete\n"
-"  -a,  --all\t\t\tAlle Pakete neu konfigurieren.\n"
 "  -u,  --unseen-only\t\tNur noch nicht gestellte Fragen zeigen.\n"
 "       --default-priority\tVoreingestellte Priorität benutzen (statt "
 "niedrig).\n"
 "       --force\t\t\tNeukonfiguration kaputter Pakete erzwingen.\n"
 "       --no-reload\t\tVorlagen nicht neu laden. (Vorsichtig verwenden)"
 
-#: ../dpkg-reconfigure:117
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s muss als Root ausgeführt werden"
 
-#: ../dpkg-reconfigure:150
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "bitte geben Sie ein Paket an, das Sie neu konfigurieren wollen"
 
-#: ../dpkg-reconfigure:171
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s ist nicht installiert"
 
-#: ../dpkg-reconfigure:175
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s ist kaputt oder nicht komplett installiert"
-
-#: ../dpkg-reconfigure:254
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Kann die Status-Datei nicht lesen: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -432,6 +426,9 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=Paket\t\tDas Paket setzen, dem der Befehl gehört."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Kann die Status-Datei nicht lesen: %s"
 
 #~ msgid "Save (mail) Note"
 #~ msgstr "Notiz aufbewahren (per E-Mail senden)"

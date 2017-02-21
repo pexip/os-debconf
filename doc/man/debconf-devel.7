@@ -251,9 +251,9 @@ version you specify is too low, debconf will reply with numeric code 30.
 .B CAPB capabilities
 .RS
 You generally don't need to use this command. It exchanges with debconf a
-list of supported capabilities. Capabilities that both you and debconf
-support will be used, and debconf will reply with all the capabilities it
-supports.
+list of supported capabilities (separated by spaces). Capabilities that
+both you and debconf support will be used, and debconf will reply with
+all the capabilities it supports.
 .P
 If 'escape' is found among your capabilities, debconf will expect commands
 you send it to have backslashes and newlines escaped (as \e\e and \en
