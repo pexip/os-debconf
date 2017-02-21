@@ -12,7 +12,7 @@ XS-Debian-Vcs-Git: git://git.debian.org/git/debconf/debconf.git
 XS-Debian-Vcs-Browser: http://git.debian.org/?p=debconf/debconf.git;a=summary
 Vcs-Bzr: http://bazaar.launchpad.net/+branch/ubuntu/debconf
 X-Python-Version: >= 2.4
-XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
 
 Package: debconf
 Priority: important
