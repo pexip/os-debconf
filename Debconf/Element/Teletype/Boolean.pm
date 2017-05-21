@@ -40,6 +40,13 @@ sub show {
 		$default=$n;
 	}
 
+	# If this is not terse mode, we want to print out choices. Since we
+	# only have two choices, though, we use a compact display format.
+	my $description=$this->question->description;
+	if (Debconf::Config->terse eq 'false') {
+		$description.=" [$y/$n]";
+	}
+
 	my $value='';
 
 	while (1) {
@@ -47,7 +54,7 @@ sub show {
 		$_=$this->frontend->prompt(
 			default => $default,
 			completions => [$y, $n],
-			prompt => $this->question->description,
+			prompt => $description,
 			question => $this->question,
 		);
 		return unless defined $_;

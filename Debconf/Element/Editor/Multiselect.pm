@@ -13,7 +13,7 @@ use base qw(Debconf::Element::Multiselect);
 
 =head1 DESCRIPTION
 
-Presents a list of choices to be selected amoung. Multiple selection is
+Presents a list of choices to be selected among. Multiple selection is
 allowed.
 
 =head1 METHODS

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2006-09-12 17:25+0000\n"
 "Last-Translator: Priti Patil <prithisd@gmail.com>\n"
 "Language-Team:  Marathi, janabhaaratii, C-DAC, Mumbai, India "
@@ -240,7 +240,7 @@ msgstr "मागे"
 msgid "Next"
 msgstr "पुढील"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -249,7 +249,7 @@ msgstr ""
 "धोक्याची सूचना: डेटा बेस भ्रष्ट झाल्याची शक्यता. गायब प्रश्न %s पुन्हा संचित करून दुरुस्तीचा "
 "प्रयत्न केला जाईल."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -258,17 +258,17 @@ msgstr ""
 "%s मधील #%s नमुन्यामधे \"%s\" या क्षेत्राची \"%s\" या नवीन मूल्याने पुनरावृत्ती झाली आहे. "
 "बहुदा हे दोन नमुने एकट्या न्यूलाईलने व्यवस्थित वेगळे केलेले नाहीत.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "%s च्या #%s स्टॅन्झा मधे '%s' हे अपरिचित नमुना क्षेत्र\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "%s च्या #%s स्टॅन्झा मधे `%s' जवळ नमुना पदविच्छेदन त्रुटी\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "%s मधील #%s नमुन्यामधे 'नमुना:' ही ओळ नाही\n"

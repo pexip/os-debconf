@@ -13,7 +13,7 @@ use base qw(Debconf::Element::Select);
 
 =head1 DESCRIPTION
 
-Presents a list of choices to be selected amoung.
+Presents a list of choices to be selected among.
 
 =head2 METHODS
 

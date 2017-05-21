@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po.pot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2006-10-06 10:46+0530\n"
 "Last-Translator: Jurmey Rabgay <jur_gay@yahoo.com>\n"
 "Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -248,7 +248,7 @@ msgstr "རྒྱབ།"
 msgid "Next"
 msgstr "གཞན་མི།"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -257,7 +257,7 @@ msgstr ""
 "ཉེན་བརྡ་:གནད་སྡུད་གཞི་རྟེན་འདི་ངན་ཅན་འབྱུང་སྲིད། འདི་གིས་ རྒྱབ་ཁར་མ་ཚང་པའི་འདྲི་བ་%s གི་ཐོག་ལས་ "
 "ཉམས་བཅོས་འབད་ནིའི་དཔའ་བཅམ་འོང་།"
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -266,17 +266,17 @@ msgstr ""
 " %s ནང་ ཊེམ་པེལེཊི་#%s ལུ་ \"%s\"བེ་ལུ་གསརཔ་དང་བཅས་ \"%s\"ས་སྒོ་རྫུན་མ་འདུག ཊེམཔེལེཊི་གཉིས་ཆ་"
 "རང་ གྲལ་ཐིག་གསརཔ་རྐྱང་པ་གིས་ ལེགས་ཤོམ་སྦེ་སོ་སོ་མ་འཕྱལ་བས།\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr " %sགི་ ཚིགས་བཅད་ #%sནང་ མ་ཤེས་པའི་ཊེམ་པེལེཊི་ས་སྒོ་ '%s'།\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "%sགི་ ཚིགས་བཅད་ #%s ནང་  `%s'གི་སྦོ་ལོགས་ཁར་ ཊེམ་པེལེཊི་མིང་དཔྱད་འཛོལ་བ།\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr " %sནང་ཡོད་པའི་ ཊེམ་པེལེཊི་ #%sནང་ལུ་ 'ཊེམ་པེལེཊི་'མེད་:གྲལ་ཐིག\n"

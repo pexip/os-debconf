@@ -26,7 +26,10 @@ override_dh_installdebconf:
 override_dh_install:
 	dh_install
 	cp debian/apt.conf debian/debconf/etc/apt/apt.conf.d/70debconf
-	cp bash_completion debian/debconf/etc/bash_completion.d/debconf
+	cp bash_completion \
+		debian/debconf/usr/share/bash-completion/completions/debconf
+	ln -s debconf \
+		debian/debconf/usr/share/bash-completion/completions/debconf-show
 
 override_dh_installchangelogs:
 	# Changelog reduction hack for debconf. Only include top 100 entries.

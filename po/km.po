@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2010-03-09 08:15+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -241,7 +241,7 @@ msgstr "ថយ​ក្រោយ​"
 msgid "Next"
 msgstr "បន្ទាប់"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -249,7 +249,7 @@ msgid ""
 msgstr ""
 "ព្រមាន ៖ អាចធ្វើ​ការ​បង្ខូច​មូលដ្ឋាន​ទិន្ន័យបាន​ ។ នឹងប៉ុនប៉ង​ជួសជុល​ដោយ​បន្ថែម​មកវិញ​នូវ​សំណួរ​ដែល​បាត់ %s ។"
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -258,17 +258,17 @@ msgstr ""
 "ពុម្ព #%s នៅ​ក្នុង %s មាន​វាល​ស្ទួន \"%s\" ជាមួយ​តម្លៃ​ថ្មី \"%s\" ។ ប្រហែល​ជា​ពុម្ព​ពីរ​មិន​ត្រូវ​បាន​ចែក​"
 "បន្ទាត់​ថ្មី​តែ​មួយ​បានត្រឹមត្រូវទេ ។\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "មិន​ស្គាល់​វាល​ពុម្ព '%s' នៅ​ក្នុង stanza #%s នៃ %s ឡើយ\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "កំហុសក្នុងការ​​ញែក​ពុម្ព​នៅក្បែរ `%s' នៅ​ក្នុង stanza #%s នៃ %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "ពុម្ព #%s នៅ​ក្នុង %s មិន​មានបន្ទាត់ 'ពុម្ព ៖' ឡើយ\n"

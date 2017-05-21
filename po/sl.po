@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.32\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2014-10-21 14:59+0100\n"
 "Last-Translator: Vanja Cvelbar <cvelbar@gmail.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -245,7 +245,7 @@ msgstr "Nazaj"
 msgid "Next"
 msgstr "Naprej"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -254,7 +254,7 @@ msgstr ""
 "pozor: možna napaka v bazi podatkov. Poskus popravljanje s ponovnim "
 "dodajanjem manjkajočih vprašanj %s"
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -263,17 +263,17 @@ msgstr ""
 "Predloga #%s v %s vsebuje podvojeno polje \"%s\" z novo vrednostjo \"%s\". "
 "Verjetno dve predlogi nista pravilno ločeni s samostojno novo vrstico.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Neznano polje `%s' v predlogi, v stavku #%s od %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Napaka v predlogi v bližini `%s', v stavku #%s od %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Predloga #%s v %s ne vsebuje vrstice 'Template:'\n"

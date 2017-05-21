@@ -76,10 +76,15 @@ sub new {
 	if ($Debconf::Db::templates->exists($template) and
 	    $Debconf::Db::templates->owners($template)) {
 		# If a question matching this template already exists in
-		# the db, add the owner to it. This handles shared owner
-		# questions.
-		my $q=Debconf::Question->get($template);
-		$q->addowner($owner, $type) if $q;
+		# the db, add the owner to it; otherwise, create one. This
+		# handles shared owner questions.
+		if ($Debconf::Db::config->exists($template)) {
+			my $q=Debconf::Question->get($template);
+			$q->addowner($owner, $type) if $q;
+		} else {
+			my $q=Debconf::Question->new($template, $owner, $type);
+			$q->template($template);
+		}
 
 		# See if the template claims to own any questions that
 		# cannot be found. If so, the db is corrupted; attempt to

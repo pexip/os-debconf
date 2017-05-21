@@ -27,7 +27,7 @@ An object of type Term::ReadLine, that is used to do the actual prompting.
 
 =item promptdefault
 
-Set if the varient of readline being used is so lame that it cannot display
+Set if the variant of readline being used is so lame that it cannot display
 defaults, so the default must be part of the prompt instead.
 
 =back
@@ -172,7 +172,7 @@ read/validate loop it is in.
 
 The function uses named parameters.
 
-Completion amoung available choices is supported. For this to work, if
+Completion among available choices is supported. For this to work, if
 a reference to an array of all possible completions is passed in.
 
 =cut

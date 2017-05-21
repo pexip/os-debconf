@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2008-09-21 18:42+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -247,7 +247,7 @@ msgstr "Vegere"
 msgid "Next"
 msgstr "Piştre"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -256,7 +256,7 @@ msgstr ""
 "Hişyarî: bêbandorkirina danegira pêkan. Dê bi lêzêdekirina pirsa windayî "
 "xuya bike %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -265,17 +265,17 @@ msgstr ""
 "Şablona #%s di %s xwedî dosya hevsere \"%s\" bi nirxeke nû \"%s\". bi piranî "
 "herdû dirbên nû ne bi rengekî rast bi rêzikeke nû ji hev hatine cudakirin.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Qada şablona nenas '%s', di stanza #%s ji %s de\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Çewtiya veqetandina şablonê nêzîkê `%s', di qaliba #%s ji %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Di şablona #%s ya %s de rêzika 'Template:' tune\n"

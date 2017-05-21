@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2012-08-07 16:47+0700\n"
 "Last-Translator: Nguyen Vu Hung <vuhung16plus@gmail.com>\n"
 "Language-Team: MOST Project <du-an-most@lists.hanoilug.org>\n"
@@ -247,7 +247,7 @@ msgstr "Lùi"
 msgid "Next"
 msgstr "Tiếp"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -256,7 +256,7 @@ msgstr ""
 "cảnh báo : cơ sở dữ liệu có thể bị hỏng. Trình này sẽ thử sửa chữa nó bằng "
 "cách thêm lại câu hỏi còn thiếu %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -265,18 +265,18 @@ msgstr ""
 "Mẫu #%s trong %s có một trường trùng « %s » có giá trị mới « %s ». Rất có "
 "thể là hai mẫu chưa định giới được bằng một dòng mới riêng lẻ.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Không rõ trường mẫu « %s », trong đoạn dong #%s của %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr ""
 "Gặp lỗi phân tích cú pháp mẫu ở gần « %s », trong đoạn dòng #%s của %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Mẫu #%s trong %s không chứa một dòng « Template: » (Mẫu)\n"

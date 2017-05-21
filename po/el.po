@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po_el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2008-08-24 17:53+0300\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -260,7 +260,7 @@ msgstr "Προηγούμενο"
 msgid "Next"
 msgstr "Επόμενο"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -269,7 +269,7 @@ msgstr ""
 "προειδοποίηση: πιθανή καταστροφή της βάσης. Θα γίνει προσπάθεια επιδιόρθωσής "
 "της προσθέτοντας την εκλιπόμμενη ερώτηση %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -278,17 +278,17 @@ msgstr ""
 "Το πρότυπο #%s στο %s έχει διπλά ορισμένο πεδίο \"%s\" με νέα τιμή \"%s\". "
 "Πιθανόν δύο πρότυπα δεν είναι σωστά χωρισμένα με κενή γραμμή.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Άγνωστο πεδίο προτύπου '%s', στο τμήμα #%s του %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Σφάλμα ανάλυσης προτύπου κοντά στο `%s', στο τμήμα #%s του %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Το πρότυπο #%s στο %s δεν περιέχει μια γραμμή 'Template:'\n"
