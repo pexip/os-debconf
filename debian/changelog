@@ -1,3 +1,9 @@
+debconf (1.5.56+deb8u1pexip1) pexip; urgency=medium
+
+  * Update to debian latest
+
+ -- vincent Sanders <vince@pexip.com>  Thu, 02 Nov 2017 09:22:43 +0000
+
 debconf (1.5.56+deb8u1) jessie; urgency=medium
 
   [ Niko Tyni ]
