@@ -10,6 +10,7 @@ package Debconf::TmpFile;
 use strict;
 use IO::File;
 use Fcntl;
+use File::Temp;
 
 =head1 DESCRIPTION
 
@@ -32,8 +33,7 @@ my $filename;
 sub open {
 	my $fh; # will be autovivified
 	my $ext=shift || '';
-	do { $filename=POSIX::tmpnam().$ext }
-	until sysopen($fh, $filename, O_WRONLY|O_TRUNC|O_CREAT|O_EXCL, 0600);
+	($fh, $filename) = File::Temp::tempfile(SUFFIX => $ext);
 	return $fh;
 }
 
