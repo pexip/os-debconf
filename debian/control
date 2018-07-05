@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 7.2.11~), po-debconf, po4a (>= 0.23)
 Vcs-Git: git://anonscm.debian.org/debconf/debconf.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debconf/debconf.git;a=summary
 X-Python-Version: >= 2.6
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: debconf
 Priority: important
