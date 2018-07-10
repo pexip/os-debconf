@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_nn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2005-01-23 19:33+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -248,7 +248,7 @@ msgstr "Tilbake"
 msgid "Next"
 msgstr "Neste"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -257,7 +257,7 @@ msgstr ""
 "åtvaring: mogleg øydelagd database. Vil freista å reparere ved å leggje til "
 "igjen manglande spørsmål %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -266,17 +266,17 @@ msgstr ""
 "Mal #%s i %s har eit duplisert felt «%s» med ny verdi «%s». Truleg er to "
 "malar ikkje skikkeleg skilde med ei tom linje.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Ukjent malfelt «%s», i strofe #%s i %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Maltolkingsfeil i nærleiken av «%s», i strofe #%s i %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Mal #%s i %s inneheld ingen linje med «Template:»\n"

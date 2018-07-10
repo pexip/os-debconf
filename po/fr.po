@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2013-12-15 08:33+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -254,7 +254,7 @@ msgstr "Retour"
 msgid "Next"
 msgstr "Suivant"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -263,7 +263,7 @@ msgstr ""
 "Attention : corruption possible de la base de données. Tentative de "
 "réparation en rajoutant la question manquante %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -273,17 +273,17 @@ msgstr ""
 "« %s » comme nouvelle valeur. Il manque probablement la ligne vide de "
 "séparation entre deux messages.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Champ de message « %s » inconnu, dans la partie #%s de %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Erreur d'analyse de message vers « %s », dans la partie #%s de %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Le message n° %s de %s ne contient pas de ligne « Template: »\n"

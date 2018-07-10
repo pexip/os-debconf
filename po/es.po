@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.2.39\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2014-12-02 21:57+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino <jfs@debian.org>\n"
 "Language-Team: Debian Spanish Team <debian-l10n-spanish@lists.debian.org>\n"
@@ -294,7 +294,7 @@ msgstr "Anterior"
 msgid "Next"
 msgstr "Siguiente"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -303,7 +303,7 @@ msgstr ""
 "aviso: posible corrupción de la base de datos. Se tratará de reparar "
 "volviendo a añadir la pregunta perdida %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -313,18 +313,18 @@ msgstr ""
 "«%s». Probablemente dos plantillas no están separadas correctamente con un "
 "sólo retorno de carro.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Campo desconocido '%s' en la plantilla, en la estrofa #%s de %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr ""
 "Error de análisis de plantilla cerca de `%s', en la estrofa #%s de %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "La plantilla #%s en %s no contiene una línea 'Template:'\n"

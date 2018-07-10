@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.52\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2013-12-15 20:27+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
@@ -243,7 +243,7 @@ msgstr "Tilbage"
 msgid "Next"
 msgstr "Næste"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -252,7 +252,7 @@ msgstr ""
 "advarsel: database måske ødelagt. Vil forsøge at reparere ved at gentilføje "
 "manglende spørgsmål %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -262,17 +262,17 @@ msgstr ""
 "kan være fordi at to skabeloner ikke er adskilt rigtigt med en tom ny "
 "linje.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Ukendt skabelonfelt `%s', i kombination nr. %s af %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Fortolkningsfejl i skabelon, nær `%s', i kombination nr. %s af %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Skabelon nr. %s i %s indeholder ikke en 'Template:'-linje\n"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2014-11-09 23:44+0100\n"
 "Last-Translator: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>\n"
 "Language-Team: Debian Dutch l10n Team <debian-l10n-dutch@lists.debian.org>\n"
@@ -253,7 +253,7 @@ msgstr "Vorige"
 msgid "Next"
 msgstr "Volgende"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -262,7 +262,7 @@ msgstr ""
 "waarschuwing: database is mogelijk beschadigd. Zal proberen deze te "
 "repareren door ontbrekende vraag \"%s\" weer toe te voegen."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -272,18 +272,18 @@ msgstr ""
 "\". Waarschijnlijk zijn twee sjablonen niet juist van elkaar gescheiden door "
 "een enkele witregel.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Onbekend sjabloonveld \"%s\" in stanza #%s van %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr ""
 "Fout bij het ontleden van de sjabloon nabij \"%s\" in stanza #%s van %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Sjabloon #%s in %s bevat geen 'Template:'-regel\n"

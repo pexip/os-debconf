@@ -96,6 +96,15 @@ debug developer => "frontend running, package name is $package";
 $frontend->default_title($package) if length $package and !$no_title;
 $frontend->info(undef);
 
+# Load any associated templates if we're being run from a package maintainer
+# script.
+if ($ARGV[0] =~/^(.*[.\/])(?:preinst|postinst|prerm|postrm)$/) {
+	my $base=$1;
+	my $templates=$base."templates";
+	Debconf::Template->load($templates, $package)
+		if -e $templates;
+}
+
 # See if the preinst or postinst of the package is being run, and if there
 # is a config script associated with this package. If so, run it first as a
 # confmodule (also loading the templates). This is a bit of a nasty hack, that
@@ -105,11 +114,6 @@ $frontend->info(undef);
 # /var/lib/dpkg.
 if ($ARGV[0] =~/^(.*[.\/])(?:postinst|preinst)$/) {
 	my $base=$1;
-
-	# Load templates, if any.
-	my $templates=$base."templates";
-	Debconf::Template->load($templates, $package)
-		if -e $templates;
 
 	# Run config script, if any.
 	my $config=$base."config";

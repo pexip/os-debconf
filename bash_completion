@@ -1,4 +1,4 @@
-have debconf-show &&
+_have debconf-show &&
 _debconf_show()
 {
         local cur

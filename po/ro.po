@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2014-12-04 21:13+0200\n"
 "Last-Translator: Andrei POPESCU <andreimpopescu@gmail.com>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
@@ -253,7 +253,7 @@ msgstr "Înapoi"
 msgid "Next"
 msgstr "Înainte"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -262,7 +262,7 @@ msgstr ""
 "avertisment: posibilă deteriorare a bazei de date. Se va încerca o reparare "
 "prin reintroducerea întrebării lipsă %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -272,18 +272,18 @@ msgstr ""
 "Probabil că două șabloane nu sunt separate corespunzător de o singură linia "
 "nouă.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Câmp de șablon necunoscut '%s', în paragraful #%s din %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr ""
 "Eroare de analiză a șablonului aproape de `%s', în paragraful #%s din %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Șablonul #%s în %s nu conține o linie 'Template:'\n"

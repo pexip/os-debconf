@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2007-06-03 13:36+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <punjabi-l10n@lists.sf.net>\n"
@@ -232,7 +232,7 @@ msgstr "ਪਿੱਛੇ"
 msgid "Next"
 msgstr "ਅੱਗੇ"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -241,7 +241,7 @@ msgstr ""
 "ਚੇਤਾਵਨੀ: ਸੰਭਵ ਤੌਰ ਉੱਤੇ ਡਾਟਾਬੇਸ ਨਿਕਾਰਾ ਹੋ ਗਿਆ ਹੈ। ਪਿਛਲਾ ਗੁੰਮ ਸਵਾਲ %s ਜੋੜ ਕੇ ਰਿਪੇਅਰ ਕਰਨ ਦੀ "
 "ਕੋਸ਼ਿਸ਼ ਕਰੇਗਾ।"
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -250,17 +250,17 @@ msgstr ""
 "ਟੈਂਪਲੇਟ #%s, %s ਵਿੱਚ ਇੱਕ ਡੁਪਲੀਕੇਟ ਖੇਤਰ \"%s\" ਮੁੱਲ \"%s\" ਨਾਲ ਹੈ।ਸੰਭਵ ਤੌਰ ਉੱਤੇ ਦੋ ਟੈਂਪਲੇਟ ਇੱਕ "
 "ਇੱਕਲੀ ਨਵੀਂ ਲਾਇਨ ਨਾਲ ਵੱਖ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ।\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "ਅਣਜਾਣ ਟੈਂਪਲੇਟ ਖੇਤਰ '%s' ਪ੍ਹੈਰੇ #%s, ਜੋ ਕਿ %s ਹੈ, 'ਚ ਹੈ\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "`%s' ਨੇੜੇ ਟੈਂਪਲੇਟ ਪਾਰਸ ਗਲਤੀ ਪ੍ਹੈਰੇ #%s ਵਿੱਚ ਹੈ, ਜੋ ਕਿ %s ਵਿੱਚ ਹੈ\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "ਟੈਂਪਲੇਟ #%s, %s ਵਿੱਚ 'Template:' ਲਾਈਨ ਨਹੀਂ ਹੈ\n"

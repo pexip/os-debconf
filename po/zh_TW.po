@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.2.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2009-12-19 16:53+0800\n"
 "Last-Translator: Tetralet <tetralet@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
@@ -231,14 +231,14 @@ msgstr "返回"
 msgid "Next"
 msgstr "下一步"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
 "missing question %s."
 msgstr "警告：資料庫可能已損壞。將會加回遺失的問題 %s 以試圖修復。"
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -247,17 +247,17 @@ msgstr ""
 "%2$s 中的 #%1$s 樣板有一個重複欄位 \"%3$s\"，並提供了一個新值為 \"%4$s\"。可"
 "能是有兩個樣板沒有適當得以換行符號分隔。\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "%3$s 中 #%2$s 部份有未知的樣板欄位 \"%1$s\"\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "在解析 %3$s 中 #%2$s 部份 \"%1$s\" 附近的樣板時發生錯誤\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "樣板 #%s 在 %s 中沒有包含 'Template:' 這麼一行\n"

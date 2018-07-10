@@ -6,9 +6,9 @@ XSBC-Pexip-Original-Maintainer: Debconf Developers <debconf-devel@lists.alioth.d
 XSBC-Pexip-Original-Uploaders: Colin Watson <cjwatson@debian.org>
 Standards-Version: 3.9.5
 Build-Depends-Indep: perl (>= 5.10.0-16), python (>= 2.6.6-3~), python3 (>= 3.1.2-8), gettext (>= 0.13), libintl-perl, libqtgui4-perl
-Build-Depends: debhelper (>= 7.2.11~), po-debconf, po4a (>= 0.23)
-Vcs-Git: git://anonscm.debian.org/debconf/debconf.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debconf/debconf.git;a=summary
+Build-Depends: debhelper (>= 8.1.0~), po-debconf, po4a (>= 0.23)
+Vcs-Git: https://anonscm.debian.org/git/debconf/debconf.git
+Vcs-Browser: https://anonscm.debian.org/cgit/debconf/debconf.git
 X-Python-Version: >= 2.6
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
@@ -20,7 +20,7 @@ Provides: debconf-2.0
 Replaces: debconf-tiny
 Depends: ${misc:Depends}
 Recommends: apt-utils (>= 0.5.1), debconf-i18n
-Suggests: debconf-doc, debconf-utils, whiptail | dialog | gnome-utils, libterm-readline-gnu-perl, libgtk2-perl (>= 1:1.130), libnet-ldap-perl, perl, libqtgui4-perl, libqtcore4-perl
+Suggests: debconf-doc, debconf-utils, whiptail | dialog, libterm-readline-gnu-perl, libgtk2-perl (>= 1:1.130), libnet-ldap-perl, perl, libqtgui4-perl, libqtcore4-perl
 Architecture: all
 Multi-Arch: foreign
 Description: Debian configuration management system

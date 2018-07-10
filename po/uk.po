@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-22 20:04-0400\n"
+"POT-Creation-Date: 2015-11-08 02:00+0000\n"
 "PO-Revision-Date: 2006-10-05 21:51+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@debian.org>\n"
 "Language-Team: Ukrainian\n"
@@ -252,7 +252,7 @@ msgstr "Назад"
 msgid "Next"
 msgstr "Далі"
 
-#: ../Debconf/Template.pm:91
+#: ../Debconf/Template.pm:96
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -261,7 +261,7 @@ msgstr ""
 "попередження: можливе ушкодження бази даних. Спробую відновити, додавши "
 "відсутнє питання %s."
 
-#: ../Debconf/Template.pm:206
+#: ../Debconf/Template.pm:211
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -270,17 +270,17 @@ msgstr ""
 "Шаблон #%s в %s має поле \"%s\" що повторюється з новим значенням \"%s\". "
 "Можливо, два шаблони невірно розділені символом нового рядка.\n"
 
-#: ../Debconf/Template.pm:231
+#: ../Debconf/Template.pm:236
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Невідоме поле шаблона \"%s\", в строфі #%s з %s\n"
 
-#: ../Debconf/Template.pm:257
+#: ../Debconf/Template.pm:262
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Помилка при розборі шаблону біля \"%s\", в строфі #%s з %s\n"
 
-#: ../Debconf/Template.pm:263
+#: ../Debconf/Template.pm:268
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Шаблон #%s в %s не містить рядка \"Template:\"\n"
