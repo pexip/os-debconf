@@ -1,3 +1,9 @@
+debconf (1.5.61pexip1) pexip; urgency=medium
+
+  * Migrate to Stretch
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 10 Jul 2018 00:19:41 +0000
+
 debconf (1.5.61) unstable; urgency=medium
 
   [ Niko Tyni ]
