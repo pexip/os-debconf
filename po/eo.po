@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-08 02:00+0000\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
 "PO-Revision-Date: 2012-07-29 13:51-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "retroiro al la fasado: %s"
 
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "ne eblas ekigi la fasadon: %s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Ne eblas lanĉi fasadon: %s"
@@ -100,11 +100,11 @@ msgstr ""
 "(Tajpu neniun aŭ iujn erojn interspacigitajn per komo sekvata de spaco (', "
 "').)"
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "_Helpo"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "Helpo"
 
@@ -211,11 +211,50 @@ msgstr ""
 "debconf legos la redaktitan dosieron, kaj uzos la valorojn kiujn vi enmetis "
 "por agordi la sistemon."
 
-#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:95
+#, fuzzy
+#| msgid "Package configuration"
+msgid "Really quit configuration?"
+msgstr "Pak-agordado"
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"If you quit this configuration dialog, then the package being configured "
+"will probably fail to install, and you may have to fix it manually. This may "
+"be especially difficult if you are in the middle of a large upgrade."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"You may need to quit anyway if you are stuck in a configuration loop due to "
+"a buggy package."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
+msgid "Continue"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf sur %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "Sekvi"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "Retroiri"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
@@ -289,36 +328,36 @@ msgstr "ni prokrastigas la pak-agordadon, ĉar apt-utils ne estas instalita"
 msgid "unable to re-open stdin: %s"
 msgstr "ne eblas remalfermi stdin: %s"
 
-#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
+#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates malsukcesis: %s"
 
-#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
+#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Elmetado de ŝablonoj el pakoj: %d%%"
 
-#: ../dpkg-preconfigure:195
+#: ../dpkg-preconfigure:197
 msgid "Preconfiguring packages ...\n"
 msgstr "Antaŭagordado de pakoj ...\n"
 
-#: ../dpkg-preconfigure:207
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "template parse error: %s"
 msgstr "ŝablona analiz-eraro: %s"
 
-#: ../dpkg-preconfigure:221
+#: ../dpkg-preconfigure:223
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: ne povas chmod: %s"
 
-#: ../dpkg-preconfigure:232
+#: ../dpkg-preconfigure:234
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s malsukcesis antaŭagordi, kun elir-stato %s"
 
-#: ../dpkg-reconfigure:99
+#: ../dpkg-reconfigure:100
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -332,21 +371,21 @@ msgstr ""
 "       --force\t\t\tDevigi la reagordon de rompitaj pakoj.\n"
 "       --no-reload\t\tNe reŝargi la ŝablonojn. (Uzu sin-garde.)"
 
-#: ../dpkg-reconfigure:111
+#: ../dpkg-reconfigure:112
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s devas esti lanĉata de root"
 
-#: ../dpkg-reconfigure:138
+#: ../dpkg-reconfigure:139
 msgid "please specify a package to reconfigure"
 msgstr "bonvolu indiki pakon por reagordi."
 
-#: ../dpkg-reconfigure:162
+#: ../dpkg-reconfigure:165
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s ne estas instalita"
 
-#: ../dpkg-reconfigure:166
+#: ../dpkg-reconfigure:169
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s estas rompita aŭ malkomplete instalita"

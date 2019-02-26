@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-08 02:00+0000\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
 "PO-Revision-Date: 2012-08-08 15:31+0300\n"
 "Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -19,18 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "التّراجع إلى الواجهة: %s"
 
 # # CHECK
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "لم يمكن ابتداء الواجهة: %s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "لم يمكن تشغيل واجهة: %s"
@@ -103,11 +103,11 @@ msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr "(لا تُدخل أي عنصر أو عنصر أو أكثر مفصولة بفواصل يتبعها مسافة (', ').)"
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "_مساعدة"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "مساعدة"
 
@@ -209,11 +209,50 @@ msgstr ""
 "بتغيير أي عناصر كما يلزم، ثم احفظ الملف واخرج من البرنامج. عند هذا، سيقرأ "
 "debconf الملف، ويستخدم القيم التي أدخلتها لتهيئة نظامك."
 
-#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:95
+#, fuzzy
+#| msgid "Package configuration"
+msgid "Really quit configuration?"
+msgstr "تهيئة الحزمة"
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"If you quit this configuration dialog, then the package being configured "
+"will probably fail to install, and you may have to fix it manually. This may "
+"be especially difficult if you are in the middle of a large upgrade."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"You may need to quit anyway if you are stuck in a configuration loop due to "
+"a buggy package."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
+msgid "Continue"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf على %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "التالي"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "السابق"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
@@ -289,36 +328,36 @@ msgstr "تأجيل تهيئة الحزم، حيث أن apt-utils غير مثبت
 msgid "unable to re-open stdin: %s"
 msgstr "لم يمكن إعادة فتح stdin: %s"
 
-#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
+#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "فشل apt-extracttemplates: %s"
 
-#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
+#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "استخراج القوالب من الحزم: %d%%"
 
-#: ../dpkg-preconfigure:195
+#: ../dpkg-preconfigure:197
 msgid "Preconfiguring packages ...\n"
 msgstr "تهيئة الحزم مسبقاً ...\n"
 
-#: ../dpkg-preconfigure:207
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "template parse error: %s"
 msgstr "خطأ في إعراب القالب: %s"
 
-#: ../dpkg-preconfigure:221
+#: ../dpkg-preconfigure:223
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: لايمكن تنفيذ chmod: %s"
 
-#: ../dpkg-preconfigure:232
+#: ../dpkg-preconfigure:234
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "فشلت تهيئة %s مسبقاً، مع حالة خروج %s"
 
-#: ../dpkg-reconfigure:99
+#: ../dpkg-reconfigure:100
 #, fuzzy
 #| msgid ""
 #| "Usage: dpkg-reconfigure [options] packages\n"
@@ -341,21 +380,21 @@ msgstr ""
 "       --force\t\t\tافرض إعادة تهيئة الحزم المُعطّلة.\n"
 "       --no-reload\t\tلا تُعد تحميل القوالب (استخدمه بحذر)"
 
-#: ../dpkg-reconfigure:111
+#: ../dpkg-reconfigure:112
 #, perl-format
 msgid "%s must be run as root"
 msgstr "يجب تشغيل %s كمستخدم جذر"
 
-#: ../dpkg-reconfigure:138
+#: ../dpkg-reconfigure:139
 msgid "please specify a package to reconfigure"
 msgstr "الرجاء تحديد حزمة لتهيئتها مسبقاً"
 
-#: ../dpkg-reconfigure:162
+#: ../dpkg-reconfigure:165
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s غير مُثبّتة"
 
-#: ../dpkg-reconfigure:166
+#: ../dpkg-reconfigure:169
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s معطوبة أو غير مُثبّتة بالكامل"

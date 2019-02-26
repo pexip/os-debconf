@@ -1,5 +1,5 @@
 # Translation of debconf manpages to German
-# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2008, 2009, 2012.
+# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2008, 2009, 2012, 2013, 2018.
 # Copyright (C) Florian 'eix' Rehnisch <eixman@gmx.de>, 2008.
 # This file is distributed under the same license as the debconf package.
 #
@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
-"PO-Revision-Date: 2013-10-12 14:12+0200\n"
-"Last-Translator: Florian 'eix' Rehnisch <eixman@gmx.de>\n"
+"POT-Creation-Date: 2018-07-25 09:14+0100\n"
+"PO-Revision-Date: 2018-07-20 10:47+0200\n"
+"Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -36,12 +36,11 @@ msgstr "debconf - führe ein Debconf-verwendendes Programm aus"
 #. type: SH
 #: ../../debconf:9 ../../Debconf/Client/ConfModule.pm:7
 #: ../../debconf-apt-progress:7 ../../debconf-escape:7
-#: ../../debconf-communicate:9 ../../debconf-copydb:16
-#: ../../debconf-getlang:15 ../../debconf-get-selections:7
-#: ../../debconf-loadtemplate:13 ../../debconf-mergetemplate:16
-#: ../../debconf-set-selections:19 ../../debconf-show:19
-#: ../../dpkg-preconfigure:7 ../../dpkg-reconfigure:7 debconf.conf.5:12
-#: confmodule.3:4
+#: ../../debconf-communicate:9 ../../debconf-copydb:16 ../../debconf-getlang:15
+#: ../../debconf-get-selections:7 ../../debconf-loadtemplate:13
+#: ../../debconf-mergetemplate:16 ../../debconf-set-selections:19
+#: ../../debconf-show:19 ../../dpkg-preconfigure:7 ../../dpkg-reconfigure:7
+#: debconf.conf.5:12 confmodule.3:4
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr "ÜBERSICHT"
@@ -228,8 +227,8 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
 #: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
-#: ../../debconf-show:154 ../../dpkg-preconfigure:244
-#: ../../dpkg-reconfigure:295 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../debconf-show:154 ../../dpkg-preconfigure:246
+#: ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -240,7 +239,7 @@ msgstr "AUTOR"
 #: ../../debconf-apt-progress:666 ../../debconf-communicate:75
 #: ../../debconf-copydb:177 ../../debconf-getlang:257
 #: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:297
+#: ../../dpkg-preconfigure:248 ../../dpkg-reconfigure:304
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess <joeyh@debian.org>"
 
@@ -3722,14 +3721,14 @@ msgstr "B<gnome>"
 msgid ""
 "This is a modern X GUI using the gtk and gnome libraries. Of course, it "
 "requires a valid DISPLAY to work; debconf will fall back to other frontends "
-"if it can't work. Note that this frontend requires you have the libgnome2-"
-"perl package installed."
+"if it can't work. Note that this frontend requires you have the libgtk3-perl "
+"package installed."
 msgstr ""
 "Dies ist eine modern X-GUI, die die GTK und GNOME-Bibliotheken benutzt. "
 "Natürlich benötigtes es zum Funktionieren ein gültiges DISPLAY; Debconf "
 "greift auf andere Benutzerschnittstellen zurück, falls sie nicht "
 "funktionieren kann. Beachten Sie, dass diese Benutzerschnittstelle die "
-"Installation des Pakets libgnome2-perl erfordert."
+"Installation des Pakets libgtk3-perl erfordert."
 
 #. type: TP
 #: debconf.7:96
@@ -3737,22 +3736,20 @@ msgstr ""
 msgid "B<kde>"
 msgstr "B<kde>"
 
-# type: Plain text
 #. type: Plain text
 #: debconf.7:102
 msgid ""
-"This frontend provides a simple X GUI written with the Qt library. It fits "
-"well the KDE desktop. You of course need a DISPLAY to use this frontend and "
-"must install libqt-perl. The frontend will fall back to dialog if some of "
-"the prerequisites are not met."
+"This frontend provides a modern X GUI based on the KDE Platform. You of "
+"course need a DISPLAY to use this frontend and you must install debconf-kde-"
+"helper package. The frontend will fall back to dialog if some of the "
+"prerequisites are not met."
 msgstr ""
-"Diese Benutzerschnittstelle liefert eine einfache X11-Benutzerschnittstelle "
-"basierend auf den Qt-Bibliotheken. Es passt gut in den Desktop KDE. "
-"Selbstverständlich benötigen Sie DISPLAY und müssen libqt-perl installieren, "
-"um diese Benutzerschnittstelle zu benutzen. Die Schnittstelle fällt auf "
-"Dialog zurück, falls einige der Voraussetzungen nicht zutreffen."
+"Diese Benutzerschnittstelle stellt eine moderne X-Benutzerschnittstelle auf "
+"der KDE-Plattform bereit. Sie benötigen natürlich ein DISPLAY, um diese "
+"Oberfläche zu benutzen und müssen das Hilfspaket debconf-kde-helper "
+"installieren. Die Schnittstelle fällt auf Dialog zurück, falls einige der "
+"Voraussetzungen nicht zutreffen."
 
-# type: TP
 #. type: TP
 #: debconf.7:102
 #, no-wrap
@@ -7219,6 +7216,26 @@ msgid ""
 msgstr ""
 "In B<debconf.conf>(5) sind viele nützliche Informationen, darunter auch über "
 "die Backend-Datenbank."
+
+# type: Plain text
+#, fuzzy
+#~| msgid ""
+#~| "This frontend provides a simple X GUI written with the Qt library. It "
+#~| "fits well the KDE desktop. You of course need a DISPLAY to use this "
+#~| "frontend and must install libqt-perl. The frontend will fall back to "
+#~| "dialog if some of the prerequisites are not met."
+#~ msgid ""
+#~ "This frontend provides a simple X GUI written with the Qt library. You of "
+#~ "course need a DISPLAY to use this frontend and must install libqtgui4-"
+#~ "perl.  The frontend will fall back to dialog if some of the prerequisites "
+#~ "are not met."
+#~ msgstr ""
+#~ "Diese Benutzerschnittstelle liefert eine einfache X11-"
+#~ "Benutzerschnittstelle basierend auf den Qt-Bibliotheken. Es passt gut in "
+#~ "den Desktop KDE. Selbstverständlich benötigen Sie DISPLAY und müssen "
+#~ "libqt-perl installieren, um diese Benutzerschnittstelle zu benutzen. Die "
+#~ "Schnittstelle fällt auf Dialog zurück, falls einige der Voraussetzungen "
+#~ "nicht zutreffen."
 
 #~ msgid "B<-a>, B<--all>"
 #~ msgstr "B<-a>, B<--all>"

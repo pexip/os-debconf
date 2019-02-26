@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-08 02:00+0000\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
 "PO-Revision-Date: 2014-12-04 21:59+0100\n"
 "Last-Translator: Marcin Owsiany <porridge@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "powrót do nakładki: %s"
 
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "nie udało się zainicjalizować nakładki: %s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Nie udało się uruchomić nakładki: %s"
@@ -99,11 +99,11 @@ msgid ""
 msgstr ""
 "(Wpisz zero lub więcej pozycji oddzielonych przecinkiem i spacją (', ').)"
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "_Pomoc"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "Pomoc"
 
@@ -212,11 +212,50 @@ msgstr ""
 "przeczyta zapisany plik i użyje wprowadzonych przez Ciebie wartości do "
 "konfiguracji systemu."
 
-#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:95
+#, fuzzy
+#| msgid "Package configuration"
+msgid "Really quit configuration?"
+msgstr "Konfiguracja pakietu"
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"If you quit this configuration dialog, then the package being configured "
+"will probably fail to install, and you may have to fix it manually. This may "
+"be especially difficult if you are in the middle of a large upgrade."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"You may need to quit anyway if you are stuck in a configuration loop due to "
+"a buggy package."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
+msgid "Continue"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf na %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "Dalej"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "Powrót"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
@@ -293,36 +332,36 @@ msgstr ""
 msgid "unable to re-open stdin: %s"
 msgstr "nie udało się ponownie otworzyć stdin: %s"
 
-#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
+#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "Działanie apt-extracttemplates zakończyło się błędem: %s"
 
-#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
+#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Rozpakowywanie szablonów dla pakietów: %d%%"
 
-#: ../dpkg-preconfigure:195
+#: ../dpkg-preconfigure:197
 msgid "Preconfiguring packages ...\n"
 msgstr "Prekonfiguracja pakietów ...\n"
 
-#: ../dpkg-preconfigure:207
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "template parse error: %s"
 msgstr "błąd w szablonie: %s"
 
-#: ../dpkg-preconfigure:221
+#: ../dpkg-preconfigure:223
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: nie udało się zmienić uprawnień: %s"
 
-#: ../dpkg-preconfigure:232
+#: ../dpkg-preconfigure:234
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "nie udało się skonfigurować %s, kod wyjścia: %s"
 
-#: ../dpkg-reconfigure:99
+#: ../dpkg-reconfigure:100
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
@@ -338,21 +377,21 @@ msgstr ""
 "zależnościami.\n"
 "       --no-reload\t\tNie przeładowuje szablonów. (Używać ostrożnie.)"
 
-#: ../dpkg-reconfigure:111
+#: ../dpkg-reconfigure:112
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s musi być uruchamiany jako root"
 
-#: ../dpkg-reconfigure:138
+#: ../dpkg-reconfigure:139
 msgid "please specify a package to reconfigure"
 msgstr "proszę podać pakiet do skonfigurowania"
 
-#: ../dpkg-reconfigure:162
+#: ../dpkg-reconfigure:165
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s nie jest zainstalowany"
 
-#: ../dpkg-reconfigure:166
+#: ../dpkg-reconfigure:169
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s jest uszkodzony, lub nie jest w pełni zainstalowany"

@@ -81,6 +81,7 @@ if (exists $ENV{DEBCONF_USE_CDEBCONF} and $ENV{DEBCONF_USE_CDEBCONF} ne '') {
 }
 
 use strict;
+use Cwd;
 use Debconf::Db;
 use Debconf::Gettext;
 use Debconf::Template;
@@ -145,6 +146,8 @@ if (! @packages) {
 $ENV{DEBCONF_RECONFIGURE}=1;
 
 my %initial_triggers=map { $_ => 1 } triggers_pending();
+
+my $original_cwd=getcwd();
 
 foreach my $pkg (@packages) {
 	# Set default title.
@@ -217,6 +220,7 @@ foreach my $pkg (@packages) {
 			close IN;
 		}
 		
+		chdir('/');
 		if ($script eq 'config' || $is_confmodule) {
 			# Start up the confmodule.
 			my $confmodule=make_confmodule($path_script, @$info);
@@ -234,6 +238,7 @@ foreach my $pkg (@packages) {
 			# Not a confmodule, so run it as a normal script.
 			run_external($path_script, @$info);
 		}
+		chdir($original_cwd);
 	}
 }
 
@@ -247,7 +252,9 @@ do {
 			if not exists $initial_triggers{$trigpend};
 	}
 	if (@new_triggers) {
+		chdir('/');
 		run_external("dpkg", "--configure", @new_triggers);
+		chdir($original_cwd);
 	}
 } while (@new_triggers);
 

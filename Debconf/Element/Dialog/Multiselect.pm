@@ -10,6 +10,7 @@ package Debconf::Element::Dialog::Multiselect;
 use strict;
 use base qw(Debconf::Element::Multiselect);
 use Debconf::Encoding qw(width);
+use Debconf::Log qw(debug);
 
 =head1 DESCRIPTION
 
@@ -53,14 +54,25 @@ sub show {
 	$lines=$lines + $menu_height + $this->frontend->spacer;
 	my $selectspacer = $this->frontend->selectspacer;
 	my $c=1;
+	my %unellipsized;
 	foreach (@choices) {
-		push @params, ($_, "");
+		my $choice = $this->frontend->ellipsize($_);
+
+		if (exists $unellipsized{$choice}) {
+			debug 'developer' => sprintf
+				'Ambiguous ellipsized choice "%s": "%s" or "%s".  Overflow.',
+				$choice, $unellipsized{$choice}, $_;
+			$choice = $_;
+		}
+		$unellipsized{$choice} = $_;
+
+		push @params, ($choice, "");
 		push @params, ($value{$_} ? 'on' : 'off');
 
 		# Choices wider than the description text? (Only needed for
 		# whiptail BTW.)
-		if ($columns < width($_) + $selectspacer) {
-			$columns = width($_) + $selectspacer;
+		if ($columns < width($choice) + $selectspacer) {
+			$columns = width($choice) + $selectspacer;
 		}
 	}
 	
@@ -77,7 +89,7 @@ sub show {
 		# Dialog returns the selected items, each on a line.
 		# Translate back to C, and turn into our internal format.
 		$this->value(join(", ", $this->order_values(
-					map { $this->translate_to_C($_) }
+					map { $this->translate_to_C($unellipsized{$_}) }
 					split(/\n/, $value))));
 	}
 	else {

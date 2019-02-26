@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-08 02:00+0000\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
 "PO-Revision-Date: 2012-08-05 23:15+0300\n"
 "Last-Translator: Tommi Vainikainen <tvainika@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "siirryn vaihtoehtoiseen liittymään: %s"
 
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "liittymän alustus epäonnistui: %s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Liittymän käynnistys epäonnistui: %s"
@@ -101,11 +101,11 @@ msgstr ""
 "(Syötä nolla tai useampia pilkulla ja välilyönnillä (', ') erotettuja "
 "arvoja.)"
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "_Ohje"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "Ohje"
 
@@ -212,11 +212,50 @@ msgstr ""
 "poistu, minkä jälkeen debconf lukee editoidun tiedoston ja säätää asetukset "
 "syöttämiesi tietojen perusteella."
 
-#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:95
+#, fuzzy
+#| msgid "Package configuration"
+msgid "Really quit configuration?"
+msgstr "Paketin asetukset"
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"If you quit this configuration dialog, then the package being configured "
+"will probably fail to install, and you may have to fix it manually. This may "
+"be especially difficult if you are in the middle of a large upgrade."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"You may need to quit anyway if you are stuck in a configuration loop due to "
+"a buggy package."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
+msgid "Continue"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf @ %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "Seuraava"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "Takaisin"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
@@ -294,36 +333,36 @@ msgstr "pakettien esiasetusta ei tehdä, koska apt-utils:ia ei ole asennettu"
 msgid "unable to re-open stdin: %s"
 msgstr "vakiosyötteen uudelleenavaus epäonnistui: %s"
 
-#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
+#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates epäonnistui: %s"
 
-#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
+#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Puretaan malleja paketeteista: %d %%"
 
-#: ../dpkg-preconfigure:195
+#: ../dpkg-preconfigure:197
 msgid "Preconfiguring packages ...\n"
 msgstr "Esiräätälöidään paketteja...\n"
 
-#: ../dpkg-preconfigure:207
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "template parse error: %s"
 msgstr "kyselypohjan jäsennysvirhe: %s"
 
-#: ../dpkg-preconfigure:221
+#: ../dpkg-preconfigure:223
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: en voi muuttaa oikeuksia: %s"
 
-#: ../dpkg-preconfigure:232
+#: ../dpkg-preconfigure:234
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s:n esiasetus epäonnistui; paluukoodi oli %s"
 
-#: ../dpkg-reconfigure:99
+#: ../dpkg-reconfigure:100
 #, fuzzy
 #| msgid ""
 #| "Usage: dpkg-reconfigure [options] packages\n"
@@ -348,21 +387,21 @@ msgstr ""
 "\t\t\t\tuudelleenkonfigurointi.\n"
 "       --no-reload\t\tÄlä uudelleenlataa mallinteita. (Käytä varoen.)"
 
-#: ../dpkg-reconfigure:111
+#: ../dpkg-reconfigure:112
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s on ajettava root-oikeuksilla"
 
-#: ../dpkg-reconfigure:138
+#: ../dpkg-reconfigure:139
 msgid "please specify a package to reconfigure"
 msgstr "tarvitsen käsiteltävän paketin nimen"
 
-#: ../dpkg-reconfigure:162
+#: ../dpkg-reconfigure:165
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s ei ole täysin asennettu"
 
-#: ../dpkg-reconfigure:166
+#: ../dpkg-reconfigure:169
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s on rikki tai ei ole täysin asennettu"

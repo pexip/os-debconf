@@ -8,7 +8,7 @@ Debconf::Element::Gnome::Multiselect - a check list in a dialog box
 
 package Debconf::Element::Gnome::Multiselect;
 use strict;
-use Gtk2;
+use Gtk3;
 use utf8;
 use Debconf::Encoding qw(to_Unicode);
 use base qw(Debconf::Element::Gnome Debconf::Element::Multiselect);
@@ -26,15 +26,15 @@ sub init {
 
 	$this->adddescription;
 
-        $this->widget(Gtk2::ScrolledWindow->new);
+        $this->widget(Gtk3::ScrolledWindow->new);
         $this->widget->show;
         $this->widget->set_policy('automatic', 'automatic');
 	
-	my $list_store = Gtk2::ListStore->new('Glib::Boolean', 'Glib::String');
-	$this->list_view(Gtk2::TreeView->new($list_store));
+	my $list_store = Gtk3::ListStore->new('Glib::Boolean', 'Glib::String');
+	$this->list_view(Gtk3::TreeView->new($list_store));
 	$this->list_view->set_headers_visible(0);
 
-	my $renderer_toggle = Gtk2::CellRendererToggle->new;
+	my $renderer_toggle = Gtk3::CellRendererToggle->new;
 	$renderer_toggle->signal_connect(toggled => sub {
 		my $path_string = $_[1];
 		my $model = $_[2];
@@ -44,11 +44,11 @@ sub init {
 	}, $list_store);
 
 	$this->list_view->append_column(
-		Gtk2::TreeViewColumn->new_with_attributes('Selected',
+		Gtk3::TreeViewColumn->new_with_attributes('Selected',
 			$renderer_toggle, 'active', SELECTED_COLUMN));
 	$this->list_view->append_column(
-		Gtk2::TreeViewColumn->new_with_attributes('Choices',
-			Gtk2::CellRendererText->new, 'text', CHOICES_COLUMN)); 
+		Gtk3::TreeViewColumn->new_with_attributes('Choices',
+			Gtk3::CellRendererText->new, 'text', CHOICES_COLUMN));
 	$this->list_view->show;
 
 	$this->widget->add($this->list_view);
@@ -80,7 +80,7 @@ locale.
 sub value {
 	my $this=shift;
 	my $list_view = $this->list_view;
-	my $list_store = $list_view->get_model ();
+	my $list_store = $list_view->get_model();
 	my ($ret, $val);
 	
 	my @vals;
@@ -94,7 +94,7 @@ sub value {
 		if ($list_store->get($iter, SELECTED_COLUMN)) {
 			push @vals, $choices[$i];
 		}
-		$iter = $list_store->iter_next($iter);
+		$list_store->iter_next($iter) or last;
 	}
 
 	return join(', ', $this->order_values(@vals));

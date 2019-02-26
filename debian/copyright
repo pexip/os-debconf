@@ -1,5 +1,4 @@
-Format: http://dep.debian.net/deps/dep5/
-Source: native package
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 
 Files: *
 Copyright: 1999-2010 Joey Hess <joeyh@debian.org>
@@ -11,6 +10,17 @@ Files: Debconf/FrontEnd/Passthrough.pm
 Copyright: 2000 Randolph Chung <tausq@debian.org>
            2000-2010 Joey Hess <joeyh@debian.org>
            2005-2010 Colin Watson <cjwatson@debian.org>
+License: BSD-2-clause
+
+Files: Debconf/FrontEnd/Qt* Debconf/Element/Qt*
+Copyright: 2003 Peter Rockai <mornfall@logisys.dyndns.org>
+           2003-2010 Colin Watson <cjwatson@debian.org>
+           2010 Sune Vuorela <sune@debian.org>
+           2011 Modestas Vainius <modax@debian.org>
+License: BSD-2-clause
+
+Files: Debconf/FrontEnd/Kde.pm
+Copyright: 2011 Modestas Vainius <modax@debian.org>
 License: BSD-2-clause
 
 Files: Debconf/FrontEnd/Gnome.pm
@@ -66,4 +76,3 @@ License: BSD-2-clause
  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  SUCH DAMAGE.
-
