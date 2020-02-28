@@ -1,3 +1,9 @@
+debconf (1.5.71pexip1) pexip; urgency=medium
+
+  * Migrate to Buster
+
+ -- Vincent Sanders <vince@pexip.com>  Fri, 28 Feb 2020 11:22:41 +0000
+
 debconf (1.5.71) unstable; urgency=medium
 
   [ Kevin Locke ]
