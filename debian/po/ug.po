@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Sahran <sahran.ug@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf_debian\n"
@@ -11,6 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2011-02-15 20:09+0600\n"
 "Last-Translator: Sahran <Sahran.ug@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,14 +49,31 @@ msgstr "ئىشلىتىدىغان ئارايۈز:"
 #. Type: select
 #. Description
 #: ../templates:1002
-msgid "Packages that use debconf for configuration share a common look and feel. You can select the type of user interface they use."
-msgstr "debconf ئىشلىتىپ تەڭشىلىدىغان بوغچىلار ئورتاق كۆرۈنۈشنى ئىشلىتىدۇ. تەڭشەش جەريانى ئىشلىتىدىغان ئىشلەتكۈچى ئارايۈزى تۈرىنى تاللاڭ."
+msgid ""
+"Packages that use debconf for configuration share a common look and feel. "
+"You can select the type of user interface they use."
+msgstr ""
+"debconf ئىشلىتىپ تەڭشىلىدىغان بوغچىلار ئورتاق كۆرۈنۈشنى ئىشلىتىدۇ. تەڭشەش "
+"جەريانى ئىشلىتىدىغان ئىشلەتكۈچى ئارايۈزى تۈرىنى تاللاڭ."
 
 #. Type: select
 #. Description
 #: ../templates:1002
-msgid "The dialog frontend is a full-screen, character based interface, while the readline frontend uses a more traditional plain text interface, and both the gnome and kde frontends are modern X interfaces, fitting the respective desktops (but may be used in any X environment). The editor frontend lets you configure things using your favorite text editor. The noninteractive frontend never asks you any questions."
-msgstr "سۆزلەشكۈ ئالدى ئۇچى — بىر خىل پۈتۈن ئېكرانلىق ھەرپ كۆرۈنۈشى، readline ئالدى ئۇچى — تېخىمۇ ئەنئەنىۋى بولغان تېكىست كۆرۈنۈشى، gnome ۋە kde ئالدى ئۇچى — ئۆزىنىڭ ئۈستەلئۈستى سىستېمىسى(ئەمما باشقا ھەر قانداق X مۇھىتىغا ماس كېلىشى مۇمكىن)غا ماس كېلىدىغان يېڭى تىپتىكى X ئارايۈز. تەھرىرلىگۈچ ئالدى ئۈچى — سىزنىڭ ئەڭ ياخشى كۆرىدىغان تېكىست تەھرىرلىگۈچتە سەپلەپ خىزمىتى ئېلىپ بېرىشىڭىزغا يول قويىدۇ. غەيرىي تەسىرلىشىشچان ئالدى ئۇچى — سىزگە ھېچقانداق مەسىلە ئوتتۇرىغا قويمايدۇ."
+msgid ""
+"The dialog frontend is a full-screen, character based interface, while the "
+"readline frontend uses a more traditional plain text interface, and both the "
+"gnome and kde frontends are modern X interfaces, fitting the respective "
+"desktops (but may be used in any X environment). The editor frontend lets "
+"you configure things using your favorite text editor. The noninteractive "
+"frontend never asks you any questions."
+msgstr ""
+"سۆزلەشكۈ ئالدى ئۇچى — بىر خىل پۈتۈن ئېكرانلىق ھەرپ كۆرۈنۈشى، readline ئالدى "
+"ئۇچى — تېخىمۇ ئەنئەنىۋى بولغان تېكىست كۆرۈنۈشى، gnome ۋە kde ئالدى ئۇچى — "
+"ئۆزىنىڭ ئۈستەلئۈستى سىستېمىسى(ئەمما باشقا ھەر قانداق X مۇھىتىغا ماس كېلىشى "
+"مۇمكىن)غا ماس كېلىدىغان يېڭى تىپتىكى X ئارايۈز. تەھرىرلىگۈچ ئالدى ئۈچى — "
+"سىزنىڭ ئەڭ ياخشى كۆرىدىغان تېكىست تەھرىرلىگۈچتە سەپلەپ خىزمىتى ئېلىپ "
+"بېرىشىڭىزغا يول قويىدۇ. غەيرىي تەسىرلىشىشچان ئالدى ئۇچى — سىزگە ھېچقانداق "
+"مەسىلە ئوتتۇرىغا قويمايدۇ."
 
 #. Type: select
 #. Choices
@@ -91,16 +109,20 @@ msgstr "مۇھىملىقى تۆۋەنرەك بولغان سوئاللارغا پ
 #. Description
 #: ../templates:2002
 msgid ""
-"Debconf prioritizes the questions it asks you. Pick the lowest priority of question you want to see:\n"
+"Debconf prioritizes the questions it asks you. Pick the lowest priority of "
+"question you want to see:\n"
 "  - 'critical' only prompts you if the system might break.\n"
 "    Pick it if you are a newbie, or in a hurry.\n"
 "  - 'high' is for rather important questions\n"
 "  - 'medium' is for normal questions\n"
 "  - 'low' is for control freaks who want to see everything"
 msgstr ""
-"Debconf ئوتتۇرىغا قويۇلىدىغان مەسىلىلەرنى كۆپ دەرىجىگە ئايرىيدۇ. سىز كۆرمەكچى بولغان ئەڭ تۆۋەن دەرىجىلىك مەسىلىنى تاللاڭ:\n"
-"- ھالقىلىق\t\tپەقەت سىستېما بۇزۇلۇشىنى كەلتۈرۈپ چىقىرىدىغان مەسىلىلەرنىلا ئەسكەرتىدۇ\n"
-"سىز يېڭىياچى ياكى بەك ئالدىراش بولسىڭىز، بۇ تۈرنى تاللاشنى ئويلاشسىڭىز بولىدۇ.\n"
+"Debconf ئوتتۇرىغا قويۇلىدىغان مەسىلىلەرنى كۆپ دەرىجىگە ئايرىيدۇ. سىز "
+"كۆرمەكچى بولغان ئەڭ تۆۋەن دەرىجىلىك مەسىلىنى تاللاڭ:\n"
+"- ھالقىلىق\t\tپەقەت سىستېما بۇزۇلۇشىنى كەلتۈرۈپ چىقىرىدىغان مەسىلىلەرنىلا "
+"ئەسكەرتىدۇ\n"
+"سىز يېڭىياچى ياكى بەك ئالدىراش بولسىڭىز، بۇ تۈرنى تاللاشنى ئويلاشسىڭىز "
+"بولىدۇ.\n"
 "- يۇقىرى\t\tناھايىتى مۇھىم بولغان مەسىلىلەرگە قارىتىلىدۇ\n"
 "- ئوتتۇرا\t\tئادەتتىكى مەسىلىلەرگە قارىتىلىدۇ\n"
 "- تۆۋەن\t\tھەممىنى كۆرۈپ تۇرۇشنى خالايدىغان تىزگىنلىگۈچىلەرگە ماس كېلىدۇ"
@@ -108,8 +130,13 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../templates:2002
-msgid "Note that no matter what level you pick here, you will be able to see every question if you reconfigure a package with dpkg-reconfigure."
-msgstr "دىققەت: سىز بۇ يەردە قايسى دەرىجىنى تاللىشىڭىزدىن قەتئىينەزەر، سىز dpkg-reconfigure ئىشلىتىپ بوغچىلارنى قايتا تەڭشىگەندە ھەممە مەسىلىلەرنى كۆرەلەيسىز."
+msgid ""
+"Note that no matter what level you pick here, you will be able to see every "
+"question if you reconfigure a package with dpkg-reconfigure."
+msgstr ""
+"دىققەت: سىز بۇ يەردە قايسى دەرىجىنى تاللىشىڭىزدىن قەتئىينەزەر، سىز dpkg-"
+"reconfigure ئىشلىتىپ بوغچىلارنى قايتا تەڭشىگەندە ھەممە مەسىلىلەرنى "
+"كۆرەلەيسىز."
 
 #. Type: text
 #. Description

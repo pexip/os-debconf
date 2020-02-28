@@ -11,6 +11,7 @@ use strict;
 use Carp;
 use IO::Socket;
 use IO::Handle;
+use IO::Select;
 use Debconf::FrontEnd;
 use Debconf::Element;
 use Debconf::Element::Select;
@@ -18,16 +19,6 @@ use Debconf::Element::Multiselect;
 use Debconf::Log qw(:all);
 use Debconf::Encoding;
 use base qw(Debconf::FrontEnd);
-
-my ($READFD, $WRITEFD, $SOCKET);
-if (defined $ENV{DEBCONF_PIPE}) {
-        $SOCKET = $ENV{DEBCONF_PIPE};
-} elsif (defined $ENV{DEBCONF_READFD} && defined $ENV{DEBCONF_WRITEFD}) {
-        $READFD = $ENV{DEBCONF_READFD};
-        $WRITEFD = $ENV{DEBCONF_WRITEFD};
-} else {
-        die "Neither DEBCONF_PIPE nor DEBCONF_READFD and DEBCONF_WRITEFD were set\n";
-}
 
 =head1 DESCRIPTION
 
@@ -51,22 +42,20 @@ Set up the pipe to the UI agent and other housekeeping chores.
 sub init {
 	my $this=shift;
 
-        if (defined $SOCKET) {
-                $this->{readfh} = $this->{writefh} = IO::Socket::UNIX->new(
-		        Type => SOCK_STREAM,
-		        Peer => $SOCKET
-	        ) || croak "Cannot connect to $SOCKET: $!";
-        } else {
-                $this->{readfh} = IO::Handle->new_from_fd(int($READFD), "r") || croak "Failed to open fd $READFD: $!";
-                $this->{writefh} = IO::Handle->new_from_fd(int($WRITEFD), "w") || croak "Failed to open fd $WRITEFD: $!";
-        }
+	# If readfh and writefh were not initialized before (by child class),
+	# initialize them from environment
+	if (not defined $this->{readfh} or not defined $this->{writefh}) {
+		if (not defined $this->init_fh_from_env()) {
+			die "Neither DEBCONF_PIPE nor DEBCONF_READFD and DEBCONF_WRITEFD were set\n";
+		}
+	}
 
 	binmode $this->{readfh}, ":utf8";
 	binmode $this->{writefh}, ":utf8";
 
 	$this->{readfh}->autoflush(1);
 	$this->{writefh}->autoflush(1);
-	
+
 	# Note: SUPER init is not called, since it does several things
 	# inappropriate for passthrough frontends, including clearing the capb.
 	$this->elements([]);
@@ -74,33 +63,85 @@ sub init {
 	$this->need_tty(0);
 }
 
-=head2 talk
+=head2 init_fh_from_env
 
-Communicates with the UI agent. Joins all parameters together to create a
-command, sends it to the agent, and reads and processes its reply.
+Initialize file handles from the environment variables: DEBCONF_PIPE - socket,
+DEBCONF_READFD and DEBCONF_WRITEFD - file descriptors of the FIFO pipes.
 
 =cut
 
-sub talk {
+sub init_fh_from_env {
+	my $this = shift;
+	my ($socket_path, $readfd, $writefd);
+
+	if (defined $ENV{DEBCONF_PIPE}) {
+		my $socket_path = $ENV{DEBCONF_PIPE};
+		$this->{readfh} = $this->{writefh} = IO::Socket::UNIX->new(
+			Type => SOCK_STREAM,
+			Peer => $socket_path
+		) || croak "Cannot connect to $socket_path: $!";
+		return "socket";
+	} elsif (defined $ENV{DEBCONF_READFD} and defined $ENV{DEBCONF_WRITEFD}) {
+		$readfd = $ENV{DEBCONF_READFD};
+		$writefd = $ENV{DEBCONF_WRITEFD};
+		$this->{readfh} = IO::Handle->new_from_fd(int($readfd), "r")
+			or croak "Failed to open fd $readfd: $!";
+		$this->{writefh} = IO::Handle->new_from_fd(int($writefd), "w")
+			or croak "Failed to open fd $writefd: $!";
+		return "fifo";
+	}
+	return undef;
+}
+
+=head2 talk_with_timeout
+
+Communicates with the UI agent. Joins all parameters together to create a
+command, sends it to the agent, and reads and processes its reply. If timeout
+is specified (the first argument), the subroutine will only wait a speficied
+number of seconds for the other end to reply. If timeout occurs, undef will be
+returned.
+
+=cut
+
+sub talk_with_timeout {
 	my $this=shift;
+	my $timeout=shift;
 	my $command=join(' ', map { Debconf::Encoding::to_Unicode($_) } @_);
 	my $reply;
 	
 	my $readfh = $this->{readfh} || croak "Broken pipe";
 	my $writefh = $this->{writefh} || croak "Broken pipe";
 	
-	debug developer => "----> $command";
+	debug developer => "----> (passthrough) $command";
 	print $writefh $command."\n";
 	$writefh->flush;
+
+	if (defined $timeout) {
+		my $select = IO::Select->new($readfh);
+		return undef if !$select->can_read($timeout);
+	}
+	return undef if ($readfh->eof());
+
 	$reply = <$readfh>;
 	chomp($reply);
-	debug developer => "<---- $reply";
+	debug developer => "<---- (passthrough) $reply";
 	my ($tag, $val) = split(' ', $reply, 2);
 	$val = '' unless defined $val;
 	$val = Debconf::Encoding::convert("UTF-8", $val);
 
 	return ($tag, $val) if wantarray;
 	return $tag;
+}
+
+=head2 talk
+
+Same as talk_with_timeout() just waits for the answer infinitely.
+
+=cut
+
+sub talk {
+	my $this=shift;
+	return $this->talk_with_timeout(undef, @_);
 }
 
 =head2 makeelement
@@ -356,6 +397,22 @@ sub progress_stop {
 	my $this=shift;
 
 	return $this->talk('PROGRESS', 'STOP');
+}
+
+sub shutdown {
+	my $this=shift;
+	$this->SUPER::shutdown();
+	# Close readfh if it is not the same as writefh (in case of socket)
+	if (defined $this->{readfh} &&
+	   (not defined $this->{writefh} or $this->{readfh} != $this->{writefh}))
+	{
+		close $this->{readfh};
+		delete $this->{readfh};
+	}
+	if (defined $this->{writefh}) {
+		close $this->{writefh};
+		delete $this->{writefh};
+	}
 }
 
 =back

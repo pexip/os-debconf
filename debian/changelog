@@ -1,3 +1,127 @@
+debconf (1.5.71) unstable; urgency=medium
+
+  [ Kevin Locke ]
+  * Dialog: Fix whiptail ellipsized selections (closes: #922279).
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 26 Feb 2019 09:30:35 +0000
+
+debconf (1.5.70) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * When using whiptail, trim select/multiselect items to fit if necessary
+    (closes: #478281).
+
+  [ Manpages translations ]
+  * French (Jean-Philippe MENGUAL; closes: #916598).
+
+  [ Programs translations ]
+  * French (Baptiste Jammet; closes: #918939).
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 16 Jan 2019 10:02:24 +0000
+
+debconf (1.5.69) unstable; urgency=medium
+
+  [ Manpages translations ]
+  * German.
+
+  [ Programs translations ]
+  * Dutch (Frans Spiesschaert; closes: #874287).
+
+  [ Colin Watson ]
+  * Remove the Qt frontend (formerly Kde), as qt4-perl is on its way out
+    (closes: #629405).
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 25 Jul 2018 09:42:35 +0100
+
+debconf (1.5.68) unstable; urgency=medium
+
+  [ Modestas Vainius ]
+  * Rename current Kde frontend to Qt.
+  * Add Debian/{FrontEnd,Element}/Qt* to debian/copyright.
+  * Add new Kde frontend that is driven by debconf-kde-helper (and requires
+    package of the same name). libqtcore4-perl and libqtgui4-perl packages
+    are no longer necessary and can be safely removed. (Closes: #631769)
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 19 Jul 2018 11:00:56 +0100
+
+debconf (1.5.67) unstable; urgency=medium
+
+  [ Translations ]
+  * Russian (Yuri Kozlov; closes: #898134).
+
+  [ Colin Watson ]
+  * Chase Vcs-Git redirection (thanks, Raphaël Hertzog).
+  * Adjust IFS handling in confmodule to work around #901185.
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 12 Jun 2018 06:16:03 +0100
+
+debconf (1.5.66) unstable; urgency=medium
+
+  [ Programs translations ]
+  * French (Baptiste Jammet; closes: #887754).
+
+  [ Colin Watson ]
+  * Move VCS to salsa.debian.org.
+  * Mark debconf-doc Multi-Arch: foreign.
+  * Port the Gnome frontend to GTK+ 3 (closes: #883442, LP: #1736618).
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 28 Feb 2018 09:50:20 +0000
+
+debconf (1.5.65) unstable; urgency=medium
+
+  * Declare Breaks on update-notifier-common (<< 3.187~) for the move of
+    debconf.py to separate binary packages (thanks, Steve Langasek; closes:
+    #881574).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 13 Nov 2017 15:26:13 +0000
+
+debconf (1.5.64) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Split debconf.py out to new python-debconf and python3-debconf binary
+    packages (closes: #709198).
+  * debconf.py: Allow the Debconf class to be used as a context manager
+    (closes: #877096).
+  * Simplify creation of documentation directory symlinks using
+    "dh_installdocs --link-doc".
+
+  [ Programs translations ]
+  * German (Helge Kreutzmann).
+
+  [ Debconf translations ]
+  * Albanian (Eva Vranici).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 15 Oct 2017 11:52:50 +0100
+
+debconf (1.5.63) unstable; urgency=medium
+
+  * "Change directory to / before executing maintainer scripts" from 1.5.62
+    was too intrusive due to changing Debconf::ConfModule, and broke some
+    existing maintainer scripts that e.g. ran ucf with relative paths.
+    Instead, just chdir to / before running maintainer scripts in
+    dpkg-reconfigure and chdir back afterwards (closes: #608648).
+  * In the Gnome frontend, hide the cancel button, and prompt for
+    confirmation when the close button is pressed (closes: #501767).
+    Original idea by Michael Vogt with an amendment by Joey Hess; some code
+    by Martin Pitt.
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 12 Jul 2017 02:23:47 +0100
+
+debconf (1.5.62) unstable; urgency=medium
+
+  * Upgrade to debhelper v9 and dh-exec.
+  * Make debconf provide python-debconf and python3-debconf, in preparation
+    for splitting those out to separate binary packages (see #709198).
+  * dpkg-preconfigure: Don't write "Extracting templates from packages:"
+    progress output if stderr is not a terminal (closes: #701818).
+  * Change directory to / before executing maintainer scripts (closes:
+    #608648).
+  * Install to $Config{vendorlib} rather than hardcoding /usr/share/perl5.
+  * Upgrade to copyright-format 1.0.
+  * Policy version 4.0.0.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 03 Jul 2017 06:38:14 +0100
+
 debconf (1.5.61pexip1) pexip; urgency=medium
 
   * Migrate to Stretch

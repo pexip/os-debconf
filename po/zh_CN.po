@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-08 02:00+0000\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
 "PO-Revision-Date: 2012-07-30 08:51+0800\n"
 "Last-Translator: Xingyou Chen <niatlantice@gmail.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "返回前端界面：%s"
 
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "无法初始化前端界面：%s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "无法开启前端界面：%s"
@@ -96,11 +96,11 @@ msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr "(输入零个或以逗号加空格(“, ”)分隔的多个项目)。"
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "帮助"
 
@@ -198,11 +198,50 @@ msgstr ""
 "一些注释和设定项目。请编辑此文件，更改任何必要的项目，然后保存并离开。同时，"
 "debconf 会读取已修改的文件，并使用您输入的值来配置系统。"
 
-#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:95
+#, fuzzy
+#| msgid "Package configuration"
+msgid "Really quit configuration?"
+msgstr "软件包设置"
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"If you quit this configuration dialog, then the package being configured "
+"will probably fail to install, and you may have to fix it manually. This may "
+"be especially difficult if you are in the middle of a large upgrade."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"You may need to quit anyway if you are stuck in a configuration loop due to "
+"a buggy package."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
+msgid "Continue"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf 运行于 %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "下一步"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "返回"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
@@ -274,36 +313,36 @@ msgstr "因为并未安装 apt-utils，所以软件包的设定过程将被推�
 msgid "unable to re-open stdin: %s"
 msgstr "重新开启标准输入失败：%s"
 
-#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
+#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates 失败：%s"
 
-#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
+#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "正在从软件包中解出模板：%d%%"
 
-#: ../dpkg-preconfigure:195
+#: ../dpkg-preconfigure:197
 msgid "Preconfiguring packages ...\n"
 msgstr "正在预设定软件包 ...\n"
 
-#: ../dpkg-preconfigure:207
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "template parse error: %s"
 msgstr "模板解读错误: %s"
 
-#: ../dpkg-preconfigure:221
+#: ../dpkg-preconfigure:223
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf：无法改变权限：%s"
 
-#: ../dpkg-preconfigure:232
+#: ../dpkg-preconfigure:234
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "预设定 %s 失败，退出状态为 %s"
 
-#: ../dpkg-reconfigure:99
+#: ../dpkg-reconfigure:100
 #, fuzzy
 #| msgid ""
 #| "Usage: dpkg-reconfigure [options] packages\n"
@@ -326,21 +365,21 @@ msgstr ""
 "       --force\t\t\t强迫重配置受损软件包。\n"
 "       --no-reload\t\t不要轻易的重装模板(使用时请慎重考虑)。"
 
-#: ../dpkg-reconfigure:111
+#: ../dpkg-reconfigure:112
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s 必须以 root 身份执行"
 
-#: ../dpkg-reconfigure:138
+#: ../dpkg-reconfigure:139
 msgid "please specify a package to reconfigure"
 msgstr "请指定要重新设定的软件包"
 
-#: ../dpkg-reconfigure:162
+#: ../dpkg-reconfigure:165
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s 未安装"
 
-#: ../dpkg-reconfigure:166
+#: ../dpkg-reconfigure:169
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s 已被损坏或未完成安装"

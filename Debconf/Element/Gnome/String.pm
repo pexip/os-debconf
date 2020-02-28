@@ -8,7 +8,7 @@ Debconf::Element::Gnome::String - text input widget
 
 package Debconf::Element::Gnome::String;
 use strict;
-use Gtk2;
+use Gtk3;
 use utf8;
 use Debconf::Encoding qw(to_Unicode);
 use base qw(Debconf::Element::Gnome);
@@ -24,7 +24,7 @@ sub init {
 
 	$this->SUPER::init(@_);
 
-	$this->widget(Gtk2::Entry->new);
+	$this->widget(Gtk3::Entry->new);
 	$this->widget->show;
 
 	my $default='';

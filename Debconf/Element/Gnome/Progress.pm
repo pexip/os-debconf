@@ -8,7 +8,7 @@ Debconf::Element::Gnome::Progress - progress bar widget
 
 package Debconf::Element::Gnome::Progress;
 use strict;
-use Gtk2;
+use Gtk3;
 use utf8;
 use Debconf::Encoding qw(to_Unicode);
 use base qw(Debconf::Element::Gnome);
@@ -37,7 +37,7 @@ sub start {
 	# Use the short description as the window title.
 	$frontend->title($description);
 
-	$this->widget(Gtk2::ProgressBar->new());
+	$this->widget(Gtk3::ProgressBar->new());
 	$this->widget->show;
 	# Make the progress bar a reasonable height by default.
 	$this->widget->set_text(' ');

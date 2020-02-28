@@ -9,7 +9,6 @@ Debconf::Element::Gnome::Text - a bit of text to show to the user.
 package Debconf::Element::Gnome::Text;
 use strict;
 use Debconf::Gettext;
-use Gtk2;
 use utf8;
 use base qw(Debconf::Element::Gnome);
 

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-08 02:00+0000\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
 "PO-Revision-Date: 2007-07-31 17:23+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -15,17 +15,17 @@ msgstr ""
 "Plural-Forms: nplurals=2;plural=(n!=1)\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../Debconf/AutoSelect.pm:76
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "फ्रन्टइन्डमा फर्कदैँछ: %s"
 
-#: ../Debconf/AutoSelect.pm:84
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "फ्रन्टइन्ड सुरुआत गर्न अक्षम: %s"
 
-#: ../Debconf/AutoSelect.pm:90
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "फ्रन्टइन्ड सुरु गर्न अक्षम: %s"
@@ -97,11 +97,11 @@ msgid ""
 msgstr ""
 "(खाली स्थानले पछ्याउने शून्य वा धेरै वस्तु अल्पविरामद्वारा छुट्यायर प्रविष्ट गर्नुहोस् (', ').)"
 
-#: ../Debconf/Element/Gnome.pm:182
+#: ../Debconf/Element/Gnome.pm:184
 msgid "_Help"
 msgstr "मद्दत"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:186
 msgid "Help"
 msgstr "मद्दत"
 
@@ -208,11 +208,50 @@ msgstr ""
 "गर्नुहोस्, र त्यसपछि यसलाई बचत गर्नुहोस् र बाहिरिनुहोस् । यस्तो अवस्थामा, debconf ले "
 "सम्पादित फाइल पढ्नेछ, र तपाईँले प्रणाली कन्फिगर गर्न प्रविष्टि गरेका मान प्रयोग गर्नेछ ।"
 
-#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:95
+#, fuzzy
+#| msgid "Package configuration"
+msgid "Really quit configuration?"
+msgstr "प्याकेज कन्फिगरेसन"
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"If you quit this configuration dialog, then the package being configured "
+"will probably fail to install, and you may have to fix it manually. This may "
+"be especially difficult if you are in the middle of a large upgrade."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid ""
+"You may need to quit anyway if you are stuck in a configuration loop due to "
+"a buggy package."
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid "_Quit"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
+msgid "Continue"
+msgstr ""
+
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf को %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:238
+#, fuzzy
+#| msgid "Next"
+msgid "_Next"
+msgstr "पछिल्लो"
+
+#: ../Debconf/FrontEnd/Gnome.pm:245
+#, fuzzy
+#| msgid "Back"
+msgid "_Back"
+msgstr "पछाडि"
 
 #: ../Debconf/FrontEnd/Readline.pm:47
 msgid "This frontend requires a controlling tty."
@@ -285,36 +324,36 @@ msgstr "प्याकेज कन्फिगरेसन विलम्ब,
 msgid "unable to re-open stdin: %s"
 msgstr "stdin फेरी खोल्न अक्षम: %s"
 
-#: ../dpkg-preconfigure:169 ../dpkg-preconfigure:181
+#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates असफल भयो: %s"
 
-#: ../dpkg-preconfigure:173 ../dpkg-preconfigure:185
+#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "प्याकेजबाट टेम्प्लेट उद्धरण गर्दैछ: %d%%"
 
-#: ../dpkg-preconfigure:195
+#: ../dpkg-preconfigure:197
 msgid "Preconfiguring packages ...\n"
 msgstr "पहिले कन्फिगर गर्ने प्याकेज ...\n"
 
-#: ../dpkg-preconfigure:207
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "template parse error: %s"
 msgstr "टेम्प्लेट पद वर्णन गर्दा त्रुटि: %s"
 
-#: ../dpkg-preconfigure:221
+#: ../dpkg-preconfigure:223
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: ले मोड परिवर्तन गर्न सक्दैन: %s"
 
-#: ../dpkg-preconfigure:232
+#: ../dpkg-preconfigure:234
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "बाहिरिने वस्तुस्थिति %s सँग, %s पहिला कन्फिगर गर्न असफल"
 
-#: ../dpkg-reconfigure:99
+#: ../dpkg-reconfigure:100
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
@@ -329,21 +368,21 @@ msgstr ""
 "       --default-priority\tतलका साटोमा पूर्वनिर्धारित प्राथमिकता प्रयोग गर्नुहोस् ।\n"
 "       --force\t\t\tविच्छेद प्याकेजको पुन: कन्फिगरेसन गर्न दवाब दिनुहोस् ।"
 
-#: ../dpkg-reconfigure:111
+#: ../dpkg-reconfigure:112
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s मूलका रुपमा चल्नु पर्दछ"
 
-#: ../dpkg-reconfigure:138
+#: ../dpkg-reconfigure:139
 msgid "please specify a package to reconfigure"
 msgstr "कृपया पुन: कन्फिगर गर्न प्याकेज निर्दिष्ट गर्नुहोस्"
 
-#: ../dpkg-reconfigure:162
+#: ../dpkg-reconfigure:165
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s स्थापना भएको छैन"
 
-#: ../dpkg-reconfigure:166
+#: ../dpkg-reconfigure:169
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s विच्छेद भएको छ वा पूर्णरुपमा स्थापना भएको छैन"

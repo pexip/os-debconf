@@ -9,7 +9,7 @@ Debconf::Element::Gnome - gnome UI element
 package Debconf::Element::Gnome;
 use strict;
 use utf8;
-use Gtk2;
+use Gtk3;
 use Debconf::Gettext;
 use Debconf::Encoding qw(to_Unicode);
 use base qw(Debconf::Element);
@@ -43,21 +43,21 @@ Sets up the hbox.
 sub init {
 	my $this=shift;
 
-	$this->hbox(Gtk2::VBox->new(0, 10));
+	$this->hbox(Gtk3::VBox->new(0, 10));
 
-	$this->hline1(Gtk2::HBox->new(0, 10));
+	$this->hline1(Gtk3::HBox->new(0, 10));
 	$this->hline1->show;
-	$this->line1(Gtk2::VBox->new(0, 10));
+	$this->line1(Gtk3::VBox->new(0, 10));
 	$this->line1->show;
 	$this->line1->pack_end ($this->hline1, 1, 1, 0);
 
-	$this->hline2(Gtk2::HBox->new(0, 10));
+	$this->hline2(Gtk3::HBox->new(0, 10));
 	$this->hline2->show;
-	$this->line2(Gtk2::VBox->new(0, 10));
+	$this->line2(Gtk3::VBox->new(0, 10));
 	$this->line2->show;
 	$this->line2->pack_end ($this->hline2, 1, 1, 0);
 
-	$this->vbox(Gtk2::VBox->new(0, 5));
+	$this->vbox(Gtk3::VBox->new(0, 5));
 	$this->vbox->pack_start($this->line1, 0, 0, 0);
 	$this->vbox->pack_start($this->line2, 1, 1, 0);
 	$this->vbox->show;
@@ -99,7 +99,7 @@ sub adddescription {
 	my $this=shift;
 	my $description=to_Unicode($this->question->description);
 	
-	my $label=Gtk2::Label->new($description);
+	my $label=Gtk3::Label->new($description);
 	$label->show;
 	$this->line1->pack_start($label, 0, 0, 0);
 }
@@ -116,11 +116,11 @@ sub addbutton {
 	my $text = shift;
 	my $callback = shift;
 	
-	my $button = Gtk2::Button->new_with_mnemonic(to_Unicode($text));
+	my $button = Gtk3::Button->new_with_mnemonic(to_Unicode($text));
 	$button->show;
 	$button->signal_connect("clicked", $callback);
 	
-	my $vbox = Gtk2::VBox->new(0, 0);
+	my $vbox = Gtk3::VBox->new(0, 0);
 	$vbox->show;
 	$vbox->pack_start($button, 1, 0, 0);
 	$this->hline1->pack_end($vbox, 0, 0, 0);
@@ -128,9 +128,11 @@ sub addbutton {
 
 =item create_message_dialog
 
-This is needed because Gtk2::MessageDialog has a much
-worse behavior than the other Gtk2:: perl widgets when
+This is needed because Gtk3::MessageDialog has a much
+worse behavior than the other Gtk3:: perl widgets when
 it comes to an UTF-8 locale.
+
+(This was originally written for Gtk2; is it still true for Gtk3?)
 
 =cut
 
@@ -140,24 +142,24 @@ sub create_message_dialog {
 	my $title = shift;
 	my $text = shift;
 	
-	my $dialog = 
-		Gtk2::Dialog->new_with_buttons(to_Unicode($title), undef, 
+	my $dialog =
+		Gtk3::Dialog->new_with_buttons(to_Unicode($title), undef,
 		                               "modal", "gtk-close", "close");
 	$dialog->set_border_width(3);
 	
-	my $hbox = Gtk2::HBox->new(0);
-	$dialog->vbox->pack_start($hbox, 1, 1, 5);
+	my $hbox = Gtk3::HBox->new(0);
+	$dialog->get_content_area->pack_start($hbox, 1, 1, 5);
 	$hbox->show;
 	
-	my $alignment = Gtk2::Alignment->new(0.5, 0.0, 1.0, 0.0);
+	my $alignment = Gtk3::Alignment->new(0.5, 0.0, 1.0, 0.0);
 	$hbox->pack_start($alignment, 1, 1, 3);
 	$alignment->show;
 	
-	my $image = Gtk2::Image->new_from_stock($type, "dialog");
+	my $image = Gtk3::Image->new_from_stock($type, "dialog");
 	$alignment->add($image);
 	$image->show;
 	
-	my $label = Gtk2::Label->new(to_Unicode($text));
+	my $label = Gtk3::Label->new(to_Unicode($text));
 	$label->set_line_wrap(1);
 	$hbox->pack_start($label, 1, 1, 2);
 	$label->show;
@@ -186,10 +188,7 @@ sub addhelp {
 	});
 
 	if (defined $this->tip ){
-		$this->tooltips( Gtk2::Tooltips->new() );
-		$this->tooltips->set_tip($this->tip, to_Unicode($help), 
-					  undef );
-		$this->tooltips->enable;
+		$this->tip->set_tooltip_text(to_Unicode($help));
 	}
 }
 

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2018-07-25 09:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,13 +170,13 @@ msgid "L<debconf-devel(7)>, L<debconf(7)>"
 msgstr ""
 
 #. type: SH
-#: ../../debconf:116 ../../Debconf/Client/ConfModule.pm:158 ../../debconf-escape:71 ../../debconf-communicate:73 ../../debconf-copydb:175 ../../debconf-getlang:255 ../../debconf-get-selections:74 ../../debconf-loadtemplate:47 ../../debconf-mergetemplate:180 ../../debconf-set-selections:223 ../../debconf-show:154 ../../dpkg-preconfigure:244 ../../dpkg-reconfigure:295 debconf.conf.5:539 confmodule.3:42 debconf.7:382 debconf-devel.7:968
+#: ../../debconf:116 ../../Debconf/Client/ConfModule.pm:158 ../../debconf-escape:71 ../../debconf-communicate:73 ../../debconf-copydb:175 ../../debconf-getlang:255 ../../debconf-get-selections:74 ../../debconf-loadtemplate:47 ../../debconf-mergetemplate:180 ../../debconf-set-selections:223 ../../debconf-show:154 ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:382 debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
 msgstr ""
 
 #. type: textblock
-#: ../../debconf:118 ../../Debconf/Client/ConfModule.pm:160 ../../debconf-apt-progress:666 ../../debconf-communicate:75 ../../debconf-copydb:177 ../../debconf-getlang:257 ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182 ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:297
+#: ../../debconf:118 ../../Debconf/Client/ConfModule.pm:160 ../../debconf-apt-progress:666 ../../debconf-communicate:75 ../../debconf-copydb:177 ../../debconf-getlang:257 ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182 ../../dpkg-preconfigure:248 ../../dpkg-reconfigure:304
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr ""
 
@@ -2817,8 +2817,8 @@ msgstr ""
 msgid ""
 "This is a modern X GUI using the gtk and gnome libraries. Of course, it "
 "requires a valid DISPLAY to work; debconf will fall back to other frontends "
-"if it can't work. Note that this frontend requires you have the "
-"libgnome2-perl package installed."
+"if it can't work. Note that this frontend requires you have the libgtk3-perl "
+"package installed."
 msgstr ""
 
 #. type: TP
@@ -2830,9 +2830,9 @@ msgstr ""
 #. type: Plain text
 #: debconf.7:102
 msgid ""
-"This frontend provides a simple X GUI written with the Qt library. It fits "
-"well the KDE desktop. You of course need a DISPLAY to use this frontend and "
-"must install libqt-perl. The frontend will fall back to dialog if some of "
+"This frontend provides a modern X GUI based on the KDE Platform. You of "
+"course need a DISPLAY to use this frontend and you must install "
+"debconf-kde-helper package. The frontend will fall back to dialog if some of "
 "the prerequisites are not met."
 msgstr ""
 

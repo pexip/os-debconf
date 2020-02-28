@@ -30,7 +30,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.41\n"
-"POT-Creation-Date: 2013-11-03 14:17-0400\n"
+"POT-Creation-Date: 2018-07-25 09:14+0100\n"
 "PO-Revision-Date: 2011-08-02 11:03+0200\n"
 "Last-Translator: Omar Campagne <ocampagne@gmail.com>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -61,12 +61,11 @@ msgstr "debconf - Ejecuta un programa que hace uso de debconf"
 #. type: SH
 #: ../../debconf:9 ../../Debconf/Client/ConfModule.pm:7
 #: ../../debconf-apt-progress:7 ../../debconf-escape:7
-#: ../../debconf-communicate:9 ../../debconf-copydb:16
-#: ../../debconf-getlang:15 ../../debconf-get-selections:7
-#: ../../debconf-loadtemplate:13 ../../debconf-mergetemplate:16
-#: ../../debconf-set-selections:19 ../../debconf-show:19
-#: ../../dpkg-preconfigure:7 ../../dpkg-reconfigure:7 debconf.conf.5:12
-#: confmodule.3:4
+#: ../../debconf-communicate:9 ../../debconf-copydb:16 ../../debconf-getlang:15
+#: ../../debconf-get-selections:7 ../../debconf-loadtemplate:13
+#: ../../debconf-mergetemplate:16 ../../debconf-set-selections:19
+#: ../../debconf-show:19 ../../dpkg-preconfigure:7 ../../dpkg-reconfigure:7
+#: debconf.conf.5:12 confmodule.3:4
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr "SINOPSIS"
@@ -254,8 +253,8 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
 #: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
-#: ../../debconf-show:154 ../../dpkg-preconfigure:244
-#: ../../dpkg-reconfigure:295 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../debconf-show:154 ../../dpkg-preconfigure:246
+#: ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -266,7 +265,7 @@ msgstr "AUTOR"
 #: ../../debconf-apt-progress:666 ../../debconf-communicate:75
 #: ../../debconf-copydb:177 ../../debconf-getlang:257
 #: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:297
+#: ../../dpkg-preconfigure:248 ../../dpkg-reconfigure:304
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess <joeyh@debian.org>"
 
@@ -3732,11 +3731,17 @@ msgstr "B<gnome>"
 
 #. type: Plain text
 #: debconf.7:96
+#, fuzzy
+#| msgid ""
+#| "This is a modern X GUI using the gtk and gnome libraries. Of course, it "
+#| "requires a valid DISPLAY to work; debconf will fall back to other "
+#| "frontends if it can't work. Note that this frontend requires you have the "
+#| "libgnome2-perl package installed."
 msgid ""
 "This is a modern X GUI using the gtk and gnome libraries. Of course, it "
 "requires a valid DISPLAY to work; debconf will fall back to other frontends "
-"if it can't work. Note that this frontend requires you have the libgnome2-"
-"perl package installed."
+"if it can't work. Note that this frontend requires you have the libgtk3-perl "
+"package installed."
 msgstr ""
 "Esta es una moderna interfaz gráfica para X que usa Gtk y las bibliotecas de "
 "GNOME. Por supuesto, requiere una variable de entorno «DISPLAY» válida para "
@@ -3752,11 +3757,17 @@ msgstr "B<kde>"
 
 #. type: Plain text
 #: debconf.7:102
+#, fuzzy
+#| msgid ""
+#| "This frontend provides a simple X GUI written with the Qt library. It "
+#| "fits well the KDE desktop. You of course need a DISPLAY to use this "
+#| "frontend and must install libqt-perl. The frontend will fall back to "
+#| "dialog if some of the prerequisites are not met."
 msgid ""
-"This frontend provides a simple X GUI written with the Qt library. It fits "
-"well the KDE desktop. You of course need a DISPLAY to use this frontend and "
-"must install libqt-perl. The frontend will fall back to dialog if some of "
-"the prerequisites are not met."
+"This frontend provides a modern X GUI based on the KDE Platform. You of "
+"course need a DISPLAY to use this frontend and you must install debconf-kde-"
+"helper package. The frontend will fall back to dialog if some of the "
+"prerequisites are not met."
 msgstr ""
 "Esta interfaz proporciona una sencilla interfaz de usuario para X creada "
 "utilizando la biblioteca QT. Se integra bien en el entorno de escritorio "
@@ -7158,6 +7169,24 @@ msgid ""
 msgstr ""
 "B<debconf.conf>(5) contiene mucha información útil, incluyendo algo de "
 "información acerca del sistema de la base de datos."
+
+#, fuzzy
+#~| msgid ""
+#~| "This frontend provides a simple X GUI written with the Qt library. It "
+#~| "fits well the KDE desktop. You of course need a DISPLAY to use this "
+#~| "frontend and must install libqt-perl. The frontend will fall back to "
+#~| "dialog if some of the prerequisites are not met."
+#~ msgid ""
+#~ "This frontend provides a simple X GUI written with the Qt library. You of "
+#~ "course need a DISPLAY to use this frontend and must install libqtgui4-"
+#~ "perl.  The frontend will fall back to dialog if some of the prerequisites "
+#~ "are not met."
+#~ msgstr ""
+#~ "Esta interfaz proporciona una sencilla interfaz de usuario para X creada "
+#~ "utilizando la biblioteca QT. Se integra bien en el entorno de escritorio "
+#~ "KDE. Por supuesto, necesita configurar «DISPLAY» para utilizar esta "
+#~ "interfaz, e instalar libqt-perl. Si no se cumplen todos los requisitos, "
+#~ "esta interfaz utilizará dialog de forma predefinida."
 
 #~ msgid "B<-a>, B<--all>"
 #~ msgstr "B<-a>, B<--all>"

@@ -4,8 +4,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
 "POT-Creation-Date: 2009-08-24 19:24+0200\n"
-"PO-Revision-Date: 2006-10-14 13:43+0200\n"
-"Last-Translator:  Elian Myftiu <elian.myftiu@gmail.com>\n"
+"PO-Revision-Date: 2017-09-06 10:07+0300\n"
+"Last-Translator: Eva Vranici <evavranici@gmail.com>\n"
 "Language-Team: Debian L10n Albanian <debian-l10n-albanian@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -35,13 +35,13 @@ msgstr "Editues"
 #. Choices
 #: ../templates:1001
 msgid "Noninteractive"
-msgstr "Jo ndërveprues"
+msgstr "Jointeraktive"
 
 #. Type: select
 #. Description
 #: ../templates:1002
 msgid "Interface to use:"
-msgstr "Ndërfaqja e përdorimit:"
+msgstr "Ndërfaqe për tu përdorur:"
 
 #. Type: select
 #. Description
@@ -50,9 +50,8 @@ msgid ""
 "Packages that use debconf for configuration share a common look and feel. "
 "You can select the type of user interface they use."
 msgstr ""
-"Paketa që përdorin debconf për konfigurimin ndajnë një pamje dhe ndjesi të "
-"përbashkët. Mund të zgjedhësh llojin e ndërfaqes së përdoruesit që ato "
-"përdorin."
+"Paketat që përdorin debconfg për konfigurim ndajnë një pamje dhe ndjesi të "
+"njëjtë. Ju mund të zgjidhni tipin e ndërfaqes së përdoruesit që ata përdorin."
 
 #. Type: select
 #. Description
@@ -65,12 +64,12 @@ msgid ""
 "you configure things using your favorite text editor. The noninteractive "
 "frontend never asks you any questions."
 msgstr ""
-"Faqja e dialogut është e bazuar në gërma, në ekran të plotë, ndërsa ajo me "
-"linja leximi përdor një ndërfaqe tekstuale më tradicionale, dhe të dyja "
-"ndërfaqet Gnome dhe KDE janë ndërfaqe moderne, që i përshtaten hapësirave të "
-"punës përkatës (por mund të përdoren në çfarëdo mjedisi X). Faqja edituese "
-"të lejon konfigurimin e paketave duke përdorur edituesin tënd të preferuar "
-"të tekstit. Faqja jondërvepruese nuk të bën asnjëherë pyetje."
+"Frontend-i dialog është ndërfaqe në ekran të plotë, e bazuar në karaktere "
+"ndërsa frontend-i i linjës së leximit përdor një ndërfaqës të teksit të "
+"thjeshtë më tradicional dhe të dy frontend-et, gnome dhe kde, janë ndërfaqës "
+"X modern, qe u përmbahen desktopëve respektivë (por mund të përdoren në çdo "
+"mjedis X). Frontend-i editues të lejon të konfigurosh gjëra duke përdorur "
+"cdo editor teksti. Frontend-i jointeraktiv nuk të pyet asnjëherë për pyetje."
 
 #. Type: select
 #. Choices
@@ -82,25 +81,25 @@ msgstr "kritike"
 #. Choices
 #: ../templates:2001
 msgid "high"
-msgstr "e lartë"
+msgstr "i lartë"
 
 #. Type: select
 #. Choices
 #: ../templates:2001
 msgid "medium"
-msgstr "mesatare"
+msgstr "medium"
 
 #. Type: select
 #. Choices
 #: ../templates:2001
 msgid "low"
-msgstr "e ulët"
+msgstr "ulët"
 
 #. Type: select
 #. Description
 #: ../templates:2002
 msgid "Ignore questions with a priority less than:"
-msgstr "Shpërfill pyetjet me një përparësi më të vogël se:"
+msgstr "Injoro pyetjet me prioritet më të vogël se:"
 
 #. Type: select
 #. Description
@@ -114,13 +113,13 @@ msgid ""
 "  - 'medium' is for normal questions\n"
 "  - 'low' is for control freaks who want to see everything"
 msgstr ""
-"Debconf i jep përparësi pyetjeve që të bën. Zgjidh përparësinë më të ulët të "
-"pyetjes që dëshiron të shohësh:\n"
-"  - 'kritike' vetëm kur sistemi mund të prishet.\n"
-"    Zgjidhe vetëm kur je fillestar, ose kur ke ngut.\n"
-"  - 'e lartë' për pyetje pak a shumë të rëndësishme\n"
-"  - 'mesatare' është për pyetje normale\n"
-"  - 'e ulët' për personat që duan të shohin gjithçka"
+"Debconf u vë prioritet pyetjeve që ai ju bën juve. Zgjidh prioritetin më të "
+"ulët të pyetjes që ju doni të shihni:\n"
+"  - 'kritike' ju lajmeron vetëm nësë sistemi bie.\n"
+"    Pick it if you are a newbie, or in a hurry.\n"
+"  - 'i lartë' është për pyetje të rëndësishme\n"
+"  - 'medium' është për pyetje normale\n"
+"  - 'ulët' është për fanatikët e kontrollit që duan të shohin gjithcka"
 
 #. Type: select
 #. Description
@@ -129,8 +128,9 @@ msgid ""
 "Note that no matter what level you pick here, you will be able to see every "
 "question if you reconfigure a package with dpkg-reconfigure."
 msgstr ""
-"Vër re që çfarëdo niveli të zgjedhësh, do të kesh mundësinë të shohësh çdo "
-"pyetje nëse rikonfiguron një paketë me dpkg-reconfigure."
+"Vini re se pavarësisht se cilin nivel ju zgjidhni, ju do të jeni në gjendje "
+"të shihni çdo pyetje në qoftë se ju konfiguroni një pakete me rekonfigurim-"
+"dpkg."
 
 #. Type: text
 #. Description
@@ -142,7 +142,7 @@ msgstr "Duke instaluar paketat"
 #. Description
 #: ../templates:4001
 msgid "Please wait..."
-msgstr "Të lutem prit..."
+msgstr "Ju lutem prit..."
 
 #. Type: text
 #. Description
@@ -151,106 +151,4 @@ msgstr "Të lutem prit..."
 #. to install a package or a collection of packages
 #: ../templates:6001
 msgid "Media change"
-msgstr ""
-
-#~ msgid "Ignore questions with a priority less than..."
-#~ msgstr "Shpërfill pyetjet me një përparësi më të vogël se..."
-
-#~ msgid ""
-#~ "Packages that use debconf for configuration prioritize the questions they "
-#~ "might ask you. Only questions with a certain priority or higher are "
-#~ "actually shown to you; all less important questions are skipped."
-#~ msgstr ""
-#~ "Paketat që përdorin debconf për konfigurim i japin përparësi pyetjeve që "
-#~ "mund të të bëhen. Vetëm pyetjet me një përparësi të caktuar apo më të "
-#~ "madhe do të të jepen; ato më pak të rëndësishme do kapërcehen."
-
-#~ msgid ""
-#~ "You can select the lowest priority of question you want to see:\n"
-#~ " - 'critical' is for items that will probably break the system\n"
-#~ "    without user intervention.\n"
-#~ " - 'high' is for items that don't have reasonable defaults.\n"
-#~ " - 'medium' is for normal items that have reasonable defaults.\n"
-#~ " - 'low' is for trivial items that have defaults that will work in\n"
-#~ "   the vast majority of cases."
-#~ msgstr ""
-#~ "Mund të zgjedhësh përparësinë më të ulët të pyetjes që dëshiron të "
-#~ "shohësh:\n"
-#~ " - 'kritike' është për paketat që ndoshta do prishin sistemin\n"
-#~ "    pa ndërhyrjen e përdoruesit.\n"
-#~ " - 'e lartë' është për paketat që nuk kanë prezgjedhje të arsyeshme.\n"
-#~ " - 'mesatare' është për paketa të zakonshme që kanë prezgjedhje të "
-#~ "arsyeshme.\n"
-#~ " - 'e ulët' është për paketa të parëndësishme që kanë prezgjedhje që do "
-#~ "të \n"
-#~ "   funksionojnë në shumicën e rasteve."
-
-#~ msgid ""
-#~ "For example, this question is of medium priority, and if your priority "
-#~ "were already 'high' or 'critical', you wouldn't see this question."
-#~ msgstr ""
-#~ "Për shembull, kjo pyetje është e përparësisë mesatare, dhe nëse "
-#~ "përparësia jote do ishte 'e lartë' apo 'kritike', nuk do mund ta shihje "
-#~ "këtë pyetje."
-
-#~ msgid "Change debconf priority"
-#~ msgstr "Ndrysho përparësinë e debconf"
-
-#~ msgid "Continue"
-#~ msgstr "Vazhdo"
-
-#~ msgid "Go Back"
-#~ msgstr "Kthehu Prapa"
-
-#~ msgid "Yes"
-#~ msgstr "Po"
-
-#~ msgid "No"
-#~ msgstr "Jo"
-
-#~ msgid "Cancel"
-#~ msgstr "Anullo"
-
-#~ msgid ""
-#~ "<Tab> moves between items; <Space> selects; <Enter> activates buttons"
-#~ msgstr ""
-#~ "<Tab> lëviz midis elementëve; <Space> zgjedh; <Enter> aktivizon butonat"
-
-#~ msgid "LTR"
-#~ msgstr "LTR"
-
-#~ msgid "Screenshot"
-#~ msgstr "Pamje ekrani"
-
-#~ msgid "Screenshot saved as %s"
-#~ msgstr "Pamja e ekranit u ruajt si %s"
-
-#~ msgid "!! ERROR: %s"
-#~ msgstr "!! GABIM: %s"
-
-#~ msgid "KEYSTROKES:"
-#~ msgstr "SEKUENCA TASTESH:"
-
-#~ msgid "Display this help message"
-#~ msgstr "Shfaq këtë mesazh ndihme"
-
-#~ msgid "Go back to previous question"
-#~ msgstr "Kthehu mbrapa në pyetjen e mëparshme"
-
-#~ msgid "Select an empty entry"
-#~ msgstr "Zgjidh një hyrje bosh"
-
-#~ msgid "Prompt: '%c' for help, default=%d> "
-#~ msgstr "Prompt: '%c' për ndihmë, e prezgjedhur=%d> "
-
-#~ msgid "Prompt: '%c' for help> "
-#~ msgstr "Prompt: '%c' për ndihmë> "
-
-#~ msgid "Prompt: '%c' for help, default=%s> "
-#~ msgstr "Prompt: '%c' për ndihmë, e prezgjedhur=%s> "
-
-#~ msgid "[Press enter to continue]"
-#~ msgstr "[Shtyp enter për të vazhduar]"
-
-#~ msgid "critical, high, medium, low"
-#~ msgstr "kritike, e lartë, mesatare, e ulët"
+msgstr "Ndryshim media"

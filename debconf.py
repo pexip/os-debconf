@@ -37,8 +37,27 @@ class DebconfError(Exception):
 LOW, MEDIUM, HIGH, CRITICAL = 'low', 'medium', 'high', 'critical'
 
 class Debconf:
+    """A class that speaks the debconf protocol.
 
-    def __init__(self, title=None, read=None, write=None):
+    The simplest way to use this is as a context manager:
+
+        import debconf
+
+        with debconf.Debconf(run_frontend=True) as db:
+            print(db.get('debconf/frontend'))
+
+    Note that this will send the STOP command on exiting the context
+    manager, so you shouldn't expect to be able to use the same frontend
+    again after this.  If you need to do that, then you should instantiate
+    the class directly instead:
+
+        import debconf
+
+        db = debconf.Debconf(run_frontend=True)
+        print(db.get('debconf/frontend'))
+    """
+
+    def __init__(self, title=None, read=None, write=None, run_frontend=False):
         for command in ('capb set reset title input beginblock endblock go get'
                         ' register unregister subst fset fget previous_module'
                         ' visible purge metaget exist version settitle'
@@ -47,6 +66,8 @@ class Debconf:
         self.read = read or sys.stdin
         self.write = write or sys.stdout
         sys.stdout = sys.stderr
+        if run_frontend:
+            runFrontEnd()
         self.setUp(title)
 
     def setUp(self, title):
@@ -116,6 +137,12 @@ class Debconf:
 
     def getString(self, question):
         return self.get(question)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, exc_tb):
+        self.stop()
 
 
 class DebconfCommunicator(Debconf, object):

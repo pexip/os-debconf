@@ -1,5 +1,3 @@
-#!/usr/bin/perl -w
-
 =head1 NAME
 
 Debconf::FrontEnd::Kde - GUI Kde frontend
@@ -7,254 +5,134 @@ Debconf::FrontEnd::Kde - GUI Kde frontend
 =cut
 
 package Debconf::FrontEnd::Kde;
-use strict;
-use utf8;
-use Debconf::Gettext;
-use Debconf::Config;
-BEGIN {
-	eval { require QtCore4 };
-	die "Unable to load QtCore -- is libqtcore4-perl installed?\n" if $@;
-	eval { require QtGui4 };
-	die "Unable to load QtGui -- is libqtgui4-perl installed?\n" if $@;
-}
-use Debconf::FrontEnd::Kde::Wizard;
-use Debconf::Log ':all';
-use base qw{Debconf::FrontEnd};
-use Debconf::Encoding qw(to_Unicode);
 
-#for debug info
-#use QtCore4::debug qw(all);
-#use Data::Dumper;
+use strict;
+use warnings;
+use IO::Handle;
+use Fcntl;
+use POSIX ":sys_wait_h";
+use Debconf::Config;
+use base "Debconf::FrontEnd::Passthrough";
 
 =head1 DESCRIPTION
 
-This FrontEnd is a Kde/Qt UI for Debconf.
+This frontend is a recommended KDE UI for Debconf. This frontend relays all
+requests to the debconf-kde-helper application via Debconf Passthrough
+protocol. The latter takes care of displaying actual UI.
 
-=head1 METHODS
-
-=over 4
-
-=item init
-
-Set up the UI. Most of the work is really done by
-Debconf::FrontEnd::Kde::Wizard and Debconf::FrontEnd::Kde::WizardUi.
+By default, debugging output from debconf-kde-helper is silenced.  If you need
+to see it, set C<DEBCONF_DEBUG=kde> in the environment.
 
 =cut
 
-our @ARGV_KDE=();
+=head2 clear_fd_cloexec
+
+Clears FD_CLOEXEC flag for the specified file descriptor
+
+=cut
+
+sub clear_fd_cloexec {
+	my $fh = shift;
+	my $flags;
+	$flags = $fh->fcntl(F_GETFD, 0);
+	$flags &= ~FD_CLOEXEC;
+	$fh->fcntl(F_SETFD, $flags);
+}
+
+=head2 init
+
+This function takes care of starting and preparing debconf-kde-helper for the
+communication with Debconf. It opens a pair of FIFO pipes and passes one end to
+the debconf-kde-helper process and the other end to the Passthrough frontend.
+Before returning, it makes sure that debconf-kde-helper is ready to accept
+commands.
+
+=cut
 
 sub init {
-	my $this=shift;
-    
-	$this->SUPER::init(@_);
-	$this->interactive(1);
-	$this->cancelled(0);
-	$this->createdelements([]);
-	$this->dupelements([]);
-	$this->capb('backup');
+	my $this = shift;
+
 	$this->need_tty(0);
 
-	# Well I see that the Qt people are just as braindamaged about apps
-	# not being allowed to work as the GTK people. You all suck, FYI.    
-	if (fork) {
-		wait(); # for child
-		if ($? != 0) {
-			die "DISPLAY problem?\n";
-		}
-	}
-	else {
-		$this->qtapp(Qt::Application(\@ARGV_KDE));
-		exit(0); # success
-	}
-	
-	# Kde will be initted only if really needed, to avoid being slow,
-	# plus avoid nastiness as described in #413509.
-	$this->window_initted(0);
-	$this->kde_initted(0);
-}
+	# FIFO pipe for debconf -> helper (dc2hp) communication
+	pipe my $dc2hp_readfh, my $dc2hp_writefh;
+	# FIFO pipe for helper -> debconf (hp2dc) communication
+	pipe my $hp2dc_readfh, my $hp2dc_writefh;
 
-sub init_kde {
-	my $this=shift;
-
-	return if $this->kde_initted;
-
-	debug frontend => "QTF: initializing app";
-	$this->qtapp(Qt::Application(\@ARGV_KDE));
-	$this->kde_initted(1);
-}
-
-sub init_window {
-	my $this=shift;
-	$this->init_kde();
-	return if $this->window_initted;
-	$this->{vbox} = Qt::VBoxLayout;
-
-	debug frontend => "QTF: initializing wizard";
-	$this->win(Debconf::FrontEnd::Kde::Wizard(undef,undef, $this));
-	debug frontend => "QTF: setting size";
-	$this->win->resize(620, 430);
-	my $hostname = `hostname`;
-	chomp $hostname;
-	$this->hostname($hostname);
-	debug frontend => "QTF: setting title";
-	$this->win->setTitle(to_Unicode(sprintf(gettext("Debconf on %s"), $this->hostname)));
-	debug frontend => "QTF: initializing main widget";
-	$this->{toplayout} = Qt::HBoxLayout();
-	$this->win->setMainFrameLayout($this->toplayout);
-	$this->win->setTitle(to_Unicode(sprintf(gettext("Debconf on %s"), $this->hostname)));
-	$this->window_initted(1);
-}
-
-=item go
-
-Creates and lays out all the necessary widgets, then runs them to get
-input.
-
-=cut
-
-sub go {
-	my $this=shift;
-	my @elements=@{$this->elements};
-	
-
-	$this->init_window;
-
-
-	my $interactive='';
-	debug frontend => "QTF: -- START ------------------";
-	foreach my $element (@elements) {
-		next unless $element->can("create");
-		
-		$element->create($this->frame);
-		$interactive=1;
-		debug frontend => "QTF: ADD: " . $element->question->description;
-		$this->{vbox}->addWidget($element->top);
-	}
-
-	if ($interactive) {
-		foreach my $element (@elements) {
-			next unless $element->top;
-			debug frontend => "QTF: SHOW: " . $element->question->description;
-			$element->top->show;
-		}
-		my $scroll = Qt::ScrollArea($this->win);
-		my $widget = Qt::Widget($scroll);
-		$widget->setLayout($this->{vbox});
-		$scroll->setWidget($widget);
-		$this->toplayout->addWidget($scroll);
-	
-	
-		if ($this->capb_backup) {
-			$this->win->setBackEnabled(1);
-		}
-		else {
-			$this->win->setBackEnabled(0);
-		}
-		$this->win->setNextEnabled(1);
-	
-		$this->win->show;
-		debug frontend => "QTF: -- ENTER EVENTLOOP --------";
-		$this->qtapp->exec;
-		$this->qtapp->exit;
-		debug frontend => "QTF: -- LEFT EVENTLOOP --------";
-			
-		$this->win->destroy();
-		$this->window_initted(0);
-		
-		
-	} else {
-		# Display all elements. This does nothing for gnome
-		# elements, but it causes noninteractive elements to do
-		# their thing.	
-		foreach my $element (@elements) {
-			$element->show;
+	my $helper_pid = fork();
+	if (!defined $helper_pid) {
+		die "Unable to fork for execution of debconf-kde-helper: $!\n";
+	} elsif ($helper_pid == 0) {
+		# Child: execute debconf-kde-helper
+		# Close unneeded file handles for this end.
+		close $hp2dc_readfh;
+		close $dc2hp_writefh;
+		# Clear FD_CLOEXEC flags
+		clear_fd_cloexec($dc2hp_readfh);
+		clear_fd_cloexec($hp2dc_writefh);
+		my $debug = Debconf::Config->debug;
+		local $ENV{QT_LOGGING_RULES} = 'org.kde.debconf.debug=false'
+			unless $debug && 'kde' =~ /$debug/;
+		my $fds = sprintf("%d,%d", $dc2hp_readfh->fileno(), $hp2dc_writefh->fileno());
+		if (!exec("debconf-kde-helper", "--fifo-fds=$fds")) {
+			print STDERR "Unable to execute debconf-kde-helper - is debconf-kde-helper installed?";
+			exit(10);
 		}
 	}
 
-	debug frontend => "QTF: -- END --------------------";
-	if ($this->cancelled) {
-		exit 1;
-	}
-	return '' if $this->goback;
-	return 1;
-}
+	# Parent process
+	# Close unneeded file handles for this end
+	close $dc2hp_readfh;
+	close $hp2dc_writefh;
 
-sub progress_start {
-	my $this=shift;
-	$this->init_window;
-	$this->SUPER::progress_start(@_);
+	# Initialize Passthrough frontend
+	$this->{kde_helper_pid} = $helper_pid;
+	$this->{readfh} = $hp2dc_readfh;
+	$this->{writefh} = $dc2hp_writefh;
+	$this->SUPER::init();
 
-	my $element=$this->progress_bar;
-	$this->{vbox}->addWidget($element->top);
-	$element->top->show;
-	my $scroll = Qt::ScrollArea($this->win);
-	my $widget = Qt::Widget($scroll);
-	$widget->setLayout($this->{vbox});
-	$scroll->setWidget($widget);
-	$this->toplayout->addWidget($scroll);
-	# TODO: no backup support yet
-	$this->win->setBackEnabled(0);
-	$this->win->setNextEnabled(0);
-	$this->win->show;
-	$this->qtapp->processEvents;
-}
-
-sub progress_set {
-	my $this=shift;
-	my $ret=$this->SUPER::progress_set(@_);
-
-	$this->qtapp->processEvents;
-
-	return $ret;
-}
-
-sub progress_info {
-	my $this=shift;
-	my $ret=$this->SUPER::progress_info(@_);
-
-	$this->qtapp->processEvents;
-
-	return $ret;
-}
-
-sub progress_stop {
-	my $this=shift;
-	my $element=$this->progress_bar;
-	$this->SUPER::progress_stop(@_);
-
-	$this->qtapp->processEvents;
-
-	$this->win->setAttribute(Qt::WA_DeleteOnClose());
-	$this->win->close;
-	$this->window_initted(0);
-
-	if ($this->cancelled) {
-		exit 1;
+	# Ping debconf-kde-helper and wait for the reply for 15 seconds
+	my $timeout = 15;
+	my $tag = $this->talk_with_timeout($timeout, "X_PING");
+	unless (defined $tag && $tag == 0) {
+		close $hp2dc_readfh;
+		close $dc2hp_writefh;
+		if (waitpid($helper_pid, WNOHANG) == $helper_pid) {
+			# debconf-helper-kde has probably died already
+			die "debconf-kde-helper terminated abnormally (exit status: " . WEXITSTATUS($?) . ")\n";
+		} elsif (kill(0, $helper_pid) == 1) {
+			# It has hung or something like that. Kill it forcefully.
+			kill 9, $helper_pid;
+			# Collect zombie
+			waitpid($helper_pid, 0);
+		}
+		if (defined $tag) {
+			die "debconf-kde-helper failed to respond to ping. Response was $tag\n";
+		} else {
+			die "debconf-kde-helper did not respond to ping in $timeout seconds\n";
+		}
 	}
 }
 
-=item shutdown
+=head2 shutdown
 
-Called to terminate the UI.
+Closes pipes and waits for the debconf-kde-helper process to finish.
 
 =cut
 
 sub shutdown {
 	my $this = shift;
-	if ($this->kde_initted) {
-		if($this->win) {
-			$this->win->destroy;
-		}
+	$this->SUPER::shutdown();
+	if (defined $this->{kde_helper_pid}) {
+	    waitpid $this->{kde_helper_pid}, 0;
+		delete $this->{kde_helper_pid};
 	}
 }
 
-=back
-
 =head1 AUTHOR
 
-Peter Rockai <mornfall@logisys.dyndns.org>
-Sune Vuorela <sune@debian.org>
+Modestas Vainius <modax@debian.org>
 
 =cut
 
-1
+1;

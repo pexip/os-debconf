@@ -148,6 +148,39 @@ sub sizetext {
 	       $window_columns + $this->borderwidth;
 }
 
+=item ellipsize
+
+Items in select and multiselect questions must be trimmed to fit when using
+whiptail, or else the window may overflow the screen.  This function handles
+that: pass it a line of text and it will truncate it if necessary, adding a
+trailing ellipsis.
+
+=cut
+
+sub ellipsize {
+	my $this=shift;
+	my $text=shift;
+
+	# We only need to do this for whiptail; dialog truncates items by
+	# itself.
+	return $text if $this->program ne 'whiptail';
+
+	$columns = $this->screenwidth - $this->borderwidth - $this->columnspacer - $this->selectspacer;
+	if (width($text) > $columns) {
+		# Ideally we might use Unicode::Truncate, but that isn't
+		# currently in Debian and extra dependencies are awkward
+		# here.  Truncating in a way that respects the character
+		# encoding and doesn't leave us with partial multi-byte
+		# characters seems to be really hard in Perl.  As a cheap
+		# hack, wrap the text (which at least honours character
+		# encoding if Text::WrapI18N and Text::CharWidth are
+		# installed) and take the first line.
+		$columns -= 3;
+		$text = (split(/\n/, wrap('', '', $text), 2))[0] . '...';
+	}
+	return $text;
+}
+
 =item hide_escape
 
 Used to hide escaped characters in input text from processing by dialog.

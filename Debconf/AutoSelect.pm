@@ -16,6 +16,18 @@ use base qw(Exporter);
 our @EXPORT_OK = qw(make_frontend make_confmodule);
 our %EXPORT_TAGS = (all => [@EXPORT_OK]);
 
+# Perl's distinction between the compilation phase and the execution phase
+# is extremely unhelpful.  Glib::Object::Introspection is a dependency of
+# Gtk3 and has an INIT block, so trying to require it from anywhere inside a
+# string eval results in a "Too late to run INIT block" diagnostic.  From
+# our point of view, there seems to be no workaround for this other than
+# requiring it unconditionally here and ignoring any errors.
+BEGIN {
+	eval {
+		require Glib::Object::Introspection;
+	};
+}
+
 =head1 DESCRIPTION
 
 This library makes it easy to create FrontEnd and ConfModule objects. It
@@ -26,7 +38,8 @@ it progressively falls back to other types in the list.
 
 my %fallback=(
 	# preferred frontend		# fall back to
-	'Kde'			=>	['Dialog', 'Readline', 'Teletype'],
+	'Kde'			=>	['Qt', 'Dialog', 'Readline', 'Teletype'],
+	'Qt'			=>	['Dialog', 'Readline', 'Teletype'],
 	'Gnome'			=>	['Dialog', 'Readline', 'Teletype'],
 	'Web'			=>	['Dialog', 'Readline', 'Teletype'],
 	'Dialog'		=>	['Readline', 'Teletype'],
