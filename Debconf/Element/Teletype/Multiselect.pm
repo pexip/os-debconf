@@ -20,6 +20,38 @@ isn't very intuitive. Better UI designs welcomed.)
 
 =cut
 
+=head1 METHODS
+
+=over 4
+
+=item expand_ranges
+
+Expand ranges of numbers input by the user.
+
+    expand_ranges(qw(1 foo 4-6 bar));
+    => qw(1 foo 4 5 6 bar)
+
+=back
+
+=cut
+
+sub expand_ranges {
+	my @ranges = @_;
+	my @accumulator;
+	for my $item (@ranges) {
+		if ($item =~ /\A(\d+)-(\d+)\Z/) {
+			my ($begin, $end) = ($1, $2);
+			for (my $i = $begin; $i <= $end; $i++) {
+				push @accumulator, $i;
+			}
+		}
+		else {
+			push @accumulator, $item;
+		}
+	}
+	return @accumulator;
+}
+
 sub show {
 	my $this=shift;
 
@@ -34,17 +66,17 @@ sub show {
 	my @completions=@choices;
 	my $i=1;
 	my %choicenum=map { $_ => $i++ } @choices;
-	
+
 	# Print out the question.
 	$this->frontend->display($this->question->extended_description."\n");
-	
+
 	# If this is not terse mode, we want to print out choices, and
 	# add numbers to the completions, and use numbers in the default
 	# prompt.
 	my $default;
 	if (Debconf::Config->terse eq 'false') {
 		$this->printlist(@choices);
-		$this->frontend->display("\n(".gettext("Enter the items you want to select, separated by spaces.").")\n");
+		$this->frontend->display("\n(".gettext("Enter the items or ranges you want to select, separated by spaces.").")\n");
 		push @completions, 1..@choices;
 		$default=join(" ", map { $choicenum{$_} }
 		                   grep { $value{$_} } @choices);
@@ -68,6 +100,8 @@ sub show {
 		# with whitespace or commas.
 		@selected=split(/[	 ,]+/, $_);
 
+		@selected=expand_ranges(@selected);
+
 		# Expand what they entered.
 		@selected=map { $this->expandabbrev($_, @choices) } @selected;
 
@@ -81,7 +115,7 @@ sub show {
 		if ($#selected > 0) {
 			map { next if $_ eq $none_of_the_above } @selected;
 		}
-		
+
 		last;
 	}
 

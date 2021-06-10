@@ -4,11 +4,10 @@ Priority: optional
 Maintainer: Debconf Developers <debconf-devel@lists.alioth.debian.org>
 Uploaders: Colin Watson <cjwatson@debian.org>
 Standards-Version: 4.0.0
-Build-Depends-Indep: perl (>= 5.10.0-16), python (>= 2.6.6-3~), python3 (>= 3.1.2-8), gettext (>= 0.13), libintl-perl
-Build-Depends: debhelper (>= 9~), dh-exec, dh-python, po-debconf, po4a (>= 0.23)
+Build-Depends-Indep: perl (>= 5.10.0-16), python3 (>= 3.1.2-8), gettext (>= 0.13), libintl-perl
+Build-Depends: debhelper-compat (= 12), dh-exec, dh-python, po-debconf, po4a (>= 0.23)
 Vcs-Git: https://salsa.debian.org/pkg-debconf/debconf.git
 Vcs-Browser: https://salsa.debian.org/pkg-debconf/debconf
-X-Python-Version: >= 2.6
 
 Package: debconf
 Priority: important
@@ -60,19 +59,6 @@ Replaces: debconf (<< 0.1.0)
 Architecture: all
 Description: debconf utilities
  This package contains some small utilities for debconf developers.
-
-Package: python-debconf
-Section: python
-Depends: debconf (= ${binary:Version}), ${misc:Depends}, ${python:Depends}
-Breaks: debconf (<< 1.5.64)
-Replaces: debconf (<< 1.5.64)
-Architecture: all
-Description: interact with debconf from Python 2
- Debconf is a configuration management system for debian packages. Packages
- use Debconf to ask questions when they are installed.
- .
- This package provides a debconf module to allow Python 2 programs to
- interact with a debconf frontend.
 
 Package: python3-debconf
 Section: python

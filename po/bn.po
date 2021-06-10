@@ -137,7 +137,9 @@ msgid "none of the above"
 msgstr "উপরের কোনোটি নয়"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
+#, fuzzy
+#| msgid "Enter the items you want to select, separated by spaces."
+msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr "আপনি যেসকল আইটেম নির্বাচন করতে চান সেগুলো এন্টার করুন, স্পেস দিয়ে পৃথক করে।"
 
 #: ../Debconf/FrontEnd.pm:140

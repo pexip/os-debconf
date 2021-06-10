@@ -20,7 +20,7 @@ clean:
 
 # Does not attempt to install documentation, as that can be fairly system
 # specific.
-install: install-utils install-python2 install-python3 install-rest
+install: install-utils install-python3 install-rest
 
 # Anything that goes in the debconf-utils package.
 install-utils:
@@ -34,17 +34,6 @@ install-i18n:
 
 PERL := perl
 PERL_VENDORLIB := $(shell $(PERL) -MConfig -e 'print $$Config{vendorlib}')
-
-# This would probably be easier if we used setup.py ...
-PYTHON2_SUPPORTED := $(shell pyversions -s)
-PYTHON_SITEDIR = $(prefix)/usr/lib/$(1)/$(if $(filter 2.0 2.1 2.2 2.3 2.4 2.5,$(patsubst python%,%,$(1))),site-packages,dist-packages)
-
-# The Python 2 package.
-install-python2:
-	set -e; for dir in $(foreach python,$(PYTHON2_SUPPORTED),$(call PYTHON_SITEDIR,$(python))); do \
-		install -d $$dir; \
-		install -m 0644 debconf.py $$dir/; \
-	done
 
 # The Python 3 package.
 install-python3:

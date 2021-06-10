@@ -51,6 +51,10 @@ sub init {
 	$this->readline(Term::ReadLine->new('debconf'));
 	$this->readline->ornaments(1);
 
+	if (-p STDOUT && -p STDERR) { # make readline play nice with buffered stdout
+		$this->readline->newTTY(*STDIN, *STDOUT);
+	}
+
 	if (Term::ReadLine->ReadLine =~ /::Gnu$/) {
 		# Well, emacs shell buffer has some annoying interactions
 		# with Term::ReadLine::GNU. It's not worth the pain.

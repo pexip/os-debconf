@@ -2,20 +2,20 @@
 # Copyright (C) 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the debconf package.
 #
-# Américo Monteiro <a_monteiro@gmx.com>, 2010, 2012, 2014.
+# Américo Monteiro <a_monteiro@gmx.com>, 2010 - 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.53\n"
+"Project-Id-Version: debconf 1.5.71\n"
 "POT-Creation-Date: 2018-07-25 09:14+0100\n"
-"PO-Revision-Date: 2014-07-27 08:35+0100\n"
+"PO-Revision-Date: 2019-04-19 13:19+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
-"Language-Team: Portuguese <traduz@debianpt.org>\n"
+"Language-Team: Portuguese <>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: ENCODINGX-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: SH
 #: ../../debconf:3 ../../Debconf/Client/ConfModule.pm:3
@@ -3659,12 +3659,6 @@ msgstr "B<gnome>"
 
 #. type: Plain text
 #: debconf.7:96
-#, fuzzy
-#| msgid ""
-#| "This is a modern X GUI using the gtk and gnome libraries. Of course, it "
-#| "requires a valid DISPLAY to work; debconf will fall back to other "
-#| "frontends if it can't work. Note that this frontend requires you have the "
-#| "libgnome2-perl package installed."
 msgid ""
 "This is a modern X GUI using the gtk and gnome libraries. Of course, it "
 "requires a valid DISPLAY to work; debconf will fall back to other frontends "
@@ -3674,7 +3668,7 @@ msgstr ""
 "Isto é uma GUI X moderna que usa as bibliotecas gtk e gnome. Claro que "
 "necessita de um DISPLAY válido para funcionar; o debconf irá cair para para "
 "outros frontends se este não puder funcionar. Note que este frontend requer "
-"que tenha o pacote libgnome2-perl instalado."
+"que tenha o pacote libgtk3-perl instalado."
 
 #. type: TP
 #: debconf.7:96
@@ -3684,22 +3678,16 @@ msgstr "B<kde>"
 
 #. type: Plain text
 #: debconf.7:102
-#, fuzzy
-#| msgid ""
-#| "This frontend provides a simple X GUI written with the Qt library. It "
-#| "fits well the KDE desktop. You of course need a DISPLAY to use this "
-#| "frontend and must install libqt-perl. The frontend will fall back to "
-#| "dialog if some of the prerequisites are not met."
 msgid ""
 "This frontend provides a modern X GUI based on the KDE Platform. You of "
 "course need a DISPLAY to use this frontend and you must install debconf-kde-"
 "helper package. The frontend will fall back to dialog if some of the "
 "prerequisites are not met."
 msgstr ""
-"Este frontend disponibiliza uma GUI X simples escrita com a biblioteca Qt. "
-"Adapta-se bem ao ambiente de trabalho KDE. Claro que você precisa de um "
-"DISPLAY para usar este frontend e tem de instalar a libqt-perl. O frontend "
-"irá cair para dialog se algum dos pre-requisitos não estiver satisfeito."
+"Este frontend disponibiliza uma GUI X moderna baseada na plataforma KDE. "
+"Claro que você precisa de um DISPLAY para usar este frontend e você tem de "
+"instalar o pacote debconf-kde-helper. O frontend irá cair para dialog se "
+"algum dos pre-requisitos não estiver satisfeito."
 
 #. type: TP
 #: debconf.7:102

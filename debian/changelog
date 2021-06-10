@@ -1,8 +1,67 @@
-debconf (1.5.71+deb10u1) buster; urgency=medium
+debconf (1.5.77) unstable; urgency=medium
 
+  [ Programs translations ]
+  * Dutch (Frans Spiesschaert; closes: #986167).
+  * Polish (Mmobilea; closes: #976044).
+
+  [ Debconf translations ]
+  * Fix double UTF-8 encoding in Finnish translation (closes: #989692).
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 10 Jun 2021 18:17:49 +0100
+
+debconf (1.5.76) unstable; urgency=medium
+
+  [ Colin Watson ]
   * Check that whiptail or dialog is actually usable (closes: #985572).
 
- -- Colin Watson <cjwatson@debian.org>  Fri, 01 Oct 2021 10:39:27 +0100
+  [ Programs translations ]
+  * Dutch (Frans Spiesschaert; closes: #906948).
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 20 Mar 2021 13:14:50 +0000
+
+debconf (1.5.75) unstable; urgency=medium
+
+  [ Philip Hands ]
+  * Replace broken debian-logo.png with proper version (closes: #983200).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 28 Feb 2021 17:51:28 +0000
+
+debconf (1.5.74) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from old 9 to 12.
+  * Add missing colon in closes line.
+  * Fix day-of-week for changelog entries 0.1.43.
+
+  [ Fabrice BAUZAC ]
+  * Teletype mode: add support for range-based selection.
+
+  [ Programs translations ]
+  * German (Helge Kreutzmann).
+
+  [ Niels Thykier ]
+  * Remove some obsolete maintainer script code.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 18 Apr 2020 12:10:08 +0100
+
+debconf (1.5.73) unstable; urgency=medium
+
+  * Use debhelper-compat instead of debian/compat.
+  * Remove ancient X-Python-Version field.
+  * Drop Python 2 support.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 03 Aug 2019 11:51:13 +0100
+
+debconf (1.5.72) unstable; urgency=medium
+
+  [ Manpages translations ]
+  * Portuguese (Américo Monteiro; closes: #927421).
+
+  [ Heitor Alves de Siqueira ]
+  * Fix readline prompts when run via run-parts (closes: #928182).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 05 May 2019 13:45:57 +0100
 
 debconf (1.5.71) unstable; urgency=medium
 
@@ -327,11 +386,11 @@ debconf (1.5.46) unstable; urgency=low
     place (and also convert its encoding that was broken by a BTS bug)
   * Activate Danish translation of manpages by adding the needed addenda
     Closes: #664901
-  
+
   [ Programs translations ]
   * Danish (Joe Dalton). Closes: #683191
   * Fix typo in the french translation of debconf-show(1)
-    LP: #1025045    
+    LP: #1025045
   * Polish (Marcin Owsiany). Closes: #683207
   * Japanese (Kenshi Muto). Closes: #683223
   * Bengali PO file header fixed
@@ -409,7 +468,7 @@ debconf (1.5.42) unstable; urgency=low
   [ Joey Hess ]
   * File DbDriver now creates the directory for the file if it is missing.
     (All other DbDrivers that write files already did this.) Closes: #636621
-  
+
   [ Emmet Hikory ]
   * Display error messages in noninteractive frontend (Closes: #367497)
 
@@ -922,7 +981,7 @@ debconf (1.5.23) unstable; urgency=low
 debconf (1.5.22) unstable; urgency=low
 
   * Improve LDAP KeyByKey option by setting the LDAP search base to the exact
-    key that is requested. Patch from Davor Ocelic. 
+    key that is requested. Patch from Davor Ocelic.
   * Initial support for storing templates database in LDAP. (i18n not
     supported). Patch from Davor Ocelic. Closes: #477531
 
@@ -1758,7 +1817,7 @@ debconf (1.4.58) unstable; urgency=low
   [ Christian Perrier ]
   * Rewrite the debconf/priority short description to have the same
     wording than cdebconf
-    Translations merged from cdebconf translations (languages not yet 
+    Translations merged from cdebconf translations (languages not yet
     supported in debconf added with translations from cdebconf)
 
  -- Joey Hess <joeyh@debian.org>  Thu, 25 Aug 2005 12:09:51 -0400
@@ -2300,7 +2359,7 @@ debconf (1.4.19) unstable; urgency=low
     and notes to use more of the available space. Closes: #229009
     Thanks to Mark Howard for this patch.
   * Use tooltips to display the help texts for questions in the Gnome
-    frontend. Closes: #240299 (Mark Howard). The Help bttons are still 
+    frontend. Closes: #240299 (Mark Howard). The Help bttons are still
     left in the UI for now.
   * Updated Greek po file from Konstantinos Margaritis. Closes: #240641
   * French po update from Julien Louis. Closes: #240648
@@ -2371,7 +2430,7 @@ debconf (1.4.9) unstable; urgency=low
     - change debconf.schema to support slapd 2.1.x. Closes: #215878
     - adds a test suite for DbDrivers.
     Thanks, Sylvain!
-  * Work around perl bug #231619 by unnecessarily using fields in 
+  * Work around perl bug #231619 by unnecessarily using fields in
     DirTree.pm. Closes: #227013
   * Patch from Eugeniy Meshcheryakov to fix display of messages in KOI8
     locales using the GNOME frontend. Closes: #231302
@@ -2438,7 +2497,7 @@ debconf (1.4.4) unstable; urgency=low
 debconf (1.4.3) unstable; urgency=low
 
   * Port of the gnome frontend to GNOME2 libs:
-  * Debconf/Frontend/Gnome.pm, Debconf/Element/Gnome.pm, 
+  * Debconf/Frontend/Gnome.pm, Debconf/Element/Gnome.pm,
     Debconf/Element/Gnome/*.pm:
     - fixed debian logo exibition
   * Makefile, debian-logo.png, debian-logo.xpm:
@@ -2714,8 +2773,8 @@ debconf (1.3.0) unstable; urgency=low
     It loads Tomohiro's modules if available, and falls back Text::Wrap and
     length if not.
   * Reorganized the i18n support, so all necessary packages are installed by
-    default (Closes: #196475, #173647), and so it can easily be removed 
-    (saving 500k) for those who don't need it and lack disk space. 
+    default (Closes: #196475, #173647), and so it can easily be removed
+    (saving 500k) for those who don't need it and lack disk space.
     Introduced debconf-i18n and debconf-english packages.
   * Link debconf-utils doc dir to debconf's, since it depends on it anyway.
     With transition preinst script. Saves 60k.
@@ -2737,7 +2796,7 @@ debconf (1.2.42) unstable; urgency=low
 
 debconf (1.2.41) unstable; urgency=low
 
-  * Follow up with a Spanish template update, also from Carlos. 
+  * Follow up with a Spanish template update, also from Carlos.
     Closes: #196786
 
  -- Joey Hess <joeyh@debian.org>  Mon,  9 Jun 2003 20:03:28 -0400
@@ -2817,7 +2876,7 @@ debconf (1.2.32) unstable; urgency=low
       inherited remove method fails as the items are not in the cache
       anymore. This only shows up if using PackageDir for both config and
       templates.
-    - Fix typo in Directory::remove which kept it from removing "-old" 
+    - Fix typo in Directory::remove which kept it from removing "-old"
       backup files.
     - Make PackageDir::shutdown Call endfile on format.
     Closes: #182725
@@ -2859,7 +2918,7 @@ debconf (1.2.28) unstable; urgency=low
 
 debconf (1.2.27) unstable; urgency=low
 
-  * Debugf message when skipping 1 or 0 select select question. 
+  * Debugf message when skipping 1 or 0 select select question.
     Closes: #181620
 
  -- Joey Hess <joeyh@debian.org>  Wed, 19 Feb 2003 15:28:57 -0500
@@ -2902,7 +2961,7 @@ debconf (1.2.23) unstable; urgency=low
 
 debconf (1.2.22) unstable; urgency=low
 
-  * Updated pt_BR.po from Andre Luis Lopes, Closes: #177224 
+  * Updated pt_BR.po from Andre Luis Lopes, Closes: #177224
 
  -- Joey Hess <joeyh@debian.org>  Fri, 31 Jan 2003 23:49:51 -0500
 
@@ -3225,11 +3284,11 @@ debconf (1.1.15) unstable; urgency=low
   * Added a new dbdriver called "PackageDir" that stores items for each package
     in separate files (shared items go in their own file) in a subdirectory.
     This is a tradeoff between the load speed of DirTree and the
-    manageability and smaller size of the flat file that has been the default 
-    so far. Locality of reference is reasonable when debconf is used on a 
-    per-package basis, as in debian. This dbdriver is planned to superceed 
+    manageability and smaller size of the flat file that has been the default
+    so far. Locality of reference is reasonable when debconf is used on a
+    per-package basis, as in debian. This dbdriver is planned to superceed
     File as the default once it's gotten some testing.
- 
+
     If you want to test this, edit your debconf.conf to define new databases
     of this type into it, use debconf-copydb to copy your existing databases
     into the new ones, and then make the new ones be used by default.
@@ -3272,7 +3331,7 @@ debconf (1.1.12) unstable; urgency=low
     smileys, put Smileys: false in debconf.conf. To disable sigils entirely,
     use Sigils: false. I will implement smiley customization for $25. (Ads
     in a changlog -- you saw it here first :-P)
-    
+
     Besides looking cute, the intent here is to make it obvious what priority
     a question is being asked at, to help combat priority inflation. Varying
     types of sigils will be added to the other frontends as well.
@@ -3364,7 +3423,7 @@ debconf (1.1.1) experimental; urgency=low
 
   * debconf-mergetemplate will now only drop old templates if it is passed
     a --drop-old-templates parameter. The old waqy broke base-config's build,
-    and might break anytime someone calls the program by hand in a weird way. 
+    and might break anytime someone calls the program by hand in a weird way.
     I will turn this parameter on in dh_installdebconf though.
     Closes: #145436
   * Updated french po file.
@@ -3441,7 +3500,7 @@ debconf (1.0.33) unstable; urgency=low
   * Updated debconf schema using OID numbers allocated under
     enterprise.Debian.package.debconf by Wichert.
   * Fixed ancient program name in old tutorual. Closes: #141904
-  * Fixed some typos and crazy man escapage in debconf.devel(8), 
+  * Fixed some typos and crazy man escapage in debconf.devel(8),
     Closes: #140991
 
  -- Joey Hess <joeyh@debian.org>  Sun, 31 Mar 2002 13:27:43 -0500
@@ -3483,7 +3542,7 @@ debconf (1.0.30) unstable; urgency=low
   * Fixed typo, Closes: #134161
   * Patch from Denis Barbier <barbier@debian.org> to make debconf-getlang
     work better with ll_LL form languages. Closes: #134307
-  * Display choices for boolean questions in the editor frontend, 
+  * Display choices for boolean questions in the editor frontend,
     Closes: #135078
   * Improved the section in the tutorial on translations. Patch from Denis
     Barbier. Closes: #96836
@@ -3526,7 +3585,7 @@ debconf (1.0.25) unstable; urgency=medium
     transition from the crufty old data::dumper db, and the "fix" for the
     missing template problem, plus possibly some unclean shutdown problems.
     So fix them all now, and either the problems go away for good or I prove
-    my theories wrong if they pop back up later. 
+    my theories wrong if they pop back up later.
   * Closes: #128707, #128265, #99786
 
  -- Joey Hess <joeyh@debian.org>  Fri, 11 Jan 2002 13:25:06 -0500
@@ -3555,7 +3614,7 @@ debconf (1.0.22) unstable; urgency=HIGH
     debconf crash later). Some if not all are related to system hangs while
     an upgrade is in progress. Since debconf is already very careful to do
     updates atomically, nearly the only safety feature left is to sync files
-    after writing them, which I have now done for all db file writes. My 
+    after writing them, which I have now done for all db file writes. My
     hypothesis is that the atomicity was being thwarted by disk caching.
     Closes: #122891, #112921, #122825, #112921 (??)
   * Directory DbDriver was unlocking the db too early, fixed.
@@ -3572,7 +3631,7 @@ debconf (1.0.21) unstable; urgency=high
   * High urgency upload to get this into testing before the freeze, as it
     fixes a bug that can cripple upgrades from stable.
   * Conflict with whiptail << 0.50.17-7, as some version between that one and
-    the 0.50-7 in stable changes something that is required to make the 
+    the 0.50-7 in stable changes something that is required to make the
     fix I put in for values starting with dashes work. Closes: #122182
   * Added a number of Brazilian Portuguese man pages.
     Closes: #122011, #122012, #122017, #122018, #122019, #122026, #122028
@@ -3703,7 +3762,7 @@ debconf (1.0.10) unstable; urgency=medium
 debconf (1.0.03) unstable; urgency=low
 
   * Corrected multiselect text frontend help line to make sense in terse
-    mode. This involved removing any mention of numbers or letters. 
+    mode. This involved removing any mention of numbers or letters.
     Closes: #113416, #113414
   * Quick and dirty gnome multiselect scrolling patch from Federico Di
     Gregorio <fog@mixadlive.com>. Still looking for a better fix.
@@ -3742,7 +3801,7 @@ debconf (1.0.00) unstable; urgency=low
     - a better confmodule interface that doesn't eat stdin/out
     - container template types
     - select list with explainations
-    - a textual replacement for the dialog frontend that is just as 
+    - a textual replacement for the dialog frontend that is just as
       easy to use, and sucks less
     - better developer's documentation
     - regression tests
@@ -3751,7 +3810,7 @@ debconf (1.0.00) unstable; urgency=low
     frontend was intended to be just that, but it is a failure, with big
     problems like unscrollable extended descriptions, UI clunkiness, etc.
     Nobody wants to fix these issues, and so the best thing to do is remove
-    it, before a lot of people begin to use it. 
+    it, before a lot of people begin to use it.
     Closes: #66170, #81344, #96302, #74722, #77085, #101643
   * Removing the slang frontend also involved:
     - getting rid of debconf/helpvisible, which was only used by it
@@ -3794,7 +3853,7 @@ debconf (0.9.95) unstable; urgency=low
   * Fixed an overloaded field problem in the Backup DbDriver.
   * Fixed the InFd field of the Pipe DbDriver so it actually works, and
     it may now be set to "none" to stop it from reading a db on startup.
-    This allows use of stuff like this, to get a partial debconf db dump, 
+    This allows use of stuff like this, to get a partial debconf db dump,
     which developers may find useful when getting info on bugs:
       debconf-copydb configdb out -c Name:out -c Driver:Pipe \
                                   -c InFd:none --pattern='^slrn/'
@@ -3843,7 +3902,7 @@ debconf (0.9.91) unstable; urgency=low
       varies.
     - Fixed multiselect questions so the defaults are auto-selected.
     - Removed sigsegv handler thing. It seems to not be needed any more?
- 
+
  -- Joey Hess <joeyh@debian.org>  Fri, 27 Jul 2001 18:34:23 -0400
 
 debconf (0.9.90) unstable; urgency=low
@@ -3908,7 +3967,7 @@ debconf (0.9.77) unstable; urgency=low
 debconf (0.9.76) unstable; urgency=low
 
   * Don't use double dashes for dialog, though they are needed for
-    whiptail. Gag. Closes: #103867 
+    whiptail. Gag. Closes: #103867
 
  -- Joey Hess <joeyh@debian.org>  Mon,  9 Jul 2001 19:08:22 -0400
 
@@ -3927,7 +3986,7 @@ debconf (0.9.74) unstable; urgency=low
 
   * Introducing terse mode. You know what you're doing, and so you're using
     the text frontend (of course!) as you do a remote upgrade from rexx over
-    a 30 hop, 95% packet loss link to another continent. Every byte hurts. 
+    a 30 hop, 95% packet loss link to another continent. Every byte hurts.
     You don't need all those touchy-feely verbose help screens. Terse mode is
     for you. (Well, for me anyway. Damn this wireless link.)
        # dpkg-reconfigure debconf --terse
@@ -3980,7 +4039,7 @@ debconf (0.9.70) unstable; urgency=low
 
 debconf (0.9.69) unstable; urgency=low
 
-  * Fix doc link, Closes: #101114 
+  * Fix doc link, Closes: #101114
 
  -- Joey Hess <joeyh@debian.org>  Sat, 16 Jun 2001 12:37:32 -0400
 
@@ -4005,7 +4064,7 @@ debconf (0.9.67) unstable; urgency=low
 
 debconf (0.9.66) unstable; urgency=low
 
-  * Prevent Editor::Note's from feeding undef values into the db, 
+  * Prevent Editor::Note's from feeding undef values into the db,
     Closes: #100776
 
  -- Joey Hess <joeyh@debian.org>  Thu, 14 Jun 2001 12:37:14 -0400
@@ -4027,7 +4086,7 @@ debconf (0.9.63) unstable; urgency=low
 
   * Man page section fixes, Closes: #100076
   * Noted in description of shell library that yes, the protocol commands
-    are lower-cased (it already explained about the db_ prefixing). 
+    are lower-cased (it already explained about the db_ prefixing).
     Closes: #100276
   * Text frontend UI changes: select and multiselect lists no longer have
     lettered choices. Instead, it uses numbers, and any unique anchored
@@ -4144,7 +4203,7 @@ debconf (0.9.53) unstable; urgency=low
 debconf (0.9.52) unstable; urgency=low
 
   * Dialog is the default frontend for new installs again, since slang
-    still need work, and cannot work on the base system anyway. 
+    still need work, and cannot work on the base system anyway.
     Closes: #96381
   * DEBCONF_ADMIN_EMAIL can be used to change where debconf mails notes and
     stuff to, overriding whatever is in the config file. Note that it may
@@ -4196,7 +4255,7 @@ debconf (0.9.40) unstable; urgency=high
 
 debconf (0.9.39) unstable; urgency=low
 
-  * Changed the debug and log stuff in debconf.conf and removed log-to. 
+  * Changed the debug and log stuff in debconf.conf and removed log-to.
     This will break any debconf.conf files which used that stuff, but I'm
     proably the only one. The new scheme is more realistic -- you can have
     debconf always log a given thing, while turning on debugging of other
@@ -4486,11 +4545,11 @@ debconf (0.9.10) unstable; urgency=low
   * Though I waited long --
     twelve days -- I must upload now.
     (And thus, miss testing.)
-    
+
   * The long overdue
     backend database is here:
     the missing quarter.			Closes: #50437
-    
+
     And so the version
     approaches 1.0 -- joy!
     Though more work awaits.
@@ -4498,7 +4557,7 @@ debconf (0.9.10) unstable; urgency=low
   * Db setup lore
     is in debconf.conf(5)
     in debconf-doc.
-  
+
     You'll find it's layered;
     quite a flexible design
     (many thanks, Wichert).
@@ -4633,7 +4692,7 @@ debconf (0.5.63) unstable; urgency=low
 
 debconf (0.5.62) unstable; urgency=low
 
-  * Fix compilation with apt 0.4. Closes: #86417 
+  * Fix compilation with apt 0.4. Closes: #86417
 
  -- Joey Hess <joeyh@debian.org>  Sat, 17 Feb 2001 19:58:13 -0800
 
@@ -4683,7 +4742,7 @@ debconf (0.5.55) unstable; urgency=low
   * Updated Franch translation from Martin Quinson
     <Martin.Quinson@ens-lyon.fr>
   * debconf-getlang now preserves fuzzy translations accross multiple runs,
-    if a new translation is not put in. I also had to rename the -OLD 
+    if a new translation is not put in. I also had to rename the -OLD
     fields to -fuzzy.
 
  -- Joey Hess <joeyh@debian.org>  Thu,  1 Feb 2001 13:39:25 -0800
@@ -4739,7 +4798,7 @@ debconf (0.5.50) unstable; urgency=low
 debconf (0.5.49) unstable; urgency=low
 
   * Clean up after bogus foo/bar template I accidentially released.
-  * Added German template translation by Michael Bramer <grisu@debian.org>, 
+  * Added German template translation by Michael Bramer <grisu@debian.org>,
     Closes: #82914
 
  -- Joey Hess <joeyh@debian.org>  Fri, 19 Jan 2001 16:07:07 -0800
@@ -4760,7 +4819,7 @@ debconf (0.5.47) unstable; urgency=low
 
 debconf (0.5.46) unstable; urgency=low
 
-  * dpkg-preconfigure: don't split on apt-extractemplates output on 
+  * dpkg-preconfigure: don't split on apt-extractemplates output on
     ' ', use \s
 
  -- Joey Hess <joeyh@debian.org>  Sun, 14 Jan 2001 23:08:27 -0800
@@ -4782,7 +4841,7 @@ debconf (0.5.44) unstable; urgency=low
 
 debconf (0.5.43) unstable; urgency=low
 
-  * Modified shell confmodule to use read -r, so if \ characters are 
+  * Modified shell confmodule to use read -r, so if \ characters are
     read in, it will not interpret them. That was causing mangled password
     entry problems in base-config, Closes: #77920. It could also cause
     random hangs if the data was just right..
@@ -4843,12 +4902,12 @@ debconf (0.5.36) unstable; urgency=low
 debconf (0.5.35) unstable; urgency=low
 
   * Both dialog and whiptail now support --nocancel, which the dialog
-    frontend will use now if a cancel button is not appropriate. 
+    frontend will use now if a cancel button is not appropriate.
     Closes: #67419
   * Reluctantly brought back a *temoporary* dependancy on perl-5.6 until
     it gets it act in order. Closes: #79571 (Debian *cannot* be released
     while debconf has this bogus dependancy.)
- 
+
  -- Joey Hess <joeyh@debian.org>  Thu, 14 Dec 2000 11:00:59 -0800
 
 debconf (0.5.34) unstable; urgency=low
@@ -4910,7 +4969,7 @@ debconf (0.5.27) unstable; urgency=low
 
   * If debconf is run without a controling tty..
     - TERM will not be defined. This breaks the dialog frontend (which is
-      broken pretty badly by the lack of a tty too ;-), so detect 
+      broken pretty badly by the lack of a tty too ;-), so detect
       lack of TERM and refuse to use that frontend.
     - Same for slang frontend.
     - Lack of a controlling tty messes with the Text frontend,
@@ -4935,7 +4994,7 @@ debconf (0.5.26) unstable; urgency=low
 
 debconf (0.5.25) unstable; urgency=low
 
-  * dpkg-reconfigure: Wait until after loading db before doing frontend 
+  * dpkg-reconfigure: Wait until after loading db before doing frontend
     fix up. Closes: #77847
 
  -- Joey Hess <joeyh@debian.org>  Thu, 23 Nov 2000 13:54:19 -0800
@@ -4949,10 +5008,10 @@ debconf (0.5.24) unstable; urgency=low
 debconf (0.5.23) unstable; urgency=low
 
   * Fixed noninteractive note element to not let the shell get its grubby
-    little hands on unvalidated input, which was making it puke. 
-    Closes: #77589 and a whole raft of other bugs filed against X which we 
+    little hands on unvalidated input, which was making it puke.
+    Closes: #77589 and a whole raft of other bugs filed against X which we
     will be merging to it. Special thanks to Ingo Saitz for providing many
-    debug logs, and the person I've forgot who should delete my debug 
+    debug logs, and the person I've forgot who should delete my debug
     account from their box now.
 
  -- Joey Hess <joeyh@debian.org>  Tue, 21 Nov 2000 23:22:09 -0800
@@ -4971,7 +5030,7 @@ debconf (0.5.21) unstable; urgency=low
   * The stuff the postinst adds to apt.conf now doesn't return a error
     code and make the apt run fail even if peices of the system like perl
     are broken, as they are now for so many people. I had held off on this
-    change for a long time, but enough is enough.    
+    change for a long time, but enough is enough.
   * Also some not-yet-ready copletion stuff in the text frontend.
 
  -- Joey Hess <joeyh@debian.org>  Thu, 16 Nov 2000 21:22:26 -0800
@@ -4998,7 +5057,7 @@ debconf (0.5.00) unstable; urgency=low
 
   * Modified all the frontends to deal with this scenario:
         A config scripts asks questions a, b, and c. a and c are asked at
-        priorities that make them visible, b is not. The user gets to c, 
+        priorities that make them visible, b is not. The user gets to c,
         and backs up.
     Previously, debconf would loop back to b, skip it again, and return the
     user to c. Now it is smart enough to go back to a once b is skipped.
@@ -5063,7 +5122,7 @@ debconf (0.4.09) unstable; urgency=low
     as admins may have multiple hosts configured to sent mail with the same
     hostname. Closes: #76653 Also reformatted the messages some for clarity
     and conciseness.
- 
+
  -- Joey Hess <joeyh@debian.org>  Thu,  9 Nov 2000 13:58:53 -0800
 
 debconf (0.4.08) unstable; urgency=low
@@ -5098,7 +5157,7 @@ debconf (0.4.05) unstable; urgency=low
 
 debconf (0.4.04) unstable; urgency=low
 
-  * confmodule: Properly quote arguments to frontend, just in case. 
+  * confmodule: Properly quote arguments to frontend, just in case.
     Closes: #74827
   * debconf-loadtemplates was totally hosed. It forgot to load the db up,
     and so it wiped it all out when it saved it! Fixed, Closes: #74826
@@ -5109,9 +5168,9 @@ debconf (0.4.04) unstable; urgency=low
 
 debconf (0.4.03) unstable; urgency=low
 
-  * Fixed a typo in the preinst. 
+  * Fixed a typo in the preinst.
     Closes: #75318, #66484, #75322, #75328, #75339, #75341, #75319, #75367,
-    #75399 (and probably a bunch more, but they're merged anyway). Actually 
+    #75399 (and probably a bunch more, but they're merged anyway). Actually
     tested this time, and it actually works.
   * Patch from bod to wrapper.
 
@@ -5132,7 +5191,7 @@ debconf (0.4.01) unstable; urgency=low
     stuff for translators. It automatically merges the new debconf.pot
     with .po files, and outputs stats on how up-to-date the translation is.
   * Seems that the Debian::DebConf::Client::ConfModule stub from bod
-    isn't good enough. :-( The problem is code that calls stuff like 
+    isn't good enough. :-( The problem is code that calls stuff like
     Debian::DebConf::Client::ConfModule::title directly. Ugh. Added an AUTOLOAD
     with a nasty eval to deal with this. Closes: #75239
   * Fixed an uninitialized value if a boolean item has no default. Bleagh.
@@ -5143,10 +5202,10 @@ debconf (0.4.00) unstable; urgency=low
 
   * Removed recursive build-dependancy on debconf-utils. There were two
     ways to do this, the quick hack way and the move lots of directories in
-    cvs way. I took the latter. 
-  * While I was reorganizing *EVERYTHING*, I renamed all the perl modules, 
+    cvs way. I took the latter.
+  * While I was reorganizing *EVERYTHING*, I renamed all the perl modules,
     what was Debian::DebConf::foo is now Debconf::foo.
-    Debian::DebConf::Client::ConfModule is now just Debconf::ConfModule, but 
+    Debian::DebConf::Client::ConfModule is now just Debconf::ConfModule, but
     a stub module exists in the old location for backwards compatability
     (thanks, bod).
   * If you use the new module, you should depend on this version of
@@ -5177,7 +5236,7 @@ debconf (0.3.83) unstable; urgency=low
 
 debconf (0.3.82) unstable; urgency=low
 
-  * French templates and po file from 
+  * French templates and po file from
     Martin Quinson <mquinson@zeppelin-cb.de> (shrug ;-)
   * Added some useful info to Template parse exceptions.
 
@@ -5205,7 +5264,7 @@ debconf (0.3.79) unstable; urgency=low
     this change is some libapt code in Client/preconfigure that is part of
     the /usr/lib/debconf/apt-extracttemplates binary. That code remains
     under the GPL, as it is part of libapt. It will hopefully be moved back
-    into libapt one day. apt-extracttemplates is not necessary for the 
+    into libapt one day. apt-extracttemplates is not necessary for the
     proper functioning of debconf; it is just a binary used in an
     optimization.
   * Motivations for this change were various. I want programs to be able to
@@ -5261,8 +5320,8 @@ debconf (0.3.74) unstable; urgency=low
     to allow broken postinst scripts that use debconf to still echo stuff to
     stdout and not have it go to debconf. Then you find that this hack makes
     legitimate code that uses the confmodule and uses the perl ConfModule
-    library nested inside, not work. So your choices are to add a further 
-    hack to the perl ConfModule, or end all these hacks and do things 
+    library nested inside, not work. So your choices are to add a further
+    hack to the perl ConfModule, or end all these hacks and do things
     cleanly. Unfortunatly, several packages have come to depend on the hack.
     What do you do?
   * Well I chickened out and hacked Client::ConfModule. But I have added an
@@ -5458,7 +5517,7 @@ debconf (0.3.47) unstable; urgency=low
 
 debconf (0.3.46) unstable; urgency=low
 
-  * Fixed documentation of isdefault flag, which needs to be renamed. 
+  * Fixed documentation of isdefault flag, which needs to be renamed.
     Cf, Bug #64374.
 
  -- Joey Hess <joeyh@debian.org>  Tue, 27 Jun 2000 19:05:27 -0700
@@ -5550,7 +5609,7 @@ debconf (0.3.37) unstable; urgency=low
     happen in normal use, if it does, I want to know. (Of course, the slang
     frontend still has no multiselct elements, maybe this will remind me to
     fix that sometime..)
-  * Fixed a nasty infinite recusion error in the web frontend, which 
+  * Fixed a nasty infinite recusion error in the web frontend, which
     actually works now.
   * Reworked the debconf debug mechanism. It now uses symbolic names for
     various types of debug messages, and DEBCONF_DEBUG specifies which
@@ -5558,7 +5617,7 @@ debconf (0.3.37) unstable; urgency=low
   * Some reorganizations to the Tutorial; split out some big sections into
     entities to aid maintenance. Moved namespace.txt into the tutorial as
     an Appendix.
- 
+
  -- Joey Hess <joeyh@debian.org>  Wed, 24 May 2000 14:05:37 -0700
 
 debconf (0.3.36) unstable; urgency=low
@@ -5655,7 +5714,7 @@ debconf (0.3.22) unstable; urgency=low
 
   * Catch undefined value returned if a package that is not installed is
     preconfigured, and use '' instead. This clears up the undefined value
-    warning people have been seeing for months. 
+    warning people have been seeing for months.
     Closes: #55498, #57792, #62263, #53657
   * Fixed for a while: Closes: #48816
 
@@ -5664,8 +5723,8 @@ debconf (0.3.22) unstable; urgency=low
 debconf (0.3.21) unstable; urgency=low
 
   * Corrected bug in slang frontend -- if the last item in a dropdown
-    select box was default, it was not highlighted as such correctly. 
-    Closes: #62021 
+    select box was default, it was not highlighted as such correctly.
+    Closes: #62021
 
  -- Joey Hess <joeyh@debian.org>  Sat,  8 Apr 2000 20:14:37 -0700
 
@@ -5785,7 +5844,7 @@ debconf (0.3.10) unstable; urgency=low
   * Text frontend no longer always prompts for a Enter press at the end of
     a run.
   * Moved some doc files into doc/ in the source package.
- 
+
  -- Joey Hess <joeyh@debian.org>  Thu, 30 Mar 2000 11:57:54 -0800
 
 debconf (0.3.01) unstable; urgency=low
@@ -5821,7 +5880,7 @@ debconf (0.2.107) unstable; urgency=low
     causing problems with apt-setup in base-config, making
     http.us.debian.org be incorrectly picked as the default when users try
     to set up apt to use a country that just has one mirror on file.
-  * Closes #60160 (important)
+  * Closes: #60160 (important)
 
  -- Joey Hess <joeyh@debian.org>  Mon, 13 Mar 2000 13:30:52 -0800
 
@@ -5865,7 +5924,7 @@ debconf (0.2.103) unstable; urgency=low
 
 debconf (0.2.102) unstable; urgency=low
 
-  * Corrected three ways badly written packages could make 
+  * Corrected three ways badly written packages could make
     dpkg-preconfigure die:
      - They could try to ask questions that didn't exist.
      - They could try to ask questions using garbage priority values.
@@ -5893,7 +5952,7 @@ debconf (0.2.101) unstable; urgency=low
 
 debconf (0.2.100) unstable; urgency=low
 
-  * Fixed a stupid typo introduced last version. 
+  * Fixed a stupid typo introduced last version.
 
  -- Joey Hess <joeyh@debian.org>  Tue, 29 Feb 2000 12:34:26 -0800
 
@@ -5939,7 +5998,7 @@ debconf (0.2.95) unstable; urgency=low
 debconf (0.2.94) unstable; urgency=low
 
   * Copyright and url updates.
-  * dpkg-reconfigure: don't run the postrm of the package. Doing so breaks 
+  * dpkg-reconfigure: don't run the postrm of the package. Doing so breaks
     things when for example, the package uses dpkg-divert and tries to
     remove diversions in the postrm. This cannot be an isolated problem
     either. This reverses the change made in version 0.2.52, which did not
@@ -5947,7 +6006,7 @@ debconf (0.2.94) unstable; urgency=low
     postinst scripts may need the postrm to clean up after them before being
     called again. However, such scripts are broken.)
     Closes: #58527 (important bug)
-  * no changes; Closes: #58495 (I'm not going to add 3 lines of code bloat 
+  * no changes; Closes: #58495 (I'm not going to add 3 lines of code bloat
     to a package in base just to provide a marginally better error message.)
   * Added --help to dpkg-preconfigure and dpkg-reconfigure. Closes: #58496
   * Added more cautions about passwords to the tutorial.
@@ -6000,7 +6059,7 @@ debconf (0.2.89) unstable; urgency=low
   * Use perl's "base" module throughout the code, cutting 2 lines from each
     module. Due to a bug in the module, I had to throw lots of "use"'s back
     in, in the case of child modules that had a name that just appeneded to
-    the name of their parent. I have filed a perlbug about that 
+    the name of their parent. I have filed a perlbug about that
     (ID 20000212.001). These additions are marked "# perlbug" so I can grep
     them back out later.
   * Warning: I expect this release is very buggy. But that's why you're
@@ -6010,14 +6069,14 @@ debconf (0.2.89) unstable; urgency=low
 
 debconf (0.2.88) unstable; urgency=low
 
-  * Add templates file, config script, postinst, and posrtm to debconf-tiny, 
-    so debconf/priority actually exists. This is necessary so base-config   
+  * Add templates file, config script, postinst, and posrtm to debconf-tiny,
+    so debconf/priority actually exists. This is necessary so base-config
     can change the priority if the boot-floppies were installed in verbose or
-    quiet mode. This is a critical bugfix, as it fixes a bug that made newly 
-    installed systems unusable.     
-  * Added dpkg-preconfigure to debconf-tiny, since this:         
-    a) lets debconf-tiny use debconf's postinst unchanged           
-    b) is useful in general to have in debconf-tiny 
+    quiet mode. This is a critical bugfix, as it fixes a bug that made newly
+    installed systems unusable.
+  * Added dpkg-preconfigure to debconf-tiny, since this:
+    a) lets debconf-tiny use debconf's postinst unchanged
+    b) is useful in general to have in debconf-tiny
   * Several k of bloat. Oh well..
 
  -- Joey Hess <joeyh@debian.org>  Wed,  9 Feb 2000 19:49:38 -0800
@@ -6050,7 +6109,7 @@ debconf (0.2.84) unstable; urgency=low
 
 debconf (0.2.83) unstable; urgency=low
 
-  * dpkg-reconfigure: detect perl confmodules properly, by making my regexp 
+  * dpkg-reconfigure: detect perl confmodules properly, by making my regexp
     match case in-sensitively. This fixes a bug that made dpkg-reconfigure
     not work at all to reconfigure packages that used ConfModule.pm.
   * dpkg-reconfigure: assume all config scripts are confmodules, it would be
@@ -6060,7 +6119,7 @@ debconf (0.2.83) unstable; urgency=low
 
 debconf (0.2.82) unstable; urgency=low
 
-  * Installed workaround from Joel Klecker to fix the annoying termcap 
+  * Installed workaround from Joel Klecker to fix the annoying termcap
     warning from Term::Readline. This does not close these bugs, but it does
     work around them: #47363, #50286, #50540, #51787, #52052, #53274, #55142,
     #56987, and #46270
@@ -6080,7 +6139,7 @@ debconf (0.2.80) frozen unstable; urgency=low
     out, just dependong on perl5 does not guarentee Data::Dumper is available.
     Raphael thinks this is a critical bug.
   * debconf-tiny's dependancy, on the other hand, was already ok.
-  * Binary and source packages no longer contain CVS backup files, 
+  * Binary and source packages no longer contain CVS backup files,
     Closes: #55860
 
  -- Joey Hess <joeyh@debian.org>  Fri, 21 Jan 2000 11:44:56 -0800
@@ -6096,7 +6155,7 @@ debconf (0.2.79) frozen unstable; urgency=low
     IPC::Open3 was being called. It also turns out this bug is tickeled by
     base-config, since it will be reconfiguredd from inittab, so it turned out
     to be a critical bug. Closes: #47659
-  * Documented (again) in dpkg-reconfigure.8 that 
+  * Documented (again) in dpkg-reconfigure.8 that
     "dpkg-reconfigure --priority=medium debconf" should be used to
     reconfigure debconf. Closes: #55706
 
@@ -6230,7 +6289,7 @@ debconf (0.2.64) unstable; urgency=low
 
   * Changed default frontend (again), back to the dialog frontend. I can't
     really make my mind up on this, but my reasoning for using dialog is that
-    debconf-tiny is going to be used by several packages on a fresh install, 
+    debconf-tiny is going to be used by several packages on a fresh install,
     so the user is going to see some debconf dialog stuff right from the
     start. Changing to text half-way through is liable to be confusing.
 
@@ -6384,7 +6443,7 @@ debconf (0.2.46) unstable; urgency=low
 
   * Changed tutorial docs of version command. Clients are not stricly
     required to pass a version number into it.
-  * Removed warning message if a client does not pass in a version, 
+  * Removed warning message if a client does not pass in a version,
     Closes: #51431
   * Added build dependancy info.
 
@@ -6587,7 +6646,7 @@ debconf (0.2.25) unstable; urgency=low
     and should not be used.
   * dpkg-reconfigure now doesn't do anything if it's told to reconfigure
     packages that lack a config script. This makes it not fail on packages
-    that don't use debconf, though it is just a no-op with them. 
+    that don't use debconf, though it is just a no-op with them.
     Closes: #48190
 
  -- Joey Hess <joeyh@debian.org>  Wed, 10 Nov 1999 17:15:04 -0800
@@ -6897,7 +6956,7 @@ debconf (0.1.70) unstable; urgency=low
   * Config scripts are now passed the version of the package that is currently
     installed when they are run, which is normally the old version of the
     package. (Analagous to postinst scripts.)
-  
+
  -- Joey Hess <joeyh@debian.org>  Wed, 13 Oct 1999 06:35:34 -0700
 
 debconf (0.1.69) unstable; urgency=low
@@ -6983,7 +7042,7 @@ debconf (0.1.59) unstable; urgency=low
     - It no longer flashes the window up on the screen unless it really
       has a question to ask this time around.
     - Made cancel button work.
-    It still segfaults on exit though. 
+    It still segfaults on exit though.
 
  -- Joey Hess <joeyh@debian.org>  Thu,  7 Oct 1999 18:21:35 -0700
 
@@ -7134,7 +7193,7 @@ debconf (0.1.43) unstable; urgency=low
   * Added data-dumper dependancy, since some perl's don't include it.
     (Closes: #46147)
 
- -- Joey Hess <joeyh@debian.org>  Mon, 28 Sep 1999 17:17:42 -0700
+ -- Joey Hess <joeyh@debian.org>  Tue, 28 Sep 1999 17:17:42 -0700
 
 debconf (0.1.42) unstable; urgency=low
 
@@ -7145,7 +7204,7 @@ debconf (0.1.42) unstable; urgency=low
 debconf (0.1.41) unstable; urgency=low
 
   * Applied patch from Peter Vreman <pfv@cooldown.demon.nl> to correct dialog
-    size guessing code. Did some additional fixes for whiptail. 
+    size guessing code. Did some additional fixes for whiptail.
     (Closes: 46060)
   * Fixed a really silly formatting bug in FrontEnd::Dialog that was
     probably leading to what looked like corrupted displays for some people.
@@ -7185,7 +7244,7 @@ debconf (0.1.39) unstable; urgency=low
 debconf (0.1.38) unstable; urgency=low
 
   * Added password data type. Currently supported by the Text frontend
-    (though it has problems displaying right in an xterm), the Gtk frontend, 
+    (though it has problems displaying right in an xterm), the Gtk frontend,
     and the Web frontend (though you'd be insane to use it!).
   * Fixed a nasty bug in the fallback code.
   * Read-protected the debconf db directory.
@@ -7197,7 +7256,7 @@ debconf (0.1.37) unstable; urgency=low
   * Fixed a problem if perl failed to configure and dpkg-preconfig then
     bombed out on the next apt run, users would have an unusable apt and not
     be able to fix their system. Now dpkg-preconfigure detects a broken perl
-    and exits sanely, allowing apt to continue and fix things. 
+    and exits sanely, allowing apt to continue and fix things.
     (Closes: #45927)
   * Fixed a dpkg-preconfig type introduced last version.
 
@@ -7319,7 +7378,7 @@ debconf (0.1.26) unstable; urgency=low
     more.
   * Modified Config.pm so it contains functions that return values,
     not just hard coded values. The functions now try to pull values out of
-    the database, and fall back on the defaults. Also, environment 
+    the database, and fall back on the defaults. Also, environment
     DEBIAN_FRONTEND always works for specifying a frontend now, overriding
     all else.
   * Changed a myriad of other files that use Config.pm to call the new
@@ -7434,7 +7493,7 @@ debconf (0.1.16) unstable; urgency=low
     background and waiting, but not closing stdin/out. I worked around by
     catching SIGCHLD's and closing the pipes from the other end when the
     postinst has existed. I've also contacted Joost.
-  * This, barring a little bit of docs and a few packages built to use it, 
+  * This, barring a little bit of docs and a few packages built to use it,
     is basically ready to be shown to the world.
 
  -- Joey Hess <joeyh@debian.org>  Mon, 13 Sep 1999 15:40:15 -0700
@@ -7447,7 +7506,7 @@ debconf (0.1.15) unstable; urgency=low
     I still have no clue why.
   * Modified Client/frontend so it runs the config script of a package
     if the script is available, every time. This is pretty ugly, but it has
-    a very nice effect: when you dpkg -i a brand new debconfed .deb, the 
+    a very nice effect: when you dpkg -i a brand new debconfed .deb, the
     config script runs as soon as the postinst tries to use debconf, and
     this lets you configure it, and then it is installed. So you don't have
     to dpkg-preconfig it first. Of course, if you're using apt, it is
@@ -7564,7 +7623,7 @@ debconf (0.1.5) unstable; urgency=low
   * Added a new program, dpkg-reconfigure. Use it to reconfigure an already
     installed package.
   * Added Client/confmodule.sh. This is very similar to Client::ConfModule
-    except it's a shell library. 
+    except it's a shell library.
   * Changed cvs.config to use confmodule.sh. It's _much_ easier to read now.
   * Copyright updates. VA has sponsored and is at least a partial owner of
     this code. It's still GPL'd, of course.

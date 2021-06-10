@@ -139,7 +139,9 @@ msgid "none of the above"
 msgstr "neniu el la supraj"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
+#, fuzzy
+#| msgid "Enter the items you want to select, separated by spaces."
+msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr "Tajpu la erojn kiujn vi volas elekti, apartitaj per spacoj."
 
 #: ../Debconf/FrontEnd.pm:140

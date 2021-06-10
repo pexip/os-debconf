@@ -142,7 +142,9 @@ msgid "none of the above"
 msgstr "ни один из предложенных выше"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
+#, fuzzy
+#| msgid "Enter the items you want to select, separated by spaces."
+msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr ""
 "Укажите буквы, соответствующие выбранным вариантам, разделяя их пробелами."
 
@@ -185,9 +187,8 @@ msgstr ""
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
-"Для интерфейса dialog требуется экран не менее 13 строк в высоту и 31 колонки"
-" в "
-"ширину."
+"Для интерфейса dialog требуется экран не менее 13 строк в высоту и 31 "
+"колонки в ширину."
 
 #: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
@@ -219,7 +220,6 @@ msgstr ""
 "и использует введённые вами параметры для настройки системы."
 
 #: ../Debconf/FrontEnd/Gnome.pm:95
-#| msgid "Package configuration"
 msgid "Really quit configuration?"
 msgstr "Вы действительно хотите прекратить настройку?"
 
@@ -230,17 +230,17 @@ msgid ""
 "be especially difficult if you are in the middle of a large upgrade."
 msgstr ""
 "Если вы прервёте настройку, то настраиваемый пакет, вероятно, не будет "
-"установлен из-за ошибки, и вам может потребоваться исправлять её "
-"вручную. Это может оказаться особенно трудно, если вы находитесь "
-"в середине большого обновления системы."
+"установлен из-за ошибки, и вам может потребоваться исправлять её вручную. "
+"Это может оказаться особенно трудно, если вы находитесь в середине большого "
+"обновления системы."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
-"Но иногда всё же требуется завершение, если вы застряли в кольце "
-"настроек из-за дефектного пакета."
+"Но иногда всё же требуется завершение, если вы застряли в кольце настроек из-"
+"за дефектного пакета."
 
 #: ../Debconf/FrontEnd/Gnome.pm:97
 msgid "_Quit"
@@ -257,12 +257,10 @@ msgid "Debconf on %s"
 msgstr "Debconf на %s"
 
 #: ../Debconf/FrontEnd/Gnome.pm:238
-#| msgid "Next"
 msgid "_Next"
 msgstr "_Далее"
 
 #: ../Debconf/FrontEnd/Gnome.pm:245
-#| msgid "Back"
 msgid "_Back"
 msgstr "_Назад"
 
@@ -306,8 +304,8 @@ msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
 "Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
-"Шаблон #%s в %s содержит повторяющееся поле «%s» с другим значением "
-"«%s». Вероятно, два шаблона не разделены символом новой строки.\n"
+"Шаблон #%s в %s содержит повторяющееся поле «%s» с другим значением «%s». "
+"Вероятно, два шаблона не разделены символом новой строки.\n"
 
 #: ../Debconf/Template.pm:236
 #, perl-format
