@@ -1,3 +1,15 @@
+debconf (1.5.71+deb10u1pexip1) pexip; urgency=medium
+
+  * New upstream release
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 11 Oct 2021 14:51:25 +0100
+
+debconf (1.5.71+deb10u1) buster; urgency=medium
+
+  * Check that whiptail or dialog is actually usable (closes: #985572).
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 01 Oct 2021 10:39:27 +0100
+
 debconf (1.5.71pexip2) pexip; urgency=medium
 
   * Rebuild in buster environment
