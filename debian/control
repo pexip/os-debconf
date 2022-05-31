@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 9~), dh-exec, dh-python, po-debconf, po4a (>= 0.23)
 Vcs-Git: https://salsa.debian.org/pkg-debconf/debconf.git
 Vcs-Browser: https://salsa.debian.org/pkg-debconf/debconf
 X-Python-Version: >= 2.6
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: debconf
 Priority: important
