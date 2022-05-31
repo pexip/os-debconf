@@ -141,7 +141,9 @@ msgid "none of the above"
 msgstr "ingen af ovenstående"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
+#, fuzzy
+#| msgid "Enter the items you want to select, separated by spaces."
+msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr "Vælg de ønskede punkter, adskilt af mellemrum."
 
 #: ../Debconf/FrontEnd.pm:140

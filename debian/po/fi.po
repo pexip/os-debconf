@@ -52,8 +52,8 @@ msgid ""
 "Packages that use debconf for configuration share a common look and feel. "
 "You can select the type of user interface they use."
 msgstr ""
-"Debconf yhdenmukaistaa sitÃ€ kÃ€yttÃ€vien pakettien asetuskÃ€yttÃ¶liittymÃ"
-"€n. Voit itse valita mieluisesi liittymÃ€n muutamasta vaihtoehdosta."
+"Debconf yhdenmukaistaa sitä käyttävien pakettien asetuskäyttöliittymän. Voit "
+"itse valita mieluisesi liittymän muutamasta vaihtoehdosta."
 
 #. Type: select
 #. Description
@@ -66,11 +66,10 @@ msgid ""
 "you configure things using your favorite text editor. The noninteractive "
 "frontend never asks you any questions."
 msgstr ""
-"Valintaikkuna on ruudun tÃ€yttÃ€vÃ€ merkkipohjainen liittymÃ€, kun taas "
-"readline on perinteisempi pelkkÃ€Ã€ tekstiÃ€ kÃ€yttÃ€vÃ€ liittymÃ€. SekÃ€ "
-"Gnome ettÃ€ KDE ovat nykyaikaisia X-pohjaisia liittymiÃ€. Teksturi kÃ€yttÃ€Ã"
-"€ asetusten sÃ€Ã€tÃ¶Ã¶n lempiteksturiasi. Ei-vuorovaikutteinen liittymÃ€ ei "
-"koskaan kysy kysymyksiÃ€."
+"Valintaikkuna on ruudun täyttävä merkkipohjainen liittymä, kun taas readline "
+"on perinteisempi pelkkää tekstiä käyttävä liittymä. Sekä Gnome että KDE ovat "
+"nykyaikaisia X-pohjaisia liittymiä. Teksturi käyttää asetusten säätöön "
+"lempiteksturiasi. Ei-vuorovaikutteinen liittymä ei koskaan kysy kysymyksiä."
 
 #. Type: select
 #. Choices
@@ -114,13 +113,13 @@ msgid ""
 "  - 'medium' is for normal questions\n"
 "  - 'low' is for control freaks who want to see everything"
 msgstr ""
-"Debconf priorisoi esittÃ€mÃ€nsÃ€ kysymykset. Valitse alin prioriteetti, "
-"jonka kysymykset haluat nÃ€hdÃ€:\n"
-"  - \"kriittinen\" kysyy vain jos jÃ€rjestelmÃ€ voi hajota.\n"
-"    Valitse tÃ€mÃ€ jos olet uusi tai sinulla on kiire.\n"
-"  - \"tÃ€rkeÃ€\" on kohtuullisen tÃ€rkeille kysymyksille\n"
+"Debconf priorisoi esittämänsä kysymykset. Valitse alin prioriteetti, jonka "
+"kysymykset haluat nähdä:\n"
+"  - \"kriittinen\" kysyy vain jos järjestelmä voi hajota.\n"
+"    Valitse tämä jos olet uusi tai sinulla on kiire.\n"
+"  - \"tärkeä\" on kohtuullisen tärkeille kysymyksille\n"
 "  - \"tavallinen\" on normaaleille kysymyksille\n"
-"  - \"vÃ€hÃ€pÃ€tÃ¶inen\" on sÃ€Ã€tÃ¶friikeille, jotka haluavat nÃ€hdÃ€ kaiken"
+"  - \"vähäpätöinen\" on säätöfriikeille, jotka haluavat nähdä kaiken"
 
 #. Type: select
 #. Description
@@ -129,8 +128,8 @@ msgid ""
 "Note that no matter what level you pick here, you will be able to see every "
 "question if you reconfigure a package with dpkg-reconfigure."
 msgstr ""
-"Huomaa, ettÃ€ riippumatta tÃ€ssÃ€ valitsemastasi tasosta nÃ€et kaikki "
-"kysymykset uudelleensÃ€Ã€tÃ€mÃ€llÃ€ paketin \"dpkg-reconfigure\"-ohjelmalla."
+"Huomaa, että riippumatta tässä valitsemastasi tasosta näet kaikki kysymykset "
+"uudelleensäätämällä paketin \"dpkg-reconfigure\"-ohjelmalla."
 
 #. Type: text
 #. Description
@@ -263,5 +262,4 @@ msgstr "Taltion vaihto"
 #~ msgstr "kriittinen, korkea, keskitaso, matala"
 
 #~ msgid "What interface should be used for configuring packages?"
-#~ msgstr ""
-#~ "MitÃ€ kÃ€yttÃ¶liittymÃ€Ã€ pakkausten asetusten sÃ€Ã€tÃ¶Ã¶n kÃ€ytetÃ€Ã€n?"
+#~ msgstr "Mitä käyttöliittymää pakkausten asetusten säätöön käytetään?"

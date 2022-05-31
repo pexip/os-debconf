@@ -135,10 +135,12 @@ msgstr ""
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:27
 msgid "none of the above"
-msgstr "żadna z powyżych"
+msgstr "żadna z powyższych"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
+#, fuzzy
+#| msgid "Enter the items you want to select, separated by spaces."
+msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr "Wpisz, oddzielone spacjami, pozycje, które chcesz zaznaczyć."
 
 #: ../Debconf/FrontEnd.pm:140
@@ -224,20 +226,25 @@ msgid ""
 "will probably fail to install, and you may have to fix it manually. This may "
 "be especially difficult if you are in the middle of a large upgrade."
 msgstr ""
+"Jeśli zamkniesz to okno dialogowe konfiguracji, konfigurowany pakiet "
+"prawdopodobnie się nie zainstaluje, i będziesz musiał naprawić go ręcznie. "
+"To może być szczególnie tródne, jeśli jesteś w połowie dużej aktualizacji."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
+"Możesz zawsze zakończyć, jeśli utknąłeś w konfiguracji lub z powodu błędu w "
+"pakiecie."
 
 #: ../Debconf/FrontEnd/Gnome.pm:97
 msgid "_Quit"
-msgstr ""
+msgstr "Wyjdź"
 
 #: ../Debconf/FrontEnd/Gnome.pm:98
 msgid "Continue"
-msgstr ""
+msgstr "Kontynuuj"
 
 #: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104

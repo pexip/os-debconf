@@ -2,14 +2,14 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Leonard Michlmayr <leonard.michlmayr@ap.univie.ac.at>, 2002.
 # Michael Piefel <piefel@debian.org>, 2004, 2006
-# Helge Kreutzmann <debian@helgefjell.de>, 2009, 2012, 2013, 2017, 2018.
+# Helge Kreutzmann <debian@helgefjell.de>, 2009, 2012, 2013, 2017, 2018, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.66\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-28 09:48+0000\n"
-"PO-Revision-Date: 2018-03-01 19:55+0100\n"
+"PO-Revision-Date: 2020-01-05 07:08+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -139,9 +139,9 @@ msgid "none of the above"
 msgstr "keines der Obigen"
 
 #: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
+msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr ""
-"Geben Sie die Elemente, die Sie auswählen wollen, durch Leerzeichen getrennt "
+"Geben Sie die Elemente oder Bereiche, die Sie auswählen wollen, durch Leerzeichen getrennt "
 "ein."
 
 #: ../Debconf/FrontEnd.pm:140
