@@ -1,3 +1,9 @@
+debconf (1.5.77pexip1) pexip; urgency=medium
+
+  * Initial bullseye build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 02 Jun 2022 14:42:07 +0100
+
 debconf (1.5.77) unstable; urgency=medium
 
   [ Programs translations ]
