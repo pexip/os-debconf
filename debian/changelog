@@ -1,3 +1,9 @@
+debconf (1.5.77pexip3) pexip-bullseye; urgency=medium
+
+  * Bullseye rebuild for ARM64 inclusion
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Mon, 05 Sep 2022 10:31:28 +0100
+
 debconf (1.5.77pexip2) pexip-bullseye; urgency=medium
 
   * Main bullseye build
