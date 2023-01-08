@@ -1,8 +1,8 @@
-doc/namespace.txt
 doc/*.txt
-doc/TODO
 doc/CREDITS
-doc/passthrough.txt
 doc/README
 doc/README.LDAP
+doc/TODO
 doc/debconf.schema
+doc/namespace.txt
+doc/passthrough.txt

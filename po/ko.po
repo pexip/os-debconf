@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2008-07-20 11:28+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <debian-l10n-korean@lists.debian.org>\n"
@@ -17,43 +17,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "다음 프론트엔드를 대신 사용: %s"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "프론트엔드를 초기화할 수 없음: %s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "프론트엔드를 시작할 수 없음: %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr "설정 파일에 설정 데이터베이스를 지정하지 않았습니다."
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr "설정 파일에 템플릿 데이터베이스를 지정하지 않았습니다."
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
 msgstr ""
 "설정 파일의 Sigils 및 Smileys 옵션은 더 이상 사용하지 않습니다. 지워주십시오."
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
 "%2$s에 있는 %1$s 절에서 정의된 데이터베이스를 설정하는데 문제가 발생했습니다."
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -63,12 +63,12 @@ msgstr ""
 "  -p,  --priority\t\t보고자 하는 질문의 우선 순위 최소값을 지정합니다.\n"
 "       --terse\t\t\t간결 모드를 사용합니다.\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "잘못된 우선 순위 \"%s\" 무시합니다"
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "사용할 수 있는 우선 순위: %s"
@@ -131,11 +131,11 @@ msgstr ""
 "C 선택에서 \"%s\" 입력값이 발견되지 않았습니다! 일어나서는 안 되는 일입니다. "
 "템플릿을 정확하게 지역화하지 않은 것 않습니다."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "위에 있는 것 중에 없음"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
@@ -168,7 +168,7 @@ msgstr ""
 "다이얼로그 프론트엔드는 dumb 터미널이나 이맥스 쉘 버퍼에서, 또는 제어 테미널 "
 "없이는 사용할 수 없습니다."
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -176,13 +176,13 @@ msgstr ""
 "dialog나 그와 비슷한 프로그램을 설치하지 않았으므로, 다이얼로그 프론트엔드는 "
 "사용할 수 없습니다."
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "다이얼로그 프론트엔드를 사용하려면 화면이 적어도 13행 31열은 되어야 합니다."
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "패키지 설정"
 
@@ -237,8 +237,7 @@ msgid "Continue"
 msgstr ""
 
 # %s - hostname
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "debconf (%s)"
@@ -259,7 +258,7 @@ msgstr "뒤로"
 msgid "This frontend requires a controlling tty."
 msgstr "이 프론트엔드는 제어 TTY를 필요로 합니다."
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "이 프론트엔드는 이맥스 쉘 버퍼와 호환되지 않습니다."
 

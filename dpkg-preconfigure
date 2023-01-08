@@ -71,6 +71,7 @@ L<debconf(7)>
 BEGIN {
 	eval qq{
 		use strict;
+		use File::Path qw(make_path remove_tree);
 		use FileHandle;
 		use Debconf::Log qw(:all);
 		use Debconf::Db;
@@ -139,6 +140,10 @@ if (! $have_tty && $frontend->need_tty) {
 	exit 0;
 }
 
+my $tempdir='/var/cache/debconf/tmp.ci';
+remove_tree($tempdir, { safe => 1, keep_root => 1 });
+make_path($tempdir);
+
 # Use the external package scanner for speed. It takes a list of debs
 # and outputs to stdout a table with these fields separated by spaces:
 my ($package, $version, $template, $config);
@@ -167,7 +172,7 @@ unless (open(INFO, "-|")) {
 			push @collect, $deb;
 		}
 		else {
-			if (system("apt-extracttemplates", @collect) != 0) {
+			if (system("apt-extracttemplates", "--tempdir", $tempdir, @collect) != 0) {
 				print STDERR sprintf("debconf: ".gettext("apt-extracttemplates failed: %s")."\n",$!);
 			}
 			if ($show_progress) {
@@ -179,7 +184,7 @@ unless (open(INFO, "-|")) {
 			$len=$static_len + length($deb) + 1;
 		}
 	}
-	if (system("apt-extracttemplates", @collect) != 0) {
+	if (system("apt-extracttemplates", "--tempdir", $tempdir, @collect) != 0) {
 		print STDERR sprintf("debconf: ".gettext("apt-extracttemplates failed: %s")."\n",$!);
 	}
 	if ($show_progress) {
@@ -242,6 +247,8 @@ $frontend->shutdown;
 
 # Save state.
 Debconf::Db->save;
+
+remove_tree($tempdir, { safe => 1, keep_root => 1 });
 
 =head1 AUTHOR
 

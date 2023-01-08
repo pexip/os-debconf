@@ -77,6 +77,10 @@ accepted by this driver. Defaults to accepting all item names.
 A regular expression that is matched against item names to see if they are
 rejected by this driver.
 
+=item root
+
+The absolute path to the root directory of the system containing the database.
+
 =back
 
 =cut
@@ -84,7 +88,7 @@ rejected by this driver.
 # I rarely base objects on fields, but I want strong compile-time type
 # checking for this class of objects, and speed.
 use fields qw(name readonly required backup failed
-              accept_type reject_type accept_name reject_name);
+              accept_type reject_type accept_name reject_name root);
 
 # Class data.
 our %drivers;

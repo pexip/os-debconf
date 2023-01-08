@@ -6,12 +6,12 @@
 # Initialization.
 
 # Check to see if a FrontEnd is running.
-if [ ! "$DEBIAN_HAS_FRONTEND" ]; then
+if [ ! "${DEBIAN_HAS_FRONTEND:-}" ]; then
 	PERL_DL_NONLAZY=1
 	export PERL_DL_NONLAZY
 	# Since there is no FrontEnd, this program execs a FrontEnd.
 	# It will then run a new copy of $0 that can talk to it.
-	if [ "$DEBCONF_USE_CDEBCONF" ]; then
+	if [ "${DEBCONF_USE_CDEBCONF:-}" ]; then
 		exec /usr/lib/cdebconf/debconf $0 "$@"
 	else
 		exec /usr/share/debconf/frontend $0 "$@"
@@ -19,14 +19,14 @@ if [ ! "$DEBIAN_HAS_FRONTEND" ]; then
 fi
 
 # Only do this once.
-if [ -z "$DEBCONF_REDIR" ]; then
+if [ -z "${DEBCONF_REDIR:-}" ]; then
 	# Redirect standard output to standard error. This prevents common
 	# mistakes by making all the output of the postinst or whatever
 	# script is using this library not be parsed as confmodule commands.
 	#
 	# To actually send something to standard output, send it to fd 3.
 	exec 3>&1
-	if [ "$DEBCONF_USE_CDEBCONF" ]; then
+	if [ "${DEBCONF_USE_CDEBCONF:-}" ]; then
 		exec 1>&5
 	else
 		exec 1>&2

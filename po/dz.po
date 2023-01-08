@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po.pot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2006-10-06 10:46+0530\n"
 "Last-Translator: Jurmey Rabgay <jur_gay@yahoo.com>\n"
 "Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -21,30 +21,30 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Bookmarks: 14,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "གདོང་མཐའ་ལུ་ལོག་འབུད་དོ་:%s"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "གདོང་མཐའ་འགོ་འབྱེད་འབད་མ་ཚུགས་:%s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "གདོང་མཐའ་འགོ་བཙུགས་མ་ཚུགས་:%s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr "རིམ་སྒྲིག་གནད་སྡུད་གཞི་རྟེན་འདི་ རིམ་སྒྲིག་ཡིག་སྣོད་ནང་གསལ་བཀོད་མ་འབད་བས།"
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr "ཊེམ་པིལེཊི་གནད་སྡུད་གཞི་རྟེན་འདི་ རིམ་སྒྲིག་ཡིག་སྣོད་ནང་གསལ་བཀོད་མ་འབད་བས།"
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -52,12 +52,12 @@ msgstr ""
 "ད་ལས་ཕར་རིམ་སྒྲིག་ཡིག་སྣོད་ནང་ སི་གིལསི་དང་སི་མའི་ལིསི་གདམ་ཁ་ཚུ་ ལག་ལེན་མི་འཐབ། དེ་ཚུ་རྩ་བསྐྲད་གཏང་"
 "གནང་།"
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "%sགི་%sཚིགས་བཅད་ཀྱིས་ངེས་འཛིན་འབད་ཡོད་པའི་གནད་སྡུད་གཞི་རྟེན་སྒྲིག་སྟངས་དཀའ་ངལ།"
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -67,12 +67,12 @@ msgstr ""
 "  -p,  --priority\t\tསྟོན་ནིའི་དོན་ལུ་ གཙོ་རིམ་འདྲི་བ་མང་མཐའ་ གསལ་བཀོད་འབད།\n"
 "       --terse\t\t\tཊེརསི་ཐབས་ལམ་ ལྕོགས་ཅན་བཟོ།\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "ནུས་མེད་ཀྱི་གཙོ་རིམ་ \"%s\"འདི་ སྣང་མེད་སྦེ་བཞག་དོ།"
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "ནུས་ཅན་གྱི་གཙོ་རིམ་ཚུ་:%s"
@@ -137,11 +137,11 @@ msgid ""
 "Perhaps the templates were incorrectly localized."
 msgstr "ཨིན་པུཊི་བེ་ལུ་ \"%s\" སི་ གདམ་ཁ་ཚུ་ནང་མ་ཐོབ་! འདི་ནམ་ཡང་འབྱུང་བཅུག་ནི་མེད་འོང་། "
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "ལྟག་གི་ཚུ་ག་ཡང་མེན།"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
@@ -174,7 +174,7 @@ msgstr ""
 "ཌའི་ལོག་གདོང་མཐའ་འདི་གིས་ ཌམཔ་ཊར་མི་་ནཱལ་གུ་དང་ ཨི་མེཀསི་ཤལ་གནས་ཁོངས་ ཡང་ན་ ཊར་མི་ནཱལ་ཚད་"
 "བཟུང་མ་འབད་བའི་གུ་ལུ་ ལཱ་འབད་མི་བཏུབ།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -182,14 +182,14 @@ msgstr ""
 "ལས་རིམ་བཟུམ་གྱི་ཌའི་ལོག་ལག་ལེན་འཐབ་བཏུབ་ གཞི་བཙུགས་མ་འབདཝ་ལས་ ཌའི་ལོག་ལུ་གཞི་བཞག་ཡོད་པའི་གདོང་"
 "མཐའ་ ལག་ལེན་འཐབ་མི་བཏུབ།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "ཌའི་ལོག་གདོང་མཐའ་ལུ་ གསལ་གཞིའི་གྲལ་ཐིག་མཐོ་ཚད་ཉུང་མཐའ་བཅུ་གསུམ་དང་ ཀེར་ཐིག་རྒྱ་ཚད་ཉུང་མཐའ་སོ་"
 "གཅིག་ དགོཔ་ཨིན།"
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "ཐུམ་སྒྲིལ་རིམ་སྒྲིག"
 
@@ -245,8 +245,7 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "%sགུ་ Debconf"
@@ -267,7 +266,7 @@ msgstr "རྒྱབ།"
 msgid "This frontend requires a controlling tty."
 msgstr "གདོང་མཐའ་འདི་ལུ་ ཚད་འཛིན་ ཊི་ཊི་ཝའི་དགོས་མཁོ་ཡོདཔ་ཨིན།"
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU འདི་ ཨི་མེཀསི་ཤལ་གནས་ཁོངས་དང་བཅས་ མཐུན་འགྱུར་ཅན་མེན།"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2014-12-12 22:34+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@debian.org>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -16,41 +16,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "กำลังย้อนกลับไปใช้การติดต่อแบบ: %s"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "ไม่สามารถตั้งต้นการติดต่อแบบ: %s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "ไม่สามารถเรียกการติดต่อผู้ใช้: %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr "ไม่ได้ระบุฐานข้อมูลค่าตั้งไว้ในแฟ้มค่าตั้ง"
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr "ไม่ได้ระบุฐานข้อมูลต้นแบบคำถามไว้ในแฟ้มค่าตั้ง"
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
 msgstr "เลิกใช้ตัวเลือก Sigils และ Smileys ในแฟ้มค่าตั้งแล้ว กรุณาลบออกด้วย"
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "เกิดปัญหาขณะตั้งค่าฐานข้อมูลที่กำหนดโดยรายการ %s ใน %s"
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -60,12 +60,12 @@ msgstr ""
 "  -p,  --priority\t\tระบุระดับคำถามต่ำสุดที่จะแสดง\n"
 "       --terse\t\t\tเปิดใช้โหมดประหยัดคำพูด\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "จะละเลยค่าระดับความสำคัญ \"%s\" ซึ่งไม่ถูกต้อง"
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "ค่าระดับความสำคัญที่ใช้ได้คือ: %s"
@@ -127,11 +127,11 @@ msgstr ""
 "ค่าที่ป้อนเข้า \"%s\" ไม่มีในตัวเลือกของ C! เหตุการณ์นี้ไม่ควรเกิดขึ้น "
 "เป็นไปได้ว่าต้นแบบคำถามอาจถูกแปลไม่ถูกต้อง"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "ไม่ใช่ข้างบนนี้"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
@@ -163,20 +163,20 @@ msgstr ""
 "การติดต่อแบบกล่องโต้ตอบจะไม่ทำงานกับเทอร์มินัลแบบ dumb, กับบัฟเฟอร์ของเชลล์ของ emacs, "
 "หรือโดยไม่มีเทอร์มินัลที่ใช้ควบคุม"
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
 msgstr ""
 "ไม่มีโปรแกรมที่คล้ายกับ 'dialog' ที่ใช้การได้ติดตั้งไว้ ดังนั้น การติดต่อแบบกล่องโต้ตอบจึงใช้การไม่ได้"
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "การติดต่อแบบกล่องโต้ตอบ ต้องใช้หน้าจอสูงอย่างน้อย 13 บรรทัด และกว้างอย่างน้อย 31 คอลัมน์"
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "การตั้งค่าแพกเกจ"
 
@@ -230,8 +230,7 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf ที่เครื่อง %s"
@@ -252,7 +251,7 @@ msgstr "ย้อนกลับ"
 msgid "This frontend requires a controlling tty."
 msgstr "การติดต่อแบบนี้ จำเป็นต้องใช้ tty สำหรับควบคุม"
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU ทำงานร่วมกับบัฟเฟอร์ของเชลล์ของ emacs ไม่ได้"
 

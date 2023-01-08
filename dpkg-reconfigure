@@ -39,6 +39,10 @@ Specify the minimum priority of question that will be displayed.
 dpkg-reconfigure normally shows low priority questions no matter what your
 default priority is. See L<debconf(7)> for a list.
 
+=item B<--terse>
+
+Enables terse output mode. This affects only some frontends.
+
 =item B<--default-priority>
 
 Use whatever the default priority of question is, instead of forcing the
@@ -194,7 +198,8 @@ foreach my $pkg (@packages) {
 	# Do not run postrm, because the postrm can depend on the package's
 	# files actually being gone already.
 	foreach my $info (['prerm',    'upgrade',     $version],
-		          ['config',   'reconfigure', $version],
+			  ['preinst',  'upgrade',     $version],
+			  ['config',   'reconfigure', $version],
 			  ['postinst', 'configure',   $version]) {
 		my $script=shift @$info;
 		my $path_script=$control_path->($script);

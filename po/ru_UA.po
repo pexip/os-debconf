@@ -1,18 +1,19 @@
-# translation of ru.po to Russian
+# translation of ru.po to Russian (Ukraine)
 # Copyright (C) 2004, 2005, 2006, 2010 Free Software Foundation, Inc.
 #
 # Michael Sobolev <mss@transas.com>, 2004.
 # Yuri Kozlov <yuray@komyakino.ru>, 2004, 2005, 2006.
 # Yuri Kozlov <yuray@komyakino.ru>, 2010, 2012, 2018.
+# Bohdan Horbeshko <bodqhrohro@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.5.66\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 12:27+0000\n"
-"PO-Revision-Date: 2018-04-29 08:45+0300\n"
-"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"PO-Revision-Date: 2019-08-05 00:41+0300\n"
+"Last-Translator: Bohdan Horbeshko <bodqhrohro@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
-"Language: ru\n"
+"Language: ru_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,30 +21,30 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../Debconf/AutoSelect.pm:89
+#: ../Debconf/AutoSelect.pm:88
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "будет использован интерфейс: %s"
 
-#: ../Debconf/AutoSelect.pm:97
+#: ../Debconf/AutoSelect.pm:96
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "не удалось инициализировать интерфейс: %s"
 
-#: ../Debconf/AutoSelect.pm:103
+#: ../Debconf/AutoSelect.pm:102
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Не удалось запустить интерфейс: %s"
 
-#: ../Debconf/Config.pm:131
+#: ../Debconf/Config.pm:130
 msgid "Config database not specified in config file."
 msgstr "База данных настройки не указана в файле настройки."
 
-#: ../Debconf/Config.pm:135
+#: ../Debconf/Config.pm:134
 msgid "Template database not specified in config file."
 msgstr "База данных шаблонов не указана в файле настройки."
 
-#: ../Debconf/Config.pm:140
+#: ../Debconf/Config.pm:139
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -51,12 +52,12 @@ msgstr ""
 "Параметры Sigils и Smileys в файле настройки устарели и больше не "
 "используются. Удалите их."
 
-#: ../Debconf/Config.pm:157
+#: ../Debconf/Config.pm:153
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "Проблемы при настройке базы данных, заданной строкой %s в %s."
 
-#: ../Debconf/Config.pm:232
+#: ../Debconf/Config.pm:228
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -66,12 +67,12 @@ msgstr ""
 "  -p,  --priority\t\tУказать желаемый приоритет задаваемых вопросов.\n"
 "       --terse\t\t\tВключить лаконичный режим.\n"
 
-#: ../Debconf/Config.pm:312
+#: ../Debconf/Config.pm:308
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "Неправильный приоритет «%s» игнорируется"
 
-#: ../Debconf/Config.pm:313
+#: ../Debconf/Config.pm:309
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "Возможные значения приоритетов: %s"
@@ -137,14 +138,12 @@ msgstr ""
 "Входное значение «%s» не найдено среди вариантов локали С! Это не должно "
 "было случиться. Возможно, шаблоны были неправильно переведены."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:59
+#: ../Debconf/Element/Teletype/Multiselect.pm:27
 msgid "none of the above"
 msgstr "ни один из предложенных выше"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:79
-#, fuzzy
-#| msgid "Enter the items you want to select, separated by spaces."
-msgid "Enter the items or ranges you want to select, separated by spaces."
+#: ../Debconf/Element/Teletype/Multiselect.pm:47
+msgid "Enter the items you want to select, separated by spaces."
 msgstr ""
 "Укажите буквы, соответствующие выбранным вариантам, разделяя их пробелами."
 
@@ -175,7 +174,7 @@ msgstr ""
 "Интерфейс dialog не будет работать на неуправляемом (dumb) терминале, из "
 "буфера emacs shell или в отсутствие контролирующего терминала."
 
-#: ../Debconf/FrontEnd/Dialog.pm:107
+#: ../Debconf/FrontEnd/Dialog.pm:105
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -183,14 +182,15 @@ msgstr ""
 "Ни одна из dialog-подобных программ не установлена, поэтому вы не можете "
 "использовать dialog-интерфейс."
 
-#: ../Debconf/FrontEnd/Dialog.pm:114
+#: ../Debconf/FrontEnd/Dialog.pm:112
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
-"Для интерфейса dialog требуется экран не менее 13 строк в высоту и 31 "
-"колонки в ширину."
+"Для интерфейса dialog требуется экран не менее 13 строк в высоту и 31 колонки"
+" в "
+"ширину."
 
-#: ../Debconf/FrontEnd/Dialog.pm:331
+#: ../Debconf/FrontEnd/Dialog.pm:296
 msgid "Package configuration"
 msgstr "Настройка пакета"
 
@@ -214,12 +214,13 @@ msgstr ""
 "Интерфейс к debconf, использующий текстовый редактор, предлагает вам "
 "редактировать один или несколько текстовых файлов. Перед вами один из таких "
 "файлов. Его формат схож с форматом стандартных файлов настройки Unix: "
-"параметры и их значения идут вперемешку с описывающими их комментариями. Вы "
-"должны изменить этот файл в соответствии с вашими потребностями, сохранить "
+"параметры и ихние значения идут вперемешку с описывающими их комментариями."
+"Вы должны изменить этот файл в соответствии с вашими потребностями, сохранить"
 "его и выйти из редактора. Затем программа debconf прочитает изменённый файл "
 "и использует введённые вами параметры для настройки системы."
 
 #: ../Debconf/FrontEnd/Gnome.pm:95
+#| msgid "Package configuration"
 msgid "Really quit configuration?"
 msgstr "Вы действительно хотите прекратить настройку?"
 
@@ -230,17 +231,17 @@ msgid ""
 "be especially difficult if you are in the middle of a large upgrade."
 msgstr ""
 "Если вы прервёте настройку, то настраиваемый пакет, вероятно, не будет "
-"установлен из-за ошибки, и вам может потребоваться исправлять её вручную. "
-"Это может оказаться особенно трудно, если вы находитесь в середине большого "
-"обновления системы."
+"установлен из-за ошибки, и вам может потребоваться исправлять её "
+"вручную. Это может оказаться особенно трудно, если вы находитесь "
+"в середине большого обновления системы."
 
 #: ../Debconf/FrontEnd/Gnome.pm:96
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
-"Но иногда всё же требуется завершение, если вы застряли в кольце настроек из-"
-"за дефектного пакета."
+"Но иногда всё же требуется завершение, если вы застряли в кольце "
+"настроек из-за дефектного пакета."
 
 #: ../Debconf/FrontEnd/Gnome.pm:97
 msgid "_Quit"
@@ -250,16 +251,19 @@ msgstr "_Выйти"
 msgid "Continue"
 msgstr "Продолжить"
 
-#: ../Debconf/FrontEnd/Gnome.pm:218
+#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf на %s"
 
 #: ../Debconf/FrontEnd/Gnome.pm:238
+#| msgid "Next"
 msgid "_Next"
 msgstr "_Далее"
 
 #: ../Debconf/FrontEnd/Gnome.pm:245
+#| msgid "Back"
 msgid "_Back"
 msgstr "_Назад"
 
@@ -267,7 +271,7 @@ msgstr "_Назад"
 msgid "This frontend requires a controlling tty."
 msgstr "Этот интерфейс работает только с управляющего терминала."
 
-#: ../Debconf/FrontEnd/Readline.pm:62
+#: ../Debconf/FrontEnd/Readline.pm:58
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU не совместим с буферами emacs shell."
 
@@ -303,8 +307,8 @@ msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
 "Probably two templates are not properly separated by a lone newline.\n"
 msgstr ""
-"Шаблон #%s в %s содержит повторяющееся поле «%s» с другим значением «%s». "
-"Вероятно, два шаблона не разделены символом новой строки.\n"
+"Шаблон #%s в %s содержит повторяющееся поле «%s» с другим значением "
+"«%s». Вероятно, два шаблона не разделены символом новой строки.\n"
 
 #: ../Debconf/Template.pm:236
 #, perl-format

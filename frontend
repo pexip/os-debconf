@@ -35,6 +35,7 @@ shift @ARGV if $ARGV[0] eq '--';
 # Set the default title.
 my $package;
 my $no_title=0;
+my $root=$ENV{DPKG_ROOT} // '';
 if ($ENV{DEBCONF_PACKAGE}) {
 	$package=$ENV{DEBCONF_PACKAGE};
 }
@@ -44,10 +45,10 @@ elsif ($ARGV[0]=~m!^.*/(.*?)\.(?:postinst|postrm|prerm)$!) {
 	# Avoid spurious title updates with triggered actions:
 	$no_title=1 if $action eq 'triggered';
 }
-elsif (-e "/var/lib/dpkg/tmp.ci/control") {
+elsif (-e "$root/var/lib/dpkg/tmp.ci/control") {
 	# The preinst is running, presumably. Now it gets really ugly, because
 	# I have to parse the control file.
-	open (CONTROL, "< /var/lib/dpkg/tmp.ci/control")
+	open (CONTROL, "< $root/var/lib/dpkg/tmp.ci/control")
 		|| die "Debconf: unable to open control file: $!";
 	while (<CONTROL>) {
 		if (/^Package: (.*)/) {
