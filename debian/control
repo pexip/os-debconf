@@ -9,7 +9,7 @@ Build-Depends-Indep: perl (>= 5.10.0-16), python3 (>= 3.1.2-8), gettext (>= 0.13
 Build-Depends: debhelper-compat (= 12), dh-exec, dh-python, po-debconf, po4a (>= 0.23)
 Vcs-Git: https://salsa.debian.org/pkg-debconf/debconf.git
 Vcs-Browser: https://salsa.debian.org/pkg-debconf/debconf
-XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: debconf
 Priority: important
