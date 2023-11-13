@@ -1,3 +1,99 @@
+debconf (1.5.82) unstable; urgency=medium
+
+  * Bump debhelper from old 12 to 13.
+  * Don't remove /var/cache/debconf/tmp.ci, to avoid warnings if it's a
+    mountpoint (closes: #1028128).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 08 Jan 2023 21:50:51 +0000
+
+debconf (1.5.81) unstable; urgency=medium
+
+  [ martin f krafft ]
+  * confmodule: Allow use from scripts with "set -u" (closes: #369953).
+
+  [ Colin Watson ]
+  * dpkg-preconfigure: Extract into /var/cache/debconf/tmp.ci, to avoid
+    problems if /tmp is mounted noexec (closes: #223683, LP: #90085).
+  * dpkg-reconfigure: Document --terse (closes: #737392).
+
+  [ Jakub Wilk ]
+  * debconf-get-selections: Sort output by question name (closes: #968814).
+
+  [ Matthijs Kooijman ]
+  * Display unsupported commands in debug logging (closes: #657626).
+
+  [ Anders Kaseorg ]
+  * Make Readline frontend check that stdin is a tty (closes: #929417).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 01 Jan 2023 20:27:59 +0000
+
+debconf (1.5.80) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Simplify a debhelper override slightly.
+  * debconf: Drop version constraint on ubiquity and update-notifier-common
+    in Breaks.
+
+  [ Programs translations ]
+  * Indonesian (Andika Triwidada; closes: #1007991).
+  * Russian (Ukraine) (Bohdan Horbeshko).
+  * French (Baptiste Jammet; closes: #1008655).
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable):
+    + Build-Depends: Drop versioned constraint on po4a.
+    + Build-Depends-Indep: Drop versioned constraint on gettext, perl and
+      python3.
+    + debconf: Drop versioned constraint on debconf-kde-helper in Suggests.
+    + debconf: Drop versioned constraint on apt-utils in Recommends.
+    + debconf: Drop versioned constraint on perl-base in Pre-Depends.
+    + debconf: Drop versioned constraint on apt, cdebconf, debconf-utils,
+      dialog, menu and whiptail in Conflicts.
+    + debconf: Drop versioned constraint on apt-listchanges in Breaks.
+    + debconf-i18n: Drop versioned constraint on debconf-utils in Conflicts.
+    + debconf-i18n: Drop versioned constraint on debconf and debconf-utils in
+      Replaces.
+    + debconf-doc: Drop versioned constraint on debian-policy in Suggests.
+    + debconf-doc: Drop versioned constraint on debconf in Conflicts.
+    + debconf-utils: Drop versioned constraint on debconf in Conflicts.
+    + debconf-utils: Drop versioned constraint on debconf in Replaces.
+    + python3-debconf: Drop versioned constraint on debconf in Replaces.
+    + python3-debconf: Drop versioned constraint on debconf in Breaks.
+
+  [ Dave Jones ]
+  * dpkg-reconfigure: fix restart of services declared with
+    --no-restart-after-upgrade (closes: #1006147, LP: #1959054).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 27 Nov 2022 20:39:29 +0000
+
+debconf (1.5.79) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Restore a minimal postinst that just loads the confmodule (closes:
+    #998068).
+  * Remove obsolete Qt entries from debian/copyright.
+  * Convert debian/po/tr.po to UTF-8 to pacify Lintian.
+
+  [ Programs translations ]
+  * Occitan (Quentin PAGÈS).
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 29 Oct 2021 14:04:59 +0100
+
+debconf (1.5.78) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * debconf-set-selections: Disable non-fatal warnings when loading database
+    in --checkonly mode (closes: #587380).
+
+  [ Helmut Grohne ]
+  * delete debconf postinst script and transition_db.pl as they only handle
+    upgrades from pre-etch (closes: #989567)
+
+  [ Johannes Schauer Marin Rodrigues ]
+  * add support for DPKG_ROOT set in maintainer scripts (closes: #983425)
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 24 Oct 2021 13:28:56 +0100
+
 debconf (1.5.77pexip3) pexip-bullseye; urgency=medium
 
   * Bullseye rebuild for ARM64 inclusion

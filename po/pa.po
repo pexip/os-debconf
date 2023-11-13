@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2007-06-03 13:36+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <punjabi-l10n@lists.sf.net>\n"
@@ -18,30 +18,30 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "ਫਰੰਟ-ਐਂਡ ਲਈ ਵਾਪਿਸ ਆ ਰਿਹਾ ਹੈ: %s"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "ਫਰੰਟ-ਐਂਡ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅਸਮੱਰਥ: %s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "ਫਰੰਟ-ਐਂਡ ਚਲਾਉਣ ਲਈ ਅਸਮਰੱਥ: %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr "ਸੰਰਚਨਾ ਫਾਇਲ ਵਿੱਚ ਸੰਰਚਨਾ ਡਾਟਾਬੇਸ ਨਹੀਂ ਦਿੱਤਾ ਹੈ।"
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr "ਸੰਰਚਨਾ ਫਾਇਲ ਵਿੱਚ ਟੈਂਪਲੇਟ ਡਾਟਾਬੇਸ ਨਹੀਂ ਦਿੱਤਾ ਗਿਆ।"
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -49,12 +49,12 @@ msgstr ""
 "ਸੰਰਚਨਾ ਫਾਇਲ ਵਿੱਚ Sigils ਅਤੇ Smileys ਚੋਣਾਂ ਨੂੰ ਹੁਣ ਵਰਤਿਆ ਨਹੀਂ ਜਾਂਦਾ ਹੈ। ਇਨ੍ਹਾਂ ਨੂੰ ਹਟਾ ਦਿਓ "
 "ਜੀ।"
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "%2$s ਦੇ %1$s ਪ੍ਹੈਰੇ ਰਾਹੀਂ ਦਿੱਤਾ ਡਾਟਾਬੇਸ ਸੈੱਟਅੱਪ ਕਰਨ ਦੌਰਾਨ ਸਮੱਸਿਆ ਹੈ।"
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -64,12 +64,12 @@ msgstr ""
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
 "       --terse\t\t\tEnable terse mode.\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "ਗਲਤ ਤਰਜੀਹ \"%s\" ਨੂੰ ਅਣਡਿੱਠਾ ਕੀਤਾ ਗਿਆ"
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "ਠੀਕ ਤਰਜੀਹ ਹਨ: %s"
@@ -132,11 +132,11 @@ msgstr ""
 "ਇੰਪੁੱਟ ਮੁੱਲ, \"%s\" C ਚੋਣਾਂ ਵਿੱਚ ਨਹੀਂ ਲੱਭੀ ਹੈ। ਇਠ ਕਦੇ ਨਹੀਂ ਹੋਣਾ ਨਹੀਂ ਸੀ ਚਾਹੀਦਾ। ਸ਼ਾਇਦ ਟੈਂਪਲੇਟ "
 "ਗਲਤ ਤਰੀਕੇ ਨਾਲ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "ਉੱਤੇ ਦਿੱਤੇ ਵਿੱਚੋਂ ਕੋਈ ਵੀ ਨਹੀਂ"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
@@ -168,7 +168,7 @@ msgstr ""
 "ਡਾਈਲਾਗ ਫਰੰਟ-ਐਂਡ ਇੱਕ ਡੰਪ ਟਰਮੀਨਲ, ਇੱਕ emaces ਸ਼ੈੱਲ ਬਫ਼ਰ, ਜਾਂ ਇੱਕ ਕੰਟਰੋਲਿੰਗ ਟਰਮੀਨਲ ਬਿਨਾਂ ਕੰਮ "
 "ਨਹੀਂ ਕਰੇਗਾ।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -176,12 +176,12 @@ msgstr ""
 "ਕੋਈ ਵਰਤਣਯੋਗ ਡਾਈਲਾਗ-ਵਰਗਾ ਪਰੋਗਰਾਮ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ, ਇਸਕਰਕੇ ਡਾਇਲਾਗ ਅਧਾਰਿਤ ਫਰੰਟ-ਐਂਡ ਵਰਤਿਆ "
 "ਨਹੀਂ ਜਾ ਸਕਦਾ।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr "ਡਾਈਲਾਗ ਫਰੰਟ-ਐਂਡ ਲਈ ਘੱਟੋ-ਘੱਟ 13 ਲਾਈਨ ਲੰਮੀ ਅਤੇ 31 ਕਾਲਮ ਚੌੜੀ ਸਕਰੀਨ ਦੀ ਲੋੜ ਹੈ।"
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "ਪੈਕੇਜ ਸੰਰਚਨਾ"
 
@@ -230,8 +230,7 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "%s ਉੱਤੇ ਡੇਬਕੰਫ਼"
@@ -252,7 +251,7 @@ msgstr "ਪਿੱਛੇ"
 msgid "This frontend requires a controlling tty."
 msgstr "ਫਰੰਟ-ਐਂਡ ਲਈ ਕੰਟਰੋਲਿੰਗ tty ਲੋੜੀਦਾ ਹੈ।"
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU emacs ਸ਼ੈੱਲ ਬਫ਼ਰਾਂ ਨਾਲ ਅਣ-ਅਨੁਕੂਲ ਹੈ।"
 

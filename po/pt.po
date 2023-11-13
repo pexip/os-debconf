@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2014-12-06 09:46+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -16,32 +16,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "caindo para o frontend; %s"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "não foi possível inicializar o frontend: %s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Não foi possível iniciar o frontend: %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr ""
 "Base de dados de configuração não especificada no ficheiro de configuração."
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr ""
 "Base de dados de templates não especificada no ficheiro de configuração."
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -49,12 +49,12 @@ msgstr ""
 "As opções Sigils e Smileys no ficheiro de configuração já não são "
 "utilizadas. Por favor remova-as."
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "Problema ao configurar a base de dados definida pela estrofe %s de %s."
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -65,12 +65,12 @@ msgstr ""
 "mostrar.\n"
 "       --terse\t\t\tActivar o modo abreviado.\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "A ignorar a prioridade inválida \"%s\""
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "As prioridades válidas são: %s"
@@ -136,11 +136,11 @@ msgstr ""
 "Valor de entrada, \"%s\" não foi encontrado nas escolhas de C! Isto nunca "
 "deveria acontecer. Talvez os templates estejam com os locales incorrectos."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "nenhum dos acima"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
@@ -172,7 +172,7 @@ msgstr ""
 "O frontend Dialog não irá funcionar num terminal 'estúpido', num buffer de "
 "shell emacs, ou sem um terminal controlador."
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -180,14 +180,14 @@ msgstr ""
 "Não está instalado nenhum programa utilizável do tipo dialog, por isso o "
 "frontend baseado em dialog não pode ser utilizado."
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "O frontend Dialog necessita de um ecrã com pelo menos 13 linhas de altura e "
 "31 colunas de largura."
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "Configuração de pacotes"
 
@@ -244,8 +244,7 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf em %s"
@@ -266,7 +265,7 @@ msgstr "Atrás"
 msgid "This frontend requires a controlling tty."
 msgstr "Este frontend necessita de um tty controlador."
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU é incompatível com buffers de shell emacs."
 

@@ -7,7 +7,7 @@
 # Murat Homurlu <ozgurmurat@gmx.net>, 2004.
 # Halil Demirezen <halild@bilmuh.ege.edu.tr>, 2004.
 # Murat Demirten <murat@debian.org>, 2004.
-# İsmail Baydan <ibaydan@gmail.com>, 2010.
+# Ä°smail Baydan <ibaydan@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
@@ -19,7 +19,7 @@ msgstr ""
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-9\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=1; plural=0;\n"
 
@@ -39,19 +39,19 @@ msgstr "Readline"
 #. Choices
 #: ../templates:1001
 msgid "Editor"
-msgstr "Düzenleyici"
+msgstr "DÃ¼zenleyici"
 
 #. Type: select
 #. Choices
 #: ../templates:1001
 msgid "Noninteractive"
-msgstr "Etkileşimsiz"
+msgstr "EtkileÅŸimsiz"
 
 #. Type: select
 #. Description
 #: ../templates:1002
 msgid "Interface to use:"
-msgstr "Kullanılacak arayüz:"
+msgstr "KullanÄ±lacak arayÃ¼z:"
 
 #. Type: select
 #. Description
@@ -60,8 +60,8 @@ msgid ""
 "Packages that use debconf for configuration share a common look and feel. "
 "You can select the type of user interface they use."
 msgstr ""
-"Yapılandırma için debconf kullanan paketler ortak bir görüntü ve izlenim "
-"verirler. Paketlerin yapılandırmada kullanacağı arayüz tipini seçebilirsiniz."
+"YapÄ±landÄ±rma iÃ§in debconf kullanan paketler ortak bir gÃ¶rÃ¼ntÃ¼ ve izlenim "
+"verirler. Paketlerin yapÄ±landÄ±rmada kullanacaÄŸÄ± arayÃ¼z tipini seÃ§ebilirsiniz."
 
 #. Type: select
 #. Description
@@ -74,12 +74,12 @@ msgid ""
 "you configure things using your favorite text editor. The noninteractive "
 "frontend never asks you any questions."
 msgstr ""
-"Diyalog arayüzü tam ekran, metin tabanlı bir arayüz sunarken; Readline daha "
-"geleneksel bir salt metin arayüzü, gnome ve kde ise kendi masaüstü "
-"ortamlarına uygun şekilde (fakat herhangi bir X ortamı içinde de "
-"kullanılabilecek) daha çağdaş X arayüzleri sunmaktadır. Düzenleyici arayüzü, "
-"kullanmayı tercih ettiğiniz metin düzenleyici ile elle yapılandırmaya olanak "
-"sağlar. Etkileşimsiz arayüz seçeneğinde herhangi bir soru sorulmaz."
+"Diyalog arayÃ¼zÃ¼ tam ekran, metin tabanlÄ± bir arayÃ¼z sunarken; Readline daha "
+"geleneksel bir salt metin arayÃ¼zÃ¼, gnome ve kde ise kendi masaÃ¼stÃ¼ "
+"ortamlarÄ±na uygun ÅŸekilde (fakat herhangi bir X ortamÄ± iÃ§inde de "
+"kullanÄ±labilecek) daha Ã§aÄŸdaÅŸ X arayÃ¼zleri sunmaktadÄ±r. DÃ¼zenleyici arayÃ¼zÃ¼, "
+"kullanmayÄ± tercih ettiÄŸiniz metin dÃ¼zenleyici ile elle yapÄ±landÄ±rmaya olanak "
+"saÄŸlar. EtkileÅŸimsiz arayÃ¼z seÃ§eneÄŸinde herhangi bir soru sorulmaz."
 
 #. Type: select
 #. Choices
@@ -91,7 +91,7 @@ msgstr "kritik"
 #. Choices
 #: ../templates:2001
 msgid "high"
-msgstr "yüksek"
+msgstr "yÃ¼ksek"
 
 #. Type: select
 #. Choices
@@ -103,13 +103,13 @@ msgstr "orta"
 #. Choices
 #: ../templates:2001
 msgid "low"
-msgstr "düşük"
+msgstr "dÃ¼ÅŸÃ¼k"
 
 #. Type: select
 #. Description
 #: ../templates:2002
 msgid "Ignore questions with a priority less than:"
-msgstr "Aşağıdakinden daha düşük önceliğe sahip soruları göz ardı et:"
+msgstr "AÅŸaÄŸÄ±dakinden daha dÃ¼ÅŸÃ¼k Ã¶nceliÄŸe sahip sorularÄ± gÃ¶z ardÄ± et:"
 
 #. Type: select
 #. Description
@@ -123,13 +123,13 @@ msgid ""
 "  - 'medium' is for normal questions\n"
 "  - 'low' is for control freaks who want to see everything"
 msgstr ""
-"Debconf görüntülediği sorulara öncelikler verir. Görmek istediğiniz sorular "
-"için en düşük önceliği seçin:\n"
+"Debconf gÃ¶rÃ¼ntÃ¼lediÄŸi sorulara Ã¶ncelikler verir. GÃ¶rmek istediÄŸiniz sorular "
+"iÃ§in en dÃ¼ÅŸÃ¼k Ã¶nceliÄŸi seÃ§in:\n"
 "  - 'kritik': sadece sistemi bozabilecek durumlarda soru sorar.\n"
-"     Yeni başlayan ya da aceleci birisiyseniz bunu seçin.\n"
-"  - 'yüksek': önemi daha yüksek sorular\n"
-"  - 'orta': normal düzeyde sorular\n"
-"  - 'düşük': bütün seçenekleri görmek isteyen denetim düşkünleri için"
+"     Yeni baÅŸlayan ya da aceleci birisiyseniz bunu seÃ§in.\n"
+"  - 'yÃ¼ksek': Ã¶nemi daha yÃ¼ksek sorular\n"
+"  - 'orta': normal dÃ¼zeyde sorular\n"
+"  - 'dÃ¼ÅŸÃ¼k': bÃ¼tÃ¼n seÃ§enekleri gÃ¶rmek isteyen denetim dÃ¼ÅŸkÃ¼nleri iÃ§in"
 
 #. Type: select
 #. Description
@@ -138,9 +138,9 @@ msgid ""
 "Note that no matter what level you pick here, you will be able to see every "
 "question if you reconfigure a package with dpkg-reconfigure."
 msgstr ""
-"Unutmayın ki paketlerin dpkg-reconfigure komutu ile tekrar yapılandırılması "
-"sırasında burada seçtiğiniz öncelik seviyesi ne olursa olsun bütün soruları "
-"görebileceksiniz."
+"UnutmayÄ±n ki paketlerin dpkg-reconfigure komutu ile tekrar yapÄ±landÄ±rÄ±lmasÄ± "
+"sÄ±rasÄ±nda burada seÃ§tiÄŸiniz Ã¶ncelik seviyesi ne olursa olsun bÃ¼tÃ¼n sorularÄ± "
+"gÃ¶rebileceksiniz."
 
 #. Type: text
 #. Description
@@ -152,7 +152,7 @@ msgstr "Paketler kuruluyor"
 #. Description
 #: ../templates:4001
 msgid "Please wait..."
-msgstr "Lütfen bekleyin..."
+msgstr "LÃ¼tfen bekleyin..."
 
 #. Type: text
 #. Description
@@ -161,7 +161,7 @@ msgstr "Lütfen bekleyin..."
 #. to install a package or a collection of packages
 #: ../templates:6001
 msgid "Media change"
-msgstr "Ortamı(CD,DVD) değişimi"
+msgstr "OrtamÄ±(CD,DVD) deÄŸiÅŸimi"
 
 #~ msgid "Gnome"
 #~ msgstr "Gnome"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_1.5.76\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2021-03-22 21:13+0100\n"
 "Last-Translator: Frans Spiesschaert <Frans.Spiesschaert@yucom.be>\n"
 "Language-Team: Debian Dutch l10n Team <debian-l10n-dutch@lists.debian.org>\n"
@@ -20,30 +20,30 @@ msgstr ""
 "X-Generator: Poedit 2.2.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "er wordt teruggevallen op frontend: %s"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "kan het frontend niet initialiseren: %s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Kan geen frontend starten: %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr "Configuratiedatabase is niet gespecificeerd in configuratiebestand."
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr "Sjabloondatabase niet gespecificeerd in configuratiebestand."
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -51,14 +51,14 @@ msgstr ""
 "De opties Sigils en Smileys in het configuratiebestand worden niet langer "
 "gebruikt. U wordt verzocht ze te verwijderen."
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
 "Probleem bij het instellen van de database gedefinieerd door stanza %s van "
 "%s."
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -68,12 +68,12 @@ msgstr ""
 "  -p,  --priority\t\tMinimum prioriteit voor te tonen vragen specificeren.\n"
 "       --terse\t\t\tBeknopte modus aanzetten.\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "Ongeldige prioriteit \"%s\" wordt genegeerd"
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "Geldige prioriteiten zijn: %s"
@@ -140,11 +140,11 @@ msgstr ""
 "nooit mogen gebeuren. Mogelijk is de taallokalisatie van de sjablonen niet "
 "correct."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "geen van bovenstaande"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr ""
 "Voer de items of bereiken in die u wilt selecteren, gescheiden door spaties."
@@ -176,7 +176,7 @@ msgstr ""
 "Het dialoog-frontend werkt niet op een domme terminal, een shell-buffer van "
 "emacs en bij gebrek aan een sturende terminal."
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -184,14 +184,14 @@ msgstr ""
 "Er is geen bruikbaar dialoog-achtig programma geïnstalleerd; hierdoor kan "
 "het op dialogen gebaseerde frontend niet worden gebruikt."
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Het dialoog-frontend vereist een scherm dat tenminste 13 regels hoog en 31 "
 "kolommen breed is."
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "Pakketconfiguratie"
 
@@ -253,8 +253,7 @@ msgstr "_Afsluiten"
 msgid "Continue"
 msgstr "Doorgaan"
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf op %s"
@@ -272,7 +271,7 @@ msgid "This frontend requires a controlling tty."
 msgstr "Dit frontend vereist een sturende tty."
 
 #
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU is niet compatibel met shell-buffers van emacs."
 

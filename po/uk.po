@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2006-10-05 21:51+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@debian.org>\n"
 "Language-Team: Ukrainian\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "буде використовуватися інтерфейс \"%s\""
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "не можливо ініціалізувати інтерфейс \"%s\""
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Не вдалося запустити інтерфейс: %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr "База даних налаштувань не вказана в конфігураційному файлі."
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr "База даних шаблонів не вказана в конфігураційному файлі."
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -49,13 +49,13 @@ msgstr ""
 "Опції Sigils та Smileys в конфігураційному файлі більше не використовуються. "
 "Видаліть їх, будь ласка."
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
 "Виникла проблема при налаштуванні бази даних, визначеної в строфі %s з %s."
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -66,12 +66,12 @@ msgstr ""
 "показані.\n"
 "       --terse\t\t\tДозволити стислий режим.\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "Ігнорується невірний пріоритет \"%s\""
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "Вірні пріоритети: \"%s\""
@@ -138,11 +138,11 @@ msgstr ""
 "Значення \"%s\" не знайдене серед варіантів C! Це не повинно було статися. "
 "Можливо, шаблон був не вірно перекладений."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "жоден з перерахованих"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
@@ -177,7 +177,7 @@ msgstr ""
 "Діалогова оболонка не буде працювати на неналаштованому (dumb) терміналі, в "
 "буфері emacs або без керуючого терміналу."
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -185,14 +185,14 @@ msgstr ""
 "Не встановлена жодна програма, подібна до dialog, отже діалогова оболонка не "
 "може бути застосована."
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Для діалогового інтерфейсу потрібен термінал не менше 13 рядків в висоту та "
 "31 стовпчиків в ширину."
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "Налаштування пакунків"
 
@@ -248,8 +248,7 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf на %s"
@@ -270,7 +269,7 @@ msgstr "Назад"
 msgid "This frontend requires a controlling tty."
 msgstr "Для цієї оболонки потрібен керуючий термінал."
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU не може працювати в буфері emacs."
 

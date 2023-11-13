@@ -22,11 +22,10 @@ override_dh_installdebconf:
 	# using me
 	dh_installdebconf -n
 
-override_dh_installchangelogs:
+execute_before_dh_installchangelogs:
 	# Changelog reduction hack for debconf. Only include top 100 entries.
 	perl -ne '$$c++ if /^debconf /; last if $$c > 100 ; print $$_' \
 		< debian/changelog > debian/debconf.changelog
-	dh_installchangelogs
 
 override_dh_compress:
 	dh_compress -X demo.templates -X tutorial.templates

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.71\n"
-"POT-Creation-Date: 2018-07-25 09:14+0100\n"
+"POT-Creation-Date: 2021-10-24 12:58+0100\n"
 "PO-Revision-Date: 2019-04-19 13:19+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <>\n"
@@ -224,7 +224,7 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-escape:71 ../../debconf-communicate:73
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:223
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:226
 #: ../../debconf-show:154 ../../dpkg-preconfigure:246
 #: ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
@@ -1239,7 +1239,7 @@ msgstr ""
 "log/installer/cdebconf, use o parâmetro --installer."
 
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:228
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr "Petter Reinholdtsen <pere@hungry.com>"
 

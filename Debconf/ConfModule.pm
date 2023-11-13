@@ -236,8 +236,10 @@ sub process_command {
 		($command, @params)=split(' ', $_);
 	}
 	if (! defined $command) {
-		return $codes{syntaxerror}.' '.
+		my $ret = $codes{syntaxerror}.' '.
 			"Bad line \"$_\" received from confmodule.";
+		debug developer => "--> $ret";
+		return $ret;
 	}
 	$command=lc($command);
 	# This command could not be handled by a sub.
@@ -246,8 +248,10 @@ sub process_command {
 	}
 	# Make sure that the command is valid.
 	if (! $this->can("command_$command")) {
-		return $codes{syntaxerror}.' '.
+		my $ret = $codes{syntaxerror}.' '.
 		       "Unsupported command \"$command\" (full line was \"$_\") received from confmodule.";
+		debug developer => "--> $ret";
+		return $ret;
 	}
 	# Now call the subroutine for the command.
 	$command="command_$command";

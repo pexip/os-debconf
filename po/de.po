@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf 1.5.66\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
 "PO-Revision-Date: 2020-01-05 07:08+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
@@ -17,30 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "greife zurück auf die Oberfläche: %s"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "kann Oberfläche nicht initialisieren: %s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Kann die Oberfläche nicht starten: %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr "Konfigurationsdatenbank in der Konfigurationsdatei nicht angegeben."
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr "Vorlagendatenbank in der Konfigurationsdatei nicht angegeben."
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -48,12 +48,12 @@ msgstr ""
 "Die Optionen Sigils und Smileys in der Konfigurationsdatei werden nicht mehr "
 "benutzt. Bitte entfernen Sie sie."
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "Problem beim Anlegen der Datenbank nach Absatz %s von %s."
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -63,12 +63,12 @@ msgstr ""
 "  -p,  --priority\t\tMinimale anzuzeigende Priorität für Fragen angeben.\n"
 "       --terse\t\t\tKompakten Modus aktivieren.\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "Ignoriere ungültige Priorität „%s“"
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "Gültige Prioritäten sind: %s"
@@ -134,15 +134,15 @@ msgstr ""
 "Eingabewert „%s“ nicht in der C-Auswahl gefunden! Das sollte nie passieren. "
 "Vielleicht wurde die Vorlage unvorschriftsmäßig lokalisiert."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "keines der Obigen"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
 msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr ""
-"Geben Sie die Elemente oder Bereiche, die Sie auswählen wollen, durch Leerzeichen getrennt "
-"ein."
+"Geben Sie die Elemente oder Bereiche, die Sie auswählen wollen, durch "
+"Leerzeichen getrennt ein."
 
 #: ../Debconf/FrontEnd.pm:140
 #, perl-format
@@ -172,7 +172,7 @@ msgstr ""
 "Die Dialog-Oberfläche funktioniert nicht auf einem Dumb-Terminal, einem "
 "Emacs-Shellbuffer oder ohne ein steuerndes Terminal."
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -180,14 +180,14 @@ msgstr ""
 "Kein passendes Dialog-Programm ist installiert, daher kann die Dialog-"
 "Oberfläche nicht verwendet werden."
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Für die Dialog-Oberfläche muss das Bild mindestens 13 Zeilen hoch und 31 "
 "Spalten breit sein."
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "Paketkonfiguration"
 
@@ -248,8 +248,7 @@ msgstr "_Quit"
 msgid "Continue"
 msgstr "Fortfahren"
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf auf %s"
@@ -266,7 +265,7 @@ msgstr "_Zurück"
 msgid "This frontend requires a controlling tty."
 msgstr "Diese Oberfläche bedarf eines steuernden Terminals."
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU ist mit dem Emacs-Shellbuffer nicht kompatibel."
 

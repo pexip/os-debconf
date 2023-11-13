@@ -6,13 +6,13 @@
 # Martin Quinson <Martin.Quinson@tuxfamily.org>, 2000,2001,2002.
 # Steve Petruzzello <dlist@bluewin.ch>, 2012.
 # Christian Perrier <bubulle@debian.org>, 2013.
-# Baptiste Jammet <baptiste@mailoo.org>, 2017, 2019.
+# Baptiste Jammet <baptiste@mailoo.org>, 2017, 2019, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf_1.5.69\n"
+"Project-Id-Version: debconf_1.5.79\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 09:48+0000\n"
-"PO-Revision-Date: 2019-01-10 16:54+0100\n"
+"POT-Creation-Date: 2021-10-24 12:27+0000\n"
+"PO-Revision-Date: 2021-11-27 08:20+0100\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -22,34 +22,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: ../Debconf/AutoSelect.pm:88
+#: ../Debconf/AutoSelect.pm:89
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "Utilisation de l'interface %s en remplacement"
 
-#: ../Debconf/AutoSelect.pm:96
+#: ../Debconf/AutoSelect.pm:97
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "Impossible d'initialiser l'interface : %s"
 
-#: ../Debconf/AutoSelect.pm:102
+#: ../Debconf/AutoSelect.pm:103
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Impossible de démarrer l'interface : %s"
 
-#: ../Debconf/Config.pm:130
+#: ../Debconf/Config.pm:131
 msgid "Config database not specified in config file."
 msgstr ""
 "Le fichier de configuration n'indique pas l'emplacement de la base de "
 "données des réglages."
 
-#: ../Debconf/Config.pm:134
+#: ../Debconf/Config.pm:135
 msgid "Template database not specified in config file."
 msgstr ""
 "Le fichier de configuration n'indique pas l'emplacement de la base de "
 "données des messages (« templates »)."
 
-#: ../Debconf/Config.pm:139
+#: ../Debconf/Config.pm:140
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -57,14 +57,14 @@ msgstr ""
 "Les options Sigils et Smileys ne sont plus utilisées dans le fichier de "
 "configuration. Veuillez les supprimer."
 
-#: ../Debconf/Config.pm:153
+#: ../Debconf/Config.pm:157
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
 "Problème pendant la configuration de la base de données définie au "
 "paragraphe %s sur %s."
 
-#: ../Debconf/Config.pm:228
+#: ../Debconf/Config.pm:232
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -74,12 +74,12 @@ msgstr ""
 "  -p,  --priority\t\tindique la priorité minimale à afficher ;\n"
 "       --terse\t\t\tactive le mode laconique (« terse »).\n"
 
-#: ../Debconf/Config.pm:308
+#: ../Debconf/Config.pm:312
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "La priorité « %s » non valable sera ignorée"
 
-#: ../Debconf/Config.pm:309
+#: ../Debconf/Config.pm:313
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "Les priorités valables sont : %s"
@@ -145,13 +145,16 @@ msgstr ""
 "La valeur « %s » ne fait pas partie des choix disponibles ! Cela ne devrait "
 "jamais se produire. Les messages ont peut-être été mal traduits."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:27
+#: ../Debconf/Element/Teletype/Multiselect.pm:59
 msgid "none of the above"
 msgstr "aucun des éléments mentionnés"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:47
-msgid "Enter the items you want to select, separated by spaces."
-msgstr "Entrez les éléments que vous voulez choisir, séparés par des espaces."
+#: ../Debconf/Element/Teletype/Multiselect.pm:79
+#| msgid "Enter the items you want to select, separated by spaces."
+msgid "Enter the items or ranges you want to select, separated by spaces."
+msgstr ""
+"Veuillez saisir les éléments ou les intervalles que vous voulez choisir, "
+"séparés par des espaces."
 
 #: ../Debconf/FrontEnd.pm:140
 #, perl-format
@@ -180,7 +183,7 @@ msgstr ""
 "L'interface dialog ne fonctionnera pas avec un terminal rustique (« dumb »), "
 "un tampon shell d'Emacs ou sans terminal de contrôle."
 
-#: ../Debconf/FrontEnd/Dialog.pm:105
+#: ../Debconf/FrontEnd/Dialog.pm:107
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -188,13 +191,13 @@ msgstr ""
 "Aucun programme de type dialog n'est installé, l'interface basée sur dialog "
 "ne peut donc pas être utilisée."
 
-#: ../Debconf/FrontEnd/Dialog.pm:112
+#: ../Debconf/FrontEnd/Dialog.pm:114
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "L'interface dialog a besoin d'un écran d'au moins 13 lignes sur 31 colonnes."
 
-#: ../Debconf/FrontEnd/Dialog.pm:296
+#: ../Debconf/FrontEnd/Dialog.pm:331
 msgid "Package configuration"
 msgstr "Outil de configuration des paquets"
 
@@ -255,19 +258,16 @@ msgstr "_Quitter"
 msgid "Continue"
 msgstr "Continuer"
 
-#: ../Debconf/FrontEnd/Gnome.pm:218 ../Debconf/FrontEnd/Kde.pm:100
-#: ../Debconf/FrontEnd/Kde.pm:104
+#: ../Debconf/FrontEnd/Gnome.pm:218
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf sur %s"
 
 #: ../Debconf/FrontEnd/Gnome.pm:238
-#| msgid "Next"
 msgid "_Next"
 msgstr "_Suivant"
 
 #: ../Debconf/FrontEnd/Gnome.pm:245
-#| msgid "Back"
 msgid "_Back"
 msgstr "_Retour"
 
@@ -275,7 +275,7 @@ msgstr "_Retour"
 msgid "This frontend requires a controlling tty."
 msgstr "Cette interface a besoin d'un terminal de contrôle."
 
-#: ../Debconf/FrontEnd/Readline.pm:58
+#: ../Debconf/FrontEnd/Readline.pm:62
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU est incompatible avec les tampons shell d'Emacs."
 
@@ -388,8 +388,8 @@ msgstr ""
 "       --default-priority\tutilise la priorité par défaut plutôt\n"
 "                         \tque la priorité basse ;\n"
 "       --force\t\t\tforce la reconfiguration des paquets cassés.\n"
-"       --no-reload\t\tne pas recharger les modèles. (à utiliser\n"
-"                         \tavec précaution)"
+"       --no-reload\t\tne pas recharger les modèles (à utiliser\n"
+"                         \tavec précaution)."
 
 #: ../dpkg-reconfigure:112
 #, perl-format

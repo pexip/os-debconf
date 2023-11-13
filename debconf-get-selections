@@ -53,8 +53,12 @@ if (@ARGV && $ARGV[0] eq '--installer') {
 }
 
 my $qi = Debconf::Question->iterator;
+my @qs;
 
 while (my $q = $qi->iterate) {
+	push @qs, $q;
+}
+for my $q (sort { $a->name cmp $b->name } @qs) {
 	my ($name, $type, $value) = ($q->name, $q->type, $q->value);
 	next if (! length $type || $type eq 'text' || $type eq 'title');
 	print "# ".$q->description."\n";

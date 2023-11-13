@@ -7,17 +7,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-07-25 09:14+0100\n"
+"POT-Creation-Date: 2021-10-24 12:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: SH
-#: ../../debconf:3 ../../Debconf/Client/ConfModule.pm:3 ../../debconf-apt-progress:3 ../../debconf-escape:3 ../../debconf-communicate:3 ../../debconf-copydb:3 ../../debconf-getlang:3 ../../debconf-get-selections:3 ../../debconf-loadtemplate:3 ../../debconf-mergetemplate:3 ../../debconf-set-selections:3 ../../debconf-show:3 ../../dpkg-preconfigure:3 ../../dpkg-reconfigure:3 debconf.conf.5:2 confmodule.3:2 debconf.7:2 debconf-devel.7:2
+#: ../../debconf:3 ../../Debconf/Client/ConfModule.pm:3
+#: ../../debconf-apt-progress:3 ../../debconf-escape:3
+#: ../../debconf-communicate:3 ../../debconf-copydb:3 ../../debconf-getlang:3
+#: ../../debconf-get-selections:3 ../../debconf-loadtemplate:3
+#: ../../debconf-mergetemplate:3 ../../debconf-set-selections:3
+#: ../../debconf-show:3 ../../dpkg-preconfigure:3 ../../dpkg-reconfigure:3
+#: debconf.conf.5:2 confmodule.3:2 debconf.7:2 debconf-devel.7:2
 #, no-wrap
 msgid "NAME"
 msgstr ""
@@ -28,7 +34,13 @@ msgid "debconf - run a debconf-using program"
 msgstr ""
 
 #. type: SH
-#: ../../debconf:9 ../../Debconf/Client/ConfModule.pm:7 ../../debconf-apt-progress:7 ../../debconf-escape:7 ../../debconf-communicate:9 ../../debconf-copydb:16 ../../debconf-getlang:15 ../../debconf-get-selections:7 ../../debconf-loadtemplate:13 ../../debconf-mergetemplate:16 ../../debconf-set-selections:19 ../../debconf-show:19 ../../dpkg-preconfigure:7 ../../dpkg-reconfigure:7 debconf.conf.5:12 confmodule.3:4
+#: ../../debconf:9 ../../Debconf/Client/ConfModule.pm:7
+#: ../../debconf-apt-progress:7 ../../debconf-escape:7
+#: ../../debconf-communicate:9 ../../debconf-copydb:16 ../../debconf-getlang:15
+#: ../../debconf-get-selections:7 ../../debconf-loadtemplate:13
+#: ../../debconf-mergetemplate:16 ../../debconf-set-selections:19
+#: ../../debconf-show:19 ../../dpkg-preconfigure:7 ../../dpkg-reconfigure:7
+#: debconf.conf.5:12 confmodule.3:4
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr ""
@@ -42,7 +54,14 @@ msgid ""
 msgstr ""
 
 #. type: SH
-#: ../../debconf:13 ../../Debconf/Client/ConfModule.pm:20 ../../debconf-apt-progress:15 ../../debconf-escape:12 ../../debconf-communicate:13 ../../debconf-copydb:29 ../../debconf-getlang:20 ../../debconf-get-selections:11 ../../debconf-loadtemplate:17 ../../debconf-mergetemplate:20 ../../debconf-set-selections:24 ../../debconf-show:25 ../../dpkg-preconfigure:13 ../../dpkg-reconfigure:11 debconf.conf.5:4 confmodule.3:12 debconf.7:4 debconf-devel.7:4
+#: ../../debconf:13 ../../Debconf/Client/ConfModule.pm:20
+#: ../../debconf-apt-progress:15 ../../debconf-escape:12
+#: ../../debconf-communicate:13 ../../debconf-copydb:29
+#: ../../debconf-getlang:20 ../../debconf-get-selections:11
+#: ../../debconf-loadtemplate:17 ../../debconf-mergetemplate:20
+#: ../../debconf-set-selections:24 ../../debconf-show:25
+#: ../../dpkg-preconfigure:13 ../../dpkg-reconfigure:11 debconf.conf.5:4
+#: confmodule.3:12 debconf.7:4 debconf-devel.7:4
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr ""
@@ -80,7 +99,9 @@ msgid ""
 msgstr ""
 
 #. type: =head1
-#: ../../debconf:30 ../../debconf-apt-progress:43 ../../debconf-copydb:35 ../../debconf-mergetemplate:44 ../../debconf-set-selections:68 ../../debconf-show:36 ../../dpkg-preconfigure:20 ../../dpkg-reconfigure:21
+#: ../../debconf:30 ../../debconf-apt-progress:43 ../../debconf-copydb:35
+#: ../../debconf-mergetemplate:44 ../../debconf-set-selections:68
+#: ../../debconf-show:36 ../../dpkg-preconfigure:20 ../../dpkg-reconfigure:21
 msgid "OPTIONS"
 msgstr ""
 
@@ -128,7 +149,8 @@ msgid "Enables terse output mode. This affects only some frontends."
 msgstr ""
 
 #. type: =head1
-#: ../../debconf:54 ../../debconf-apt-progress:107 ../../debconf-copydb:74 ../../debconf-set-selections:59
+#: ../../debconf:54 ../../debconf-apt-progress:107 ../../debconf-copydb:74
+#: ../../debconf-set-selections:59
 msgid "EXAMPLES"
 msgstr ""
 
@@ -159,7 +181,13 @@ msgid ""
 msgstr ""
 
 #. type: SH
-#: ../../debconf:64 ../../Debconf/Client/ConfModule.pm:153 ../../debconf-escape:21 ../../debconf-communicate:39 ../../debconf-copydb:101 ../../debconf-getlang:73 ../../debconf-loadtemplate:30 ../../debconf-mergetemplate:60 ../../debconf-set-selections:82 ../../dpkg-preconfigure:59 ../../dpkg-reconfigure:73 debconf.conf.5:537 confmodule.3:36 debconf.7:376 debconf-devel.7:958
+#: ../../debconf:64 ../../Debconf/Client/ConfModule.pm:153
+#: ../../debconf-escape:21 ../../debconf-communicate:39
+#: ../../debconf-copydb:101 ../../debconf-getlang:73
+#: ../../debconf-loadtemplate:30 ../../debconf-mergetemplate:60
+#: ../../debconf-set-selections:82 ../../dpkg-preconfigure:59
+#: ../../dpkg-reconfigure:73 debconf.conf.5:537 confmodule.3:36 debconf.7:376
+#: debconf-devel.7:958
 #, no-wrap
 msgid "SEE ALSO"
 msgstr ""
@@ -170,13 +198,24 @@ msgid "L<debconf-devel(7)>, L<debconf(7)>"
 msgstr ""
 
 #. type: SH
-#: ../../debconf:116 ../../Debconf/Client/ConfModule.pm:158 ../../debconf-escape:71 ../../debconf-communicate:73 ../../debconf-copydb:175 ../../debconf-getlang:255 ../../debconf-get-selections:74 ../../debconf-loadtemplate:47 ../../debconf-mergetemplate:180 ../../debconf-set-selections:223 ../../debconf-show:154 ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:382 debconf-devel.7:968
+#: ../../debconf:116 ../../Debconf/Client/ConfModule.pm:158
+#: ../../debconf-escape:71 ../../debconf-communicate:73
+#: ../../debconf-copydb:175 ../../debconf-getlang:255
+#: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:226
+#: ../../debconf-show:154 ../../dpkg-preconfigure:246
+#: ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
 msgstr ""
 
 #. type: textblock
-#: ../../debconf:118 ../../Debconf/Client/ConfModule.pm:160 ../../debconf-apt-progress:666 ../../debconf-communicate:75 ../../debconf-copydb:177 ../../debconf-getlang:257 ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182 ../../dpkg-preconfigure:248 ../../dpkg-reconfigure:304
+#: ../../debconf:118 ../../Debconf/Client/ConfModule.pm:160
+#: ../../debconf-apt-progress:666 ../../debconf-communicate:75
+#: ../../debconf-copydb:177 ../../debconf-getlang:257
+#: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
+#: ../../dpkg-preconfigure:248 ../../dpkg-reconfigure:304
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr ""
 
@@ -625,7 +664,8 @@ msgid "Print out the value of the debconf/frontend question."
 msgstr ""
 
 #. type: =head1
-#: ../../debconf-communicate:34 ../../debconf-loadtemplate:24 ../../debconf-set-selections:32
+#: ../../debconf-communicate:34 ../../debconf-loadtemplate:24
+#: ../../debconf-set-selections:32
 msgid "WARNING"
 msgstr ""
 
@@ -954,7 +994,7 @@ msgid ""
 msgstr ""
 
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:225
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:228
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr ""
 
@@ -3420,7 +3460,9 @@ msgid "If you do file a bug report, be sure to include the following information
 msgstr ""
 
 #. type: TP
-#: debconf.7:365 debconf.7:368 debconf.7:371 debconf-devel.7:469 debconf-devel.7:473 debconf-devel.7:479 debconf-devel.7:484 debconf-devel.7:489
+#: debconf.7:365 debconf.7:368 debconf.7:371 debconf-devel.7:469
+#: debconf-devel.7:473 debconf-devel.7:479 debconf-devel.7:484
+#: debconf-devel.7:489
 #, no-wrap
 msgid "B<*>"
 msgstr ""

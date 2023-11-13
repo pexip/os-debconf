@@ -44,8 +44,7 @@ sub init {
 	$this->SUPER::init(@_);
 
 	# Yeah, you need a controlling tty. Make sure there is one.
-	open(TESTTY, "/dev/tty") || die gettext("This frontend requires a controlling tty.")."\n";
-	close TESTTY;
+	-t STDIN || die gettext("This frontend requires a controlling tty.")."\n";
 
 	$Term::ReadLine::termcap_nowarn = 1; # Turn off stupid termcap warning.
 	$this->readline(Term::ReadLine->new('debconf'));
