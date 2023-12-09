@@ -1,3 +1,9 @@
+debconf (1.5.82pexip2) pexip-bookworm; urgency=medium
+
+  * Bookworm build for product distribution
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Sat, 09 Dec 2023 22:52:11 +0000
+
 debconf (1.5.82pexip1) pexip-bookworm; urgency=medium
 
   * Initial bookworm build
