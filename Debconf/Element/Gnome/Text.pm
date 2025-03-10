@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Gnome::Text - a bit of text to show to the user.
 =cut
 
 package Debconf::Element::Gnome::Text;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use utf8;

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Select - Base select input element
 =cut
 
 package Debconf::Element::Select;
+use warnings;
 use strict;
 use Debconf::Log ':all';
 use Debconf::Gettext;
@@ -30,7 +31,7 @@ for them.
 
 sub visible {
 	my $this=shift;
-	
+
 	my @choices=$this->question->choices_split;
 
 	if (@choices > 1) {
@@ -88,7 +89,7 @@ sub translate_to_C {
 	$this->question->template->i18n('');
 	my @choices_c=$this->question->choices_split;
 	$this->question->template->i18n(1);
-	
+
 	for (my $x=0; $x <= $#choices; $x++) {
 		return $choices_c[$x] if $choices[$x] eq $value;
 	}

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::DbDriver::File - store database in flat file
 =cut
 
 package Debconf::DbDriver::File;
+use warnings;
 use strict;
 use Debconf::Log qw(:all);
 use Cwd 'abs_path';
@@ -83,7 +84,7 @@ sub init {
 	$this->error("No filename specified") unless $this->{filename};
 
 	my ($directory)=$this->{filename}=~m!^(.*)/[^/]+!;
-	if (length $directory and ! -d $directory) {
+	if (length $directory and not -d $directory) {
 		mkdir $directory || $this->error("mkdir $directory:$!");
 	}
 
@@ -93,11 +94,11 @@ sub init {
 	$this->{filename} = abs_path($this->{filename});
 
 	debug "db $this->{name}" => "started; filename is $this->{filename}";
-	
+
 	# Make sure that the file exists, and set the mode too.
 	if (! -e $this->{filename}) {
 		$this->{backup}=0;
-		sysopen(my $fh, $this->{filename}, 
+		sysopen(my $fh, $this->{filename},
 				O_WRONLY|O_TRUNC|O_CREAT,$this->{mode}) or
 			$this->error("could not open $this->{filename}");
 		close $fh;
@@ -156,7 +157,7 @@ sub shutdown {
 
 	return if $this->{readonly};
 
-	if (grep $this->{dirty}->{$_}, keys %{$this->{cache}}) {
+	if (grep { $this->{dirty}->{$_} } keys %{$this->{cache}}) {
 		debug "db $this->{name}" => "saving database";
 	}
 	else {
@@ -191,7 +192,7 @@ sub shutdown {
 	# resulting in truncated files.
 	$fh->sync or $this->error("could not sync $this->{filename}-new: $!");
 
-	# Now rename the old file to -old (if doing backups), and put -new 
+	# Now rename the old file to -old (if doing backups), and put -new
 	# in its place.
 	if (-e $this->{filename} && $this->{backup}) {
 		rename($this->{filename}, $this->{filename}."-old") or
@@ -214,7 +215,7 @@ Sorry bud, if it's not in the cache, it doesn't exist.
 =cut
 
 sub load {
-	return undef;
+	return;
 }
 
 =head1 AUTHOR

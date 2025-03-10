@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Web::Error - An error message on a form
 =cut
 
 package Debconf::Element::Web::Error;
+use warnings;
 use strict;
 use base qw(Debconf::Element::Web::Text);
 

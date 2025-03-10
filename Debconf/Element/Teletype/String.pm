@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Teletype::String - string input field
 =cut
 
 package Debconf::Element::Teletype::String;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 
@@ -33,7 +34,7 @@ sub show {
 		question => $this->question,
 	);
 	return unless defined $value;
-	
+
 	$this->frontend->display("\n");
 	$this->value($value);
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Web::Select - A select box on a form
 =cut
 
 package Debconf::Element::Web::Select;
+use warnings;
 use strict;
 use base qw(Debconf::Element::Select);
 
@@ -44,7 +45,7 @@ sub show {
 		}
 	}
 	$_.="</select>\n";
-	
+
 	return $_;
 }
 

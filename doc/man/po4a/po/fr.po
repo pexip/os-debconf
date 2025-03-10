@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
-"POT-Creation-Date: 2021-10-24 12:58+0100\n"
+"POT-Creation-Date: 2024-01-21 19:23+0000\n"
 "PO-Revision-Date: 2018-12-08 22:08+0100\n"
 "Last-Translator: Jean-Philippe MENGUAL <mengualjeanphi@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -42,10 +42,10 @@ msgstr "debconf - Exécuter un programme utilisant debconf"
 #. type: SH
 #: ../../debconf:9 ../../Debconf/Client/ConfModule.pm:7
 #: ../../debconf-apt-progress:7 ../../debconf-escape:7
-#: ../../debconf-communicate:9 ../../debconf-copydb:16 ../../debconf-getlang:15
-#: ../../debconf-get-selections:7 ../../debconf-loadtemplate:13
-#: ../../debconf-mergetemplate:16 ../../debconf-set-selections:19
-#: ../../debconf-show:19 ../../dpkg-preconfigure:7 ../../dpkg-reconfigure:7
+#: ../../debconf-communicate:9 ../../debconf-copydb:17 ../../debconf-getlang:16
+#: ../../debconf-get-selections:7 ../../debconf-loadtemplate:14
+#: ../../debconf-mergetemplate:17 ../../debconf-set-selections:7
+#: ../../debconf-show:7 ../../dpkg-preconfigure:7 ../../dpkg-reconfigure:7
 #: debconf.conf.5:12 confmodule.3:4
 #, no-wrap
 msgid "SYNOPSIS"
@@ -66,10 +66,10 @@ msgstr ""
 #. type: SH
 #: ../../debconf:13 ../../Debconf/Client/ConfModule.pm:20
 #: ../../debconf-apt-progress:15 ../../debconf-escape:12
-#: ../../debconf-communicate:13 ../../debconf-copydb:29
-#: ../../debconf-getlang:20 ../../debconf-get-selections:11
-#: ../../debconf-loadtemplate:17 ../../debconf-mergetemplate:20
-#: ../../debconf-set-selections:24 ../../debconf-show:25
+#: ../../debconf-communicate:13 ../../debconf-copydb:30
+#: ../../debconf-getlang:21 ../../debconf-get-selections:11
+#: ../../debconf-loadtemplate:18 ../../debconf-mergetemplate:21
+#: ../../debconf-set-selections:12 ../../debconf-show:13
 #: ../../dpkg-preconfigure:13 ../../dpkg-reconfigure:11 debconf.conf.5:4
 #: confmodule.3:12 debconf.7:4 debconf-devel.7:4
 #, no-wrap
@@ -127,9 +127,9 @@ msgstr ""
 
 # type: =head1
 #. type: =head1
-#: ../../debconf:30 ../../debconf-apt-progress:43 ../../debconf-copydb:35
-#: ../../debconf-mergetemplate:44 ../../debconf-set-selections:68
-#: ../../debconf-show:36 ../../dpkg-preconfigure:20 ../../dpkg-reconfigure:21
+#: ../../debconf:30 ../../debconf-apt-progress:43 ../../debconf-copydb:36
+#: ../../debconf-mergetemplate:45 ../../debconf-set-selections:56
+#: ../../debconf-show:24 ../../dpkg-preconfigure:20 ../../dpkg-reconfigure:21
 msgid "OPTIONS"
 msgstr "OPTIONS"
 
@@ -178,20 +178,20 @@ msgstr "Spécifier la priorité minimale des questions qui vont être posées."
 
 # type: TP
 #. type: =item
-#: ../../debconf:48 ../../dpkg-preconfigure:34
+#: ../../debconf:48 ../../dpkg-preconfigure:34 ../../dpkg-reconfigure:42
 msgid "B<--terse>"
 msgstr "B<--terse>"
 
 #. type: textblock
-#: ../../debconf:50 ../../dpkg-preconfigure:36
+#: ../../debconf:50 ../../dpkg-preconfigure:36 ../../dpkg-reconfigure:44
 msgid "Enables terse output mode. This affects only some frontends."
 msgstr ""
 "Activer le mode d'affichage concis. Cela n'affecte que certaines interfaces."
 
 # type: =head1
 #. type: =head1
-#: ../../debconf:54 ../../debconf-apt-progress:107 ../../debconf-copydb:74
-#: ../../debconf-set-selections:59
+#: ../../debconf:54 ../../debconf-apt-progress:107 ../../debconf-copydb:75
+#: ../../debconf-set-selections:47
 msgid "EXAMPLES"
 msgstr "EXEMPLES"
 
@@ -232,12 +232,12 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: ../../debconf:64 ../../Debconf/Client/ConfModule.pm:153
+#: ../../debconf:64 ../../Debconf/Client/ConfModule.pm:154
 #: ../../debconf-escape:21 ../../debconf-communicate:39
-#: ../../debconf-copydb:101 ../../debconf-getlang:73
-#: ../../debconf-loadtemplate:30 ../../debconf-mergetemplate:60
-#: ../../debconf-set-selections:82 ../../dpkg-preconfigure:59
-#: ../../dpkg-reconfigure:73 debconf.conf.5:537 confmodule.3:36 debconf.7:376
+#: ../../debconf-copydb:102 ../../debconf-getlang:74
+#: ../../debconf-loadtemplate:31 ../../debconf-mergetemplate:61
+#: ../../debconf-set-selections:70 ../../dpkg-preconfigure:59
+#: ../../dpkg-reconfigure:77 debconf.conf.5:537 confmodule.3:36 debconf.7:376
 #: debconf-devel.7:958
 #, no-wrap
 msgid "SEE ALSO"
@@ -251,13 +251,13 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 
 # type: SH
 #. type: SH
-#: ../../debconf:116 ../../Debconf/Client/ConfModule.pm:158
-#: ../../debconf-escape:71 ../../debconf-communicate:73
-#: ../../debconf-copydb:175 ../../debconf-getlang:255
-#: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:226
-#: ../../debconf-show:154 ../../dpkg-preconfigure:246
-#: ../../dpkg-reconfigure:302 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: ../../debconf:117 ../../Debconf/Client/ConfModule.pm:159
+#: ../../debconf-escape:72 ../../debconf-communicate:74
+#: ../../debconf-copydb:175 ../../debconf-getlang:256
+#: ../../debconf-get-selections:78 ../../debconf-loadtemplate:48
+#: ../../debconf-mergetemplate:181 ../../debconf-set-selections:226
+#: ../../debconf-show:152 ../../dpkg-preconfigure:258
+#: ../../dpkg-reconfigure:309 debconf.conf.5:539 confmodule.3:42 debconf.7:382
 #: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
@@ -265,11 +265,11 @@ msgstr "AUTEUR"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf:118 ../../Debconf/Client/ConfModule.pm:160
-#: ../../debconf-apt-progress:666 ../../debconf-communicate:75
-#: ../../debconf-copydb:177 ../../debconf-getlang:257
-#: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:248 ../../dpkg-reconfigure:304
+#: ../../debconf:119 ../../Debconf/Client/ConfModule.pm:161
+#: ../../debconf-apt-progress:658 ../../debconf-communicate:76
+#: ../../debconf-copydb:177 ../../debconf-getlang:258
+#: ../../debconf-loadtemplate:50 ../../debconf-mergetemplate:183
+#: ../../dpkg-preconfigure:260 ../../dpkg-reconfigure:311
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess <joeyh@debian.org>"
 
@@ -353,13 +353,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../Debconf/Client/ConfModule.pm:61
+#: ../../Debconf/Client/ConfModule.pm:62
 msgid "import"
 msgstr "import"
 
 # type: textblock
 #. type: textblock
-#: ../../Debconf/Client/ConfModule.pm:63
+#: ../../Debconf/Client/ConfModule.pm:64
 msgid ""
 "Ensure that a FrontEnd is running.  It's a little hackish. If "
 "DEBIAN_HAS_FRONTEND is set, a FrontEnd is assumed to be running.  If not, "
@@ -374,13 +374,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../Debconf/Client/ConfModule.pm:94
+#: ../../Debconf/Client/ConfModule.pm:95
 msgid "stop"
 msgstr "stop"
 
 # type: textblock
 #. type: textblock
-#: ../../Debconf/Client/ConfModule.pm:96
+#: ../../Debconf/Client/ConfModule.pm:97
 msgid ""
 "The frontend doesn't send a return code here, so we cannot try to read it or "
 "we'll block."
@@ -390,19 +390,19 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../Debconf/Client/ConfModule.pm:106
+#: ../../Debconf/Client/ConfModule.pm:107
 msgid "AUTOLOAD"
 msgstr "CHARGEMENT AUTOMATIQUE"
 
 # type: textblock
 #. type: textblock
-#: ../../Debconf/Client/ConfModule.pm:108
+#: ../../Debconf/Client/ConfModule.pm:109
 msgid "Creates handler functions for commands on the fly."
 msgstr "Créer des fonctions de gestion pour des commandes à la volée."
 
 # type: textblock
 #. type: textblock
-#: ../../Debconf/Client/ConfModule.pm:155
+#: ../../Debconf/Client/ConfModule.pm:156
 msgid ""
 "The debconf specification (/usr/share/doc/debian-policy/"
 "debconf_specification.txt.gz)."
@@ -588,8 +588,8 @@ msgstr ""
 #. type: textblock
 #: ../../debconf-apt-progress:69
 msgid ""
-"Otherwise, install packages with their progress bar ending at this \"waypoint"
-"\". Must be used with B<--from>."
+"Otherwise, install packages with their progress bar ending at this "
+"\"waypoint\". Must be used with B<--from>."
 msgstr ""
 "Sinon, installe les paquets avec une barre de progression se terminant à "
 "cette graduation. Doit être utilisée avec B<--from>."
@@ -788,13 +788,13 @@ msgstr ""
 
 # type: SH
 #. type: =head1
-#: ../../debconf-apt-progress:662
+#: ../../debconf-apt-progress:654
 msgid "AUTHORS"
 msgstr "AUTEURS"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-apt-progress:664 ../../debconf-escape:73
+#: ../../debconf-apt-progress:656 ../../debconf-escape:74
 msgid "Colin Watson <cjwatson@debian.org>"
 msgstr "Colin Watson <cjwatson@debian.org>"
 
@@ -925,8 +925,8 @@ msgstr "Afficher l'importance de la question de l'interface/debconf."
 
 # type: =head1
 #. type: =head1
-#: ../../debconf-communicate:34 ../../debconf-loadtemplate:24
-#: ../../debconf-set-selections:32
+#: ../../debconf-communicate:34 ../../debconf-loadtemplate:25
+#: ../../debconf-set-selections:20
 msgid "WARNING"
 msgstr "ATTENTION"
 
@@ -954,7 +954,7 @@ msgstr "debconf-copydb - copier une base de données debconf"
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-copydb:18
+#: ../../debconf-copydb:19
 #, no-wrap
 msgid ""
 " debconf-copydb sourcedb destdb [--pattern=pattern] [--owner-pattern=pattern] [--config=Foo:bar]\n"
@@ -965,7 +965,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:31
+#: ../../debconf-copydb:32
 msgid ""
 "B<debconf-copydb> copies items from an existing debconf database into "
 "another, possibly new database. The two databases may have different "
@@ -978,13 +978,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-copydb:39
+#: ../../debconf-copydb:40
 msgid "I<sourcedb>"
 msgstr "I<sourcedb>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:41
+#: ../../debconf-copydb:42
 msgid ""
 "The name of the source database. Typically it will be defined in your "
 "debconf.conf (or .debconfrc) file."
@@ -994,13 +994,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-copydb:44
+#: ../../debconf-copydb:45
 msgid "I<destdb>"
 msgstr "I<destdb>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:46
+#: ../../debconf-copydb:47
 msgid ""
 "The name of the destination database. It may be defined in debconf.conf or ."
 "debconfrc, or you might define it on the command line (see below)."
@@ -1011,13 +1011,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-copydb:50
+#: ../../debconf-copydb:51
 msgid "B<-p> I<pattern>, B<--pattern> I<pattern>"
 msgstr "B<-p> I<pattern>, B<--pattern> I<pattern>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:52
+#: ../../debconf-copydb:53
 msgid ""
 "If this is specified, only items in I<sourcedb> whose names match the "
 "pattern will be copied."
@@ -1027,13 +1027,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-copydb:55
+#: ../../debconf-copydb:56
 msgid "B<--owner-pattern> I<pattern>"
 msgstr "B<--owner-pattern> I<pattern>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:57
+#: ../../debconf-copydb:58
 msgid ""
 "If this is specified, only items in I<sourcedb> whose owners match the "
 "pattern will be copied."
@@ -1043,19 +1043,19 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-copydb:60
+#: ../../debconf-copydb:61
 msgid "B<-c> I<foo:bar>, B<--config> I<Foo:bar>"
 msgstr "B<-c> I<toto:titi>, B<--config> I<Toto:titi>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:62
+#: ../../debconf-copydb:63
 msgid "Set option Foo to bar. This is similar to writing:"
 msgstr "Définir l'option Toto à la valeur titi. Cela équivaut à écrire :"
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-copydb:64
+#: ../../debconf-copydb:65
 #, no-wrap
 msgid ""
 "  Foo: bar\n"
@@ -1066,7 +1066,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:66
+#: ../../debconf-copydb:67
 msgid ""
 "In debconf.conf, except you probably want to leave off the space on the "
 "command line (or quote it: \"Foo: bar\"). Generally must be used multiple "
@@ -1083,7 +1083,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-copydb:76
+#: ../../debconf-copydb:77
 #, no-wrap
 msgid ""
 "  debconf-copydb configdb backup\n"
@@ -1094,7 +1094,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:78
+#: ../../debconf-copydb:79
 msgid ""
 "Copy all of configdb to backup, assuming you already have the backup "
 "database defined in debconf.conf."
@@ -1104,7 +1104,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-copydb:81
+#: ../../debconf-copydb:82
 #, no-wrap
 msgid ""
 "  debconf-copydb configdb newdb --pattern='^slrn/' \\\n"
@@ -1119,7 +1119,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:85
+#: ../../debconf-copydb:86
 msgid ""
 "Copy slrn's data out of configdb, and into newdb. newdb is not defined in "
 "the rc file, so the --config switches set up the database on the fly."
@@ -1130,7 +1130,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-copydb:88
+#: ../../debconf-copydb:89
 #, no-wrap
 msgid ""
 "  debconf-copydb configdb stdout -c Name:stdout -c Driver:Pipe \\\n"
@@ -1143,7 +1143,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:91
+#: ../../debconf-copydb:92
 msgid "Spit out all the items in the debconf database related to package foo."
 msgstr ""
 "Envoyer tous les éléments dans la base de données debconf relatifs au paquet "
@@ -1151,7 +1151,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-copydb:93
+#: ../../debconf-copydb:94
 #, no-wrap
 msgid ""
 "  debconf-copydb configdb pipe --config=Name:pipe \\\n"
@@ -1168,7 +1168,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:98
+#: ../../debconf-copydb:99
 msgid ""
 "This uses the special purpose pipe driver to copy a database to a remote "
 "system."
@@ -1178,7 +1178,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-copydb:103
+#: ../../debconf-copydb:104
 msgid "L<debconf.conf(5)>"
 msgstr "L<debconf.conf(5)>"
 
@@ -1190,7 +1190,7 @@ msgstr "debconf-getlang - extraire une langue depuis un questionnaire"
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-getlang:17
+#: ../../debconf-getlang:18
 #, no-wrap
 msgid ""
 " debconf-getlang lang master [translation]\n"
@@ -1203,7 +1203,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:22
+#: ../../debconf-getlang:23
 msgid ""
 "Note: This utility is deprecated; you should switch to using the po-debconf "
 "package."
@@ -1213,7 +1213,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:24
+#: ../../debconf-getlang:25
 msgid ""
 "This program helps make and manage translations of debconf templates.  There "
 "are basically three situations in which this program might be called:"
@@ -1224,13 +1224,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-getlang:29
+#: ../../debconf-getlang:30
 msgid "A translation is just being started."
 msgstr "Une traduction a juste commencé."
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:31
+#: ../../debconf-getlang:32
 msgid ""
 "You want to provide the translator with a file they can work on that has the "
 "English fields from your templates file, plus blank Field-ll fields for the "
@@ -1242,7 +1242,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:35
+#: ../../debconf-getlang:36
 msgid ""
 "To do this, run the program with first parameter being the code for the "
 "language that is being translated to, and the second parameter being the "
@@ -1254,13 +1254,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-getlang:39
+#: ../../debconf-getlang:40
 msgid "A translation is well under way."
 msgstr "Une traduction est déjà bien avancée."
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:41
+#: ../../debconf-getlang:42
 msgid ""
 "You have changed some English text, or added more items to your templates "
 "file, and you want to send the translators a file with the English text plus "
@@ -1274,7 +1274,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:46
+#: ../../debconf-getlang:47
 msgid ""
 "To accomplish this, run the program with the first parameter being the the "
 "code for the language that is being translated to, the second parameter "
@@ -1288,7 +1288,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:51
+#: ../../debconf-getlang:52
 msgid ""
 "When run this way, the program is smart enough to notice fuzzy translations. "
 "For example a fuzzy Description will be output as Description-<lang>-fuzzy, "
@@ -1303,13 +1303,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-getlang:57
+#: ../../debconf-getlang:58
 msgid "Checking the status of a translation"
 msgstr "Vérification de l'état d'une traduction."
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:59
+#: ../../debconf-getlang:60
 msgid ""
 "To check the status of a translation, use the --status flag, and pass the "
 "english template file as the first parameter, and all the other translated "
@@ -1323,7 +1323,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-getlang:64
+#: ../../debconf-getlang:65
 #, no-wrap
 msgid ""
 "  debconf-getlang --stats debian/templates debian/templates.*\n"
@@ -1334,13 +1334,13 @@ msgstr ""
 
 # type: =head1
 #. type: =head1
-#: ../../debconf-getlang:68
+#: ../../debconf-getlang:69
 msgid "NOTE"
 msgstr "NOTE"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:70
+#: ../../debconf-getlang:71
 msgid ""
 "Note that the text in the generated templates may be word-wrapped by debconf."
 msgstr ""
@@ -1349,7 +1349,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-getlang:75
+#: ../../debconf-getlang:76
 msgid "L<debconf-mergetemplate(1)>"
 msgstr "L<debconf-mergetemplate(1)>"
 
@@ -1388,7 +1388,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:228
+#: ../../debconf-get-selections:80 ../../debconf-set-selections:228
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr "Petter Reinholdtsen <pere@hungry.com>"
 
@@ -1402,7 +1402,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-loadtemplate:15
+#: ../../debconf-loadtemplate:16
 #, no-wrap
 msgid ""
 " debconf-loadtemplate owner file [file ..]\n"
@@ -1413,7 +1413,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-loadtemplate:19
+#: ../../debconf-loadtemplate:20
 msgid ""
 "Loads one or more template files into the debconf database. The first "
 "parameter specifies the owner of the templates (typically, the owner is the "
@@ -1427,7 +1427,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-loadtemplate:26
+#: ../../debconf-loadtemplate:27
 msgid ""
 "This program should never be used from a maintainer script of a package that "
 "uses debconf! It may however, be useful in debugging, or to seed the debconf "
@@ -1439,7 +1439,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-loadtemplate:32
+#: ../../debconf-loadtemplate:33
 msgid "L<debconf-communicate(1)>"
 msgstr "L<debconf-communicate(1)>"
 
@@ -1451,7 +1451,7 @@ msgstr "debconf-mergetemplate - fusionner plusieurs questionnaires debconf"
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-mergetemplate:18
+#: ../../debconf-mergetemplate:19
 #, no-wrap
 msgid ""
 " debconf-mergetemplate [options] [templates.ll ...] templates\n"
@@ -1462,7 +1462,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-mergetemplate:22
+#: ../../debconf-mergetemplate:23
 msgid ""
 "Note: This utility is deprecated. You should switch to using po-debconf's "
 "po2debconf program."
@@ -1472,7 +1472,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-mergetemplate:25
+#: ../../debconf-mergetemplate:26
 msgid ""
 "This program is useful if you have multiple debconf templates files which "
 "you want to merge together into one big file. All the specified files will "
@@ -1484,7 +1484,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-mergetemplate:29
+#: ../../debconf-mergetemplate:30
 msgid ""
 "This can be especially useful if you are dealing with translated template "
 "files. In this case, you might have your main template file, plus several "
@@ -1500,7 +1500,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-mergetemplate:35
+#: ../../debconf-mergetemplate:36
 msgid ""
 "So, you want to merge together all the translated templates files with your "
 "main templates file. Any fields that are unique to the translated files need "
@@ -1516,7 +1516,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-mergetemplate:41
+#: ../../debconf-mergetemplate:42
 msgid ""
 "This program handles that case properly, just list each of the translated "
 "templates files, and then your main templates file last."
@@ -1526,13 +1526,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-mergetemplate:48
+#: ../../debconf-mergetemplate:49
 msgid "--outdated"
 msgstr "--outdated"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-mergetemplate:50
+#: ../../debconf-mergetemplate:51
 msgid ""
 "Merge in even outdated translations. The default is to drop them with a "
 "warning message."
@@ -1542,13 +1542,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-mergetemplate:53
+#: ../../debconf-mergetemplate:54
 msgid "--drop-old-templates"
 msgstr "--drop-old-templates"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-mergetemplate:55
+#: ../../debconf-mergetemplate:56
 msgid ""
 "If a translation has an entire template that is not in the master file (and "
 "thus is probably an old template), drop that entire template."
@@ -1559,7 +1559,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-mergetemplate:62
+#: ../../debconf-mergetemplate:63
 msgid "L<debconf-getlang(1)>"
 msgstr "L<debconf-getlang(1)>"
 
@@ -1573,7 +1573,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-set-selections:21
+#: ../../debconf-set-selections:9
 #, no-wrap
 msgid ""
 " debconf-set-selections file\n"
@@ -1586,7 +1586,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:26
+#: ../../debconf-set-selections:14
 msgid ""
 "B<debconf-set-selections> can be used to pre-seed the debconf database with "
 "answers, or to change answers in the database. Each question will be marked "
@@ -1599,7 +1599,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:30
+#: ../../debconf-set-selections:18
 msgid "Reads from a file if a filename is given, otherwise from stdin."
 msgstr ""
 "Si un nom de fichier est donné, celui-ci est lu, sinon l'entrée standard est "
@@ -1607,7 +1607,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:34
+#: ../../debconf-set-selections:22
 msgid ""
 "Only use this command to seed debconf values for packages that will be or "
 "are installed. Otherwise you can end up with values in the database for "
@@ -1625,13 +1625,13 @@ msgstr ""
 
 # type: =head1
 #. type: =head1
-#: ../../debconf-set-selections:40
+#: ../../debconf-set-selections:28
 msgid "DATA FORMAT"
 msgstr "FORMAT DES DONNÉES"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:42
+#: ../../debconf-set-selections:30
 msgid ""
 "The data is a series of lines. Lines beginning with a # character are "
 "comments. Blank lines are ignored. All other lines set the value of one "
@@ -1652,7 +1652,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:50
+#: ../../debconf-set-selections:38
 msgid ""
 "Alternatively, the third value can be \"seen\"; then the preseed line only "
 "controls whether the question is marked as seen in debconf's database. Note "
@@ -1669,7 +1669,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:56
+#: ../../debconf-set-selections:44
 msgid ""
 "Lines can be continued to the next line by ending them with a \"\\\" "
 "character."
@@ -1679,7 +1679,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-set-selections:61
+#: ../../debconf-set-selections:49
 #, no-wrap
 msgid ""
 " # Force debconf priority to critical.\n"
@@ -1692,7 +1692,7 @@ msgstr ""
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-set-selections:64
+#: ../../debconf-set-selections:52
 #, no-wrap
 msgid ""
 " # Override default frontend to readline, but allow user to select.\n"
@@ -1708,25 +1708,25 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-set-selections:72
+#: ../../debconf-set-selections:60
 msgid "B<--verbose>, B<-v>"
 msgstr "B<--verbose>, B<-v>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:74
+#: ../../debconf-set-selections:62
 msgid "verbose output"
 msgstr "Affichage bavard"
 
 # type: =item
 #. type: =item
-#: ../../debconf-set-selections:76
+#: ../../debconf-set-selections:64
 msgid "B<--checkonly>, B<-c>"
 msgstr "B<--checkonly>, B<-c>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:78
+#: ../../debconf-set-selections:66
 msgid "only check the input file format, do not save changes to database"
 msgstr ""
 "ne vérifier que le format du fichier d'entrée, ne pas sauvegarder les "
@@ -1734,7 +1734,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-set-selections:84
+#: ../../debconf-set-selections:72
 msgid "L<debconf-get-selections(1)> (available in the debconf-utils package)"
 msgstr "L<debconf-get-selections(1)> (disponible dans le paquet debconf-utils)"
 
@@ -1746,7 +1746,7 @@ msgstr "debconf-show - interroger la base de données de debconf"
 
 # type: verbatim
 #. type: verbatim
-#: ../../debconf-show:21
+#: ../../debconf-show:9
 #, no-wrap
 msgid ""
 " debconf-show packagename [...] [--db=dbname]\n"
@@ -1761,7 +1761,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-show:27
+#: ../../debconf-show:15
 msgid "B<debconf-show> lets you query the debconf database in different ways."
 msgstr ""
 "B<debconf-show> vous permet d'interroger la base de données de debconf de "
@@ -1769,7 +1769,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-show:29
+#: ../../debconf-show:17
 msgid ""
 "The most common use is \"debconf-show packagename\", which displays all "
 "items in the debconf database owned by a given package, and their current "
@@ -1782,7 +1782,7 @@ msgstr ""
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-show:33
+#: ../../debconf-show:21
 msgid ""
 "This can be useful as a debugging aid, and especially handy in bug reports "
 "involving a package's use of debconf."
@@ -1792,13 +1792,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-show:40
+#: ../../debconf-show:28
 msgid "B<--db=>I<dbname>"
 msgstr "B<--db=>I<dbname>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-show:42
+#: ../../debconf-show:30
 msgid ""
 "Specify the database to query. By default, debconf-show queries the main "
 "database."
@@ -1808,13 +1808,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-show:45
+#: ../../debconf-show:33
 msgid "B<--listowners>"
 msgstr "B<--listowners>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-show:47
+#: ../../debconf-show:35
 msgid ""
 "Lists all owners of questions in the database. Generally an owner is "
 "equivalent to a debian package name."
@@ -1824,19 +1824,19 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../debconf-show:50
+#: ../../debconf-show:38
 msgid "B<--listdbs>"
 msgstr "B<--listdbs>"
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-show:52
+#: ../../debconf-show:40
 msgid "Lists all available databases."
 msgstr "Lister toutes les bases de données disponibles."
 
 # type: textblock
 #. type: textblock
-#: ../../debconf-show:156
+#: ../../debconf-show:154
 msgid "Joey Hess <joeyh@debian.org> and Sylvain Ferriol"
 msgstr "Joey Hess <joeyh@debian.org> et Sylvain Ferriol"
 
@@ -1939,19 +1939,19 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../dpkg-preconfigure:51 ../../dpkg-reconfigure:65
+#: ../../dpkg-preconfigure:51 ../../dpkg-reconfigure:69
 msgid "B<-h>, B<--help>"
 msgstr "B<-h>, B<--help>"
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-preconfigure:53 ../../dpkg-reconfigure:67
+#: ../../dpkg-preconfigure:53 ../../dpkg-reconfigure:71
 msgid "Display usage help."
 msgstr "Afficher un message d'aide."
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-preconfigure:61 ../../dpkg-reconfigure:75
+#: ../../dpkg-preconfigure:61 ../../dpkg-reconfigure:79
 msgid "L<debconf(7)>"
 msgstr "L<debconf(7)>"
 
@@ -2042,13 +2042,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../dpkg-reconfigure:42
+#: ../../dpkg-reconfigure:46
 msgid "B<--default-priority>"
 msgstr "B<--default-priority>"
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-reconfigure:44
+#: ../../dpkg-reconfigure:48
 msgid ""
 "Use whatever the default priority of question is, instead of forcing the "
 "priority to low."
@@ -2056,13 +2056,13 @@ msgstr "Utiliser la priorité par défaut, au lieu de forcer la priorité à low
 
 # type: =item
 #. type: =item
-#: ../../dpkg-reconfigure:47
+#: ../../dpkg-reconfigure:51
 msgid "B<-u>, B<--unseen-only>"
 msgstr "B<-u>, B<--unseen-only>"
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-reconfigure:49
+#: ../../dpkg-reconfigure:53
 msgid ""
 "By default, all questions are shown, even if they have already been "
 "answered. If this parameter is set though, only questions that have not yet "
@@ -2074,13 +2074,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../dpkg-reconfigure:53
+#: ../../dpkg-reconfigure:57
 msgid "B<--force>"
 msgstr "B<--force>"
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-reconfigure:55
+#: ../../dpkg-reconfigure:59
 msgid ""
 "Force dpkg-reconfigure to reconfigure a package even if the package is in an "
 "inconsistent or broken state. Use with caution."
@@ -2090,13 +2090,13 @@ msgstr ""
 
 # type: =item
 #. type: =item
-#: ../../dpkg-reconfigure:58
+#: ../../dpkg-reconfigure:62
 msgid "B<--no-reload>"
 msgstr "B<--no-reload>"
 
 # type: textblock
 #. type: textblock
-#: ../../dpkg-reconfigure:60
+#: ../../dpkg-reconfigure:64
 msgid ""
 "Prevent dpkg-reconfigure from reloading templates. Use with caution; this "
 "will prevent dpkg-reconfigure from repairing broken templates databases.  "
@@ -3595,7 +3595,7 @@ msgstr ""
 #: debconf.conf.5:514
 #, no-wrap
 msgid ""
-"  # A database is also used to hold templates. We \n"
+"  # A database is also used to hold templates. We\n"
 "  # don't need to make this as fancy.\n"
 "  Name: templates\n"
 "  Driver: File\n"
@@ -7307,16 +7307,16 @@ msgstr ""
 #, no-wrap
 msgid ""
 " \tif db_go; then\n"
-" \t\tSTATE=$(($STATE + 1))\n"
+" \t\tSTATE=$((STATE + 1))\n"
 " \telse\n"
-" \t\tSTATE=$(($STATE - 1))\n"
+" \t\tSTATE=$((STATE - 1))\n"
 " \tfi\n"
 " done\n"
 msgstr ""
 " \tif db_go; then\n"
-" \t\tSTATE=$(($STATE + 1))\n"
+" \t\tSTATE=$((STATE + 1))\n"
 " \telse\n"
-" \t\tSTATE=$(($STATE - 1))\n"
+" \t\tSTATE=$((STATE - 1))\n"
 " \tfi\n"
 " done\n"
 

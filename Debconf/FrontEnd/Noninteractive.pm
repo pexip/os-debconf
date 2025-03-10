@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Noninteractive - non-interactive FrontEnd
 =cut
 
 package Debconf::FrontEnd::Noninteractive;
+use warnings;
 use strict;
 use Debconf::Encoding qw(width wrap);
 use Debconf::Gettext;
@@ -24,7 +25,7 @@ tty not needed
 
 =cut
 
-sub init { 
+sub init {
         my $this=shift;
 
         $this->SUPER::init(@_);

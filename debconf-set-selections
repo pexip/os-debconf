@@ -4,18 +4,6 @@
 
 debconf-set-selections - insert new values into the debconf database
 
-=cut
-
-sub usage {
-	print STDERR <<EOF;
-Usage: debconf-set-selections [-vcu] [file]
-  -v, --verbose     verbose output
-  -c, --checkonly   only check the input file format
-  -u, --unseen      do not set the 'seen' flag when preseeding values
-EOF
-	exit(1);
-}
-
 =head1 SYNOPSIS
 
  debconf-set-selections file
@@ -94,6 +82,16 @@ use Getopt::Long;
 
 use vars qw(%opts $filename $debug $error $checkonly $unseen);
 
+sub usage {
+	print STDERR <<EOF;
+Usage: debconf-set-selections [-vcu] [file]
+  -v, --verbose     verbose output
+  -c, --checkonly   only check the input file format
+  -u, --unseen      do not set the 'seen' flag when preseeding values
+EOF
+	exit(1);
+}
+
 sub info {
 	my $msg = shift;
 	print STDERR "info: $msg\n" if $debug;
@@ -112,7 +110,7 @@ sub error {
 
 sub load_answer {
 	my ($owner, $label, $type, $content) = @_;
-	
+
 	info "Loading answer for '$label'";
 
 	# Set up the template.
@@ -123,7 +121,7 @@ sub load_answer {
 		$template->extended_description("This is a fake template used to pre-seed the debconf database. If you are seeing this, something is probably wrong.");
 	}
 	$template->type($type);
-	
+
 	# The question should already exist, it was created along with the
 	# template. Set it up.
 	my $question=Debconf::Question->get($label);
@@ -190,27 +188,37 @@ GetOptions(
 
 $error = 0;
 
-while (<>) {
-	$_=mungeline($_);
-	while (/\\$/ && ! eof) {
-		s/\\$//;
-		$_.=mungeline(<>);
+unshift @ARGV, '-' unless @ARGV;
+foreach my $filename (@ARGV) {
+	my $input;
+	if ($filename eq '-') {
+		$input = \*STDIN;
+	} elsif (not open $input, '<', $filename) {
+		warn $!;
+		next;
 	}
-	next if /^\s*$/ || /^\s*\#/;
-	# Allow multiple spaces between all values except the last one.
-	# Extra whitespace in the content is significant.
-	my ($owner, $label, $type, $content) = /^\s*(\S+)\s+(\S+)\s+(\S+)(?:\s(.*))?/;
-	if (! defined $content) {
-		$content='';
-	}
-	if (ok_format($owner, $label, $type, $content)) {
-		if (grep { $_ eq $type } @knownflags) {
-			info "Trying to set '$type' flag to '$content'";
-			set_flag($owner, $label, $type, $content);
+	while (<$input>) {
+		$_=mungeline($_);
+		while (/\\$/ && ! eof) {
+			s/\\$//;
+			$_.=mungeline(<$input>);
 		}
-		else {
-			info "Trying to set '$label' [$type] to '$content'";
-			load_answer($owner, $label, $type, $content);
+		next if /^\s*$/ || /^\s*\#/;
+		# Allow multiple spaces between all values except the last one.
+		# Extra whitespace in the content is significant.
+		my ($owner, $label, $type, $content) = /^\s*(\S+)\s+(\S+)\s+(\S+)(?:\s(.*))?/;
+		if (! defined $content) {
+			$content='';
+		}
+		if (ok_format($owner, $label, $type, $content)) {
+			if (grep { $_ eq $type } @knownflags) {
+				info "Trying to set '$type' flag to '$content'";
+				set_flag($owner, $label, $type, $content);
+			}
+			else {
+				info "Trying to set '$label' [$type] to '$content'";
+				load_answer($owner, $label, $type, $content);
+			}
 		}
 	}
 }

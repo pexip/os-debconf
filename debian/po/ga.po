@@ -1,6 +1,6 @@
 #
 # This is a compendium of all known Irish language translations
-# of open source software packages.  See the README for a list of 
+# of open source software packages.  See the README for a list of
 # contributors and copyright information.
 msgid ""
 msgstr ""

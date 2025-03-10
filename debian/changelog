@@ -1,3 +1,128 @@
+debconf (1.5.91) unstable; urgency=medium
+
+  * Teletype: Require stdin to be a tty (closes: #1061480).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Mar 2025 12:07:15 +0000
+
+debconf (1.5.90) unstable; urgency=medium
+
+  [ Benjamin Drung ]
+  * ReadLine: Fix uninitialized value on "EOF" (^D) (closes: #723843).
+
+  [ Manual page translations ]
+  * Add Romanian (Remus-Gabriel Chelu; closes: #1083078).
+
+  [ Debconf translations ]
+  * Georgian (Temuri Doghonadze).
+
+  [ Programs translations ]
+  * Georgian (Temuri Doghonadze).
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 07 Mar 2025 18:07:00 +0000
+
+debconf (1.5.89) unstable; urgency=medium
+
+  * confmodule: Fix detection of whether debconf is installed (closes:
+    #1091366).
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 25 Dec 2024 23:36:39 +0000
+
+debconf (1.5.88) unstable; urgency=medium
+
+  [ Programs translations ]
+  * Catalan (Carles Pina i Estany).
+
+  [ Colin Watson ]
+  * Use /usr/lib/apt/apt-extracttemplates if available (closes: #1087523).
+
+  [ Gioele Barabucci ]
+  * confmodule: Align debconf's and cdebconf's confmodule.
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 24 Dec 2024 00:10:45 +0000
+
+debconf (1.5.87) unstable; urgency=medium
+
+  * dpkg-preconfigure: Change directory to /, to avoid problems if the
+    current working directory does not exist (closes: #1043465).
+  * Apply X-Style: black.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 08 Jul 2024 13:12:50 +0100
+
+debconf (1.5.86) unstable; urgency=medium
+
+  * Fix stdin/stdout handling regression in Debconf::DbDriver::Pipe (thanks,
+    Dan Bungert; closes: #1063817, LP: #2052982).
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 13 Feb 2024 09:35:03 +0000
+
+debconf (1.5.85) unstable; urgency=medium
+
+  * Revert 'Use ":encoding(UTF-8)" in Debconf::FrontEnd::Passthrough rather
+    than ":utf8"'; this requires PerlIO, which is not available when only
+    perl-base is installed.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 26 Jan 2024 10:15:49 +0000
+
+debconf (1.5.84) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * perlcritic fixes:
+    - Move "use strict" above all code.
+    - Avoid declaring variables in conditional statements.
+    - Don't use bareword file/directory handles.
+    - Make all loop iterators lexical.
+    - Don't modify $_ in list functions.
+    - Use bare return rather than "return undef".
+    - Avoid two-argument open.
+    - Use a temporary variable rather than "return sort ...".
+    - Use ":encoding(UTF-8)" in Debconf::FrontEnd::Passthrough rather than
+      ":utf8", since the latter does not validate the input data.
+    - Avoid string eval in a couple of places.
+    - Enable warnings lexically rather than using "perl -w".
+    - Use the block form of grep and map.
+    - Avoid combining low- and high-precedence boolean operators.
+    - Avoid comma-separated statements.
+    - Avoid indirect object call syntax for "new".
+  * Reformat debconf.py using pyupgrade, black, and isort.
+  * Adjust shell code to pass shellcheck.
+  * Fix parsing error that resulted in some nonsense in hierarchy.txt.
+  * dpkg-preconfigure: Print "Extracting templates from packages" to stdout,
+    not stderr (closes: #797071).  Also improves error messages if
+    apt-extracttemplates fails (closes: #754123).
+  * debconf-apt-progress: Handle the case of failing to exec the requested
+    command (closes: #682508).
+  * debconf.py: Don't pass sys.executable as an argument to the frontend
+    (closes: #304572).  This may break compatibility if the importing
+    program isn't an executable with a #!, but that seems unlikely for
+    programs shipped in Debian.
+
+  [ Gioele Barabucci ]
+  * Remove previous_module from confmodules again (cf. 1.4.27/1.4.28;
+    closes: #1040127).
+
+  [ Debconf translations ]
+  * Romanian (Remus-Gabriel Chelu; closes: #1039068).
+
+  [ Programs translations ]
+  * Romanian (Remus-Gabriel Chelu; closes: #1039069).
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 24 Jan 2024 16:20:13 +0000
+
+debconf (1.5.83) unstable; urgency=medium
+
+  [ Ani Hay ]
+  * Recompress debian-logo.png.
+
+  [ Alexandre Detiste ]
+  * debconf.py: Add typing information to ease apt-listchanges testing.
+  * Rename debian/postinst to debian/debconf.postinst for debhelper 14/15
+    compatibility.
+
+  [ Colin Watson ]
+  * Avoid Perl's unsafe "<>" operator (closes: #1041329).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 24 Dec 2023 12:34:57 +0000
+
 debconf (1.5.82) unstable; urgency=medium
 
   * Bump debhelper from old 12 to 13.

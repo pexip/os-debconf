@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 12:27+0000\n"
+"POT-Creation-Date: 2025-03-10 12:05+0000\n"
 "PO-Revision-Date: 2010-03-09 08:15+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -20,42 +20,42 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../Debconf/AutoSelect.pm:89
+#: ../Debconf/AutoSelect.pm:91
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "ថយទៅ​ផ្ទៃ​ខាងមុខ ៖ %s"
 
-#: ../Debconf/AutoSelect.pm:97
+#: ../Debconf/AutoSelect.pm:104
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "មិន​អាច​ចាប់​ផ្ដើម​ផ្នែក​ខាងមុខ ៖ %s"
 
-#: ../Debconf/AutoSelect.pm:103
+#: ../Debconf/AutoSelect.pm:110
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "មិន​អាច​ចាប់​ផ្ដើម​ផ្នែក​ខាងមុខ ៖ %s"
 
-#: ../Debconf/Config.pm:131
+#: ../Debconf/Config.pm:135
 msgid "Config database not specified in config file."
 msgstr "​មូលដ្ឋាន​ទិន្នន័យកំណត់រចនា​សម្ព័ន្ធ​​មិនបានបញ្ជាក់​នៅក្នុង​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ​ឡើយ ។"
 
-#: ../Debconf/Config.pm:135
+#: ../Debconf/Config.pm:139
 msgid "Template database not specified in config file."
 msgstr "មូលដ្ឋាន​ទិន្ន័យ​ពុម្ព​​មិន​បាន​បញ្ជាក់​ក្នុង​ឯកសារ​កំណត់​រចនា​សម្ព័ន្ធឡើយ ។"
 
-#: ../Debconf/Config.pm:140
+#: ../Debconf/Config.pm:144
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
 msgstr ""
 "ជម្រើស Sigils និង សញ្ញា​អារម្មណ៍ នៅ​ក្នុង​ឯកសារ​​មិន​ត្រូវ​បាន​ប្រើតទៅទៀតទេ ។ សូម​យក​ពួក​វា​ចេញ ។"
 
-#: ../Debconf/Config.pm:157
+#: ../Debconf/Config.pm:161
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr "បញ្ហា​ក្នុង​ការ​រៀបចំ​មូលដ្ឋាន​ទិន្ន័យ​បាន​កំណត់​ដោយ stanza %s នៃ %s ។"
 
-#: ../Debconf/Config.pm:232
+#: ../Debconf/Config.pm:236
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -65,50 +65,50 @@ msgstr ""
 "  -p,  --priority\t\tបញ្ជាក់​សំណួរអាទិភាព​អប្បរមាដែលត្រូវ​​បង្ហាញ​​ ។\n"
 "       --terse\t\t\tបើក​របៀប​ជា​ សង្ខេប ។\n"
 
-#: ../Debconf/Config.pm:312
+#: ../Debconf/Config.pm:316
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "ការ​មិន​អើពើ​អទិភាព​ដែល​មិន​ត្រឹមត្រូវ \"%s\""
 
-#: ../Debconf/Config.pm:313
+#: ../Debconf/Config.pm:317
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "អទិភាព​ដែល​ត្រឹមត្រូវ​គឺ ៖ %s"
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Multiselect.pm:31
-#: ../Debconf/Element/Editor/Select.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Multiselect.pm:32
+#: ../Debconf/Element/Editor/Select.pm:32
 msgid "Choices"
 msgstr "ជម្រើស"
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Boolean.pm:36
-#: ../Debconf/Element/Editor/Boolean.pm:59
-#: ../Debconf/Element/Teletype/Boolean.pm:28
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:37
+#: ../Debconf/Element/Editor/Boolean.pm:60
+#: ../Debconf/Element/Teletype/Boolean.pm:29
 msgid "yes"
 msgstr "បាទ/ចាស"
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Boolean.pm:39
-#: ../Debconf/Element/Editor/Boolean.pm:62
-#: ../Debconf/Element/Teletype/Boolean.pm:29
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:40
+#: ../Debconf/Element/Editor/Boolean.pm:63
+#: ../Debconf/Element/Teletype/Boolean.pm:30
 msgid "no"
 msgstr "ទេ"
 
-#: ../Debconf/Element/Editor/Multiselect.pm:32
+#: ../Debconf/Element/Editor/Multiselect.pm:33
 msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr "(បញ្ចូល សូន្យ ឬ ធាតុ​ច្រើន​ដែល​ចែក​ដោយ​សញ្ញា​ក្បៀស​ដែល​បន្ដ​ដោយ​ចន្លោះ (', ') ។)"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:185
 msgid "_Help"
 msgstr "_ជំនួយ"
 
-#: ../Debconf/Element/Gnome.pm:186
+#: ../Debconf/Element/Gnome.pm:187
 msgid "Help"
 msgstr "ជំនួយ"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:40
+#: ../Debconf/Element/Noninteractive/Error.pm:41
 #, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
@@ -116,16 +116,16 @@ msgid ""
 msgstr ""
 "Debconf មិនត្រូវ​បាន​កំណត់​រចនា​សម្ព័ន្ធដើម្បី​បង្ហាញ​សារ​កំហុស​នេះ​ទេ ដូច្នេះ​វាបាន​ផ្ញើ​សំបុត្រ​ឲ្យ​អ្នក ។"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:67
+#: ../Debconf/Element/Noninteractive/Error.pm:68
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:90
+#: ../Debconf/Element/Noninteractive/Error.pm:91
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf កំពុង​រត់​នៅ %s"
 
-#: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
+#: ../Debconf/Element/Select.pm:96 ../Debconf/Element/Select.pm:111
 #, perl-format
 msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
@@ -134,35 +134,35 @@ msgstr ""
 "បញ្ចូល​តម្លៃ \"%s\" រក​មិន​ឃើញ​ក្នុង​ជម្រើស Cទេ ! វា​មិន​គួរ​កើតឡើង​ទេ ។ប្រហែល​ជា​ពុម្ព​ត្រូវ​បាន​ធ្វើ​"
 "មូលដ្ឋាន​នីយកម្ម​មិន​ត្រឹមត្រូវ ។"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:59
+#: ../Debconf/Element/Teletype/Multiselect.pm:60
 msgid "none of the above"
 msgstr "មិនមាន​ក្នុងចំណោម​ខាងលើទេ"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:79
+#: ../Debconf/Element/Teletype/Multiselect.pm:80
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr "បញ្ចូល​ធាតុ​ដែល​អ្នក​ចង់​ជ្រើស ដែល​ចែក​ដោយ​ចន្លោះ ។"
 
-#: ../Debconf/FrontEnd.pm:140
+#: ../Debconf/FrontEnd.pm:141
 #, perl-format
 msgid "Unable to load Debconf::Element::%s. Failed because: %s"
 msgstr "មិន​អាច​ផ្ទុក Debconf::Element::%s បានទេ ។ ​បរាជ័យ​ពី​ព្រោះ ៖ %s"
 
-#: ../Debconf/FrontEnd.pm:333
+#: ../Debconf/FrontEnd.pm:334
 #, perl-format
 msgid "Configuring %s"
 msgstr "កំពុង​កំណត់​រចនា​សម្ព័ន្ធ %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:53
+#: ../Debconf/FrontEnd/Dialog.pm:54
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "មិនបានកំណត់ TERM ទេ ដូច្នេះ​​​មិនអាចប្រើ​ប្រអប់​ផ្នែក​ខាងមុខបានទេ ។"
 
-#: ../Debconf/FrontEnd/Dialog.pm:56
+#: ../Debconf/FrontEnd/Dialog.pm:57
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "ប្រអប់​ផ្នែក​ខាងមុខមិន​ស៊ីគ្នា​ជាមួយ​និង​សតិ​បណ្ដោះ​អាសន្ន​សែល​អ៊ីម៉ាកទេ"
 
-#: ../Debconf/FrontEnd/Dialog.pm:59
+#: ../Debconf/FrontEnd/Dialog.pm:60
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -170,7 +170,7 @@ msgstr ""
 "ប្រអប់​ផ្នែក​ខាងមុខនឹង​មិន​ធ្វើ​ការ​លើ​ស្ថានីយ​ទទួល សតិ​បណ្ដោះ​អាសន្ន​សែល​អ៊ីម៉ាក ឬ ដោយ​ដោយគ្មាន​ស្ថានីយ​"
 "ត្រួតពិនិត្យ ។"
 
-#: ../Debconf/FrontEnd/Dialog.pm:107
+#: ../Debconf/FrontEnd/Dialog.pm:108
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -178,17 +178,17 @@ msgstr ""
 "មិនមាន​​កម្មវិធី​ dialog-like ដែលបានដំឡើងឡើយ ដូច្នេះ មិនអាច​ប្រើ​ប្រអប់ដែលបានផ្អែកលើ​ផ្ទៃ​ខាងមុខ​​"
 "បានឡើយ ។"
 
-#: ../Debconf/FrontEnd/Dialog.pm:114
+#: ../Debconf/FrontEnd/Dialog.pm:115
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "ប្រអប់​ផ្នែក​ខាងមុខ​ទាមទារ​អេក្រង់មួយ​ដែលមាន​​យ៉ាងហោច​ណាស់កម្ពស់ ១៣​ បន្ទាត់​ និង ទទឹង 31 ជួរ​ឈរ​ ។"
 
-#: ../Debconf/FrontEnd/Dialog.pm:331
+#: ../Debconf/FrontEnd/Dialog.pm:332
 msgid "Package configuration"
 msgstr "ការ​កំណត់​រចនាសម្ព័ន្ធ​កញ្ចប់"
 
-#: ../Debconf/FrontEnd/Editor.pm:94
+#: ../Debconf/FrontEnd/Editor.pm:95
 msgid ""
 "You are using the editor-based debconf frontend to configure your system. "
 "See the end of this document for detailed instructions."
@@ -196,7 +196,7 @@ msgstr ""
 "អ្នក​កំពុង​ប្រើ​កម្មវិធីនពន្ធ​ដែលបានផ្អែកទៅលើ​ debconf ខាង​ផ្នែក​ខាងមុខដើម្បី​កំណត់​រចនា​សម្ព័ន្ធ​ប្រព័ន្ធ​របស់​"
 "អ្នក ។  ចំពោះ​សេចក្ដី​ណែនាំលម្អិត សូមមើលខាង​ចុង​ឯកសារ​នេះ ។"
 
-#: ../Debconf/FrontEnd/Editor.pm:111
+#: ../Debconf/FrontEnd/Editor.pm:112
 msgid ""
 "The editor-based debconf frontend presents you with one or more text files "
 "to edit. This is one such text file. If you are familiar with standard unix "
@@ -212,76 +212,76 @@ msgstr ""
 "ហើយ​ ចេញ​ ។ ក្នុង​ចំណុច​នោះដែរ debcon នឹង​អាន​ឯកសារ​ដែល​បាន​កែសម្រួល ហើយ​ប្រើ​តម្លៃ​ដែល​អ្នក​បាន​បញ្ចូល​ "
 "ដើម្បីកំណត់រចនាសម្ព័ន្ធ​របស់ប្រព័ន្ធ  ។"
 
-#: ../Debconf/FrontEnd/Gnome.pm:95
+#: ../Debconf/FrontEnd/Gnome.pm:96
 #, fuzzy
 #| msgid "Package configuration"
 msgid "Really quit configuration?"
 msgstr "ការ​កំណត់​រចនាសម្ព័ន្ធ​កញ្ចប់"
 
-#: ../Debconf/FrontEnd/Gnome.pm:96
+#: ../Debconf/FrontEnd/Gnome.pm:97
 msgid ""
 "If you quit this configuration dialog, then the package being configured "
 "will probably fail to install, and you may have to fix it manually. This may "
 "be especially difficult if you are in the middle of a large upgrade."
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:96
+#: ../Debconf/FrontEnd/Gnome.pm:97
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:98
 msgid "_Quit"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:98
+#: ../Debconf/FrontEnd/Gnome.pm:99
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218
+#: ../Debconf/FrontEnd/Gnome.pm:219
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf លើ %s"
 
-#: ../Debconf/FrontEnd/Gnome.pm:238
+#: ../Debconf/FrontEnd/Gnome.pm:239
 #, fuzzy
 #| msgid "Next"
 msgid "_Next"
 msgstr "បន្ទាប់"
 
-#: ../Debconf/FrontEnd/Gnome.pm:245
+#: ../Debconf/FrontEnd/Gnome.pm:246
 #, fuzzy
 #| msgid "Back"
 msgid "_Back"
 msgstr "ថយ​ក្រោយ​"
 
-#: ../Debconf/FrontEnd/Readline.pm:47
-msgid "This frontend requires a controlling tty."
-msgstr "ផ្នែក​ខាងមុខ​នេះ​ទាមទារ​ tty ​ត្រួត​ពិនិត្យ ។"
-
-#: ../Debconf/FrontEnd/Readline.pm:62
+#: ../Debconf/FrontEnd/Readline.pm:59
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "ពាក្យ::ReadLine::GNU មិន​ស៊ី​គ្នា​ជាមួយ​សតិ​បណ្ដោះ​អាសន្ន​ស៊ែល​អ៊ីម៉ាកទេ ។"
 
-#: ../Debconf/FrontEnd/Teletype.pm:99
+#: ../Debconf/FrontEnd/Teletype.pm:46
+msgid "This frontend requires a controlling tty."
+msgstr "ផ្នែក​ខាងមុខ​នេះ​ទាមទារ​ tty ​ត្រួត​ពិនិត្យ ។"
+
+#: ../Debconf/FrontEnd/Teletype.pm:103
 msgid "More"
 msgstr "បន្ថែម​ទៀត"
 
-#: ../Debconf/FrontEnd/Web.pm:66
+#: ../Debconf/FrontEnd/Web.pm:67
 #, perl-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
 msgstr "ចំណាំ ៖ Debconf កំពុង​រត់​លើ​របៀបជា​បណ្ដាញ ។ ទៅ​កាន់ http://localhost:%i/"
 
-#: ../Debconf/FrontEnd/Web.pm:166
+#: ../Debconf/FrontEnd/Web.pm:167
 msgid "Back"
 msgstr "ថយ​ក្រោយ​"
 
-#: ../Debconf/FrontEnd/Web.pm:168
+#: ../Debconf/FrontEnd/Web.pm:169
 msgid "Next"
 msgstr "បន្ទាប់"
 
-#: ../Debconf/Template.pm:96
+#: ../Debconf/Template.pm:97
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -289,7 +289,7 @@ msgid ""
 msgstr ""
 "ព្រមាន ៖ អាចធ្វើ​ការ​បង្ខូច​មូលដ្ឋាន​ទិន្ន័យបាន​ ។ នឹងប៉ុនប៉ង​ជួសជុល​ដោយ​បន្ថែម​មកវិញ​នូវ​សំណួរ​ដែល​បាត់ %s ។"
 
-#: ../Debconf/Template.pm:211
+#: ../Debconf/Template.pm:212
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -298,65 +298,65 @@ msgstr ""
 "ពុម្ព #%s នៅ​ក្នុង %s មាន​វាល​ស្ទួន \"%s\" ជាមួយ​តម្លៃ​ថ្មី \"%s\" ។ ប្រហែល​ជា​ពុម្ព​ពីរ​មិន​ត្រូវ​បាន​ចែក​"
 "បន្ទាត់​ថ្មី​តែ​មួយ​បានត្រឹមត្រូវទេ ។\n"
 
-#: ../Debconf/Template.pm:236
+#: ../Debconf/Template.pm:237
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "មិន​ស្គាល់​វាល​ពុម្ព '%s' នៅ​ក្នុង stanza #%s នៃ %s ឡើយ\n"
 
-#: ../Debconf/Template.pm:262
+#: ../Debconf/Template.pm:263
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "កំហុសក្នុងការ​​ញែក​ពុម្ព​នៅក្បែរ `%s' នៅ​ក្នុង stanza #%s នៃ %s\n"
 
-#: ../Debconf/Template.pm:268
+#: ../Debconf/Template.pm:269
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "ពុម្ព #%s នៅ​ក្នុង %s មិន​មានបន្ទាត់ 'ពុម្ព ៖' ឡើយ\n"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "ត្រូវ​តែ​បញ្ជាក់ debs មួយចំនួន​ដែលត្រូវ​កំណត់​រចនា​សម្ព័ន្ធ​ជាមុន"
 
-#: ../dpkg-preconfigure:131
+#: ../dpkg-preconfigure:148
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "កំពុង​ពន្យា​ការ​កំណត់​រចនា​សម្ព័ន្ធ​កញ្ចប់ គឺចាប់​តាំងពីមិនបានដំឡើង​ apt-utils មកម្លេះ"
 
-#: ../dpkg-preconfigure:138
+#: ../dpkg-preconfigure:155
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "មិន​អាច​បើក stdin ឡើងវិញបានទេ ៖ %s"
 
-#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
+#: ../dpkg-preconfigure:206
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "apt-extracttemplates បានបរាជ័យ​ ៖ %s"
 
-#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "កំពុង​ស្រង់​ចេញ​ពុម្ព​ពី​កញ្ចប់ ៖ %d%%"
 
-#: ../dpkg-preconfigure:197
+#: ../dpkg-preconfigure:239
 msgid "Preconfiguring packages ...\n"
 msgstr "កំពុង​កំណត់​រចនា​សម្ព័ន្ធ​កញ្ចប់​ជាមុន ...\n"
 
-#: ../dpkg-preconfigure:209
+#: ../dpkg-preconfigure:251
 #, perl-format
 msgid "template parse error: %s"
 msgstr "កំហុស​ក្នុង​ការ​ញែក​ពុម្ព ៖ %s"
 
-#: ../dpkg-preconfigure:223
+#: ../dpkg-preconfigure:265
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf ៖ មិន​អាច chmod ៖ %s"
 
-#: ../dpkg-preconfigure:234
+#: ../dpkg-preconfigure:276
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s បរាជ័យ​ក្នុង​ការ​កំណត់​រចនា​សម្ព័ន្ធ​ជាមុន ជាមួយ​ស្ថានភាព​ចេញ %s"
 
-#: ../dpkg-reconfigure:100
+#: ../dpkg-reconfigure:106
 #, fuzzy
 #| msgid ""
 #| "Usage: dpkg-reconfigure [options] packages\n"
@@ -379,30 +379,30 @@ msgstr ""
 "       --force\t\t\tបង្ខំ​កា​រកំណត់​រចនាសម្ព័ន្ធ​ឡើង​របស់​កញ្ចប់​ដែល​ខូច ។\n"
 "       --no-reload\t\tកុំ​ផ្ទុក​ពុម្ព​ឡើង​វិញ ។ (ប្រើ​ដោយ​ប្រុងប្រយ័ត្ន ។)"
 
-#: ../dpkg-reconfigure:112
+#: ../dpkg-reconfigure:118
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s ត្រូវ​តែ​រត់​ជា​ root"
 
-#: ../dpkg-reconfigure:139
+#: ../dpkg-reconfigure:145
 msgid "please specify a package to reconfigure"
 msgstr "សូម​បញ្ជាក់​កញ្ចប់​ដែលត្រូវ​កំណត់​រចនា​សម្ព័ន្ធ​ឡើងវិញ"
 
-#: ../dpkg-reconfigure:165
+#: ../dpkg-reconfigure:171
 #, perl-format
 msgid "%s is not installed"
 msgstr "មិនបានដំឡើង %s ទេ"
 
-#: ../dpkg-reconfigure:169
+#: ../dpkg-reconfigure:175
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s បាន​ខូច ឬ មិន​បាន​ដំឡើងចប់​ពេញលេញ"
 
-#: ../debconf-communicate:53
+#: ../debconf-communicate:54
 msgid "Usage: debconf-communicate [options] [package]"
 msgstr "ការ​ប្រើប្រាស់ ៖ debconf-communicate [options] [package]"
 
-#: ../debconf-mergetemplate:14
+#: ../debconf-mergetemplate:15
 msgid ""
 "debconf-mergetemplate: This utility is deprecated. You should switch to "
 "using po-debconf's po2debconf program."
@@ -410,11 +410,11 @@ msgstr ""
 "debconf-mergetemplate ៖ មិនបានពេញចិត្ត​នឹងឧបករណ៍​ប្រើប្រាស់​នេះទេ​ ។ អ្នកគួរតែប្តូរ​​ទៅ​ប្រើ​"
 "កម្មវិធី po2debcof​ របស់ po-debconf ។"
 
-#: ../debconf-mergetemplate:66
+#: ../debconf-mergetemplate:67
 msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
 msgstr "ការ​ប្រើប្រាស់ ៖ debconf-mergetemplate ពុម្ព [options] [templates.ll ...]"
 
-#: ../debconf-mergetemplate:71
+#: ../debconf-mergetemplate:72
 msgid ""
 "\n"
 "        --outdated\t\tMerge in even outdated translations.\n"
@@ -424,41 +424,41 @@ msgstr ""
 "        --លែងប្រើប្រាស់\t\tបញ្ចូល​ចូលគ្នា​នៅក្នុង​ការបកប្រែ​ដែលលែងប្រើ ។\n"
 "\t--ទម្លាក់​ពុម្ព​ចាស់ៗ\tទម្លាក់ពុម្ព​ដែល​លែងប្រើចោលទាំងអស់ ។"
 
-#: ../debconf-mergetemplate:119
+#: ../debconf-mergetemplate:120
 #, perl-format
 msgid "%s is missing"
 msgstr "បាត់ %s"
 
-#: ../debconf-mergetemplate:123
+#: ../debconf-mergetemplate:124
 #, perl-format
 msgid "%s is missing; dropping %s"
 msgstr "បាត់%s កំពុង​ទម្លាក់ %s"
 
-#: ../debconf-mergetemplate:146
+#: ../debconf-mergetemplate:147
 #, perl-format
 msgid "%s is fuzzy at byte %s: %s"
 msgstr "%s ស្រពិចស្រពិល​នៅ​ %s បៃ ៖ %s"
 
-#: ../debconf-mergetemplate:151
+#: ../debconf-mergetemplate:152
 #, perl-format
 msgid "%s is fuzzy at byte %s: %s; dropping it"
 msgstr "%s ស្រពិចស្រពិល​នៅ %s បៃ ៖ %s ។ កំពុង​ទម្លាក់​វា"
 
-#: ../debconf-mergetemplate:168
+#: ../debconf-mergetemplate:169
 #, perl-format
 msgid "%s is outdated"
 msgstr "%s ត្រូវបានគេ​លែងប្រើ"
 
-#: ../debconf-mergetemplate:173
+#: ../debconf-mergetemplate:174
 #, perl-format
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s ត្រូវបានគេលែងប្រើ ។ កំពុង​ទម្លាក់​ពុម្ព​ទាំងអស់ !"
 
-#: ../debconf:95
+#: ../debconf:96
 msgid "Usage: debconf [options] command [args]"
 msgstr "របៀបប្រើ ៖ debconf [option] ពាក្យ​បញ្ជា [args]"
 
-#: ../debconf:97
+#: ../debconf:98
 msgid ""
 "\n"
 "  -o,  --owner=package\t\tSet the package that owns the command."

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -6,6 +6,7 @@ debconf-getlang - extract a language from a templates file
 
 =cut
 
+use warnings;
 use strict;
 use Debconf::Template::Transient;
 use Getopt::Long;
@@ -30,7 +31,7 @@ There are basically three situations in which this program might be called:
 
 You want to provide the translator with a file they can work on that has the
 English fields from your templates file, plus blank Field-ll fields for the
-target language that they can fill in. 
+target language that they can fill in.
 
 To do this, run the program with first parameter being the code for the
 language that is being translated to, and the second parameter being the
@@ -56,7 +57,7 @@ translations.
 
 =item Checking the status of a translation
 
-To check the status of a translation, use the --status flag, and pass 
+To check the status of a translation, use the --status flag, and pass
 the english template file as the first parameter, and all the other
 translated templates after that. It will output statistics for each of
 them. For example:
@@ -117,7 +118,7 @@ sub getlang {
 	my @out;
 	foreach my $in (Debconf::Template::Transient->load($fn)) {
 		my $out=Debconf::Template::Transient->new($in->template);
-		
+
 		foreach my $field ($in->fields) {
 			next if $field eq 'template';
 			if ($field =~ m/-(..(_..)?)$/) {
@@ -130,11 +131,11 @@ sub getlang {
 				$out->$field($in->$field());
 			}
 		}
-	
+
 		$master{$out->template}=$out;
 		push @out, $out;
 	}
-	
+
 	# Now read in the localized file, if there is one.
 	my %localized;
 	if ($lfn) {
@@ -142,21 +143,21 @@ sub getlang {
 			$localized{$in->template}=$in;
 		}
 	}
-	
+
 	# Now go merge together the master template and any corresponding
 	# localized template. Determine which translations are good, and
 	# which are fuzzy. Finally, stub in any fields that should exist
 	# for the target language, but do not yet exist. This gets complex
 	# because only some fields need to be translated, depending on
 	# template type.
-	
+
 	my $good=0;
 	my $fuzzy=0;
 	my $bad=0;
 
 	foreach my $master (@out) {
 		my $localized=$localized{$master->template};
-	
+
 		# Work out what fields need to be translated.
 		my @needfields=qw{description};
 		if ($master->type !~ /^((multi)?select|note|error|boolean)$/) {
@@ -165,7 +166,7 @@ sub getlang {
 		if ($master->type =~ /(multi)?select/) {
 			push @needfields, 'choices';
 		}
-	
+
 		# Merge in localized, including fuzzy translations.
 		#
 		# Note that extended_ fields are looked for, and if they exist,
@@ -179,7 +180,7 @@ sub getlang {
 				my $field_lang="$field-$lang";
 				my $field_ext="extended_$field";
 				my $field_lang_ext="extended_$field_lang";
-		
+
 				my $value=$master->$field;
 				next unless defined $value;
 				next unless defined $localized->$field_lang;
@@ -190,7 +191,7 @@ sub getlang {
 					if defined $localized->$field;
 				$lvalue.="\n".$localized->$field_ext
 					if defined $localized->$field_ext;
-	
+
 				# Ignore leading/trailing whitespace,
 				# and collapse other whitespace.
 				$value=~s/^\s+//gm;
@@ -202,7 +203,7 @@ sub getlang {
 
 				my $old="$field_lang-fuzzy";
 				my $old_ext="extended_$old";
-				if (defined $localized->$old && 
+				if (defined $localized->$old &&
 				    $localized->$field_lang eq "") {
 					# Old fuzzy field exists, and no
 					# translation has been updated, so
@@ -228,7 +229,7 @@ sub getlang {
 				}
 			}
 		}
-		
+
 		# Now make sure that at least stubs exist for every needed
 		# translated field.
 		foreach my $field (@needfields) {
@@ -239,12 +240,12 @@ sub getlang {
 			}
 		}
 	}
-	
+
 	if (! $stats) {
 		print Debconf::Template::Transient->stringify(@out) unless $stats;
 	}
 	else {
-		print "$lang: ".join(', ', grep { $_ ne "" } 
+		print "$lang: ".join(', ', grep { $_ ne "" }
 			$good  ? "$good translated strings"  : "",
 			$fuzzy ? "$fuzzy fuzzy translations" : "",
 			$bad   ? "$bad untranslated strings" : "",

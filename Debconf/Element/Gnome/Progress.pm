@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Gnome::Progress - progress bar widget
 =cut
 
 package Debconf::Element::Gnome::Progress;
+use warnings;
 use strict;
 use Gtk3;
 use utf8;
@@ -62,7 +63,7 @@ sub info {
 	my $question=shift;
 
 	$this->widget->set_text(to_Unicode($question->description));
-	
+
 	# TODO: to support a cancelable progress bar, should return 0 here
 	# if the user hit cancel.
 	return 1;

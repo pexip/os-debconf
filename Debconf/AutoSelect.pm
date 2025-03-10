@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::AutoSelect - automatic FrontEnd selection library.
 =cut
 
 package Debconf::AutoSelect;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use Debconf::ConfModule;
@@ -71,7 +72,8 @@ other types, all the way to a Noninteractive frontend if all else fails.
 
 sub make_frontend {
 	my $script=shift;
-	my $starttype=ucfirst($type) if defined $type;
+	my $starttype;
+	$starttype=ucfirst($type) if defined $type;
 	if (! defined $starttype || ! length $starttype) {
 		$starttype = Debconf::Config->frontend;
 		if ($starttype =~ /^[A-Z]/) {
@@ -81,20 +83,25 @@ sub make_frontend {
 	}
 
 	my $showfallback=0;
-	foreach $type ($starttype, @{$fallback{$starttype}}, 'Noninteractive') {
+	foreach my $trytype ($starttype, @{$fallback{$starttype}}, 'Noninteractive') {
 		if (! $showfallback) {
-			debug user => "trying frontend $type";
+			debug user => "trying frontend $trytype";
 		}
 		else {
-			warn(sprintf(gettext("falling back to frontend: %s"), $type));
+			warn(sprintf(gettext("falling back to frontend: %s"), $trytype));
 		}
+		## no critic (BuiltinFunctions::ProhibitStringyEval)
 		$frontend=eval qq{
-			use Debconf::FrontEnd::$type;
-			Debconf::FrontEnd::$type->new();
+			use Debconf::FrontEnd::$trytype;
+			Debconf::FrontEnd::$trytype->new();
 		};
-		return $frontend if defined $frontend;
+		## use critic
+		if (defined $frontend) {
+			$type = $trytype;
+			return $frontend;
+		}
 
-		warn sprintf(gettext("unable to initialize frontend: %s"), $type);
+		warn sprintf(gettext("unable to initialize frontend: %s"), $trytype);
 		$@=~s/\n.*//s;
 		warn "($@)";
 		$showfallback=1;
@@ -114,7 +121,7 @@ sub make_confmodule {
 	my $confmodule=Debconf::ConfModule->new(frontend => $frontend);
 
 	$confmodule->startup(@_) if @_;
-	
+
 	return $confmodule;
 }
 

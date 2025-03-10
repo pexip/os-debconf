@@ -1,4 +1,5 @@
 package Test::Debconf::DbDriver::SLAPD;
+use warnings;
 use strict;
 
 use Debconf::Gettext;
@@ -25,9 +26,9 @@ sub new {
 sub slapd_start{
 	my $self = shift;
 
-		
+
 #	print "beg slapd_start\n";
-	# be sure that we have no residues before starting new test 
+	# be sure that we have no residues before starting new test
 	$self->slapd_stop();
 
 	system("mkdir -p $self->{dir}") == 0
@@ -44,7 +45,7 @@ sub slapd_start{
 
 	# is there slapd installed?
 	if (! -x $slapdbin) {
-		die "Unable to find $slapdbin, is slapd package installed ?"; 
+		die "Unable to find $slapdbin, is slapd package installed ?";
 	}
 
 	system("$slapdbin -s LOG_DEBUG -f $self->{conf} -h ldap://$self->{server}:$self->{port}") == 0
@@ -65,9 +66,9 @@ sub slapd_stop {
 
 	if ( -f $pf) {
 #		print $pf;
-		open(PIDFILE, $self->{pidfile}) or die "Can not open file: $pf";
-		my $pid = <PIDFILE>;
-		close PIDFILE;
+		open(my $pidfile, "<", $self->{pidfile}) or die "Can not open file: $pf";
+		my $pid = <$pidfile>;
+		close $pidfile;
 		my $cnt = kill 'TERM',$pid;
 		sleep 1;
 #		print $cnt;
@@ -93,8 +94,8 @@ sub slapd_stop {
 sub build_slapd_conf {
 	my $self = shift;
 
-	open(SLAPD_CONF, ">$self->{dir}/slapd.conf");
-	print SLAPD_CONF gettext(<<EOF);
+	open(my $slapd_conf, ">", "$self->{dir}/slapd.conf");
+	print $slapd_conf gettext(<<EOF);
 # This is the main ldapd configuration file. See slapd.conf(5) for more
 # info on the configuration options.
 
@@ -148,14 +149,14 @@ access to *
 
 EOF
 
-	close OUTFILE;
+	close $slapd_conf;
 }
 
 sub build_ldap_ldif {
 	my $self = shift;
 
-	open(OUTFILE, ">$self->{dir}/ldap.ldif");
-	print OUTFILE gettext(<<EOF);
+	open(my $outfile, ">", "$self->{dir}/ldap.ldif");
+	print $outfile gettext(<<EOF);
 dn: cn=admin,dc=debian,dc=org
 objectClass: organizationalRole
 objectClass: simpleSecurityObject
@@ -169,7 +170,7 @@ cn: debconf
 
 EOF
 
-close OUTFILE;
+	close $outfile;
 }
 
 1;

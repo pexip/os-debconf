@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Dialog::Error - An error message in a dialog box
 =cut
 
 package Debconf::Element::Dialog::Error;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 
@@ -20,7 +21,7 @@ on it.
 sub show {
 	my $this=shift;
 
-	$this->frontend->showtext($this->question, 
+	$this->frontend->showtext($this->question,
 		$this->question->description."\n\n".
 		$this->question->extended_description
 	);

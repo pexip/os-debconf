@@ -5,6 +5,7 @@
 # debconf source tree, and is not needed in production code.
 PATH=$PATH:.
 if [ -e confmodule ]; then
+	# shellcheck source-path=SCRIPTDIR/..
 	. confmodule
 else
 	. /usr/share/debconf/confmodule
@@ -17,7 +18,7 @@ db_settitle demo/title
 
 # This implements a simple state machine so the back button can be handled.
 STATE=1
-while [ "$STATE" != 0 -a "$STATE" != 10 ]; do
+while [ "$STATE" != 0 ] && [ "$STATE" != 10 ]; do
 	case $STATE in
 	1)
 		db_input high demo/boolean || true
@@ -43,7 +44,7 @@ while [ "$STATE" != 0 -a "$STATE" != 10 ]; do
 	5)
 		# Will be displayed again.
 		db_input high demo/password || true
-		
+
 	;;
 	6)
 		db_progress START 0 10 demo/progress/title
@@ -70,11 +71,11 @@ while [ "$STATE" != 0 -a "$STATE" != 10 ]; do
 		db_input low demo/error || true
 	;;
 	esac
-	
+
 	if db_go; then
-		STATE=$(($STATE + 1))
+		STATE=$((STATE + 1))
 	else
-		STATE=$(($STATE - 1))
+		STATE=$((STATE - 1))
 	fi
 #	echo "ON STATE: $STATE"
 done
@@ -83,8 +84,8 @@ done
 db_get demo/string
 echo "string is $RET"
 db_get demo/boolean
-echo $RET
+echo "$RET"
 db_get demo/multiselect
-echo $RET
+echo "$RET"
 
 db_stop

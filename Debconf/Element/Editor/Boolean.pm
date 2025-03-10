@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Editor::Boolean - Yes/No question
 =cut
 
 package Debconf::Element::Editor::Boolean;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use base qw(Debconf::Element);
@@ -51,10 +52,10 @@ if the user typed in something invalid, the value is not changed.
 
 sub value {
 	my $this=shift;
-	
+
 	return $this->SUPER::value() unless @_;
 	my $value=shift;
-	
+
 	# Handle translated and non-translated replies.
 	if ($value eq 'yes' || $value eq gettext("yes")) {
 		return $this->SUPER::value('true');

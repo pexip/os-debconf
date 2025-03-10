@@ -1,4 +1,5 @@
 package Test::Debconf::DbDriver::CommonTest;
+use warnings;
 use strict;
 use FreezeThaw qw(cmpStr freeze);
 use base qw(Test::Unit::TestCase);
@@ -26,15 +27,15 @@ sub test_item_1 {
 	$self->{testname} = 'test_item_1';
 
 	# item for testing
-	$self->{item} = { 
+	$self->{item} = {
 		name => 'debconf-test/test_1',
-		entry => { 
+		entry => {
 			owners => { 'debconf-test' => 1, toto => 1 },
 			fields => {},
 			variables => {},
 			flags => {},
 		}
-	}; 
+	};
 
 	$self->go_test_item();
 }
@@ -43,7 +44,7 @@ sub test_item_1 {
 
     Name : debconf-test/test_2
     Owners : debconf_test
-    Value : <EMPTY> 
+    Value : <EMPTY>
 
 =cut
 
@@ -52,15 +53,15 @@ sub test_item_2 {
 	$self->{testname} = 'test_item_2';
 
 	# item for testing
-	$self->{item} = { 
+	$self->{item} = {
 		name => 'debconf-test/test_2',
-		entry => { 
+		entry => {
 			owners => { 'debconf_test' => 1 },
 			fields => { value => '' },
 			variables => {},
 			flags => {},
-		} 
-	}; 
+		}
+	};
 
 	$self->go_test_item();
 }
@@ -69,7 +70,7 @@ sub test_item_2 {
 
     Name : debconf-test/test_3
     Owners : debconf
-    Variables : countries = <EMPTY> 
+    Variables : countries = <EMPTY>
 
 =cut
 
@@ -78,14 +79,14 @@ sub test_item_3 {
 	$self->{testname} = 'test_item_3';
 
 	# item for testing
-	$self->{item} = { 
+	$self->{item} = {
 		name => 'debconf-test/test_3',
-		entry => { 
+		entry => {
 			owners => { 'debconf' => 1 },
 			fields => {},
 			variables => { countries => ''},
 			flags => {},
-		} 
+		}
 	};
 
 	$self->go_test_item();
@@ -95,7 +96,7 @@ sub test_item_3 {
 
     Name : debconf-test/test_4
     Owners : debconf
-    Flags : seen 
+    Flags : seen
 
 =cut
 
@@ -104,15 +105,15 @@ sub test_item_4 {
 	$self->{testname} = 'test_item_4';
 
 	# item for testing
-	$self->{item} = { 
+	$self->{item} = {
 		name => 'debconf-test/test_4',
-		entry => { 
+		entry => {
 			owners => { 'debconf' => 1 },
 			fields => {},
 			variables => {},
 			flags => { seen => 'true'},
-		} 
-	}; 
+		}
+	};
 
 	$self->go_test_item();
 }
@@ -122,15 +123,15 @@ sub test_shutdown {
 	$self->{testname} = 'test_shutdown';
 
 	# item for testing
-	my $item = { 
+	my $item = {
 		name => 'debconf-test/test_shutdown',
-		entry => { 
+		entry => {
 			owners => { 'debconf' => 1 },
 			fields => {},
 			variables => {},
 			flags => { seen => 'true'},
-		} 
-	}; 
+		}
+	};
 
 	$self->add_item($item, 'debconf',$self->{driver});
 
@@ -138,7 +139,7 @@ sub test_shutdown {
 
 	 # verify if item is in cache and not in a dirty state
 	$self->assert(defined $self->{driver}->cachedata($item->{name}),
-	              'item not defined in cache'); 
+	              'item not defined in cache');
 	# verify that item is not in a dirty state
 	$self->assert($self->{driver}->{dirty}->{$item->{name}} == 0,
 		      'item still in a dirty state in cache');
@@ -149,9 +150,9 @@ sub go_test_item {
 	my $self = shift;
 	my $itemname = $self->{item}->{name};
 	my $entry = $self->{item}->{entry};
-    
+
 	# add item in the cache
-	$self->{driver}->cacheadd($itemname, $entry); 
+	$self->{driver}->cacheadd($itemname, $entry);
 	# set item in dirty state => it will be saved in database
 	$self->{driver}->{dirty}->{$itemname}=1;
 
@@ -161,8 +162,8 @@ sub go_test_item {
 	my $entry_from_db = $self->{driver}->cached($itemname);
 
 	my $result = cmpStr($entry, $entry_from_db);
-	$self->assert($result == 0, 
-	              'item saved in database differs from the original item'); 
+	$self->assert($result == 0,
+	              'item saved in database differs from the original item');
 }
 
 sub reconnectdb {
@@ -170,7 +171,7 @@ sub reconnectdb {
 
 	# save items to database server
 	$self->shutdown_driver();
-	# reload same items from database server 
+	# reload same items from database server
 	$self->new_driver();
 }
 

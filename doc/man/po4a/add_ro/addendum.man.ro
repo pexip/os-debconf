@@ -1,0 +1,8 @@
+PO4A-HEADER:mode=after;position=^\.SH NUME;beginboundary=^FakePo4aBoundary
+.SH TRADUERE
+Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024
+.PP
+Dacă găsiți o greșeală în traducere, vă rugăm să o raportați autorului acestei
+traduceri, pe lista de discuții <debian-l10n-romanian@lists.debian.org> sau
+trimițând un raport de eroare contra pachetului „debconf” către sistemul de
+urmărire al erorilor din Debian (BTS).

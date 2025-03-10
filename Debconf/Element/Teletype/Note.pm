@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Teletype::Note - A note to the user
 =cut
 
 package Debconf::Element::Teletype::Note;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 

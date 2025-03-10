@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,8 +7,9 @@ Debconf::DbDriver - base class for debconf db drivers
 =cut
 
 package Debconf::DbDriver;
-use Debconf::Log qw{:all};
+use warnings;
 use strict;
+use Debconf::Log qw{:all};
 use base 1.01; # ensure that they don't have a broken perl installation
 
 =head1 DESCRIPTION
@@ -117,8 +118,13 @@ sub new {
 	foreach my $field (keys %params) {
 		if ($field eq 'readonly' || $field eq 'required' || $field eq 'backup') {
 			# Convert from true/false strings to numbers.
-			$this->{$field}=1,next if lc($params{$field}) eq "true";
-			$this->{$field}=0,next if lc($params{$field}) eq "false";
+			if (lc($params{$field}) eq "true") {
+				$this->{$field}=1;
+				next;
+			} elsif (lc($params{$field}) eq "false") {
+				$this->{$field}=0;
+				next;
+			}
 		}
 		elsif ($field=~/^(accept|reject)_/) {
 			# Internally, store these as pre-compiled regexps.
@@ -180,7 +186,7 @@ If any driver with the given name exists, it is returned.
 sub driver {
 	my $this=shift;
 	my $name=shift;
-	
+
 	return $drivers{$name};
 }
 
@@ -199,9 +205,9 @@ sub accept {
 	my $this=shift;
 	my $name=shift;
 	my $type=shift;
-	
+
 	return if $this->{failed};
-	
+
 	if ((exists $this->{accept_name} && $name !~ /$this->{accept_name}/) ||
 	    (exists $this->{reject_name} && $name =~ /$this->{reject_name}/)) {
 		debug "db $this->{name}" => "reject $name";

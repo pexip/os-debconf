@@ -52,9 +52,11 @@ BEGIN {
 		$charmap = `locale charmap`;
 		chomp $charmap;
 	}
-	
+
 	no warnings;
+	## no critic (BuiltinFunctions::ProhibitStringyEval)
 	eval q{ use Text::WrapI18N; use Text::CharWidth };
+	## use critic
 	use warnings;
 	# mblen has been known to get busted and return large numbers when
 	# the wrong version of perl is installed. Avoid an infinite loop
@@ -87,11 +89,11 @@ my $old_input_charmap;
 sub convert {
 	my $input_charmap = shift;
 	my $string = shift;
-	
+
 	return unless defined $charmap;
-	
+
 	# The converter object is cached.
-	if (! defined $old_input_charmap || 
+	if (! defined $old_input_charmap ||
 	    $input_charmap ne $old_input_charmap) {
 		$converter = Text::Iconv->new($input_charmap, $charmap);
 		$old_input_charmap = $input_charmap;

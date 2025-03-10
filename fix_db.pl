@@ -1,4 +1,5 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
+use warnings;
 use strict;
 use Debconf::Db;
 use Debconf::Log q{warn};
@@ -12,16 +13,16 @@ if (! @ARGV || $ARGV[0] ne 'end') {
 	my $counter=0;
 	do {
 		$ok=1;
-	
+
 		# There is no iterator method in the templates object, so I will do
-		# some nasty hacking to get them all. Oh well. Nothing else needs to 
+		# some nasty hacking to get them all. Oh well. Nothing else needs to
 		# iterate templates..
 		my %templates=();
 		my $ti=$Debconf::Db::templates->iterator;
 		while (my $t=$ti->iterate) {
 			$templates{$t}=Debconf::Template->get($t);
 		}
-	
+
 		my %questions=();
 		my $qi=Debconf::Question->iterator;
 		while (my $q=$qi->iterate) {
@@ -37,7 +38,7 @@ if (! @ARGV || $ARGV[0] ne 'end') {
 				$fix=1;
 			}
 			elsif (! exists $templates{$q->template->template}) {
-				warn "question \"".$q->name."\" uses nonexistant template ".$q->template->template."; removing it.";
+				warn "question \"".$q->name."\" uses nonexistent template ".$q->template->template."; removing it.";
 				foreach my $owner (split(/, /, $q->owners)) {
 					$q->removeowner($owner);
 				}
@@ -48,12 +49,12 @@ if (! @ARGV || $ARGV[0] ne 'end') {
 				$questions{$q->name}=$q;
 			}
 		}
-		
+
 		# I had a report of a templates db that had templates that claimed to
 		# be owned by their matching questions -- but the questions didn't exist!
 		# Check for such a thing.
 		foreach my $t (keys %templates) {
-			# Object has no owners method (not otherwise needed), so I'll do 
+			# Object has no owners method (not otherwise needed), so I'll do
 			# some nasty grubbing.
 			my @owners=$Debconf::Db::templates->owners($t);
 			if (! @owners) {
@@ -64,7 +65,7 @@ if (! @ARGV || $ARGV[0] ne 'end') {
 			}
 			foreach my $q (@owners) {
 				if (! exists $questions{$q}) {
-					warn "template \"$t\" claims to be used by nonexistant question \"$q\"; removing that.";
+					warn "template \"$t\" claims to be used by nonexistent question \"$q\"; removing that.";
 					$Debconf::Db::templates->removeowner($t, $q);
 					$ok=0;
 					$fix=1;

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::ScreenSize - screen size tracker
 =cut
 
 package Debconf::FrontEnd::ScreenSize;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use base qw(Debconf::FrontEnd);

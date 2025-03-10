@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Dialog::Text - A message in a dialog box
 =cut
 
 package Debconf::Element::Dialog::Text;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 
@@ -22,7 +23,7 @@ sub show {
 	$this->frontend->showtext($this->question,
 		$this->question->description."\n\n".
 		$this->question->extended_description
-	);	
+	);
 	$this->value('');
 }
 

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Editor::MultiSelect - select from a list of choices
 =cut
 
 package Debconf::Element::Editor::Multiselect;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use base qw(Debconf::Element::Multiselect);
@@ -50,7 +51,7 @@ sub value {
 	my @values=split(',\s+', shift);
 
 	my %valid=map { $_ => 1 } $this->question->choices_split;
-	
+
 	$this->SUPER::value(join(', ', $this->order_values(
 			map { $this->translate_to_C($_) }
 			grep { $valid{$_} } @values)));

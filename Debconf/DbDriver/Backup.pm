@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::DbDriver::Backup - backup writes to a db
 =cut
 
 package Debconf::DbDriver::Backup;
+use warnings;
 use strict;
 use Debconf::Log qw{:all};
 use base 'Debconf::DbDriver::Copy';
@@ -85,7 +86,7 @@ Saves both databases.
 
 sub shutdown {
 	my $this=shift;
-	
+
 	$this->{backupdb}->shutdown(@_);
 	$this->{db}->shutdown(@_);
 }
@@ -98,7 +99,7 @@ sub _query {
 	my $this=shift;
 	my $command=shift;
 	shift; # this again
-	
+
 	return $this->{db}->$command(@_);
 }
 

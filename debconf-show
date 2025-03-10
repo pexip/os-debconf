@@ -4,18 +4,6 @@
 
 debconf-show - query the debconf database
 
-=cut
-
-sub usage {
-	print STDERR <<EOF;
-Usage: 
-    debconf-show packagename [...] [--db=dbname]
-    debconf-show --listowners [--db=dbname]
-    debconf-show --listdbs
-EOF
-	exit(1);
-}
-
 =head1 SYNOPSIS
 
  debconf-show packagename [...] [--db=dbname]
@@ -61,6 +49,16 @@ use Debconf::Db;
 use Debconf::Template;
 use Debconf::Question;
 use Getopt::Long;
+
+sub usage {
+	print STDERR <<EOF;
+Usage:
+    debconf-show packagename [...] [--db=dbname]
+    debconf-show --listowners [--db=dbname]
+    debconf-show --listdbs
+EOF
+	exit(1);
+}
 
 my $db='';
 my $listowners=0;

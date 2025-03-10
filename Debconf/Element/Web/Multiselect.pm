@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Web::Multiselect - A multi select box on a form
 =cut
 
 package Debconf::Element::Web::Multiselect;
+use warnings;
 use strict;
 use base qw(Debconf::Element::Multiselect);
 
@@ -45,7 +46,7 @@ sub show {
 		}
 	}
 	$_.="</select>\n";
-	
+
 	return $_;
 }
 
@@ -70,7 +71,7 @@ sub value {
 	$this->question->template->i18n('');
 	my @choices=$this->question->choices_split;
 	$this->question->template->i18n(1);
-	
+
 	$this->SUPER::value(join(', ',  $this->order_values(map { $choices[$_] } @values)));
 }
 

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Question - Question object
 =cut
 
 package Debconf::Question;
+use warnings;
 use strict;
 use Debconf::Db;
 use Debconf::Template;
@@ -90,7 +91,7 @@ sub get {
 		$this->{name}=$name;
 		return $question{$name}=$this;
 	}
-	return undef;
+	return;
 }
 
 =item iterator
@@ -122,11 +123,11 @@ sub iterator {
 sub _expand_vars {
 	my $this=shift;
 	my $text=shift;
-		
+
 	return '' unless defined $text;
 
 	my @vars=$Debconf::Db::config->variables($this->{name});
-	
+
 	my $rest=$text;
 	my $result='';
 	my $variable;
@@ -148,7 +149,7 @@ sub _expand_vars {
 		}
 	}
 	$result.=$rest; # add on anything that's left.
-	
+
 	return $result;
 }
 
@@ -188,7 +189,7 @@ are expanded.
 
 sub choices {
 	my $this=shift;
-	
+
 	return $this->_expand_vars($this->template->choices);
 }
 
@@ -201,7 +202,7 @@ individual choices and returns them as a list.
 
 sub choices_split {
 	my $this=shift;
-	
+
 	my @items;
 	my $item='';
 	for my $chunk (split /(\\[, ]|,\s+)/, $this->choices) {
@@ -228,7 +229,7 @@ it to. The value of the variable is returned.
 sub variable {
 	my $this=shift;
 	my $var=shift;
-	
+
 	if (@_) {
 		return $Debconf::Db::config->setvariable($this->{name}, $var, shift);
 	}
@@ -269,14 +270,14 @@ sub flag {
 
 =item value
 
-Get the current value of this Question. Will return the default value 
+Get the current value of this Question. Will return the default value
 from the template if no value is set. Pass in parameter to set the value.
 
 =cut
 
 sub value {
 	my $this = shift;
-	
+
 	unless (@_) {
 		my $ret=$Debconf::Db::config->getfield($this->{name}, 'value');
 		return $ret if defined $ret;
@@ -295,7 +296,7 @@ individual values and returns them as a list.
 
 sub value_split {
 	my $this=shift;
-	
+
 	my $value=$this->value;
 	$value='' if ! defined $value;
 	my @items;
@@ -342,7 +343,7 @@ sub removeowner {
 	return unless $Debconf::Db::config->removeowner($this->{name}, shift);
 	# If that made the question go away, the question no longer owns
 	# the template, and remove this object from the class's cache.
-	if (length $template and 
+	if (length $template and
 	    not $Debconf::Db::config->exists($this->{name})) {
 		$Debconf::Db::templates->removeowner($template, $this->{name});
 		delete $question{$this->{name}};

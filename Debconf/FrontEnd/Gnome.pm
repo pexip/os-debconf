@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Gnome - GUI Gnome frontend
 =cut
 
 package Debconf::FrontEnd::Gnome;
+use warnings;
 use strict;
 use utf8;
 use Debconf::Gettext;
@@ -110,15 +111,15 @@ sub close_callback {
 	$grid->set_column_homogeneous(0);
 	$dialog->get_content_area->pack_start($grid, 1, 1, 5);
 	$grid->show;
-	
+
 	my $alignment = Gtk3::Alignment->new(0.5, 0.0, 1.0, 0.0);
 	$grid->add($alignment);
 	$alignment->show;
-	
+
 	my $image = Gtk3::Image->new_from_icon_name("dialog-information", "dialog");
 	$alignment->add($image);
 	$image->show;
-	
+
 	my $label = Gtk3::Label->new(to_Unicode($text));
 	$label->set_line_wrap(1);
 	$grid->add($label);
@@ -158,7 +159,7 @@ sub on_back {
 
 sub init {
 	my $this=shift;
-	
+
 	# Ya know, this really sucks. The authors of GTK seemed to just not
 	# conceive of a program that can, *gasp*, work even if GTK doesn't
 	# load. So this thing throws a fatal, essentially untrappable
@@ -191,7 +192,7 @@ sub init {
 
 		exit(0); # success
 	}
-	
+
 	# Only load Gtk after the child has successfully proved it can do
 	# the same. This avoids the problem where a module calls into a
 	# native library and causes the perl interpreter to crash. When
@@ -204,12 +205,12 @@ sub init {
 	@ARGV=@ARGV_for_gnome;
 	Gtk3->init;
 	@ARGV=@gnome_sucks;
-	
+
 	$this->SUPER::init(@_);
 	$this->interactive(1);
 	$this->capb('backup');
 	$this->need_tty(0);
-	
+
 	$this->assistant(Gtk3::Assistant->new);
 	$this->assistant->set_position("center");
 	$this->assistant->set_default_size(600, 400);
@@ -230,7 +231,7 @@ sub init {
 	if (-e $logo) {
 		$this->logo(Gtk3::Gdk::Pixbuf->new_from_file($logo));
 	}
-	
+
 	$this->assistant->signal_connect("close", \&close_callback);
 	$this->assistant->signal_connect("prepare", \&prepare_callback, $this);
 	$this->assistant->set_forward_page_func(\&forward_page_func, $this->assistant);

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 12:27+0000\n"
+"POT-Creation-Date: 2025-03-10 12:05+0000\n"
 "PO-Revision-Date: 2006-01-28 03:04+0800\n"
 "Last-Translator: Eric Pareja <xenos@upm.edu.ph>\n"
 "Language-Team: Tagalog <debian-tl@banwa.upm.edu.ph>\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#: ../Debconf/AutoSelect.pm:89
+#: ../Debconf/AutoSelect.pm:91
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "nanumbalik sa mukha: %s"
 
-#: ../Debconf/AutoSelect.pm:97
+#: ../Debconf/AutoSelect.pm:104
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "hindi maihanda ang mukha: %s"
 
-#: ../Debconf/AutoSelect.pm:103
+#: ../Debconf/AutoSelect.pm:110
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Hindi mapatakbo ang mukha: %s"
 
-#: ../Debconf/Config.pm:131
+#: ../Debconf/Config.pm:135
 msgid "Config database not specified in config file."
 msgstr "Hindi nakatakda ang database ng pagsasaayos sa taklasang pagkaayos."
 
-#: ../Debconf/Config.pm:135
+#: ../Debconf/Config.pm:139
 msgid "Template database not specified in config file."
 msgstr "Hindi nakatakda ang template database sa taklasang pagkaayos."
 
-#: ../Debconf/Config.pm:140
+#: ../Debconf/Config.pm:144
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -49,13 +49,13 @@ msgstr ""
 "Ang mga opsyon ng Sigil at Smiley sa talaksang pagkaayos ay hindi na "
 "ginagamit. Paki-tanggal ang mga ito."
 
-#: ../Debconf/Config.pm:157
+#: ../Debconf/Config.pm:161
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
 "Nagka-problema sa paghanda ng database na tinutukoy ng estropa %s ng %s."
 
-#: ../Debconf/Config.pm:232
+#: ../Debconf/Config.pm:236
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -66,52 +66,52 @@ msgstr ""
 "ipapakita.\n"
 "       --terse\t\t\tGamitin ang modong tuwiran.\n"
 
-#: ../Debconf/Config.pm:312
+#: ../Debconf/Config.pm:316
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "Hindi pinansin ang imbalidong antas \"%s\""
 
-#: ../Debconf/Config.pm:313
+#: ../Debconf/Config.pm:317
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "Mga tanggap na mga antas ay: %s"
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Multiselect.pm:31
-#: ../Debconf/Element/Editor/Select.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Multiselect.pm:32
+#: ../Debconf/Element/Editor/Select.pm:32
 msgid "Choices"
 msgstr "Pagpipilian"
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Boolean.pm:36
-#: ../Debconf/Element/Editor/Boolean.pm:59
-#: ../Debconf/Element/Teletype/Boolean.pm:28
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:37
+#: ../Debconf/Element/Editor/Boolean.pm:60
+#: ../Debconf/Element/Teletype/Boolean.pm:29
 msgid "yes"
 msgstr "oo"
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Boolean.pm:39
-#: ../Debconf/Element/Editor/Boolean.pm:62
-#: ../Debconf/Element/Teletype/Boolean.pm:29
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:40
+#: ../Debconf/Element/Editor/Boolean.pm:63
+#: ../Debconf/Element/Teletype/Boolean.pm:30
 msgid "no"
 msgstr "hindi"
 
-#: ../Debconf/Element/Editor/Multiselect.pm:32
+#: ../Debconf/Element/Editor/Multiselect.pm:33
 msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
 "(Magbigay ng wala o labis na mga aytem na hiniwalay ng kuwit at sundan ng "
 "puwang (', ').)"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:185
 msgid "_Help"
 msgstr "_Tulong"
 
-#: ../Debconf/Element/Gnome.pm:186
+#: ../Debconf/Element/Gnome.pm:187
 msgid "Help"
 msgstr "Tulong"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:40
+#: ../Debconf/Element/Noninteractive/Error.pm:41
 #, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
@@ -120,16 +120,16 @@ msgstr ""
 "Hindi nakasaayos ang debconf upang ipakita ang error, kaya't ito'y ipinadala "
 "sa inyo sa email."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:67
+#: ../Debconf/Element/Noninteractive/Error.pm:68
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:90
+#: ../Debconf/Element/Noninteractive/Error.pm:91
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, pinatakbo sa %s"
 
-#: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
+#: ../Debconf/Element/Select.pm:96 ../Debconf/Element/Select.pm:111
 #, perl-format
 msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
@@ -138,35 +138,35 @@ msgstr ""
 "Ibinigay na halaga, \"%s\" hindi nahanap sa mga pagpipilian! Hindi ito dapat "
 "mangyari. Maaaring ang mga template ay hindi akma ang pagka-lokalisado."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:59
+#: ../Debconf/Element/Teletype/Multiselect.pm:60
 msgid "none of the above"
 msgstr "wala sa itaas"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:79
+#: ../Debconf/Element/Teletype/Multiselect.pm:80
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr "Ibigay ang mga aytem na nais niyong piliin, nakahiwalay ng mga puwang."
 
-#: ../Debconf/FrontEnd.pm:140
+#: ../Debconf/FrontEnd.pm:141
 #, perl-format
 msgid "Unable to load Debconf::Element::%s. Failed because: %s"
 msgstr "Hindi maipasok ang Debconf::Element::%s. Bigo dahil sa: %s"
 
-#: ../Debconf/FrontEnd.pm:333
+#: ../Debconf/FrontEnd.pm:334
 #, perl-format
 msgid "Configuring %s"
 msgstr "Isinasaayos ang %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:53
+#: ../Debconf/FrontEnd/Dialog.pm:54
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr "Hindi nakatakda ang TERM, kaya't hindi magamit ang mukha na dialog."
 
-#: ../Debconf/FrontEnd/Dialog.pm:56
+#: ../Debconf/FrontEnd/Dialog.pm:57
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Hindi maaring gamitin ang mukha na dialog sa emacs shell buffer"
 
-#: ../Debconf/FrontEnd/Dialog.pm:59
+#: ../Debconf/FrontEnd/Dialog.pm:60
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -174,7 +174,7 @@ msgstr ""
 "Hindi gagana ang mukha na dialog sa dumb terminal, sa emacs shell buffer, o "
 "kung walang controlling terminal."
 
-#: ../Debconf/FrontEnd/Dialog.pm:107
+#: ../Debconf/FrontEnd/Dialog.pm:108
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -182,19 +182,19 @@ msgstr ""
 "Walang magamit na programang katulad ng dialog na naka-instol, kaya't hindi "
 "magamit ang mukha na batay sa dialog."
 
-#: ../Debconf/FrontEnd/Dialog.pm:114
+#: ../Debconf/FrontEnd/Dialog.pm:115
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Ang mukha na dialog ay nangangailangan ng tabing na di kukulang sa 13 linya "
 "kataas at 31 hilera ang lapad."
 
-#: ../Debconf/FrontEnd/Dialog.pm:331
+#: ../Debconf/FrontEnd/Dialog.pm:332
 #, fuzzy
 msgid "Package configuration"
 msgstr "Pagsasaayos ng Debian"
 
-#: ../Debconf/FrontEnd/Editor.pm:94
+#: ../Debconf/FrontEnd/Editor.pm:95
 msgid ""
 "You are using the editor-based debconf frontend to configure your system. "
 "See the end of this document for detailed instructions."
@@ -202,7 +202,7 @@ msgstr ""
 "Gumagamit kayo ng mukha ng debconf na editor-based upang isaayos ang inyong "
 "sistema. Basahin ang sukdulan ng babasahin para sa detalyadong mga bilin."
 
-#: ../Debconf/FrontEnd/Editor.pm:111
+#: ../Debconf/FrontEnd/Editor.pm:112
 msgid ""
 "The editor-based debconf frontend presents you with one or more text files "
 "to edit. This is one such text file. If you are familiar with standard unix "
@@ -220,77 +220,77 @@ msgstr ""
 "debconf ang na-edit na taklasan, at gagamitin ang mga halagang inyong "
 "pinasok upang masaayos ang sistema."
 
-#: ../Debconf/FrontEnd/Gnome.pm:95
+#: ../Debconf/FrontEnd/Gnome.pm:96
 #, fuzzy
 msgid "Really quit configuration?"
 msgstr "Pagsasaayos ng Debian"
 
-#: ../Debconf/FrontEnd/Gnome.pm:96
+#: ../Debconf/FrontEnd/Gnome.pm:97
 msgid ""
 "If you quit this configuration dialog, then the package being configured "
 "will probably fail to install, and you may have to fix it manually. This may "
 "be especially difficult if you are in the middle of a large upgrade."
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:96
+#: ../Debconf/FrontEnd/Gnome.pm:97
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:98
 msgid "_Quit"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:98
+#: ../Debconf/FrontEnd/Gnome.pm:99
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218
+#: ../Debconf/FrontEnd/Gnome.pm:219
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf sa %s"
 
-#: ../Debconf/FrontEnd/Gnome.pm:238
+#: ../Debconf/FrontEnd/Gnome.pm:239
 #, fuzzy
 #| msgid "Next"
 msgid "_Next"
 msgstr "Susunod"
 
-#: ../Debconf/FrontEnd/Gnome.pm:245
+#: ../Debconf/FrontEnd/Gnome.pm:246
 #, fuzzy
 #| msgid "Back"
 msgid "_Back"
 msgstr "Bumalik"
 
-#: ../Debconf/FrontEnd/Readline.pm:47
-msgid "This frontend requires a controlling tty."
-msgstr "Ang mukha na ito ay nangangailangan ng controlling tty."
-
-#: ../Debconf/FrontEnd/Readline.pm:62
+#: ../Debconf/FrontEnd/Readline.pm:59
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU ay hindi kabagay sa emacs shell buffer."
 
-#: ../Debconf/FrontEnd/Teletype.pm:99
+#: ../Debconf/FrontEnd/Teletype.pm:46
+msgid "This frontend requires a controlling tty."
+msgstr "Ang mukha na ito ay nangangailangan ng controlling tty."
+
+#: ../Debconf/FrontEnd/Teletype.pm:103
 msgid "More"
 msgstr "Meron pa"
 
-#: ../Debconf/FrontEnd/Web.pm:66
+#: ../Debconf/FrontEnd/Web.pm:67
 #, perl-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
 msgstr ""
 "Paunawa: Ang debconf ay tumatakbo sa modang web. Tignan sa http://localhost:"
 "%i/"
 
-#: ../Debconf/FrontEnd/Web.pm:166
+#: ../Debconf/FrontEnd/Web.pm:167
 msgid "Back"
 msgstr "Bumalik"
 
-#: ../Debconf/FrontEnd/Web.pm:168
+#: ../Debconf/FrontEnd/Web.pm:169
 msgid "Next"
 msgstr "Susunod"
 
-#: ../Debconf/Template.pm:96
+#: ../Debconf/Template.pm:97
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -299,7 +299,7 @@ msgstr ""
 "babala: maaring nasira ang database. Susubukan itong ayusin sa pag-dagdag "
 "muli ng nawawalang tanong %s."
 
-#: ../Debconf/Template.pm:211
+#: ../Debconf/Template.pm:212
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -309,67 +309,67 @@ msgstr ""
 "\"%s\". Maaring ang dalawang template ay hindi nahiwalay ng tugma na mag-"
 "isang newline.\n"
 
-#: ../Debconf/Template.pm:236
+#: ../Debconf/Template.pm:237
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Hindi kilalang template field '%s', sa estropa #%s ng %s\n"
 
-#: ../Debconf/Template.pm:262
+#: ../Debconf/Template.pm:263
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Parse error sa template malapit sa `%s' sa estropa #%s ng %s\n"
 
-#: ../Debconf/Template.pm:268
+#: ../Debconf/Template.pm:269
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Template #%s sa %s ay hindi naglalaman ng linyang 'Template:'\n"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "kailangan magtakda ng ilang mga deb na isasaayos bago ng pagluklok"
 
-#: ../dpkg-preconfigure:131
+#: ../dpkg-preconfigure:148
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr ""
 "ipinagpapaliban ang pagsasaayos ng pakete, dahil ang apt-utils ay hindi "
 "nakaluklok"
 
-#: ../dpkg-preconfigure:138
+#: ../dpkg-preconfigure:155
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "hindi mabuksan muli ang stdin: %s"
 
-#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
+#: ../dpkg-preconfigure:206
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "bigo ang apt-extracttemplates: %s"
 
-#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Binubuklat ang mga template mula sa mga pakete: %d%%"
 
-#: ../dpkg-preconfigure:197
+#: ../dpkg-preconfigure:239
 msgid "Preconfiguring packages ...\n"
 msgstr "Isinasaayos ang mga pakete bago luklokin ...\n"
 
-#: ../dpkg-preconfigure:209
+#: ../dpkg-preconfigure:251
 #, perl-format
 msgid "template parse error: %s"
 msgstr "error sa pag-parse ng template: %s"
 
-#: ../dpkg-preconfigure:223
+#: ../dpkg-preconfigure:265
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: hindi ma-chmod: %s"
 
-#: ../dpkg-preconfigure:234
+#: ../dpkg-preconfigure:276
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "bigo ang pagsasaayos ng %s, may exit status na %s"
 
-#: ../dpkg-reconfigure:100
+#: ../dpkg-reconfigure:106
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
@@ -385,30 +385,30 @@ msgstr ""
 "antas\n"
 "       --force\t\t\tIpilit ang pagsasaayos muli ng mga sirang mga pakete."
 
-#: ../dpkg-reconfigure:112
+#: ../dpkg-reconfigure:118
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s ay dapat ipatakbo bilang root"
 
-#: ../dpkg-reconfigure:139
+#: ../dpkg-reconfigure:145
 msgid "please specify a package to reconfigure"
 msgstr "paki-takda ang pakete na isasaayos muli"
 
-#: ../dpkg-reconfigure:165
+#: ../dpkg-reconfigure:171
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s ay hindi nakaluklok"
 
-#: ../dpkg-reconfigure:169
+#: ../dpkg-reconfigure:175
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s ay sira o hindi buong nailuklok"
 
-#: ../debconf-communicate:53
+#: ../debconf-communicate:54
 msgid "Usage: debconf-communicate [options] [package]"
 msgstr "Pag-gamit: debconf-communicate [mga opsyon] [pakete]"
 
-#: ../debconf-mergetemplate:14
+#: ../debconf-mergetemplate:15
 msgid ""
 "debconf-mergetemplate: This utility is deprecated. You should switch to "
 "using po-debconf's po2debconf program."
@@ -416,12 +416,12 @@ msgstr ""
 "debconf-mergetemplate: Ang kasangkapan na ito ay hindi na ginagamit.     "
 "Gamitin niyo na lamang ang po2debconf na programa ng po-debconf."
 
-#: ../debconf-mergetemplate:66
+#: ../debconf-mergetemplate:67
 msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
 msgstr ""
 "Pag-gamit: debconf-mergetemplate [mga opsyon] [templates.|| ...] mga template"
 
-#: ../debconf-mergetemplate:71
+#: ../debconf-mergetemplate:72
 msgid ""
 "\n"
 "        --outdated\t\tMerge in even outdated translations.\n"
@@ -431,41 +431,41 @@ msgstr ""
 "        --outdated\t\tIsama pati ang laos na pagsasalin.\n"
 "\t--drop-old-templates\tKalimutan ang buong template na laos."
 
-#: ../debconf-mergetemplate:119
+#: ../debconf-mergetemplate:120
 #, perl-format
 msgid "%s is missing"
 msgstr "Wala ang %s"
 
-#: ../debconf-mergetemplate:123
+#: ../debconf-mergetemplate:124
 #, perl-format
 msgid "%s is missing; dropping %s"
 msgstr "Wala ang %s; hindi ginamit ang %s"
 
-#: ../debconf-mergetemplate:146
+#: ../debconf-mergetemplate:147
 #, perl-format
 msgid "%s is fuzzy at byte %s: %s"
 msgstr "%s ay malabo sa byte %s: %s"
 
-#: ../debconf-mergetemplate:151
+#: ../debconf-mergetemplate:152
 #, perl-format
 msgid "%s is fuzzy at byte %s: %s; dropping it"
 msgstr "%s ay malabo sa byte %s: %s; hindi gagamitin"
 
-#: ../debconf-mergetemplate:168
+#: ../debconf-mergetemplate:169
 #, perl-format
 msgid "%s is outdated"
 msgstr "%s ay laos na"
 
-#: ../debconf-mergetemplate:173
+#: ../debconf-mergetemplate:174
 #, perl-format
 msgid "%s is outdated; dropping whole template!"
 msgstr "%s ay laos na; hindi gagamitin ang buong template!"
 
-#: ../debconf:95
+#: ../debconf:96
 msgid "Usage: debconf [options] command [args]"
 msgstr "Pag-gamit: debconf [mga opsyon] utos [mga arg]"
 
-#: ../debconf:97
+#: ../debconf:98
 msgid ""
 "\n"
 "  -o,  --owner=package\t\tSet the package that owns the command."

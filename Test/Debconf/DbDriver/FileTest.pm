@@ -7,6 +7,7 @@ Test::Debconf::DbDriver::FileTest - File driver class test
 =cut
 
 package Test::Debconf::DbDriver::FileTest;
+use warnings;
 use strict;
 use File::Temp;
 use Debconf::DbDriver::File;
@@ -25,15 +26,15 @@ sub new_driver {
 		name => "filedb",
 		filename => $self->{tmpfile}->filename,
 	);
-    
+
 	$self->{driver} = Debconf::DbDriver::File->new(%params);
 }
 
 sub set_up {
 	my $self = shift;
-	
-	$self->{tmpfile} = new File::Temp( DIR => '/tmp');
-	
+
+	$self->{tmpfile} = File::Temp->new( DIR => '/tmp');
+
 	$self->new_driver();
 }
 
@@ -47,7 +48,7 @@ sub suite {
 	my $self = shift;
 
 	my $testsuite = Test::Unit::TestSuite->new(__PACKAGE__);
-    
+
 	return $testsuite;
 }
 

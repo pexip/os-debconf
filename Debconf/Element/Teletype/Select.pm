@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Teletype::Select - select from a list of values
 =cut
 
 package Debconf::Element::Teletype::Select;
+use warnings;
 use strict;
 use Debconf::Config;
 use POSIX qw(ceil);
@@ -25,7 +26,7 @@ This lets the user pick from a number of values.
 Pass this method what the user entered, followed by the list of choices.
 It will try to intuit which one they picked. User can enter the number of
 an item in the list, or a unique anchored substring of its name (or the
-full name). If they do, the function returns the choice they selected. 
+full name). If they do, the function returns the choice they selected.
 If not, it returns the null string.
 
 =cut
@@ -37,11 +38,11 @@ sub expandabbrev {
 
 	# Check for (valid) numbers, unless in terse mode, when they were
 	# never shown any numbers to pick from.
-	if (Debconf::Config->terse eq 'false' and 
+	if (Debconf::Config->terse eq 'false' and
 	    $input=~m/^[0-9]+$/ and $input ne '0' and $input <= @choices) {
 		return $choices[$input - 1];
 	}
-	
+
 	# Check for substrings.
 	my @matches=();
 	foreach (@choices) {
@@ -58,13 +59,13 @@ sub expandabbrev {
 		}
 		return $matches[0] if @matches == 1;
 	}
-	
+
 	return '';
 }
 
 =item printlist
 
-Pass a list of all the choices the user has to choose from. Formats and 
+Pass a list of all the choices the user has to choose from. Formats and
 displays the list, using multiple columns if necessary.
 
 =cut
@@ -126,28 +127,28 @@ COLUMN:	for ($num_cols = $max_cols; $num_cols >= 0; $num_cols--) {
 					$output[$l] .= ' ' x ($max_len - length $output[$l]);
 				}
 			}
-	
+
 			$line=0;
 			$max_len=0;
 		}
 	}
 
 	# Remove unnecessary whitespace at ends of lines.
-	@output = map { s/\s+$//; $_ } @output;
+	for (@output) { s/\s+$//; }
 
 	map { $this->frontend->display_nowrap($_) } @output;
 }
 
 sub show {
 	my $this=shift;
-	
+
 	my $default=$this->translate_default;
-	my @choices=$this->question->choices_split;	
+	my @choices=$this->question->choices_split;
 	my @completions=@choices;
 
 	# Print out the question.
 	$this->frontend->display($this->question->extended_description."\n");
-	
+
 	# Change default to number of default in choices list
 	# except in terse mode.
 	if (Debconf::Config->terse eq 'false') {
@@ -157,7 +158,7 @@ sub show {
 				last;
 			}
 		}
-		
+
 		# Rather expensive, and does nothing in terse mode.
 		$this->printlist(@choices);
 		$this->frontend->display("\n");

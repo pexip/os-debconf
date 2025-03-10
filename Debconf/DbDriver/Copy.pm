@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::DbDriver::Copy - class that can make copies
 =cut
 
 package Debconf::DbDriver::Copy;
+use warnings;
 use strict;
 use Debconf::Log qw{:all};
 use base 'Debconf::DbDriver';
@@ -30,9 +31,9 @@ sub copy {
 	my $item=shift;
 	my $src=shift;
 	my $dest=shift;
-	
+
 	debug "db $this->{name}" => "copying $item from $src->{name} to $dest->{name}";
-	
+
 	# First copy the owners, which makes sure $dest has the item.
 	my @owners=$src->owners($item);
 	if (! @owners) {

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Gnome::Boolean - check box widget
 =cut
 
 package Debconf::Element::Gnome::Boolean;
+use warnings;
 use strict;
 use Gtk3;
 use utf8;
@@ -22,9 +23,9 @@ This is a check box widget.
 sub init {
 	my $this=shift;
 	my $description=to_Unicode($this->question->description);
-	
+
 	$this->SUPER::init(@_);
-	
+
 	$this->widget(Gtk3::CheckButton->new($description));
 	$this->widget->show;
 	$this->widget->set_active(($this->question->value eq 'true') ? 1 : 0);

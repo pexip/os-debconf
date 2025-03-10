@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Dialog::String - A text input field in a dialog box
 =cut
 
 package Debconf::Element::Dialog::String;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 
@@ -21,14 +22,14 @@ sub show {
 	my $this=shift;
 
 	my ($text, $lines, $columns)=
-		$this->frontend->makeprompt($this->question);	
+		$this->frontend->makeprompt($this->question);
 
 	my $default='';
 	$default=$this->question->value if defined $this->question->value;
 
 	my @params=('--inputbox');
 	push @params, $this->frontend->dashsep if $this->frontend->dashsep;
-	push @params, ($text, $lines + $this->frontend->spacer, 
+	push @params, ($text, $lines + $this->frontend->spacer,
 	               $columns, $default);
 
 	my $value=$this->frontend->showdialog($this->question, @params);

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Config - Debconf meta-configuration module
 =cut
 
 package Debconf::Config;
+use warnings;
 use strict;
 use Debconf::Question;
 use Debconf::Gettext;
@@ -27,11 +28,11 @@ if ($ENV{DEBCONF_SYSTEMRC}) {
 	# set by programs like sudo, and that proved to be confusing
 	unshift @config_files, ((getpwuid($>))[7])."/.debconfrc";
 }
-	   
+
 =head1 DESCRIPTION
 
 This package holds configuration values for debconf. It supplies defaults,
-and allows them to be overridden by values from the command line, the 
+and allows them to be overridden by values from the command line, the
 environment, the config file, and values pulled out of the debconf database.
 
 =head1 METHODS
@@ -48,7 +49,7 @@ essence of it. It will load from a set of standard locations unless a file
 to load is specified as the first parameter.
 
 If a hash of parameters are passed, those parameters are used as the defaults
-for *every* database driver that is loaded up. Practically, setting 
+for *every* database driver that is loaded up. Practically, setting
 (readonly => "true") is the only use of this.
 
 =cut
@@ -60,7 +61,7 @@ sub _hashify ($$) {
 	my $hash=shift;
 
 	$text =~ s/\$\{([^}]+)\}/$ENV{$1}/eg;
-	
+
 	my %ret;
 	my $i;
 	foreach my $line (split /\n/, $text) {
@@ -76,22 +77,22 @@ sub _hashify ($$) {
 	}
 	return $i;
 }
- 
+
 # Processes an environment variable that encodes a reference to an existing
 # db, or the parameters to set up a new db. Returns the db. Additional
 # parameters will be used as defaults if a new driver is set up. At least a
 # name default should always be passed. Returns the db name.
 sub _env_to_driver {
 	my $value=shift;
-	
+
 	my ($name, $options) = $value =~ m/^(\w+)(?:{(.*)})?$/;
 	return unless $name;
-	
+
 	return $name if Debconf::DbDriver->driver($name);
-	
+
 	my %hash = @_; # defaults from params
 	$hash{driver} = $name;
-	
+
 	if (defined $options) {
 		# And add any other name:value name:value pairs,
 		# default name is `filename' for convienence.
@@ -111,20 +112,23 @@ sub load {
 	my $class=shift;
 	my $cf=shift;
 	my @defaults=@_;
-	
+
 	if (! $cf) {
 		for my $file (@config_files) {
 			$file = "$ENV{DPKG_ROOT}$file" if exists $ENV{DPKG_ROOT};
-			$cf=$file, last if -e $file;
+			if (-e $file) {
+				$cf = $file;
+				last;
+			}
 		}
 	}
 	die "No config file found" unless $cf;
 
-	open (DEBCONF_CONFIG, $cf) or die "$cf: $!\n";
+	open (my $debconf_config, "<", $cf) or die "$cf: $!\n";
 	local $/="\n\n"; # read a stanza at a time
 
 	# Read global options stanza.
-	1 until _hashify(<DEBCONF_CONFIG>, $config) || eof DEBCONF_CONFIG;
+	1 until _hashify(<$debconf_config>, $config) || eof $debconf_config;
 
 	# Verify that all options are sane.
 	if (! exists $config->{config}) {
@@ -141,7 +145,7 @@ sub load {
 	}
 
 	# Now read in each database driver, and set it up.
-	while (<DEBCONF_CONFIG>) {
+	while (<$debconf_config>) {
 		my %config=(@defaults);
 		if (exists $ENV{DEBCONF_DB_REPLACE}) {
 			$config{readonly} = "true";
@@ -158,7 +162,7 @@ sub load {
 			die $@;
 		}
 	}
-	close DEBCONF_CONFIG;
+	close $debconf_config;
 
 	# DEBCONF_DB_REPLACE bypasses the normal databases. We do still need
 	# to set up the normal databases anyway so that the template
@@ -238,7 +242,7 @@ EOF
 
 	# don't load big Getopt::Long unless really necessary.
 	return unless grep { $_ =~ /^-/ } @ARGV;
-	
+
 	require Getopt::Long;
 	Getopt::Long::Configure('bundling');
 	Getopt::Long::GetOptions(
@@ -264,11 +268,11 @@ file.
 
 sub frontend {
 	my $class=shift;
-	
+
 	return $ENV{DEBIAN_FRONTEND} if exists $ENV{DEBIAN_FRONTEND};
 	$config->{frontend}=shift if @_;
 	return $config->{frontend} if exists $config->{frontend};
-	
+
 	my $ret='dialog';
 	my $question=Debconf::Question->get('debconf/frontend');
 	if ($question) {
@@ -423,7 +427,7 @@ Other fields can be accessed and set by calling class methods.
 sub AUTOLOAD {
 	(my $field = our $AUTOLOAD) =~ s/.*://;
 	my $class=shift;
-	
+
 	return $config->{$field}=shift if @_;
 	return $config->{$field} if defined $config->{$field};
 	return '';

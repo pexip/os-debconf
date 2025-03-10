@@ -2,37 +2,47 @@ Source: debconf
 Section: admin
 Priority: optional
 Maintainer: Debconf Developers <debconf-devel@lists.alioth.debian.org>
-Uploaders: Colin Watson <cjwatson@debian.org>,
+Uploaders:
+ Colin Watson <cjwatson@debian.org>,
 Standards-Version: 4.0.0
-Build-Depends-Indep: gettext,
-                     libintl-perl,
-                     perl,
-                     python3,
-Build-Depends: debhelper-compat (= 13),
-               dh-exec,
-               dh-python,
-               po-debconf,
-               po4a,
+Build-Depends-Indep:
+ gettext,
+ libintl-perl,
+ perl,
+ python3,
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-exec,
+ dh-python,
+ po-debconf,
+ po4a,
 Vcs-Git: https://salsa.debian.org/pkg-debconf/debconf.git
 Vcs-Browser: https://salsa.debian.org/pkg-debconf/debconf
+X-Style: black
 
 Package: debconf
 Priority: important
-Conflicts: debconf-tiny,
-           whiptail-utf8 (<= 0.50.17-13),
-Provides: debconf-2.0,
-Replaces: debconf-tiny,
-Depends: ${misc:Depends},
-Recommends: apt-utils,
-            debconf-i18n,
-Suggests: debconf-doc,
-          debconf-kde-helper,
-          debconf-utils,
-          libgtk3-perl,
-          libnet-ldap-perl,
-          libterm-readline-gnu-perl,
-          perl,
-          whiptail | dialog,
+Conflicts:
+ debconf-tiny,
+ whiptail-utf8 (<= 0.50.17-13),
+Provides:
+ debconf-2.0,
+Replaces:
+ debconf-tiny,
+Depends:
+ ${misc:Depends},
+Recommends:
+ apt (>= 2.9.11~) | apt-utils,
+ debconf-i18n,
+Suggests:
+ debconf-doc,
+ debconf-kde-helper,
+ debconf-utils,
+ libgtk3-perl,
+ libnet-ldap-perl,
+ libterm-readline-gnu-perl,
+ perl,
+ whiptail | dialog,
 Architecture: all
 Multi-Arch: foreign
 Description: Debian configuration management system
@@ -42,14 +52,16 @@ Description: Debian configuration management system
 Package: debconf-i18n
 Section: localization
 Priority: important
-Conflicts: debconf-english,
+Conflicts:
+ debconf-english,
 Architecture: all
-Depends: debconf (= ${source:Version}),
-         liblocale-gettext-perl,
-         libtext-charwidth-perl,
-         libtext-iconv-perl,
-         libtext-wrapi18n-perl,
-         ${misc:Depends},
+Depends:
+ debconf (= ${source:Version}),
+ liblocale-gettext-perl,
+ libtext-charwidth-perl,
+ libtext-iconv-perl,
+ libtext-wrapi18n-perl,
+ ${misc:Depends},
 Description: full internationalization support for debconf
  This package provides full internationalization for debconf, including
  translations into all available languages, support for using translated
@@ -57,8 +69,10 @@ Description: full internationalization support for debconf
  sets.
 
 Package: debconf-doc
-Suggests: debian-policy,
-Depends: ${misc:Depends},
+Suggests:
+ debian-policy,
+Depends:
+ ${misc:Depends},
 Section: doc
 Architecture: all
 Multi-Arch: foreign
@@ -70,17 +84,19 @@ Description: debconf documentation
 
 Package: debconf-utils
 Section: devel
-Depends: debconf (= ${source:Version}),
-         ${misc:Depends},
+Depends:
+ debconf (= ${source:Version}),
+ ${misc:Depends},
 Architecture: all
 Description: debconf utilities
  This package contains some small utilities for debconf developers.
 
 Package: python3-debconf
 Section: python
-Depends: debconf (= ${binary:Version}),
-         ${misc:Depends},
-         ${python3:Depends},
+Depends:
+ debconf (= ${binary:Version}),
+ ${misc:Depends},
+ ${python3:Depends},
 Architecture: all
 Description: interact with debconf from Python 3
  Debconf is a configuration management system for debian packages. Packages

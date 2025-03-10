@@ -1,0 +1,469 @@
+# Georgian translation for debconf.
+# Copyright (C) 2025 debconf's authors
+# This file is distributed under the same license as the debconf package.
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debconf\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-10 12:05+0000\n"
+"PO-Revision-Date: 2025-02-09 06:10+0100\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <(nothing)>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: ../Debconf/AutoSelect.pm:91
+#, perl-format
+msgid "falling back to frontend: %s"
+msgstr "ისევ ვიყენებ წინაბოლოს: %s"
+
+#: ../Debconf/AutoSelect.pm:104
+#, perl-format
+msgid "unable to initialize frontend: %s"
+msgstr "წინაბოლოს ინიციალიზაცია ჩავარდა: %s"
+
+#: ../Debconf/AutoSelect.pm:110
+#, perl-format
+msgid "Unable to start a frontend: %s"
+msgstr "წინაბოლოს გაშვების შეცდომა: %s"
+
+#: ../Debconf/Config.pm:135
+msgid "Config database not specified in config file."
+msgstr "კონფიგურაციის ფაილში კონფიგურაციის მონაცემთა ბაზა მითითებული არაა."
+
+#: ../Debconf/Config.pm:139
+msgid "Template database not specified in config file."
+msgstr "კონფიგურაციის ფაილში ნიმუშების მონაცემთა ბაზა მითითებული არაა."
+
+#: ../Debconf/Config.pm:144
+msgid ""
+"The Sigils and Smileys options in the config file are no longer used. Please "
+"remove them."
+msgstr ""
+"კონფიგურაციის ფაილის პარამეტრები Sigils და Smileys აღარ გამოიყენება. წაშალეთ "
+"ისინი."
+
+#: ../Debconf/Config.pm:161
+#, perl-format
+msgid "Problem setting up the database defined by stanza %s of %s."
+msgstr ""
+"პრობლემა მონაცემთა ბაზის მორგებისას, რომელიც აღწერილია სტრიქონით %s %s-ში."
+
+#: ../Debconf/Config.pm:236
+msgid ""
+"  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
+"  -p,  --priority\t\tSpecify minimum priority question to show.\n"
+"       --terse\t\t\tEnable terse mode.\n"
+msgstr ""
+"  -f,  --frontend\t\tdebconf-ის წინაბოლოს მითითება.\n"
+"  -p,  --priority\t\tმიუთითეთ მინიმალური პრიორიტეტი საჩვენებელი "
+"კითხვისთვის.\n"
+"       --terse\t\t\tლაკონური რეჟიმის ჩართვა.\n"
+
+#: ../Debconf/Config.pm:316
+#, perl-format
+msgid "Ignoring invalid priority \"%s\""
+msgstr "გამოტოვებულია არასწორი პრიორიტეტი \"%s\""
+
+#: ../Debconf/Config.pm:317
+#, perl-format
+msgid "Valid priorities are: %s"
+msgstr "სწორი პრიორიტეტებია: %s"
+
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Multiselect.pm:32
+#: ../Debconf/Element/Editor/Select.pm:32
+msgid "Choices"
+msgstr "არჩევანი"
+
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:37
+#: ../Debconf/Element/Editor/Boolean.pm:60
+#: ../Debconf/Element/Teletype/Boolean.pm:29
+msgid "yes"
+msgstr "დიახ"
+
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:40
+#: ../Debconf/Element/Editor/Boolean.pm:63
+#: ../Debconf/Element/Teletype/Boolean.pm:30
+msgid "no"
+msgstr "არა"
+
+#: ../Debconf/Element/Editor/Multiselect.pm:33
+msgid ""
+"(Enter zero or more items separated by a comma followed by a space (', ').)"
+msgstr ""
+"(შეიყვანეთ ნული ან მეტი ელემენტი, რომლებიც გამოყოფილია მძიმით, რომელსაც ჰარე "
+"მოჰყვება (', ').)"
+
+#: ../Debconf/Element/Gnome.pm:185
+msgid "_Help"
+msgstr "_დახმარება"
+
+#: ../Debconf/Element/Gnome.pm:187
+msgid "Help"
+msgstr "დახმარება"
+
+#: ../Debconf/Element/Noninteractive/Error.pm:41
+msgid ""
+"Debconf is not confident this error message was displayed, so it mailed it "
+"to you."
+msgstr ""
+"Debconf არაა დარწმუნებული, რომ ეს შეცდომის შეტყობინება ნაჩვენებია, ამიტომ ის "
+"ფოსტაზე გამოგიგზავნათ."
+
+#: ../Debconf/Element/Noninteractive/Error.pm:68
+msgid "Debconf"
+msgstr "Debconf"
+
+#: ../Debconf/Element/Noninteractive/Error.pm:91
+#, perl-format
+msgid "Debconf, running at %s"
+msgstr "Debconf გაშვებულია ჰოსტზე %s"
+
+#: ../Debconf/Element/Select.pm:96 ../Debconf/Element/Select.pm:111
+#, perl-format
+msgid ""
+"Input value, \"%s\" not found in C choices! This should never happen. "
+"Perhaps the templates were incorrectly localized."
+msgstr ""
+"შეყვანილი მნიშვნელობა \"%s\" არაა აღმოჩენილი ლოკალში C! ეს არასდროს უნდა "
+"მომხდარიყო. ალბათ, ნიმუშები არასწორადაა ნათარგმნი."
+
+#: ../Debconf/Element/Teletype/Multiselect.pm:60
+msgid "none of the above"
+msgstr "Ჩამოთვლილთაგან არც ერთი"
+
+#: ../Debconf/Element/Teletype/Multiselect.pm:80
+msgid "Enter the items or ranges you want to select, separated by spaces."
+msgstr ""
+"შეიყვანეთ ელემენტები ან შუალედები, რომლებიც გნებავთ, მონიშნოთ. ერთმანეთისგან "
+"გამოყავით ჰარეებით."
+
+#: ../Debconf/FrontEnd.pm:141
+#, perl-format
+msgid "Unable to load Debconf::Element::%s. Failed because: %s"
+msgstr "Debconf::Element::%s ვერ ჩაიტვირთა. ჩავარდნის მიზეზია: %s"
+
+#: ../Debconf/FrontEnd.pm:334
+#, perl-format
+msgid "Configuring %s"
+msgstr "კონფიგურირდება %s"
+
+#: ../Debconf/FrontEnd/Dialog.pm:54
+msgid "TERM is not set, so the dialog frontend is not usable."
+msgstr "TERM დაყენებული არაა, ამიტომ წინაბოლოს dialog ვერ გამოიყენებთ."
+
+#: ../Debconf/FrontEnd/Dialog.pm:57
+msgid "Dialog frontend is incompatible with emacs shell buffers"
+msgstr "წინაბოლო dialog არაა თავსებადი emacs-ის გარსის ბუფერებთან"
+
+#: ../Debconf/FrontEnd/Dialog.pm:60
+msgid ""
+"Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
+"without a controlling terminal."
+msgstr ""
+"წინაბოლო dialog არ იმუშავებს დებილ ტერმინალზე, emacs-ის გარსის ბუფერზე, ან "
+"მაკონტროლებელი ტერმინალის გარეშე."
+
+#: ../Debconf/FrontEnd/Dialog.pm:108
+msgid ""
+"No usable dialog-like program is installed, so the dialog based frontend "
+"cannot be used."
+msgstr ""
+"გამოყენებადი dialog-ის მსგავსი პროგრამა დაყენებული არაა, ამიტომ შესაბამის "
+"წინაბოლოს ვერ გამოიყენებთ."
+
+#: ../Debconf/FrontEnd/Dialog.pm:115
+msgid ""
+"Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
+msgstr ""
+"წინაბოლოს dialog, სულ ცოტა, 13 ხაზის სიმაღლის და 31 სვეტის სიგანის მქონე "
+"ეკრანი სჭირდება."
+
+#: ../Debconf/FrontEnd/Dialog.pm:332
+msgid "Package configuration"
+msgstr "პაკეტის კონფიგურაცია"
+
+#: ../Debconf/FrontEnd/Editor.pm:95
+msgid ""
+"You are using the editor-based debconf frontend to configure your system. "
+"See the end of this document for detailed instructions."
+msgstr ""
+"თქვენი სისტემის მოსარგებად რედაქტორზე დაფუძნებულ debconf-ის წინაბოლოს "
+"იყენებთ. დეტალური ინსტრუქცია იხილეთ ამ დოკუმენტის ბოლოში."
+
+#: ../Debconf/FrontEnd/Editor.pm:112
+msgid ""
+"The editor-based debconf frontend presents you with one or more text files "
+"to edit. This is one such text file. If you are familiar with standard unix "
+"configuration files, this file will look familiar to you -- it contains "
+"comments interspersed with configuration items. Edit the file, changing any "
+"items as necessary, and then save it and exit. At that point, debconf will "
+"read the edited file, and use the values you entered to configure the system."
+msgstr ""
+"რედაქტორზე დაფუძნებული debconf-ის წინაბოლო წარმოგიდგენთ ერთ ან მეტ ტექსტურ "
+"ფაილს ჩასასწორებლად. არსებობს ერთი ასეთი ტექსტური ფაილი. თუ სტანდარტულ unix-"
+"ის კონფიგურაციებში ერკვევით, ეს ფაილი ნაცნობი იქნება -- ის შეიცავს "
+"ბრძანებებს, რომლებიც კონფიგურაციის ელემენტებს შეესაბამება. ჩაასწორეთ ეს "
+"ფაილი და შეცვალეთ, რაც გნებავთ, შემდეგ კი შეინახეთ და გადით რედაქტორიდან. "
+"როცა ამას იზამთ, debconf წაიკითხავს ჩასწორებულ ფაილს და გამოიყენებს "
+"მნიშვნელობებს, რომლებიც შეიყვანეთ, რომ სისტემის მორგებაში დაგეხმაროთ."
+
+#: ../Debconf/FrontEnd/Gnome.pm:96
+msgid "Really quit configuration?"
+msgstr "მართლა გნებავთ მორგებიდან გასვლა?"
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid ""
+"If you quit this configuration dialog, then the package being configured "
+"will probably fail to install, and you may have to fix it manually. This may "
+"be especially difficult if you are in the middle of a large upgrade."
+msgstr ""
+"თუ მორგების დიალოგიდან გახვალთ, პაკეტის, რომლის მორგებაც მიმდინარეობდა, "
+"დაყენება შეუძლებელი იქნება და შეცდომის გასწორება, ალბათ, ხელით მოგიწევთ. ეს "
+"შეიძლება ძალიან რთული იყოს, განსაკუთრებით, თუ დიდ განახლებას აკეთებთ."
+
+#: ../Debconf/FrontEnd/Gnome.pm:97
+msgid ""
+"You may need to quit anyway if you are stuck in a configuration loop due to "
+"a buggy package."
+msgstr ""
+"შეიძლება, გასვლა ისედაც დაგჭირდეთ, თუ მორგება გაიჭედა შეცდომის შემცველი "
+"პაკეტის გამო."
+
+#: ../Debconf/FrontEnd/Gnome.pm:98
+msgid "_Quit"
+msgstr "გასვ_ლა"
+
+#: ../Debconf/FrontEnd/Gnome.pm:99
+msgid "Continue"
+msgstr "გაგრძელება"
+
+#: ../Debconf/FrontEnd/Gnome.pm:219
+#, perl-format
+msgid "Debconf on %s"
+msgstr "Debconf ჰოსტზე %s"
+
+#: ../Debconf/FrontEnd/Gnome.pm:239
+msgid "_Next"
+msgstr "_შემდეგი"
+
+#: ../Debconf/FrontEnd/Gnome.pm:246
+msgid "_Back"
+msgstr "_უკან"
+
+#: ../Debconf/FrontEnd/Readline.pm:59
+msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
+msgstr "Term::ReadLine::GNU შეუთავსებელია emacs-ის გარსის ბუფერებთან."
+
+#: ../Debconf/FrontEnd/Teletype.pm:46
+msgid "This frontend requires a controlling tty."
+msgstr "ამ წინაბოლოს კონტროლირებადი tty სჭირდება."
+
+#: ../Debconf/FrontEnd/Teletype.pm:103
+msgid "More"
+msgstr "მეტი"
+
+#: ../Debconf/FrontEnd/Web.pm:67
+#, perl-format
+msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
+msgstr ""
+"შენიშვნა: Debconf გაშვებულია ვების რეჟიმში. შედით მისამართზე http://"
+"localhost:%i/"
+
+#: ../Debconf/FrontEnd/Web.pm:167
+msgid "Back"
+msgstr "უკან"
+
+#: ../Debconf/FrontEnd/Web.pm:169
+msgid "Next"
+msgstr "შემდეგი"
+
+#: ../Debconf/Template.pm:97
+#, perl-format
+msgid ""
+"warning: possible database corruption. Will attempt to repair by adding back "
+"missing question %s."
+msgstr ""
+"გაფრთხილება. შეიძლება, მონაცემთა ბაზა დაზიანებილია. ვცდი, ეს გავასწორო "
+"ნაკლული კითხვის %s თავიდან დამატებით."
+
+#: ../Debconf/Template.pm:212
+#, perl-format
+msgid ""
+"Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
+"Probably two templates are not properly separated by a lone newline.\n"
+msgstr ""
+"ნიმუშს #%s %s-ში აქვს გამეორებული ველი \"%s\" ახალი მნიშვნელობით \"%s\". "
+"ალბათ ორი ნიმუში ერთმანეთისგან ახალი ხაზით არაა გამოყოფილი.\n"
+
+#: ../Debconf/Template.pm:237
+#, perl-format
+msgid "Unknown template field '%s', in stanza #%s of %s\n"
+msgstr "უცნობი ნიმუშის ველი '%s'. ხაზზე #%s %s-დან\n"
+
+#: ../Debconf/Template.pm:263
+#, perl-format
+msgid "Template parse error near `%s', in stanza #%s of %s\n"
+msgstr "ნიმუშის შეცდომა '%s'-თან ახლოს, სტრიქონში #%s %s-დან\n"
+
+#: ../Debconf/Template.pm:269
+#, perl-format
+msgid "Template #%s in %s does not contain a 'Template:' line\n"
+msgstr "ნიმუში #%s %s-ში არ შეიცავს ხაზს 'Template:'\n"
+
+#: ../dpkg-preconfigure:138
+#, perl-format
+msgid "must specify some debs to preconfigure"
+msgstr "წინასწარ მოსარგებად რამდენიმე deb პაკეტი უნდა მიუთითოთ"
+
+#: ../dpkg-preconfigure:148
+msgid "delaying package configuration, since apt-utils is not installed"
+msgstr ""
+"პაკეტის მორგება დაყოვნებული იქნება, რადგან პაკეტი apt-utils დაყენებული არაა"
+
+#: ../dpkg-preconfigure:155
+#, perl-format
+msgid "unable to re-open stdin: %s"
+msgstr "ვერ გავხსენი თავიდან stdin: %s"
+
+#: ../dpkg-preconfigure:206
+#, perl-format
+msgid "apt-extracttemplates failed: %s"
+msgstr "apt-extracttemplates ჩავარდა: %s"
+
+#: ../dpkg-preconfigure:209
+#, perl-format
+msgid "Extracting templates from packages: %d%%"
+msgstr "ნიმუშების გაშლა პაკეტიდან: %d%%"
+
+#: ../dpkg-preconfigure:239
+msgid "Preconfiguring packages ...\n"
+msgstr "პაკეტების წინასწარი მორგება ...\n"
+
+#: ../dpkg-preconfigure:251
+#, perl-format
+msgid "template parse error: %s"
+msgstr "ნიმუშის დამუშავების შეცდომა: %s"
+
+#: ../dpkg-preconfigure:265
+#, perl-format
+msgid "debconf: can't chmod: %s"
+msgstr "debconf: chmod-ის შეცდომა: %s"
+
+#: ../dpkg-preconfigure:276
+#, perl-format
+msgid "%s failed to preconfigure, with exit status %s"
+msgstr "%s-ის წინასწარი მორგება ჩავარდა გასვლის სტატუსით %s"
+
+#: ../dpkg-reconfigure:106
+msgid ""
+"Usage: dpkg-reconfigure [options] packages\n"
+"  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+"       --default-priority\tUse default priority instead of low.\n"
+"       --force\t\t\tForce reconfiguration of broken packages.\n"
+"       --no-reload\t\tDo not reload templates. (Use with caution.)"
+msgstr ""
+"გამოყენება: dpkg-reconfigure [პარამეტრები] პაკეტები\n"
+"  -u,  --unseen-only\t\tნაჩვენები იქნება, მხოლოდ, კითხვები, რომლებიც ჯერ არ "
+"გინახავთ.\n"
+"       --default-priority\tდაბლის მაგიერ ნაგულისხმევი პრიორიტეტის "
+"გამოყენება.\n"
+"       --force\t\t\tდაზიანებული პაკეტების ნაგულისხმევი მორგება.\n"
+"       --no-reload\t\tნიმუშები თავიდან არ ჩაიტვირთება. (გამოყენებისას "
+"ფრთხილად.)"
+
+#: ../dpkg-reconfigure:118
+#, perl-format
+msgid "%s must be run as root"
+msgstr "%s root მომხმარებლით უნდა გაეშვას"
+
+#: ../dpkg-reconfigure:145
+msgid "please specify a package to reconfigure"
+msgstr "მიუთითეთ პაკეტი თავიდან მოსარგებად"
+
+#: ../dpkg-reconfigure:171
+#, perl-format
+msgid "%s is not installed"
+msgstr "%s დაყენებული არაა"
+
+#: ../dpkg-reconfigure:175
+#, perl-format
+msgid "%s is broken or not fully installed"
+msgstr "%s გაფუჭებულია, ან ბოლომდე არაა დაყენებული"
+
+#: ../debconf-communicate:54
+msgid "Usage: debconf-communicate [options] [package]"
+msgstr "გამოყენება: debconf-communicate [პარამეტრები] [პაკეტი]"
+
+#: ../debconf-mergetemplate:15
+msgid ""
+"debconf-mergetemplate: This utility is deprecated. You should switch to "
+"using po-debconf's po2debconf program."
+msgstr ""
+"debconf-mergetemplate: ეს პროგრამა მოძველებულია. სჯობს, po-debconf-ის "
+"პროგრამა po2debconf გამოიყენოთ."
+
+#: ../debconf-mergetemplate:67
+msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
+msgstr ""
+"გამოყენება: debconf-mergetemplate [პარამეტრები] [ნიმუშები.ll ...] ნიმუშები"
+
+#: ../debconf-mergetemplate:72
+msgid ""
+"\n"
+"        --outdated\t\tMerge in even outdated translations.\n"
+"\t--drop-old-templates\tDrop entire outdated templates."
+msgstr ""
+"\n"
+"        --outdated\t\tშერწყმული იქნება მოძველებული თარგმანებიც კი.\n"
+"\t--drop-old-templates\tმოძველებული ნიმუშები გათვალისწინებული არ იქნება."
+
+#: ../debconf-mergetemplate:120
+#, perl-format
+msgid "%s is missing"
+msgstr "%s აღმოჩენილი არაა"
+
+#: ../debconf-mergetemplate:124
+#, perl-format
+msgid "%s is missing; dropping %s"
+msgstr "%s აღმოჩენილი არაა. ვაცილებ %s-ს"
+
+#: ../debconf-mergetemplate:147
+#, perl-format
+msgid "%s is fuzzy at byte %s: %s"
+msgstr "%s გაურკვეველია ბაიტთან %s: %s"
+
+#: ../debconf-mergetemplate:152
+#, perl-format
+msgid "%s is fuzzy at byte %s: %s; dropping it"
+msgstr "%s გაურკვეველია ბაიტთან %s: %s; ის მოცილებული იქნება"
+
+#: ../debconf-mergetemplate:169
+#, perl-format
+msgid "%s is outdated"
+msgstr "%s მოძველებულია"
+
+#: ../debconf-mergetemplate:174
+#, perl-format
+msgid "%s is outdated; dropping whole template!"
+msgstr "%s მოძველებულია. მოცილდება მთელი ნიმუში!"
+
+#: ../debconf:96
+msgid "Usage: debconf [options] command [args]"
+msgstr "გამოყენება: debconf [პარამეტრები] ბრძანება [არგუმენტები]"
+
+#: ../debconf:98
+msgid ""
+"\n"
+"  -o,  --owner=package\t\tSet the package that owns the command."
+msgstr ""
+"\n"
+"  -o,  --owner=package\t\tდააყენეთ ბრძანება, რომელის ბრძანების მფლობელია."

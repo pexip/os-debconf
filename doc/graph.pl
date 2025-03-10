@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 #
 # Pass this program a list of .pm files. It parses them (halfheartedly,
 # it works on my code, may not on your code), and generates an inheritcance
@@ -7,6 +7,7 @@
 # Remember: I have a copy of this in debconf and a copy in stool. Keep them
 # sync'd.
 
+use warnings;
 use strict;
 
 my %kids;
@@ -17,9 +18,9 @@ foreach my $file (@ARGV) {
 	my $package='';
 	my $desc='';
 	my @isa=();
-	open (IN,$file) || die "$file: $!";
-	while (<IN>) {
-		if (/package\s(\w+.*?);/) {
+	open (my $in, "<", $file) || die "$file: $!";
+	while (<$in>) {
+		if (/^\s*package\s(\w+.*?);/) {
 			$package=$1;
 		}
 		# Gag. This just looks for @ISA= lines and use base.
@@ -30,8 +31,8 @@ foreach my $file (@ARGV) {
 			$desc=$1;
 		}
 	}
-	close IN;
-	
+	close $in;
+
 	if ($package) {
 		$descs{$package}=$desc;
 		foreach (@isa) {
@@ -56,7 +57,7 @@ sub printitem {
 sub printkids {
 	my $parent=shift;
 	my $spacer=shift;
-	
+
 	foreach my $kid (sort keys %{$kids{$parent}}) {
 		next if $seen{$kid};
 		$seen{$kid}=1;
@@ -64,7 +65,7 @@ sub printkids {
 		$_=$kid;
 		foreach my $p (split(/::/,$parent)) {
 			s/^$p\:://;
-			
+
 		}
 		printitem($spacer.$_, $kid);
 		printkids($kid, "  $spacer");

@@ -1,13 +1,13 @@
 The Passthrough Frontend
 ========================
 
-The Passthrough frontend basically replays the ConfModule protocol over a 
+The Passthrough frontend basically replays the ConfModule protocol over a
 Unix domain socket so that other programs can "listen" in and actually
 implement the user interface. With some minor additions, the protocol is
 designed to mirror the ConfModule protocol as closely as feasible.
 
 A typical session goes like this: (time moves downwards)
-In this diagram, and in the rest of this document, "Passthrough" denotes 
+In this diagram, and in the rest of this document, "Passthrough" denotes
 the Debconf passthrough frontend, Frontend represents a user-supplied
 program that understands this interface.
 
@@ -82,10 +82,10 @@ commands like this:
 
 	DATA <tag> <item> <value>
 
-   where: 
+   where:
 	<tag> is the name of the template, e.g. debconf/frontend
 	<item> is one of {"type", "description", "extended_description", "choices"}
-	<value> is the value of the <item>, with all newlines converted to 
+	<value> is the value of the <item>, with all newlines converted to
 	        "\\n" (i.e. 0x2F 0x6E)
 
 All DATA information will be sent to the Frontend prior to sending any
@@ -124,12 +124,12 @@ the Frontend should query the user for information, and return either:
   or:
 	30 GOBACK	if the user requested to go back to a previous question
 
-If a GOBACK request was received and the ConfModule supports the backup 
+If a GOBACK request was received and the ConfModule supports the backup
 capability, the previous set of questions will be asked again, with all
 DATA commands reissued.
 
 Otherwise, if an OK condition was returned, the Passthrough module will issue
-the same number of GET commands as previously sent INPUT commands, in the 
+the same number of GET commands as previously sent INPUT commands, in the
 form of:
 
 	GET <tag>
@@ -152,15 +152,15 @@ At any point in time, the Frontend may indicate an error condition by sending
 a response such as:
 	100 <error message>
 
-This signals the Passthrough module that something is wrong. At the time of 
-this writing, unfortunately, the Passthrough module does not handle errors 
+This signals the Passthrough module that something is wrong. At the time of
+this writing, unfortunately, the Passthrough module does not handle errors
 very gracefully.
 
 Implementation Details/Hints for the Frontend
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The frontend needs to be careful about storing information across multiple
 DATA/INPUT/GO/GET requests. After any GET requests, the next DATA/INPUT
-request should cause any pending question/answer information at the Frontend 
-side to be discarded. Similarly, when a Frontend sends back a "30 GOBACK" 
-response to a GO command, it should take care to clear out previous 
+request should cause any pending question/answer information at the Frontend
+side to be discarded. Similarly, when a Frontend sends back a "30 GOBACK"
+response to a GO command, it should take care to clear out previous
 question/answer information.

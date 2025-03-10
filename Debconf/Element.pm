@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,13 +7,14 @@ Debconf::Element - Base input element
 =cut
 
 package Debconf::Element;
+use warnings;
 use strict;
 use base qw(Debconf::Base);
 
 =head1 DESCRIPTION
 
 This is the base object on which many different types of input elements are
-built. Each element represents one user interface element in a FrontEnd. 
+built. Each element represents one user interface element in a FrontEnd.
 
 =head1 FIELDS
 
@@ -38,7 +39,7 @@ and other nastiness.
 
 sub visible {
 	my $this=shift;
-	
+
 	return 1;
 }
 

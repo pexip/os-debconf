@@ -8,7 +8,7 @@ package/*	- This is the property of a single package, and can be
 
 shared/foo/*	- This holds items that are shared between several packages.
 		  "foo" is replaced by a name that relates to all of them. For
-		  example, news grabbers and readers all can use 
+		  example, news grabbers and readers all can use
 		  shared/news/server to store the news server they use.
 
 Currently the following shared templates and questions exist:

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Noninteractive - Dummy Element
 =cut
 
 package Debconf::Element::Noninteractive;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 
@@ -27,7 +28,7 @@ This type of element is not visible.
 
 sub visible {
 	my $this=shift;
-	
+
 	return;
 }
 
