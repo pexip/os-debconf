@@ -28,7 +28,7 @@ controlled via
 Sometimes you might want to preconfigure a package
 by hand, when you're not installing it with apt. You can use
 .BR dpkg-preconfigure (8)
-to do that, just pass it the filenames of the packages you 
+to do that, just pass it the filenames of the packages you
 want to preconfigure. You will need apt-utils installed for that to work.
 .SH Reconfiguring packages
 Suppose you installed the package, and answered debconf's questions, but
@@ -52,7 +52,7 @@ you is only one of many, that can be swapped in at will. There are many
 debconf frontends available:
 .TP
 .B dialog
-The default frontend, this uses the 
+The default frontend, this uses the
 .BR whiptail (1)
 or
 .BR dialog (1)
@@ -72,7 +72,7 @@ to use this frontend.
 .P
 This frontend has some special hotkeys. Pageup (or ctrl-u)
 will go back to the previous question (if that is supported
-by the package that is using debconf), and pagedown (or 
+by the package that is using debconf), and pagedown (or
 ctrl-v) will skip forward to the next question.
 .P
 This is the best frontend for remote admin work over a slow
@@ -131,11 +131,11 @@ for a minute, you can set the DEBIAN_FRONTEND environment variable to
 the name of the frontend to use. For example:
   DEBIAN_FRONTEND=readline apt-get install slrn
 .P
-The 
+The
 .BR dpkg-reconfigure (8)
 and
 .BR dpkg-preconfigure (8)
-commands also let you pass 
+commands also let you pass
 .I --frontend=
 to them, followed by the frontend you want them to use.
 .P
@@ -259,16 +259,16 @@ DEBCONF_DB_OVERRIDE variable. Like DEBCONF_DB_FALLBACK, it sets up a temporary
 database, but this database is consulted before any others, and can be used
 to override existing values.
 .SH Developing for Debconf
-Package developers and others who want to develop packages that use 
+Package developers and others who want to develop packages that use
 debconf should read
-.BR debconf-devel (7) 
+.BR debconf-devel (7)
  .
 .P
 Briefly, debconf communicates with maintainer scripts or other programs
-via standard input and output, using a simple line-oriented command language 
+via standard input and output, using a simple line-oriented command language
 similar to that used by common internet protocols such as SMTP. Programs use
 this protocol to ask debconf to display questions to the user, and retrieve
-the user's answers. The questions themselves are defined in a separate file, 
+the user's answers. The questions themselves are defined in a separate file,
 called the "templates file", which has a format not unlike a debian control
 file.
 .P

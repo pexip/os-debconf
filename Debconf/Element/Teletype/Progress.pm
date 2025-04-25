@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Teletype::Progress - Progress bar in a terminal
 =cut
 
 package Debconf::Element::Teletype::Progress;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 

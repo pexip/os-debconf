@@ -1,5 +1,6 @@
 package Test::AllTests;
 
+use warnings;
 use strict;
 use Test::Unit::TestSuite;
 use Test::CopyDBTest;
@@ -9,10 +10,10 @@ use Test::Debconf::DbDriver::LDAPTest;
 
 sub suite {
 	my $class = shift;
-    
+
 	# create an empty suite
 	my $suite = Test::Unit::TestSuite->empty_new("All Tests Suite");
-    
+
 	# add CopyDB test suite
 	$suite->add_test(Test::CopyDBTest->suite());
 
@@ -30,11 +31,11 @@ sub suite {
 		$ldapsuite = $ldapsuite_method->();
 	};
 	$suite->add_test($ldapsuite);
-    
+
 	# add your test suite or test case
 	# extract suite by way of suite method and add
 	#$suite->add_test(MyModule::Suite->suite());
-	
+
 	# get and add another existing suite
 	#$suite->add_test(Test::Unit::TestSuite->new("MyModule::TestCase"));
 

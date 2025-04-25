@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Template::Transient - Transient template object
 =cut
 
 package Debconf::Template::Transient;
+use warnings;
 use strict;
 use base 'Debconf::Template';
 use fields qw(_fields);
@@ -31,7 +32,7 @@ The name of the template to create must be passed to this function.
 sub new {
 	my $this=shift;
 	my $template=shift;
-	
+
 	unless (ref $this) {
 		$this = fields::new($this);
 	}
@@ -66,9 +67,9 @@ sub fields {
 =head2 clearall
 
 Clears all the fields of the object.
-                
+
 =cut
-                
+
 sub clearall {
 	my $this=shift;
 
@@ -79,7 +80,7 @@ sub clearall {
 
 =head2 AUTOLOAD
 
-Creates and calls accessor methods to handle fields. 
+Creates and calls accessor methods to handle fields.
 This supports internationalization.
 
 =cut
@@ -94,7 +95,7 @@ This supports internationalization.
 			my $this=shift;
 
 			return $this->{_fields}->{$field}=shift if @_;
-		
+
 			# Check to see if i18n should be used.
 			if ($Debconf::Template::i18n && @langs) {
 				foreach my $lang (@langs) {

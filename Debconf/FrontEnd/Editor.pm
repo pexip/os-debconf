@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Editor - Edit a config file to answer questions
 =cut
 
 package Debconf::FrontEnd::Editor;
+use warnings;
 use strict;
 use Debconf::Encoding q(wrap);
 use Debconf::TmpFile;
@@ -86,7 +87,7 @@ sub go {
 	my $this=shift;
 	my @elements=@{$this->elements};
 	return 1 unless @elements;
-	
+
 	# End the filename in .sh because it is basically a shell
 	# format file, and this makes some editors do good things.
 	$fh = Debconf::TmpFile::open('.sh');
@@ -106,12 +107,12 @@ sub go {
 		Debconf::TmpFile::cleanup();
 		return 1;
 	}
-	
+
 	$this->divider;
 	$this->comment(gettext("The editor-based debconf frontend presents you with one or more text files to edit. This is one such text file. If you are familiar with standard unix configuration files, this file will look familiar to you -- it contains comments interspersed with configuration items. Edit the file, changing any items as necessary, and then save it and exit. At that point, debconf will read the edited file, and use the values you entered to configure the system."));
 	print $fh ("\n");
 	close $fh;
-	
+
 	# Launch editor.
 	my $editor=$ENV{EDITOR} || $ENV{VISUAL} || '/usr/bin/editor';
 	# $editor may possibly contain spaces and options
@@ -122,8 +123,8 @@ sub go {
 	# pass the text into it to be processed.
 	# FIXME: this isn't really very robust. Syntax errors are ignored.
 	my %eltname=map { $_->question->name => $_ } @elements;
-	open (IN, "<".Debconf::TmpFile::filename());
-	while (<IN>) {
+	open (my $in, "<", Debconf::TmpFile::filename());
+	while (<$in>) {
 		next if /^\s*#/;
 
 		if (/(.*?)="(.*)"/ && $eltname{$1}) {
@@ -132,8 +133,8 @@ sub go {
 			$eltname{$1}->value($2);
 		}
 	}
-	close IN;
-	
+	close $in;
+
 	Debconf::TmpFile::cleanup();
 
 	return 1;

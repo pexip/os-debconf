@@ -2,6 +2,8 @@
 # This is a stub module that just uses the new module, and is here for
 # backwards-compatability with pograms that use the old name.
 package Debian::DebConf::Client::ConfModule;
+use warnings;
+use strict;
 use Debconf::Client::ConfModule;
 use Debconf::Log qw{debug};
 print STDERR "Debian::DebConf::Client::ConfModule is deprecated, please use Debconf::Client::ConfModule instead.\n";

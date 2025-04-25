@@ -7,6 +7,7 @@ Test::Debconf::DbDriver::DirTreeTest - DirTree driver class test
 =cut
 
 package Test::Debconf::DbDriver::DirTreeTest;
+use warnings;
 use strict;
 use File::Temp;
 use Debconf::DbDriver::DirTree;
@@ -31,7 +32,7 @@ sub new_driver {
 
 sub set_up {
 	my $self = shift;
-	
+
 	$self->{tmpdir} = File::Temp->tempdir('dirtreedb-XXXX', DIR => '/tmp');
 	$self->new_driver();
 }
@@ -46,7 +47,7 @@ sub suite {
 	my $self = shift;
 
 	my $testsuite = Test::Unit::TestSuite->new(__PACKAGE__);
-    
+
 	return $testsuite;
 }
 

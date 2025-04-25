@@ -162,4 +162,3 @@ msgstr "Подождите…"
 #: ../templates:6001
 msgid "Media change"
 msgstr "Смена носителя"
-

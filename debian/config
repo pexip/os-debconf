@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/sh
 set -e
 
 # This is to handle upgrading from old versions of debconf. If the
@@ -9,6 +9,7 @@ if [ ! -e /usr/share/debconf/confmodule ]; then
 	exit
 fi
 
+# shellcheck disable=SC1091
 . /usr/share/debconf/confmodule
 
 db_version 2.0

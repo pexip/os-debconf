@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::FrontEnd::Teletype - FrontEnd for any teletype
 =cut
 
 package Debconf::FrontEnd::Teletype;
+use warnings;
 use strict;
 use Debconf::Encoding qw(width wrap);
 use Debconf::Gettext;
@@ -40,6 +41,9 @@ sub init {
 	$this->SUPER::init(@_);
 	$this->interactive(1);
 	$this->linecount(0);
+
+	# Yeah, you need a controlling tty. Make sure there is one.
+	-t STDIN || die gettext("This frontend requires a controlling tty.")."\n";
 }
 
 =item display
@@ -56,7 +60,7 @@ text will not be shown in terse mode,
 sub display {
 	my $this=shift;
 	my $text=shift;
-	
+
 	$Debconf::Encoding::columns=$this->screenwidth;
 	$this->display_nowrap(wrap('','',$text));
 }
@@ -78,7 +82,7 @@ sub display_nowrap {
 	# Silly split elides trailing null matches.
 	my @lines=split(/\n/, $text);
 	push @lines, "" if $text=~/\n$/;
-	
+
 	# Add to the display any pending title.
 	my $title=$this->title;
 	if (length $title) {
@@ -116,7 +120,7 @@ sub display_nowrap {
 Prompts the user for input, and returns it. If a title is pending,
 it will be displayed before the prompt.
 
-This function will return undef if the user opts to skip the question 
+This function will return undef if the user opts to skip the question
 (by backing up or moving on to the next question). Anything that uses this
 function should catch that and handle it, probably by exiting any
 read/validate loop it is in.

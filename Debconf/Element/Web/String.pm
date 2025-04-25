@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Web::String - A text input field on a form
 =cut
 
 package Debconf::Element::Web::String;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 

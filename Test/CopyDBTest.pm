@@ -1,10 +1,11 @@
-my $tmp_base_dir = "/tmp/debconf-test";
+package CopyDBTestSetup;  ## no critic (Modules::RequireFilenameMatchesPackage)
 
-package CopyDBTestSetup;
-
+use warnings;
 use strict;
 use Test::Debconf::DbDriver::SLAPD;
 use base qw(Test::Unit::Setup);
+
+my $tmp_base_dir = "/tmp/debconf-test";
 
 sub set_up{
 	my $self = shift();
@@ -18,7 +19,7 @@ sub set_up{
 
 sub tear_down{
 	my $self = shift();
-    
+
 	$self->{slapd}->slapd_stop();
 }
 
@@ -60,12 +61,12 @@ sub test_item_1 {
 
 	my $item = {
 		name => "$name",
-		entry => { 
+		entry => {
 			owners => { "$owner" => 1},
 			fields => { template => "$name"},
 			variables => {},
 		}
-	}; 
+	};
 
 	$self->{assert} = sub {
 		my $item_config_entry = shift;
@@ -73,7 +74,7 @@ sub test_item_1 {
 		my $result = cmpStr($item_config_entry, $entry_from_db);
 #		print "src: ",freeze($item_config_entry),"\n";
 #		print "dest: ",freeze($entry_from_db),"\n";
-		$self->assert($result == 0, 
+		$self->assert($result == 0,
 			      'item saved in database differs from the original item');
 	};
 
@@ -95,20 +96,20 @@ sub test_201431 {
 	# item for testing
 	Debconf::Template->new($name,$owner,$type);
 
-	my $item = { 
+	my $item = {
 		name => "$name",
-		entry => { 
+		entry => {
 			owners => { "$owner" => 1},
 			fields => { template => "$name"},
 			flags => {},
 			variables => {},
 		}
-	}; 
+	};
 
 	$self->{assert} = sub {
 		my $item_config_entry = shift;
 		my $entry_from_db = shift;
-		$self->assert_null($entry_from_db, 
+		$self->assert_null($entry_from_db,
 			      'item saved in database differs from the original item');
 	};
 
@@ -147,14 +148,14 @@ sub go_test_copy {
 	my $item = shift;
 	my $owner = shift;
 
-	# test to copy item from each src databases  
+	# test to copy item from each src databases
 	my @src_db_names = @{$self->{src_db_names}};
 	foreach my $src_db_name (@src_db_names) {
 
-		# test to copy item in all dest databases  
+		# test to copy item in all dest databases
 		my @dest_db_names = @{$self->{dest_db_names}};
 		foreach my $dest_db_name (@dest_db_names) {
-			
+
 			# add item in src db
 			$self->add_item_in_db($item, $owner, Debconf::DbDriver->driver($src_db_name));
 
@@ -162,12 +163,12 @@ sub go_test_copy {
 				      Debconf::DbDriver->driver($dest_db_name),
 				      'file2file',
 				      $self->{pattern});
-			
+
 			# force to flush
 			$self->db_reload();
-			
+
 			my $entry_copied = Debconf::DbDriver->driver($dest_db_name)->cached($item->{'name'});
-			
+
 			# test copy result
 			my $assert = $self->{assert};
 			&$assert($item->{entry}, $entry_copied);
@@ -177,7 +178,7 @@ sub go_test_copy {
 		}
 	}
 }
-	
+
 
 sub copydb {
 	my $self = shift;
@@ -186,12 +187,12 @@ sub copydb {
 	my $name = shift;
 	my $pattern = shift;
 	my $owner_pattern = shift;
-	
+
 # Set up a copier to handle copying from one to the other.
 #	my $src = Debconf::DbDriver->driver("configdb");
 	my $copier = Debconf::DbDriver::Backup->new(
-						    db => $src_driver, 
-						    backupdb => $dest_driver, 
+						    db => $src_driver,
+						    backupdb => $dest_driver,
 						    name => $name);
 
 # Now just iterate over all items in src that patch the pattern, and tell
@@ -199,18 +200,17 @@ sub copydb {
 	my $i=$copier->iterator;
 	while (my $item=$i->iterate) {
 		next unless $item =~ /$pattern/;
-		
+
 		if (defined $owner_pattern) {
 			my $fit_owner = 0;
-			my $owner;
-			foreach $owner ($src_driver->owners($item)){
+			foreach my $owner ($src_driver->owners($item)){
 				$fit_owner = 1 if $owner =~ /$owner_pattern/;
 			}
 			next unless $fit_owner;
 		}
 		$copier->copy($item, $src_driver, $dest_driver);
 	}
-	
+
 	$copier->shutdown;
 
 }
@@ -233,15 +233,15 @@ sub db_init {
 	chomp(my $pwd = `pwd`);
 
 	# config temp file
-	$self->{config_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{config_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{config_filename} = $self->{config_file}->filename;
 
 	# template temp file
-	$self->{template_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{template_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{template_filename} = $self->{template_file}->filename;
 
 	# filedb temp file
-	$self->{filedb_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{filedb_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{filedb_filename} = $self->{filedb_file}->filename;
 
 	# dirtreedb temp dir
@@ -251,14 +251,14 @@ sub db_init {
 	$self->{packdirdb_dir} = File::Temp->tempdir('packdirdb-XXXX', DIR => $self->{tmp_dir});
 
 	# passwddb temp file
-	$self->{passwddb_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{passwddb_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{passwddb_filename} = $self->{passwddb_file}->filename;
 
 	# build conf file
-	$self->{conf_file} = new File::Temp( DIR => $self->{tmp_dir});
+	$self->{conf_file} = File::Temp->new( DIR => $self->{tmp_dir});
 	$self->{conf_filename} = $self->{conf_file}->filename;
-	open(OUTFILE, ">$self->{conf_filename}");
-	print OUTFILE gettext(<<EOF);
+	open(my $outfile, ">", $self->{conf_filename});
+	print $outfile gettext(<<EOF);
 Config: configdb
 Templates: templatedb
 
@@ -301,8 +301,8 @@ Filename: $self->{template_filename}
 
 EOF
 
-	close OUTFILE;
-	
+	close $outfile;
+
 	# the only solution to test debconf-copydb with
 	# different conf file => VERY UGLY
 	@Debconf::Config::config_files =("$self->{conf_filename}");
@@ -336,7 +336,7 @@ sub suite {
 
 	my $testsuite = Test::Unit::TestSuite->new(__PACKAGE__);
 	my $wrapper = CopyDBTestSetup->new($testsuite);
-    
+
 	return $wrapper;
 }
 1;

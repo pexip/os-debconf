@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Gnome::Error - an error message to show to the user
 =cut
 
 package Debconf::Element::Gnome::Error;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use Gtk3;

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 # Copyright (C) 2002 Matthew Palmer.
 # Copyright (C) 2007-2008 Davor Ocelic.
 
@@ -9,6 +9,7 @@ Debconf::DbDriver::LDAP - access (config) database in an LDAP directory
 =cut
 
 package Debconf::DbDriver::LDAP;
+use warnings;
 use strict;
 use Debconf::Log qw(:all);
 use Net::LDAP;
@@ -72,7 +73,7 @@ write custom handling code on the LDAP server part.
 Note that when this option is enabled, the connection to the LDAP server
 is kept active during the whole Debconf run. This is a little different
 from the all-in-one behavior where two brief connections are made to LDAP;
-in the beginning to retrieve all the entries, and in the end to save 
+in the beginning to retrieve all the entries, and in the end to save
 eventual changes.
 
 =back
@@ -95,12 +96,12 @@ sub binddb {
 	# Check for required options
 	$this->error("No server specified") unless exists $this->{server};
 	$this->error("No Base DN specified") unless exists $this->{basedn};
-	
+
 	# Set up other defaults
 	$this->{binddn} = "" unless exists $this->{binddn};
 	# XXX This will need to handle SSL when we support it
 	$this->{port} = 389 unless exists $this->{port};
-	
+
 	debug "db $this->{name}" => "talking to $this->{server}, data under $this->{basedn}";
 
 	# Whee, LDAP away!  Net::LDAP tells us about all these methods.
@@ -109,7 +110,7 @@ sub binddb {
 		$this->error("Unable to connect to LDAP server");
 		return; # if not fatal, give up anyway
 	}
-	
+
 	# Check for anon bind
 	my $rv = "";
 	if (!($this->{binddn} && $this->{bindpasswd})) {
@@ -122,7 +123,7 @@ sub binddb {
 	if ($rv->code) {
 		$this->error("Bind Failed: ".$rv->error);
 	}
-	
+
 	return $this->{ds};
 }
 
@@ -147,7 +148,7 @@ sub init {
 	# A record of all the existing entries in the DB so we know which
 	# ones need to added, and which modified
 	$this->{exists} = {};
-	
+
 	if ($this->{keybykey}) {
 		debug "db $this->{name}" => "will get database data key by key";
 	}
@@ -157,12 +158,12 @@ sub init {
 		if ($data->code) {
 			$this->error("Search failed: ".$data->error);
 		}
-			
+
 		my $records = $data->as_struct();
-		debug "db $this->{name}" => "Read ".$data->count()." entries";	
-	
+		debug "db $this->{name}" => "Read ".$data->count()." entries";
+
 		$this->parse_records($records);
-	
+
 		$this->{ds}->unbind;
 	}
 }
@@ -176,16 +177,16 @@ Save the dirty entries back to the LDAP server.
 sub shutdown
 {
 	my $this = shift;
-	
+
 	return if $this->{readonly};
-	
-	if (grep $this->{dirty}->{$_}, keys %{$this->{cache}}) {
+
+	if (grep { $this->{dirty}->{$_} } keys %{$this->{cache}}) {
 		debug "db $this->{name}" => "saving changes";
 	} else {
 		debug "db $this->{name}" => "no database changes, not saving";
 		return 1;
 	}
-	
+
 	unless ($this->{keybykey}) {
 		$this->binddb;
 		return unless $this->{ds};
@@ -198,7 +199,7 @@ sub shutdown
 		(my $entry_cn = $item) =~ s/([,+="<>#;])/\\$1/g;
 		my $entry_dn = "cn=$entry_cn,$this->{basedn}";
 		debug "db $this->{name}" => "writing out to $entry_dn";
-		
+
 		my %data = %{$this->{cache}->{$item}};
 		my %modify_data;
 		my $add_data = [ 'objectclass' => 'top',
@@ -216,10 +217,10 @@ sub shutdown
 				delete $data{fields}->{$field};
 			}
 		}
-		
+
 		foreach my $field (keys %{$data{fields}}) {
 			# skip empty fields exept value field
-			next if ($data{fields}->{$field} eq '' && 
+			next if ($data{fields}->{$field} eq '' &&
 				 !($field eq 'value'));
 			if ((exists $this->{accept_attribute} &&
 				 $field !~ /$this->{accept_attribute}/) or
@@ -239,7 +240,7 @@ sub shutdown
 		$modify_data{owners} = \@owners;
 		push(@{$add_data}, 'owners');
 		push(@{$add_data}, \@owners);
-		
+
 		my @flags = grep { $data{flags}->{$_} eq 'true' } keys %{$data{flags}};
 		if (@flags) {
 			$modify_data{flags} = \@flags;
@@ -254,7 +255,7 @@ sub shutdown
 			push(@{$add_data}, 'variables');
 			push(@{$add_data}, $variable);
 		}
-		
+
 		my $rv="";
 		if ($this->{exists}->{$item}) {
 			$rv = $this->{ds}->modify($entry_dn, replace => \%modify_data);
@@ -271,7 +272,7 @@ sub shutdown
 	$this->SUPER::shutdown(@_);
 }
 
-=head2 load 
+=head2 load
 
 Empty routine for all-in-one db fetch, but does some actual
 work for individual keys retrieval.
@@ -285,7 +286,7 @@ sub load {
 
 	my $records = $this->get_key($entry_cn);
 	return unless $records;
-		
+
 	debug "db $this->{name}" => "Read entry for $entry_cn";
 
 	$this->parse_records($records);

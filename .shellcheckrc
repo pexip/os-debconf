@@ -1,0 +1,5 @@
+disable=SC2119
+enable=deprecate-which
+# Needed so that shellcheck can follow sourcing of confmodule even in
+# pre-commit runs where confmodule was not changed.
+external-sources=true

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Dialog::Note - A note in a dialog box
 =cut
 
 package Debconf::Element::Dialog::Note;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 
@@ -19,7 +20,7 @@ This is an input element that can display a dialog box with a note on it.
 sub show {
 	my $this=shift;
 
-	$this->frontend->showtext($this->question, 
+	$this->frontend->showtext($this->question,
 		$this->question->description."\n\n".
 		$this->question->extended_description
 	);

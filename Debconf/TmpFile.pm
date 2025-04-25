@@ -7,6 +7,7 @@ Debconf::TmpFile - temporary file creator
 =cut
 
 package Debconf::TmpFile;
+use warnings;
 use strict;
 use IO::File;
 use Fcntl;

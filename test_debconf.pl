@@ -1,17 +1,18 @@
-#!/usr/bin/perl -w -I.
+#!/usr/bin/perl -I.
+
+use warnings;
+use strict;
+use Test::Unit::TestRunner;
+use Getopt::Long;
 
 sub usage {
 	print STDERR <<EOF;
-Usage: 
+Usage:
     test_debconf.pl OneTest
     test_debconf.pl --all
 EOF
 	exit(1);
 }
-
-use strict;
-use Test::Unit::TestRunner;
-use Getopt::Long;
 
 my $all=0;
 my $test=0;

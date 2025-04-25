@@ -94,7 +94,7 @@ db_text () {
 	db_input $@
 }
 
-# Cannot read a return code, since there is none and we would block.            
-db_stop () {                                                                    
-	echo STOP >&3                                                           
+# Cannot read a return code, since there is none and we would block.
+db_stop () {
+	echo STOP >&3
 }

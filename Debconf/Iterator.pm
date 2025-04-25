@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Iterator - DebConf iterator object
 =cut
 
 package Debconf::Iterator;
+use warnings;
 use strict;
 use base qw(Debconf::Base);
 
@@ -17,7 +18,7 @@ just as you would use anything else derived from Debconf::Base.
 
 =head1 FIELDS
 
-Generally any you want. By convention prefix any field names you use with 
+Generally any you want. By convention prefix any field names you use with
 your module's name, to prevent conflicts when multiple modules need to use
 the same iterator.
 

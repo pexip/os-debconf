@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,8 +7,9 @@ Debconf::Base - Debconf base class
 =cut
 
 package Debconf::Base;
-use Debconf::Log ':all';
+use warnings;
 use strict;
+use Debconf::Log ':all';
 
 =head1 DESCRIPTION
 

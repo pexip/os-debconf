@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Gnome::Select - drop down select box widget
 =cut
 
 package Debconf::Element::Gnome::Select;
+use warnings;
 use strict;
 use Gtk3;
 use utf8;

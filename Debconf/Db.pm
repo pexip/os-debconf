@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Db - debconf databases
 =cut
 
 package Debconf::Db;
+use warnings;
 use strict;
 use Debconf::Log qw{:all};
 use Debconf::Config;
@@ -20,7 +21,7 @@ This class makes available a $Debconf::Db::config, which is the root db
 driver for storing state, and a $Debconf::Db::templates, which is the root
 db driver for storing template data.
 
-Requests can be sent directly to the db's by things like 
+Requests can be sent directly to the db's by things like
 $Debconf::Db::config->setfield(...)
 
 =head1 CLASS METHODS
@@ -30,7 +31,7 @@ $Debconf::Db::config->setfield(...)
 Loads up the database drivers.
 
 If a hash of parameters are passed, those parameters are used as the defaults
-for *every* database driver that is loaded up. Practically, setting 
+for *every* database driver that is loaded up. Practically, setting
 (readonly => "true") is the only use of this.
 
 =cut
@@ -70,7 +71,7 @@ sub makedriver {
 		die $@ if $@;
 	}
 	delete $config{driver}; # not a field for the object
-	
+
 	# Make object, and pass in the config, and we're done with it.
 	debug db => "making DbDriver of type $type";
 	"Debconf::DbDriver::$type"->new(%config);

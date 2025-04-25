@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 12:27+0000\n"
+"POT-Creation-Date: 2025-03-10 12:05+0000\n"
 "PO-Revision-Date: 2006-10-05 21:51+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@debian.org>\n"
 "Language-Team: Ukrainian\n"
@@ -15,33 +15,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../Debconf/AutoSelect.pm:89
+#: ../Debconf/AutoSelect.pm:91
 #, perl-format
 msgid "falling back to frontend: %s"
 msgstr "буде використовуватися інтерфейс \"%s\""
 
-#: ../Debconf/AutoSelect.pm:97
+#: ../Debconf/AutoSelect.pm:104
 #, perl-format
 msgid "unable to initialize frontend: %s"
 msgstr "не можливо ініціалізувати інтерфейс \"%s\""
 
-#: ../Debconf/AutoSelect.pm:103
+#: ../Debconf/AutoSelect.pm:110
 #, perl-format
 msgid "Unable to start a frontend: %s"
 msgstr "Не вдалося запустити інтерфейс: %s"
 
-#: ../Debconf/Config.pm:131
+#: ../Debconf/Config.pm:135
 msgid "Config database not specified in config file."
 msgstr "База даних налаштувань не вказана в конфігураційному файлі."
 
-#: ../Debconf/Config.pm:135
+#: ../Debconf/Config.pm:139
 msgid "Template database not specified in config file."
 msgstr "База даних шаблонів не вказана в конфігураційному файлі."
 
-#: ../Debconf/Config.pm:140
+#: ../Debconf/Config.pm:144
 msgid ""
 "The Sigils and Smileys options in the config file are no longer used. Please "
 "remove them."
@@ -49,13 +49,13 @@ msgstr ""
 "Опції Sigils та Smileys в конфігураційному файлі більше не використовуються. "
 "Видаліть їх, будь ласка."
 
-#: ../Debconf/Config.pm:157
+#: ../Debconf/Config.pm:161
 #, perl-format
 msgid "Problem setting up the database defined by stanza %s of %s."
 msgstr ""
 "Виникла проблема при налаштуванні бази даних, визначеної в строфі %s з %s."
 
-#: ../Debconf/Config.pm:232
+#: ../Debconf/Config.pm:236
 msgid ""
 "  -f,  --frontend\t\tSpecify debconf frontend to use.\n"
 "  -p,  --priority\t\tSpecify minimum priority question to show.\n"
@@ -66,52 +66,52 @@ msgstr ""
 "показані.\n"
 "       --terse\t\t\tДозволити стислий режим.\n"
 
-#: ../Debconf/Config.pm:312
+#: ../Debconf/Config.pm:316
 #, perl-format
 msgid "Ignoring invalid priority \"%s\""
 msgstr "Ігнорується невірний пріоритет \"%s\""
 
-#: ../Debconf/Config.pm:313
+#: ../Debconf/Config.pm:317
 #, perl-format
 msgid "Valid priorities are: %s"
 msgstr "Вірні пріоритети: \"%s\""
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Multiselect.pm:31
-#: ../Debconf/Element/Editor/Select.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Multiselect.pm:32
+#: ../Debconf/Element/Editor/Select.pm:32
 msgid "Choices"
 msgstr "Варіанти"
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Boolean.pm:36
-#: ../Debconf/Element/Editor/Boolean.pm:59
-#: ../Debconf/Element/Teletype/Boolean.pm:28
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:37
+#: ../Debconf/Element/Editor/Boolean.pm:60
+#: ../Debconf/Element/Teletype/Boolean.pm:29
 msgid "yes"
 msgstr "так"
 
-#: ../Debconf/Element/Editor/Boolean.pm:30
-#: ../Debconf/Element/Editor/Boolean.pm:39
-#: ../Debconf/Element/Editor/Boolean.pm:62
-#: ../Debconf/Element/Teletype/Boolean.pm:29
+#: ../Debconf/Element/Editor/Boolean.pm:31
+#: ../Debconf/Element/Editor/Boolean.pm:40
+#: ../Debconf/Element/Editor/Boolean.pm:63
+#: ../Debconf/Element/Teletype/Boolean.pm:30
 msgid "no"
 msgstr "ні"
 
-#: ../Debconf/Element/Editor/Multiselect.pm:32
+#: ../Debconf/Element/Editor/Multiselect.pm:33
 msgid ""
 "(Enter zero or more items separated by a comma followed by a space (', ').)"
 msgstr ""
 "(Вкажіть необхідну кількість параметрів, розділяючи їх комою з пробілом (', "
 "').)"
 
-#: ../Debconf/Element/Gnome.pm:184
+#: ../Debconf/Element/Gnome.pm:185
 msgid "_Help"
 msgstr "Допомога"
 
-#: ../Debconf/Element/Gnome.pm:186
+#: ../Debconf/Element/Gnome.pm:187
 msgid "Help"
 msgstr "Допомога"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:40
+#: ../Debconf/Element/Noninteractive/Error.pm:41
 #, fuzzy
 msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
@@ -120,16 +120,16 @@ msgstr ""
 "Debconf не був налаштований відображувати це повідомлення про помилку, тому "
 "його відправлено поштою."
 
-#: ../Debconf/Element/Noninteractive/Error.pm:67
+#: ../Debconf/Element/Noninteractive/Error.pm:68
 msgid "Debconf"
 msgstr "Debconf"
 
-#: ../Debconf/Element/Noninteractive/Error.pm:90
+#: ../Debconf/Element/Noninteractive/Error.pm:91
 #, perl-format
 msgid "Debconf, running at %s"
 msgstr "Debconf, що працює на %s"
 
-#: ../Debconf/Element/Select.pm:95 ../Debconf/Element/Select.pm:110
+#: ../Debconf/Element/Select.pm:96 ../Debconf/Element/Select.pm:111
 #, perl-format
 msgid ""
 "Input value, \"%s\" not found in C choices! This should never happen. "
@@ -138,38 +138,38 @@ msgstr ""
 "Значення \"%s\" не знайдене серед варіантів C! Це не повинно було статися. "
 "Можливо, шаблон був не вірно перекладений."
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:59
+#: ../Debconf/Element/Teletype/Multiselect.pm:60
 msgid "none of the above"
 msgstr "жоден з перерахованих"
 
-#: ../Debconf/Element/Teletype/Multiselect.pm:79
+#: ../Debconf/Element/Teletype/Multiselect.pm:80
 #, fuzzy
 #| msgid "Enter the items you want to select, separated by spaces."
 msgid "Enter the items or ranges you want to select, separated by spaces."
 msgstr ""
 "Вкажіть літери, що відповідають вибраним варіантам, розділяючи їх пробілами."
 
-#: ../Debconf/FrontEnd.pm:140
+#: ../Debconf/FrontEnd.pm:141
 #, perl-format
 msgid "Unable to load Debconf::Element::%s. Failed because: %s"
 msgstr "Не вдалося завантажити Debconf::Element::%s. Причина  %s"
 
-#: ../Debconf/FrontEnd.pm:333
+#: ../Debconf/FrontEnd.pm:334
 #, perl-format
 msgid "Configuring %s"
 msgstr "Налаштування %s"
 
-#: ../Debconf/FrontEnd/Dialog.pm:53
+#: ../Debconf/FrontEnd/Dialog.pm:54
 msgid "TERM is not set, so the dialog frontend is not usable."
 msgstr ""
 "Змінна оточення TERM не встановлена, отже діалогова оболонка не може бути "
 "застосована."
 
-#: ../Debconf/FrontEnd/Dialog.pm:56
+#: ../Debconf/FrontEnd/Dialog.pm:57
 msgid "Dialog frontend is incompatible with emacs shell buffers"
 msgstr "Діалогова оболонка не сумісна з буфером emacs"
 
-#: ../Debconf/FrontEnd/Dialog.pm:59
+#: ../Debconf/FrontEnd/Dialog.pm:60
 msgid ""
 "Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or "
 "without a controlling terminal."
@@ -177,7 +177,7 @@ msgstr ""
 "Діалогова оболонка не буде працювати на неналаштованому (dumb) терміналі, в "
 "буфері emacs або без керуючого терміналу."
 
-#: ../Debconf/FrontEnd/Dialog.pm:107
+#: ../Debconf/FrontEnd/Dialog.pm:108
 msgid ""
 "No usable dialog-like program is installed, so the dialog based frontend "
 "cannot be used."
@@ -185,18 +185,18 @@ msgstr ""
 "Не встановлена жодна програма, подібна до dialog, отже діалогова оболонка не "
 "може бути застосована."
 
-#: ../Debconf/FrontEnd/Dialog.pm:114
+#: ../Debconf/FrontEnd/Dialog.pm:115
 msgid ""
 "Dialog frontend requires a screen at least 13 lines tall and 31 columns wide."
 msgstr ""
 "Для діалогового інтерфейсу потрібен термінал не менше 13 рядків в висоту та "
 "31 стовпчиків в ширину."
 
-#: ../Debconf/FrontEnd/Dialog.pm:331
+#: ../Debconf/FrontEnd/Dialog.pm:332
 msgid "Package configuration"
 msgstr "Налаштування пакунків"
 
-#: ../Debconf/FrontEnd/Editor.pm:94
+#: ../Debconf/FrontEnd/Editor.pm:95
 msgid ""
 "You are using the editor-based debconf frontend to configure your system. "
 "See the end of this document for detailed instructions."
@@ -204,7 +204,7 @@ msgstr ""
 "Ви використовуєте текстовий редактор для налаштування вашої системи. "
 "Докладну інформацію ви знайдете в кінці цього документу."
 
-#: ../Debconf/FrontEnd/Editor.pm:111
+#: ../Debconf/FrontEnd/Editor.pm:112
 msgid ""
 "The editor-based debconf frontend presents you with one or more text files "
 "to edit. This is one such text file. If you are familiar with standard unix "
@@ -221,78 +221,78 @@ msgstr ""
 "його та вийти з редактора. Після цього debconf прочитає змінений файл та "
 "використає введені параметри для налаштування системи."
 
-#: ../Debconf/FrontEnd/Gnome.pm:95
+#: ../Debconf/FrontEnd/Gnome.pm:96
 #, fuzzy
 #| msgid "Package configuration"
 msgid "Really quit configuration?"
 msgstr "Налаштування пакунків"
 
-#: ../Debconf/FrontEnd/Gnome.pm:96
+#: ../Debconf/FrontEnd/Gnome.pm:97
 msgid ""
 "If you quit this configuration dialog, then the package being configured "
 "will probably fail to install, and you may have to fix it manually. This may "
 "be especially difficult if you are in the middle of a large upgrade."
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:96
+#: ../Debconf/FrontEnd/Gnome.pm:97
 msgid ""
 "You may need to quit anyway if you are stuck in a configuration loop due to "
 "a buggy package."
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:97
+#: ../Debconf/FrontEnd/Gnome.pm:98
 msgid "_Quit"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:98
+#: ../Debconf/FrontEnd/Gnome.pm:99
 msgid "Continue"
 msgstr ""
 
-#: ../Debconf/FrontEnd/Gnome.pm:218
+#: ../Debconf/FrontEnd/Gnome.pm:219
 #, perl-format
 msgid "Debconf on %s"
 msgstr "Debconf на %s"
 
-#: ../Debconf/FrontEnd/Gnome.pm:238
+#: ../Debconf/FrontEnd/Gnome.pm:239
 #, fuzzy
 #| msgid "Next"
 msgid "_Next"
 msgstr "Далі"
 
-#: ../Debconf/FrontEnd/Gnome.pm:245
+#: ../Debconf/FrontEnd/Gnome.pm:246
 #, fuzzy
 #| msgid "Back"
 msgid "_Back"
 msgstr "Назад"
 
-#: ../Debconf/FrontEnd/Readline.pm:47
-msgid "This frontend requires a controlling tty."
-msgstr "Для цієї оболонки потрібен керуючий термінал."
-
-#: ../Debconf/FrontEnd/Readline.pm:62
+#: ../Debconf/FrontEnd/Readline.pm:59
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU не може працювати в буфері emacs."
 
-#: ../Debconf/FrontEnd/Teletype.pm:99
+#: ../Debconf/FrontEnd/Teletype.pm:46
+msgid "This frontend requires a controlling tty."
+msgstr "Для цієї оболонки потрібен керуючий термінал."
+
+#: ../Debconf/FrontEnd/Teletype.pm:103
 msgid "More"
 msgstr "Більше"
 
-#: ../Debconf/FrontEnd/Web.pm:66
+#: ../Debconf/FrontEnd/Web.pm:67
 #, perl-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
 msgstr ""
 "Зауваження: debconf працює в web режимі. Відкрийте документ http://localhost:"
 "%i/"
 
-#: ../Debconf/FrontEnd/Web.pm:166
+#: ../Debconf/FrontEnd/Web.pm:167
 msgid "Back"
 msgstr "Назад"
 
-#: ../Debconf/FrontEnd/Web.pm:168
+#: ../Debconf/FrontEnd/Web.pm:169
 msgid "Next"
 msgstr "Далі"
 
-#: ../Debconf/Template.pm:96
+#: ../Debconf/Template.pm:97
 #, perl-format
 msgid ""
 "warning: possible database corruption. Will attempt to repair by adding back "
@@ -301,7 +301,7 @@ msgstr ""
 "попередження: можливе ушкодження бази даних. Спробую відновити, додавши "
 "відсутнє питання %s."
 
-#: ../Debconf/Template.pm:211
+#: ../Debconf/Template.pm:212
 #, perl-format
 msgid ""
 "Template #%s in %s has a duplicate field \"%s\" with new value \"%s\". "
@@ -310,65 +310,65 @@ msgstr ""
 "Шаблон #%s в %s має поле \"%s\" що повторюється з новим значенням \"%s\". "
 "Можливо, два шаблони невірно розділені символом нового рядка.\n"
 
-#: ../Debconf/Template.pm:236
+#: ../Debconf/Template.pm:237
 #, perl-format
 msgid "Unknown template field '%s', in stanza #%s of %s\n"
 msgstr "Невідоме поле шаблона \"%s\", в строфі #%s з %s\n"
 
-#: ../Debconf/Template.pm:262
+#: ../Debconf/Template.pm:263
 #, perl-format
 msgid "Template parse error near `%s', in stanza #%s of %s\n"
 msgstr "Помилка при розборі шаблону біля \"%s\", в строфі #%s з %s\n"
 
-#: ../Debconf/Template.pm:268
+#: ../Debconf/Template.pm:269
 #, perl-format
 msgid "Template #%s in %s does not contain a 'Template:' line\n"
 msgstr "Шаблон #%s в %s не містить рядка \"Template:\"\n"
 
-#: ../dpkg-preconfigure:126
+#: ../dpkg-preconfigure:138
 #, perl-format
 msgid "must specify some debs to preconfigure"
 msgstr "для передналаштування необхідно вказати які-небудь deb-файли"
 
-#: ../dpkg-preconfigure:131
+#: ../dpkg-preconfigure:148
 msgid "delaying package configuration, since apt-utils is not installed"
 msgstr "оскільки apt-utils не встановлені, налаштування пакунків відкладається"
 
-#: ../dpkg-preconfigure:138
+#: ../dpkg-preconfigure:155
 #, perl-format
 msgid "unable to re-open stdin: %s"
 msgstr "не вдалося заново відкрити stdin: %s"
 
-#: ../dpkg-preconfigure:171 ../dpkg-preconfigure:183
+#: ../dpkg-preconfigure:206
 #, perl-format
 msgid "apt-extracttemplates failed: %s"
 msgstr "помилка при виконанні apt-extracttemplates: %s"
 
-#: ../dpkg-preconfigure:175 ../dpkg-preconfigure:187
+#: ../dpkg-preconfigure:209
 #, perl-format
 msgid "Extracting templates from packages: %d%%"
 msgstr "Видобування шаблонів з пакунків: %d%%"
 
-#: ../dpkg-preconfigure:197
+#: ../dpkg-preconfigure:239
 msgid "Preconfiguring packages ...\n"
 msgstr "Передналаштування пакунків...\n"
 
-#: ../dpkg-preconfigure:209
+#: ../dpkg-preconfigure:251
 #, perl-format
 msgid "template parse error: %s"
 msgstr "помилка при розборі шаблону: %s"
 
-#: ../dpkg-preconfigure:223
+#: ../dpkg-preconfigure:265
 #, perl-format
 msgid "debconf: can't chmod: %s"
 msgstr "debconf: не можу змінити права доступу: %s"
 
-#: ../dpkg-preconfigure:234
+#: ../dpkg-preconfigure:276
 #, perl-format
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "не вдалося передналаштувати пакунок %s, код помилки %s"
 
-#: ../dpkg-reconfigure:100
+#: ../dpkg-reconfigure:106
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
@@ -383,30 +383,30 @@ msgstr ""
 "       --default-priority\tВикористовувати пріоритет за замовчанням.\n"
 "       --force\t\t\tПримусово переналаштувати пошкоджені пакунки."
 
-#: ../dpkg-reconfigure:112
+#: ../dpkg-reconfigure:118
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s повинна виконуватись з правами користувача root"
 
-#: ../dpkg-reconfigure:139
+#: ../dpkg-reconfigure:145
 msgid "please specify a package to reconfigure"
 msgstr "вкажіть пакунок, який потрібно переконфігурувати"
 
-#: ../dpkg-reconfigure:165
+#: ../dpkg-reconfigure:171
 #, perl-format
 msgid "%s is not installed"
 msgstr "Пакунок %s не встановлений"
 
-#: ../dpkg-reconfigure:169
+#: ../dpkg-reconfigure:175
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "Пакунок %s встановлений не повністю чи пошкоджений"
 
-#: ../debconf-communicate:53
+#: ../debconf-communicate:54
 msgid "Usage: debconf-communicate [options] [package]"
 msgstr "Використання: debconf-communicate [опції] [пакунок]"
 
-#: ../debconf-mergetemplate:14
+#: ../debconf-mergetemplate:15
 msgid ""
 "debconf-mergetemplate: This utility is deprecated. You should switch to "
 "using po-debconf's po2debconf program."
@@ -414,12 +414,12 @@ msgstr ""
 "debconf-mergetemplate: Ця програма більше не повинна використовуватися. "
 "Використовуйте програму po2debconf з пакунка po-debconf."
 
-#: ../debconf-mergetemplate:66
+#: ../debconf-mergetemplate:67
 msgid "Usage: debconf-mergetemplate [options] [templates.ll ...] templates"
 msgstr ""
 "Використання: debconf-mergetemplate [опції] [templates.ll ...] templates"
 
-#: ../debconf-mergetemplate:71
+#: ../debconf-mergetemplate:72
 msgid ""
 "\n"
 "        --outdated\t\tMerge in even outdated translations.\n"
@@ -429,41 +429,41 @@ msgstr ""
 "        --outdated\t\tЗливати навіть застарілі шаблони.\n"
 "\t--drop-old-templates\tВикинути всі застарілі шаблони."
 
-#: ../debconf-mergetemplate:119
+#: ../debconf-mergetemplate:120
 #, perl-format
 msgid "%s is missing"
 msgstr "%s відсутній"
 
-#: ../debconf-mergetemplate:123
+#: ../debconf-mergetemplate:124
 #, perl-format
 msgid "%s is missing; dropping %s"
 msgstr "%s відсутній; кидаю %s"
 
-#: ../debconf-mergetemplate:146
+#: ../debconf-mergetemplate:147
 #, perl-format
 msgid "%s is fuzzy at byte %s: %s"
 msgstr "%s нечіткий біля байту %s: %s"
 
-#: ../debconf-mergetemplate:151
+#: ../debconf-mergetemplate:152
 #, perl-format
 msgid "%s is fuzzy at byte %s: %s; dropping it"
 msgstr "%s нечіткий біля байту %s: %s; кидаю це"
 
-#: ../debconf-mergetemplate:168
+#: ../debconf-mergetemplate:169
 #, perl-format
 msgid "%s is outdated"
 msgstr "Пакунок %s застарів"
 
-#: ../debconf-mergetemplate:173
+#: ../debconf-mergetemplate:174
 #, perl-format
 msgid "%s is outdated; dropping whole template!"
 msgstr "Пакунок %s застарів; кидаю весь шаблон!"
 
-#: ../debconf:95
+#: ../debconf:96
 msgid "Usage: debconf [options] command [args]"
 msgstr "Використання: debconf [опції] команда [аргументи]"
 
-#: ../debconf:97
+#: ../debconf:98
 msgid ""
 "\n"
 "  -o,  --owner=package\t\tSet the package that owns the command."

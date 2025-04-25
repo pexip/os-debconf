@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::DbDriver::Debug - debug db requests
 =cut
 
 package Debconf::DbDriver::Debug;
+use warnings;
 use strict;
 use Debconf::Log qw{:all};
 use base 'Debconf::DbDriver';

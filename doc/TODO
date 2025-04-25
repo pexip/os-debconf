@@ -1,5 +1,5 @@
 General:
-* The ConfModule should not return the backup return code, ever, if 
+* The ConfModule should not return the backup return code, ever, if
   the confmodule it talks to has not indicated it has that capability.
 * Get rid of the horrendous fd #3 hack in /usr/share/debconf/confmodule.
   Unfortuantly, many packages probably depend on the hack. Options are to

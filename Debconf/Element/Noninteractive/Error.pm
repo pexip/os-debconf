@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Noninteractive::Error - noninteractive error message Element
 =cut
 
 package Debconf::Element::Noninteractive::Error;
+use warnings;
 use strict;
 use Text::Wrap;
 use Debconf::Gettext;
@@ -67,7 +68,7 @@ sub sendmail {
 	    	my $title=gettext("Debconf").": ".
 			$this->frontend->title." -- ".
 			$this->question->description;
-		unless (open(MAIL, "|-")) { # child
+		unless (open(my $mail, "|-")) { # child
 			exec("mail", "-s", $title, Debconf::Config->admin_email) or return '';
 		}
 		# Let's not clobber this, other parts of debconf might use
@@ -76,23 +77,23 @@ sub sendmail {
 		$Text::Wrap::columns=75;
 #		$Text::Wrap::break=q/\s+/;
 		if ($this->question->extended_description ne '') {
-			print MAIL wrap('', '', $this->question->extended_description);
+			print $mail wrap('', '', $this->question->extended_description);
 		}
 		else {
 			# Evil note!
-			print MAIL wrap('', '', $this->question->description);
+			print $mail wrap('', '', $this->question->description);
 		}
-		print MAIL "\n\n";
+		print $mail "\n\n";
 		my $hostname=`hostname -f 2>/dev/null`;
 		if (! defined $hostname) {
 			$hostname="unknown system";
 		}
-		print MAIL "-- \n", sprintf(gettext("Debconf, running at %s"), $hostname, "\n");
-		print MAIL "[ ", wrap('', '', $footer), " ]\n" if $footer;
-		close MAIL or return '';
+		print $mail "-- \n", sprintf(gettext("Debconf, running at %s"), $hostname, "\n");
+		print $mail "[ ", wrap('', '', $footer), " ]\n" if $footer;
+		close $mail or return '';
 
 		$Text::Wrap::columns=$old_columns;
-	
+
 		# Mark this note as seen. The frontend doesn't do this for us,
 		# since we are marked as not visible.
 		$this->question->flag('seen', 'true');

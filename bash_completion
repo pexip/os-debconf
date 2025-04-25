@@ -9,4 +9,3 @@ _debconf_show()
                         $( apt-cache pkgnames -- $cur ) )
 }
 complete -F _debconf_show debconf-show
-

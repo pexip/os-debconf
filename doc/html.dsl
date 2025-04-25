@@ -4,7 +4,7 @@
 <style-sheet>
 
 <style-specification id="html" use="docbook">
-<style-specification-body> 
+<style-specification-body>
 
 (define %generate-article-toc% #t)
 (define %generate-article-titlepage% #t)

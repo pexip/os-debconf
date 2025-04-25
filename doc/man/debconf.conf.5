@@ -66,7 +66,7 @@ debugging, and the DEBCONF_DEBUG environment variable can be set instead to
 accomplish that.
 .TP
 .B NoWarnings
-If set, this will make debconf not display warnings about various things. 
+If set, this will make debconf not display warnings about various things.
 This can be overridden on the fly with the DEBCONF_NOWARNINGS environment
 variable.
 .TP
@@ -196,7 +196,7 @@ As example stanza setting up a database using this driver:
 This database driver is a compromise between the File and DirTree
 databases. It uses a directory, in which there is (approximately) one file
 per package that uses debconf. This is fairly fast, while using little more
-room than the File database driver. 
+room than the File database driver.
 .P
 This driver is configurable in the same ways as is the DirTree driver,
 plus:
@@ -274,7 +274,7 @@ write custom handling code on the LDAP server part.
 Note that when this option is enabled, the connection to the LDAP server
 is kept active during the whole Debconf run. This is a little different
 from the all-in-one behavior where two brief connections are made to LDAP;
-in the beginning to retrieve all the entries, and in the end to save 
+in the beginning to retrieve all the entries, and in the end to save
 eventual changes.
 .RE
 .RE
@@ -504,7 +504,7 @@ Here is a more complicated example of a debconf.conf file.
   # is looked up in the company-wide LDAP database
   # (unless it's a password).
 
-  # A database is also used to hold templates. We 
+  # A database is also used to hold templates. We
   # don't need to make this as fancy.
   Name: templates
   Driver: File

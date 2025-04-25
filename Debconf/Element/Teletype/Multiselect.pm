@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Teletype::Multiselect - select multiple items
 =cut
 
 package Debconf::Element::Teletype::Multiselect;
+use warnings;
 use strict;
 use Debconf::Gettext;
 use Debconf::Config;

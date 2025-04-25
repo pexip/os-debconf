@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Dialog::Password - A password input field in a dialog box
 =cut
 
 package Debconf::Element::Dialog::Password;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 
@@ -19,7 +20,7 @@ field on it.
 
 sub show {
 	my $this=shift;
-	
+
 	my ($text, $lines, $columns)=
 		$this->frontend->makeprompt($this->question);
 

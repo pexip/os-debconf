@@ -1,14 +1,15 @@
+package LDAPTestSetup;  ## no critic (Modules::RequireFilenameMatchesPackage)
+
+use warnings;
+use strict;
+use Test::Debconf::DbDriver::SLAPD;
+use base qw(Test::Unit::Setup);
+
 # constants
 my $tmp_base_dir = "/tmp/debconf-test/debconf/dbdriver/ldap";
 my $_SERVER = 'localhost';
 my $_PORT = '9009';
 my $_LDAPDIR = 'Test/Debconf/DbDriver/ldap';
-
-package LDAPTestSetup;
-
-use strict;
-use Test::Debconf::DbDriver::SLAPD;
-use base qw(Test::Unit::Setup);
 
 sub set_up{
 	my $self = shift();
@@ -22,7 +23,7 @@ sub set_up{
 
 sub tear_down{
 	my $self = shift();
-    
+
 	$self->{slapd}->slapd_stop();
 }
 
@@ -59,13 +60,13 @@ sub new_driver {
 		binddn => "cn=admin,dc=debian,dc=org",
 		bindpasswd => "debian",
 	);
-    
+
 	$self->{driver} = Debconf::DbDriver::LDAP->new(%params);
 }
 
 sub set_up {
 	my $self = shift;
-	
+
 	$self->new_driver();
 }
 
@@ -80,7 +81,7 @@ sub suite {
 
 	my $testsuite = Test::Unit::TestSuite->new(__PACKAGE__);
 	my $wrapper = LDAPTestSetup->new($testsuite);
-    
+
 	return $wrapper;
 }
 

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Editor::String - Password input
 =cut
 
 package Debconf::Element::Editor::Password;
+use warnings;
 use strict;
 use base qw(Debconf::Element::Editor::String);
 

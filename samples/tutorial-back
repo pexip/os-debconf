@@ -8,13 +8,13 @@ db_version 2.0
 db_capb backup
 
 STATE=1
-while [ "$STATE" != 0 -a "$STATE" != 3 ]; do
+while [ "$STATE" != 0 ] && [ "$STATE" != 3 ]; do
 	case "$STATE" in
 	1)
 		# Do you like debian?
 		db_input medium foo/like_debian || true
 	;;
-	
+
 	2)
 		# Check to see if they like debian.
 		db_get foo/like_debian
@@ -26,8 +26,8 @@ while [ "$STATE" != 0 -a "$STATE" != 3 ]; do
 	esac
 
 	if db_go; then
-		STATE=$(($STATE + 1))
+		STATE=$((STATE + 1))
 	else
-		STATE=$(($STATE - 1))
+		STATE=$((STATE - 1))
 	fi
 done

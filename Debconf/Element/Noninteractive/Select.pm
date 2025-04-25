@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Noninteractive::Select - dummy select Element
 =cut
 
 package Debconf::Element::Noninteractive::Select;
+use warnings;
 use strict;
 use base qw(Debconf::Element::Noninteractive);
 

@@ -1,6 +1,6 @@
 # Maintains: VI fsfhu
 # comm2: sas 321hu
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"

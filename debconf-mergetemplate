@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -6,6 +6,7 @@ debconf-mergetemplate - merge together multiple debconf template files
 
 =cut
 
+use warnings;
 use strict;
 use Debconf::Template::Transient;
 use Debconf::Config;
@@ -30,7 +31,7 @@ This can be especially useful if you are dealing with translated template
 files. In this case, you might have your main template file, plus several
 other files provided by the translators. These files will have translated
 fields in them, and maybe the translators left in the english versions of
-the fields they translated, for their reference. 
+the fields they translated, for their reference.
 
 So, you want to merge together all the translated templates files
 with your main templates file. Any fields that are unique to the translated
@@ -154,7 +155,7 @@ foreach my $template (map { Debconf::Template::Transient->load($_) } @ARGV) {
 					}
 				}
 			}
-			
+
 			$master->$field($template->$field);
 			# If the other template has no extended part of the field,
 			# coply in nothing.

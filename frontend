@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -18,6 +18,7 @@ all this.
 
 =cut
 
+use warnings;
 use strict;
 use Debconf::Db;
 use Debconf::Template;
@@ -48,15 +49,15 @@ elsif ($ARGV[0]=~m!^.*/(.*?)\.(?:postinst|postrm|prerm)$!) {
 elsif (-e "$root/var/lib/dpkg/tmp.ci/control") {
 	# The preinst is running, presumably. Now it gets really ugly, because
 	# I have to parse the control file.
-	open (CONTROL, "< $root/var/lib/dpkg/tmp.ci/control")
+	open (my $control, "<", "$root/var/lib/dpkg/tmp.ci/control")
 		|| die "Debconf: unable to open control file: $!";
-	while (<CONTROL>) {
+	while (<$control>) {
 		if (/^Package: (.*)/) {
 			$package=$1;
 			last;
 		}
 	}
-	close CONTROL;
+	close $control;
 	if (! exists $ENV{PERL_DL_NONLAZY} || ! $ENV{PERL_DL_NONLAZY}) {
 		warn "PERL_DL_NONLAZY is not set, if debconf is running from a preinst script, this is not safe";
 	}
@@ -94,7 +95,7 @@ else {
 	}
 }
 debug developer => "frontend running, package name is $package";
-$frontend->default_title($package) if length $package and !$no_title;
+$frontend->default_title($package) if length $package and not $no_title;
 $frontend->info(undef);
 
 # Load any associated templates if we're being run from a package maintainer
@@ -135,7 +136,7 @@ if ($ARGV[0] =~/^(.*[.\/])(?:postinst|preinst)$/) {
 
 		# Talk to it until it is done.
 		1 while ($confmodule->communicate);
-		
+
 		exit $confmodule->exitcode if $confmodule->exitcode > 0;
 	}
 }

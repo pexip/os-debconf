@@ -7,6 +7,7 @@ Debconf::Log - debconf log module
 =cut
 
 package Debconf::Log;
+use warnings;
 use strict;
 use base qw(Exporter);
 our @EXPORT_OK=qw(debug warn);
@@ -26,7 +27,7 @@ This module uses Exporter.
 =item debug
 
 Outputs an infomational message. The first parameter specifies the type of
-information that is being logged. If the user has specified a debug or log 
+information that is being logged. If the user has specified a debug or log
 setting that matches the parameter, the message is output and/or logged.
 
 Currently used types of information: user, developer, debug, db
@@ -36,12 +37,12 @@ Currently used types of information: user, developer, debug, db
 my $log_open=0;
 sub debug {
 	my $type=shift;
-	
+
 	my $debug=Debconf::Config->debug;
 	if ($debug && $type =~ /$debug/) {
 		print STDERR "debconf ($type): ".join(" ", @_)."\n";
 	}
-	
+
 	my $log=Debconf::Config->log;
 	if ($log && $type =~ /$log/) {
 		require Sys::Syslog;

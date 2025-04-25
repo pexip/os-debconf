@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Editor::Text - Just text to display to user.
 =cut
 
 package Debconf::Element::Editor::Text;
+use warnings;
 use strict;
 use base qw(Debconf::Element);
 
@@ -21,7 +22,7 @@ sub show {
 
 	$this->frontend->comment($this->question->extended_description."\n\n".
 		$this->question->description."\n\n");
-	
+
 	$this->value('');
 }
 

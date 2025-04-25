@@ -1,35 +1,34 @@
-# translation of ro.po to Romanian
-#
-# Romanian translation
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# Translation of debconf_debconf to Romanian.
+# Traducerea în limba română a mesjelor din debconf_debconf.
+# Copyright  ©  2004, 2005, 2006, 2008, 2023 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the debconf package.
 #
 # Eddy Petrișor <eddy.petrisor@gmail.com>, 2004, 2005, 2006, 2008.
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2023.
+#
+# Cronologia traducerii fișierului „debconf_debconf”:
+# Traducerea inițială, făcută de SB, pentru versiunea debconf_debconf 1.4.30(2004-07-24).
+# Actualizare a traducerii pentru versiunea 1.4.66, făcută de EP, dec-2005.
+# Actualizare a traducerii pentru versiunea 1.4.67, făcută de EP, ian-2006.
+# Actualizare a traducerii pentru versiunea 1.5.24, făcută de EP, oct-2008.
+# Actualizare a traducerii pentru versiunea 1.5.82(2009-08-24), făcută de R-GC, iun-2023.
+# Actualizare a traducerii pentru versiunea Y, făcută de X, Z(luna-anul).
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: ro\n"
+"Project-Id-Version: debconf_debconf 1.5.82\n"
 "Report-Msgid-Bugs-To: debconf@packages.debian.org\n"
 "POT-Creation-Date: 2009-08-24 19:24+0200\n"
-"PO-Revision-Date: 2010-05-21 22:45+0300\n"
-"Last-Translator: Eddy Petrișor <eddy.petrisor@gmail.com>\n"
+"PO-Revision-Date: 2023-06-25 13:37+0200\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. Type: select
 #. Choices
@@ -41,7 +40,7 @@ msgstr "Dialog"
 #. Choices
 #: ../templates:1001
 msgid "Readline"
-msgstr "Linie interactivă"
+msgstr "Linie de comandă interactivă"
 
 #. Type: select
 #. Choices
@@ -53,7 +52,7 @@ msgstr "Editor"
 #. Choices
 #: ../templates:1001
 msgid "Noninteractive"
-msgstr "Non-interactiv"
+msgstr "Non-interactivă"
 
 #. Type: select
 #. Description
@@ -68,8 +67,9 @@ msgid ""
 "Packages that use debconf for configuration share a common look and feel. "
 "You can select the type of user interface they use."
 msgstr ""
-"Pachetele care folosesc debconf pentru configurare, sunt asemănătoare în "
-"aspect și comportament. Puteți selecta tipul de interfață utilizat de ele."
+"Pachetele care folosesc «debconf» pentru configurare, sunt asemănătoare în "
+"aspect și comportament. Puteți selecta tipul de interfață utilizat de "
+"acestea."
 
 #. Type: select
 #. Description
@@ -84,8 +84,8 @@ msgid ""
 msgstr ""
 "Interfața dialog este o interfață în mod text, pe tot ecranul, în timp ce "
 "linia de comandă folosește o interfață în mod text, mai tradițională, și, "
-"atât interfața gnome cât și kde sunt interfețe moderne în X, care se "
-"încadrează în mediile respective (dar pot fi folosite în orice mediu X). "
+"atât interfața Gnome cât și interfața KDE sunt interfețe moderne în X, care "
+"se încadrează în mediile respective (dar pot fi folosite în orice mediu X). "
 "Interfața editor vă permite sa configurați lucrurile folosind editorul de "
 "text preferat de dvs. Interfața non-interactivă nu vă întreabă niciodată "
 "nimic."
@@ -94,31 +94,31 @@ msgstr ""
 #. Choices
 #: ../templates:2001
 msgid "critical"
-msgstr "critic"
+msgstr "critică"
 
 #. Type: select
 #. Choices
 #: ../templates:2001
 msgid "high"
-msgstr "ridicat"
+msgstr "ridicată"
 
 #. Type: select
 #. Choices
 #: ../templates:2001
 msgid "medium"
-msgstr "mediu"
+msgstr "medie"
 
 #. Type: select
 #. Choices
 #: ../templates:2001
 msgid "low"
-msgstr "scăzut"
+msgstr "scăzută"
 
 #. Type: select
 #. Description
 #: ../templates:2002
 msgid "Ignore questions with a priority less than:"
-msgstr "Ignoră întrebările cu prioritatea mai mică decât:"
+msgstr "Ignoră întrebările cu prioritatea mai mică decât cea:"
 
 #. Type: select
 #. Description
@@ -132,13 +132,13 @@ msgid ""
 "  - 'medium' is for normal questions\n"
 "  - 'low' is for control freaks who want to see everything"
 msgstr ""
-"Debconf prioritizează întrebările pe care vi le adresează. Alegeți cea mai  "
+"«debconf» prioritizează întrebările pe care vi le adresează. Alegeți cea mai "
 "mică prioritate a întrebărilor pe care doriți să le vedeți:\n"
-"  - 'critic' apare doar când sistemul se poate să se strice.\n"
-"     Alegeți-o dacă sunteți începător, sau vă grăbiți.\n"
-"  - 'ridicat' este pentru întrebări destul de importante\n"
-"  - 'mediu' este pentru întrebări normale\n"
-"  - 'scăzut' este pentru obsedații de control care vor să vadă tot"
+"  - „critică” afișează întrebări doar când sistemul ar putea să se strice.\n"
+"     Alegeți-o dacă sunteți începător, sau vă grăbiți;\n"
+"  - „ridicată” este pentru întrebări destul de importante;\n"
+"  - „medie” este pentru întrebări normale;\n"
+"  - „scăzută” este pentru obsedații de control care vor să vadă tot."
 
 #. Type: select
 #. Description
@@ -147,8 +147,8 @@ msgid ""
 "Note that no matter what level you pick here, you will be able to see every "
 "question if you reconfigure a package with dpkg-reconfigure."
 msgstr ""
-"A se nota că indiferent ce nivel alegeți aici, veți putea să vedeți fiecare "
-"întrebare dacă reconfigurați un pachet cu dpkg-reconfigure."
+"Rețineți că indiferent ce nivel alegeți aici, veți putea să vedeți fiecare "
+"întrebare dacă reconfigurați un pachet cu «dpkg-reconfigure»."
 
 #. Type: text
 #. Description

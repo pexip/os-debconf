@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -39,16 +39,17 @@ everything, simply import ":all".
 =cut
 
 package Debconf::Client::ConfModule;
+use warnings;
 use strict;
 use base qw(Exporter);
 
 # List all valid commands here.
 our @EXPORT_OK=qw(version capb stop reset title input beginblock endblock go
-	      unset set get register unregister clear previous_module
+	      unset set get register unregister clear
 	      start_frontend fset fget subst purge metaget visible exist
 	      settitle info progress data x_loadtemplatefile);
 
-# Import :all to get everything.		   
+# Import :all to get everything.
 our %EXPORT_TAGS = (all => [@EXPORT_OK]);
 
 # Set up valid command lookup hash.
@@ -87,7 +88,7 @@ sub import {
 	# perl module is used. In that case, this module needs to write
 	# to fd #3, rather than stdout. See changelog 0.3.74.
 	if (exists $ENV{DEBCONF_REDIR} && $ENV{DEBCONF_REDIR}) {
-		open(STDOUT,">&3");
+		open(STDOUT, ">&", 3);
 	}
 }
 
@@ -115,11 +116,11 @@ sub AUTOLOAD {
 
 	die "Unsupported command `$command'."
 		unless $commands{$command};
-	
+
 	no strict 'refs';
 	*$AUTOLOAD = sub {
 		my $c=join (' ', $command, @_);
-	
+
 		# Newlines in input can really badly confuse the protocol, so
 		# detect and warn.
 		if ($c=~m/\n/) {

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::DbDriver::PackageDir - store database in a directory
 =cut
 
 package Debconf::DbDriver::PackageDir;
+use warnings;
 use strict;
 use Debconf::Log qw(:all);
 use IO::File;
@@ -37,12 +38,12 @@ An optional extension to tack on the end of each filename.
 =item mode
 
 The (octal) permissions to create the files with if they do not exist.
-Defaults to 600, since the files could contain passwords in some 
+Defaults to 600, since the files could contain passwords in some
 circumstances.
 
 =item format
 
-The Format object to use for reading and writing files. 
+The Format object to use for reading and writing files.
 
 In the config file, just the name of the format to use, such as '822' can
 be specified. Default is 822.
@@ -87,12 +88,12 @@ sub loadfile {
 
 	return if $this->{_loaded}->{$file};
 	$this->{_loaded}->{$file}=1;
-	
+
 	debug "db $this->{name}" => "loading $file";
 	return unless -e $file;
 
 	my $fh=IO::File->new;
-	open($fh, $file) or $this->error("$file: $!");
+	open($fh, "<", $file) or $this->error("$file: $!");
 	my @item = $this->{format}->read($fh);
 	while (@item) {
 		$this->cacheadd(@item);
@@ -144,7 +145,7 @@ the whole set, so it doesn't matter.
 
 sub iterator {
 	my $this=shift;
-	
+
 	my $handle;
 	opendir($handle, $this->{directory}) ||
 		$this->error("opendir: $!");
@@ -164,7 +165,7 @@ sub iterator {
 =head2 exists(itemname)
 
 Check the cache first, then check to see if a file that might contain the
-item exists, load it, and test existence. 
+item exists, load it, and test existence.
 
 =cut
 
@@ -173,12 +174,12 @@ sub exists {
 	my $name=shift;
 	# Check the cache first.
 	my $incache=$this->Debconf::DbDriver::Cache::exists($name);
-	return $incache if (!defined $incache or $incache);
+	return $incache if not defined $incache or $incache;
 	my $file=$this->{directory}.'/'.$this->filename($name);
 	return unless -e $file;
 
 	$this->load($name);
-	
+
 	# Now check the cache again; if it exists load will have put it
 	# into the cache.
 	return $this->Debconf::DbDriver::Cache::exists($name);
@@ -199,7 +200,7 @@ sub shutdown {
 	foreach my $item (keys %{$this->{cache}}) {
 		my $file=$this->filename($item);
 		$files{$file}++;
-		
+
 		if (! defined $this->{cache}->{$item}) {
 			$killfiles{$file}++;
 			delete $this->{cache}->{$item};
@@ -228,7 +229,7 @@ sub shutdown {
 		elsif ($dirtyfiles{$file}) {
 			debug "db $this->{name}" => "saving $file";
 			my $filename=$this->{directory}."/".$file;
-		
+
 			sysopen(my $fh, $filename."-new",
 			                O_WRONLY|O_TRUNC|O_CREAT,$this->{mode}) or
 				$this->error("could not write $filename-new: $!");
@@ -255,7 +256,7 @@ sub shutdown {
 				$this->error("rename failed: $!");
 		}
 	}
-	
+
 	$this->SUPER::shutdown(@_);
 	return 1;
 }

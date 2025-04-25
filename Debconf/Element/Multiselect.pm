@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 =head1 NAME
 
@@ -7,6 +7,7 @@ Debconf::Element::Multiselect - Base multiselect input element
 =cut
 
 package Debconf::Element::Multiselect;
+use warnings;
 use strict;
 use base qw(Debconf::Element::Select);
 
@@ -65,7 +66,7 @@ sub translate_default {
 	$this->question->template->i18n('');
 	my @choices_c=$this->question->choices_split;
 	$this->question->template->i18n(1);
-	
+
 	my @ret;
 	# Translate each default.
 	foreach my $c_default ($this->question->value_split) {
