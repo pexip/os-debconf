@@ -1,3 +1,9 @@
+debconf (1.5.91+pexip25u1) pexip-trixie; urgency=medium
+
+  * Initial trixie build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 29 Apr 2025 22:30:04 +0100
+
 debconf (1.5.91) unstable; urgency=medium
 
   * Teletype: Require stdin to be a tty (closes: #1061480).
